@@ -6,8 +6,14 @@ script: npm run test
 notifications:
   email:
     recipients:
+<<<<<<< HEAD
       - jess.portnoy@kaltura.com
       - eran.sakal@kaltura.com
       - amir.chervinsky@kaltura.com
+=======
+      - eran.sakal@kaltura.com
+      - amir.chervinsky@kaltura.com
+      - jess.portnoy@kaltura.com
+>>>>>>> f2129e20e3958e6e1b4a1d3b502c5ab64de6ec3b
     on_success: change
 on_failure: always
