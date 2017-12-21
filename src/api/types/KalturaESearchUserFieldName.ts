@@ -19,16 +19,16 @@ export class KalturaESearchUserFieldName extends KalturaObjectBase {
         return this._value;
     }
 
-    static userCreatedAt = new KalturaESearchUserFieldName('created_at');
-	static userEmail = new KalturaESearchUserFieldName('email');
-	static userFirstName = new KalturaESearchUserFieldName('first_name');
-	static userGroupIds = new KalturaESearchUserFieldName('group_ids');
-	static userLastName = new KalturaESearchUserFieldName('last_name');
-	static userPermissionNames = new KalturaESearchUserFieldName('permission_names');
-	static userRoleIds = new KalturaESearchUserFieldName('role_ids');
-	static userScreenName = new KalturaESearchUserFieldName('screen_name');
-	static userTags = new KalturaESearchUserFieldName('tags');
-	static userType = new KalturaESearchUserFieldName('kuser_type');
-	static userUpdatedAt = new KalturaESearchUserFieldName('updated_at');
+    static createdAt = new KalturaESearchUserFieldName('created_at');
+	static email = new KalturaESearchUserFieldName('email');
+	static firstName = new KalturaESearchUserFieldName('first_name');
+	static groupIds = new KalturaESearchUserFieldName('group_ids');
+	static lastName = new KalturaESearchUserFieldName('last_name');
+	static permissionNames = new KalturaESearchUserFieldName('permission_names');
+	static roleIds = new KalturaESearchUserFieldName('role_ids');
+	static screenName = new KalturaESearchUserFieldName('screen_name');
+	static tags = new KalturaESearchUserFieldName('tags');
+	static type = new KalturaESearchUserFieldName('user_type');
+	static updatedAt = new KalturaESearchUserFieldName('updated_at');
 }
 KalturaTypesFactory.registerType('KalturaESearchUserFieldName',KalturaESearchUserFieldName);

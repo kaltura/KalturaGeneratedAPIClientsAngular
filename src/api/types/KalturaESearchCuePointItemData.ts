@@ -16,6 +16,7 @@ export interface KalturaESearchCuePointItemDataArgs  extends KalturaESearchItemD
 	answers? : string;
 	hint? : string;
 	explanation? : string;
+	assetId? : string;
 }
 
 
@@ -33,6 +34,7 @@ export class KalturaESearchCuePointItemData extends KalturaESearchItemData {
 	answers : string;
 	hint : string;
 	explanation : string;
+	assetId : string;
 
     constructor(data? : KalturaESearchCuePointItemDataArgs)
     {
@@ -57,7 +59,8 @@ export class KalturaESearchCuePointItemData extends KalturaESearchItemData {
 				question : { type : 's' },
 				answers : { type : 's' },
 				hint : { type : 's' },
-				explanation : { type : 's' }
+				explanation : { type : 's' },
+				assetId : { type : 's' }
             }
         );
         return result;

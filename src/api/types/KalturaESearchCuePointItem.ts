@@ -3,15 +3,15 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaESearchCuePointFieldName } from './KalturaESearchCuePointFieldName';
 import { KalturaCuePointType } from './KalturaCuePointType';
-import { KalturaESearchItem, KalturaESearchItemArgs } from './KalturaESearchItem';
+import { KalturaESearchAbstractEntryItem, KalturaESearchAbstractEntryItemArgs } from './KalturaESearchAbstractEntryItem';
 
-export interface KalturaESearchCuePointItemArgs  extends KalturaESearchItemArgs {
+export interface KalturaESearchCuePointItemArgs  extends KalturaESearchAbstractEntryItemArgs {
     fieldName? : KalturaESearchCuePointFieldName;
 	cuePointType? : KalturaCuePointType;
 }
 
 
-export class KalturaESearchCuePointItem extends KalturaESearchItem {
+export class KalturaESearchCuePointItem extends KalturaESearchAbstractEntryItem {
 
     fieldName : KalturaESearchCuePointFieldName;
 	cuePointType : KalturaCuePointType;

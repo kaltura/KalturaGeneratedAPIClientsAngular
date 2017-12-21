@@ -19,7 +19,7 @@ export class KalturaESearchUserOrderByFieldName extends KalturaObjectBase {
         return this._value;
     }
 
-    static userCreatedAt = new KalturaESearchUserOrderByFieldName('created_at');
-	static userUpdatedAt = new KalturaESearchUserOrderByFieldName('updated_at');
+    static createdAt = new KalturaESearchUserOrderByFieldName('created_at');
+	static updatedAt = new KalturaESearchUserOrderByFieldName('updated_at');
 }
 KalturaTypesFactory.registerType('KalturaESearchUserOrderByFieldName',KalturaESearchUserOrderByFieldName);

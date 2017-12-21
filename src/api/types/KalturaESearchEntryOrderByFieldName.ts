@@ -19,12 +19,12 @@ export class KalturaESearchEntryOrderByFieldName extends KalturaObjectBase {
         return this._value;
     }
 
-    static entryCreatedAt = new KalturaESearchEntryOrderByFieldName('created_at');
-	static entryEndDate = new KalturaESearchEntryOrderByFieldName('end_date');
-	static entryName = new KalturaESearchEntryOrderByFieldName('name.keyword');
-	static entryStartDate = new KalturaESearchEntryOrderByFieldName('start_date');
-	static entryUpdatedAt = new KalturaESearchEntryOrderByFieldName('updated_at');
-	static entryViews = new KalturaESearchEntryOrderByFieldName('views');
-	static entryVotes = new KalturaESearchEntryOrderByFieldName('votes');
+    static createdAt = new KalturaESearchEntryOrderByFieldName('created_at');
+	static endDate = new KalturaESearchEntryOrderByFieldName('end_date');
+	static _name = new KalturaESearchEntryOrderByFieldName('name');
+	static startDate = new KalturaESearchEntryOrderByFieldName('start_date');
+	static updatedAt = new KalturaESearchEntryOrderByFieldName('updated_at');
+	static views = new KalturaESearchEntryOrderByFieldName('views');
+	static votes = new KalturaESearchEntryOrderByFieldName('votes');
 }
 KalturaTypesFactory.registerType('KalturaESearchEntryOrderByFieldName',KalturaESearchEntryOrderByFieldName);

@@ -19,7 +19,7 @@ export class KalturaESearchCategoryOrderByFieldName extends KalturaObjectBase {
         return this._value;
     }
 
-    static categoryCreatedAt = new KalturaESearchCategoryOrderByFieldName('created_at');
-	static categoryUpdatedAt = new KalturaESearchCategoryOrderByFieldName('updated_at');
+    static createdAt = new KalturaESearchCategoryOrderByFieldName('created_at');
+	static updatedAt = new KalturaESearchCategoryOrderByFieldName('updated_at');
 }
 KalturaTypesFactory.registerType('KalturaESearchCategoryOrderByFieldName',KalturaESearchCategoryOrderByFieldName);

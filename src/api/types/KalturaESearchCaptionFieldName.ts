@@ -19,8 +19,8 @@ export class KalturaESearchCaptionFieldName extends KalturaObjectBase {
         return this._value;
     }
 
-    static captionContent = new KalturaESearchCaptionFieldName('caption_assets.lines.content');
-	static captionEndTime = new KalturaESearchCaptionFieldName('caption_assets.lines.end_time');
-	static captionStartTime = new KalturaESearchCaptionFieldName('caption_assets.lines.start_time');
+    static content = new KalturaESearchCaptionFieldName('content');
+	static endTime = new KalturaESearchCaptionFieldName('end_time');
+	static startTime = new KalturaESearchCaptionFieldName('start_time');
 }
 KalturaTypesFactory.registerType('KalturaESearchCaptionFieldName',KalturaESearchCaptionFieldName);

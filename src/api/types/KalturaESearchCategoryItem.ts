@@ -2,14 +2,14 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaESearchCategoryFieldName } from './KalturaESearchCategoryFieldName';
-import { KalturaESearchItem, KalturaESearchItemArgs } from './KalturaESearchItem';
+import { KalturaESearchAbstractCategoryItem, KalturaESearchAbstractCategoryItemArgs } from './KalturaESearchAbstractCategoryItem';
 
-export interface KalturaESearchCategoryItemArgs  extends KalturaESearchItemArgs {
+export interface KalturaESearchCategoryItemArgs  extends KalturaESearchAbstractCategoryItemArgs {
     fieldName? : KalturaESearchCategoryFieldName;
 }
 
 
-export class KalturaESearchCategoryItem extends KalturaESearchItem {
+export class KalturaESearchCategoryItem extends KalturaESearchAbstractCategoryItem {
 
     fieldName : KalturaESearchCategoryFieldName;
 

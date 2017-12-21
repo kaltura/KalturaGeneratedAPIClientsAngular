@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaESearchItem, KalturaESearchItemArgs } from './KalturaESearchItem';
+import { KalturaESearchAbstractEntryItem, KalturaESearchAbstractEntryItemArgs } from './KalturaESearchAbstractEntryItem';
 
-export interface KalturaESearchUnifiedItemArgs  extends KalturaESearchItemArgs {
+export interface KalturaESearchUnifiedItemArgs  extends KalturaESearchAbstractEntryItemArgs {
     
 }
 
 
-export class KalturaESearchUnifiedItem extends KalturaESearchItem {
+export class KalturaESearchUnifiedItem extends KalturaESearchAbstractEntryItem {
 
     
 

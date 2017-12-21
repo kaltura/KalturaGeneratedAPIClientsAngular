@@ -2,12 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaESearchResponse } from './KalturaESearchResponse';
 
-import { KalturaESearchParams } from './KalturaESearchParams';
+import { KalturaESearchUserParams } from './KalturaESearchUserParams';
 import { KalturaPager } from './KalturaPager';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ESearchSearchUserActionArgs  extends KalturaRequestArgs {
-    searchParams : KalturaESearchParams;
+    searchParams : KalturaESearchUserParams;
 	pager? : KalturaPager;
 }
 
@@ -23,7 +23,7 @@ export interface ESearchSearchUserActionArgs  extends KalturaRequestArgs {
  */
 export class ESearchSearchUserAction extends KalturaRequest<KalturaESearchResponse> {
 
-    searchParams : KalturaESearchParams;
+    searchParams : KalturaESearchUserParams;
 	pager : KalturaPager;
 
     constructor(data : ESearchSearchUserActionArgs)
@@ -39,7 +39,7 @@ export class ESearchSearchUserAction extends KalturaRequest<KalturaESearchRespon
             {
                 service : { type : 'c', default : 'elasticsearch_esearch' },
 				action : { type : 'c', default : 'searchUser' },
-				searchParams : { type : 'o', subTypeConstructor : KalturaESearchParams, subType : 'KalturaESearchParams' },
+				searchParams : { type : 'o', subTypeConstructor : KalturaESearchUserParams, subType : 'KalturaESearchUserParams' },
 				pager : { type : 'o', subTypeConstructor : KalturaPager, subType : 'KalturaPager' }
             }
         );
