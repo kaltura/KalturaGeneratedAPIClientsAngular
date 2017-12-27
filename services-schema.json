@@ -25857,28 +25857,6 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
-                },
-                {
-                    "name": "isSequenceEntry",
-                    "description": "True if the entry is a sequence entry",
-                    "typeClassName": "KalturaNullableBoolean",
-                    "type": "EnumOfInt",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "sequenceEntryIds",
-                    "description": "The sequence entries of the entry",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
                 }
             ]
         },

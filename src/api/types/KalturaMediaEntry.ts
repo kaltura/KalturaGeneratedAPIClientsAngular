@@ -17,8 +17,6 @@ export interface KalturaMediaEntryArgs  extends KalturaPlayableEntryArgs {
 	creditUserName? : string;
 	creditUrl? : string;
 	streams? : KalturaStreamContainer[];
-	isSequenceEntry? : KalturaNullableBoolean;
-	sequenceEntryIds? : string;
 }
 
 
@@ -36,8 +34,6 @@ export class KalturaMediaEntry extends KalturaPlayableEntry {
 	readonly flavorParamsIds : string;
 	readonly isTrimDisabled : KalturaNullableBoolean;
 	streams : KalturaStreamContainer[];
-	isSequenceEntry : KalturaNullableBoolean;
-	sequenceEntryIds : string;
 
     constructor(data? : KalturaMediaEntryArgs)
     {
@@ -63,9 +59,7 @@ export class KalturaMediaEntry extends KalturaPlayableEntry {
 				dataUrl : { type : 's', readOnly : true },
 				flavorParamsIds : { type : 's', readOnly : true },
 				isTrimDisabled : { type : 'en', readOnly : true, subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				streams : { type : 'a', subTypeConstructor : KalturaStreamContainer, subType : 'KalturaStreamContainer' },
-				isSequenceEntry : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				sequenceEntryIds : { type : 's' }
+				streams : { type : 'a', subTypeConstructor : KalturaStreamContainer, subType : 'KalturaStreamContainer' }
             }
         );
         return result;
