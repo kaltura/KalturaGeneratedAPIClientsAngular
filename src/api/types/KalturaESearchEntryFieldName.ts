@@ -21,9 +21,6 @@ export class KalturaESearchEntryFieldName extends KalturaObjectBase {
 
     static accessControlId = new KalturaESearchEntryFieldName('access_control_id');
 	static adminTags = new KalturaESearchEntryFieldName('admin_tags');
-	static categories = new KalturaESearchEntryFieldName('categories');
-	static categoryIds = new KalturaESearchEntryFieldName('category_ids');
-	static categoryName = new KalturaESearchEntryFieldName('category_name');
 	static conversionProfileId = new KalturaESearchEntryFieldName('conversion_profile_id');
 	static createdAt = new KalturaESearchEntryFieldName('created_at');
 	static creatorId = new KalturaESearchEntryFieldName('creator_kuser_id');

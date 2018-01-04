@@ -68829,6 +68829,38 @@
             ]
         },
         {
+            "name": "KalturaESearchCategoryEntryItem",
+            "base": "KalturaESearchAbstractEntryItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchCategoryEntryFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "categoryEntryStatus",
+                    "description": "",
+                    "typeClassName": "KalturaCategoryEntryStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchCategoryItem",
             "base": "KalturaESearchAbstractCategoryItem",
             "plugin": "elasticSearch",
@@ -82234,6 +82266,32 @@
             ]
         },
         {
+            "name": "KalturaESearchCategoryEntryFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "ANCESTOR_ID",
+                    "value": "ancestor_id"
+                },
+                {
+                    "name": "ANCESTOR_NAME",
+                    "value": "ancestor_name"
+                },
+                {
+                    "name": "FULL_IDS",
+                    "value": "full_ids"
+                },
+                {
+                    "name": "ID",
+                    "value": "id"
+                },
+                {
+                    "name": "NAME",
+                    "value": "name"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchCategoryFieldName",
             "type": "string",
             "values": [
@@ -82418,18 +82476,6 @@
                 {
                     "name": "ADMIN_TAGS",
                     "value": "admin_tags"
-                },
-                {
-                    "name": "CATEGORIES",
-                    "value": "categories"
-                },
-                {
-                    "name": "CATEGORY_IDS",
-                    "value": "category_ids"
-                },
-                {
-                    "name": "CATEGORY_NAME",
-                    "value": "category_name"
                 },
                 {
                     "name": "CONVERSION_PROFILE_ID",
