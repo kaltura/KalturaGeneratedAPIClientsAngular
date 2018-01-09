@@ -9,6 +9,7 @@ export interface KalturaESearchAbstractCategoryItemArgs  extends KalturaESearchC
     searchTerm? : string;
 	itemType? : KalturaESearchItemType;
 	range? : KalturaESearchRange;
+	addHighlight? : boolean;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaESearchAbstractCategoryItem extends KalturaESearchCategoryBa
     searchTerm : string;
 	itemType : KalturaESearchItemType;
 	range : KalturaESearchRange;
+	addHighlight : boolean;
 
     constructor(data? : KalturaESearchAbstractCategoryItemArgs)
     {
@@ -32,7 +34,8 @@ export class KalturaESearchAbstractCategoryItem extends KalturaESearchCategoryBa
                 objectType : { type : 'c', default : 'KalturaESearchAbstractCategoryItem' },
 				searchTerm : { type : 's' },
 				itemType : { type : 'en', subTypeConstructor : KalturaESearchItemType, subType : 'KalturaESearchItemType' },
-				range : { type : 'o', subTypeConstructor : KalturaESearchRange, subType : 'KalturaESearchRange' }
+				range : { type : 'o', subTypeConstructor : KalturaESearchRange, subType : 'KalturaESearchRange' },
+				addHighlight : { type : 'b' }
             }
         );
         return result;
