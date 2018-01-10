@@ -22,6 +22,7 @@ export class KalturaConditionType extends KalturaObjectBase {
     static activeEdgeValidate = new KalturaConditionType('14');
 	static anonymousIp = new KalturaConditionType('15');
 	static assetPropertiesCompare = new KalturaConditionType('8');
+	static assetType = new KalturaConditionType('16');
 	static authenticated = new KalturaConditionType('1');
 	static country = new KalturaConditionType('2');
 	static deliveryProfile = new KalturaConditionType('13');

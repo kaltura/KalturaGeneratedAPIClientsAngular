@@ -40485,6 +40485,27 @@
             ]
         },
         {
+            "name": "KalturaAssetTypeCondition",
+            "base": "KalturaCondition",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "assetTypes",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaAssetsParamsResourceContainers",
             "base": "KalturaResource",
             "plugin": "",
@@ -80348,6 +80369,10 @@
                 {
                     "name": "ASSET_PROPERTIES_COMPARE",
                     "value": "8"
+                },
+                {
+                    "name": "ASSET_TYPE",
+                    "value": "16"
                 },
                 {
                     "name": "AUTHENTICATED",
