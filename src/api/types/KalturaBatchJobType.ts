@@ -71,6 +71,7 @@ export class KalturaBatchJobType extends KalturaObjectBase {
 	static recalculateCache = new KalturaBatchJobType('41');
 	static scheduledTask = new KalturaBatchJobType('scheduledTask.ScheduledTask');
 	static schedulerHelper = new KalturaBatchJobType('18');
+	static serverNodeMonitor = new KalturaBatchJobType('45');
 	static storageDelete = new KalturaBatchJobType('25');
 	static storageExport = new KalturaBatchJobType('23');
 	static syncCategoryPrivacyContext = new KalturaBatchJobType('39');

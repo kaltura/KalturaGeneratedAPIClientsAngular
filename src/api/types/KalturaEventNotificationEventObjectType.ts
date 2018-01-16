@@ -55,6 +55,7 @@ export class KalturaEventNotificationEventObjectType extends KalturaObjectBase {
 	static schedulerconfig = new KalturaEventNotificationEventObjectType('25');
 	static schedulerstatus = new KalturaEventNotificationEventObjectType('26');
 	static schedulerworker = new KalturaEventNotificationEventObjectType('27');
+	static serverNode = new KalturaEventNotificationEventObjectType('39');
 	static storageprofile = new KalturaEventNotificationEventObjectType('28');
 	static syndicationfeed = new KalturaEventNotificationEventObjectType('29');
 	static thumbasset = new KalturaEventNotificationEventObjectType('5');

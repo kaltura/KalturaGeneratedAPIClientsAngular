@@ -6876,6 +6876,22 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "markOffline",
+                    "resultClassName": "KalturaServerNode",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "serverNodeId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Mark server node offline",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "reportStatus",
                     "resultClassName": "KalturaServerNode",
                     "resultType": "Object",
@@ -79658,6 +79674,10 @@
                     "value": "18"
                 },
                 {
+                    "name": "SERVER_NODE_MONITOR",
+                    "value": "45"
+                },
+                {
                     "name": "STORAGE_DELETE",
                     "value": "25"
                 },
@@ -83457,6 +83477,10 @@
                 {
                     "name": "SCHEDULERWORKER",
                     "value": "27"
+                },
+                {
+                    "name": "SERVER_NODE",
+                    "value": "39"
                 },
                 {
                     "name": "STORAGEPROFILE",
