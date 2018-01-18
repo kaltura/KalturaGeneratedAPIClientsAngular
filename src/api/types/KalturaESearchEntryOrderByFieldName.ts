@@ -21,7 +21,9 @@ export class KalturaESearchEntryOrderByFieldName extends KalturaObjectBase {
 
     static createdAt = new KalturaESearchEntryOrderByFieldName('created_at');
 	static endDate = new KalturaESearchEntryOrderByFieldName('end_date');
+	static lastPlayedAt = new KalturaESearchEntryOrderByFieldName('last_played_at');
 	static _name = new KalturaESearchEntryOrderByFieldName('name');
+	static plays = new KalturaESearchEntryOrderByFieldName('plays');
 	static startDate = new KalturaESearchEntryOrderByFieldName('start_date');
 	static updatedAt = new KalturaESearchEntryOrderByFieldName('updated_at');
 	static views = new KalturaESearchEntryOrderByFieldName('views');

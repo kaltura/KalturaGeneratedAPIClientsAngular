@@ -82661,12 +82661,8 @@
                     "value": "kuser_id"
                 },
                 {
-                    "name": "VIEWS",
-                    "value": "views"
-                },
-                {
-                    "name": "VOTES",
-                    "value": "votes"
+                    "name": "USER_NAMES",
+                    "value": "user_names"
                 }
             ]
         },
@@ -82683,8 +82679,16 @@
                     "value": "end_date"
                 },
                 {
+                    "name": "LAST_PLAYED_AT",
+                    "value": "last_played_at"
+                },
+                {
                     "name": "NAME",
                     "value": "name"
+                },
+                {
+                    "name": "PLAYS",
+                    "value": "plays"
                 },
                 {
                     "name": "START_DATE",

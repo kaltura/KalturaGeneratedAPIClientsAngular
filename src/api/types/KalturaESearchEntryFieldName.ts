@@ -50,7 +50,6 @@ export class KalturaESearchEntryFieldName extends KalturaObjectBase {
 	static templateEntryId = new KalturaESearchEntryFieldName('template_entry_id');
 	static updatedAt = new KalturaESearchEntryFieldName('updated_at');
 	static userId = new KalturaESearchEntryFieldName('kuser_id');
-	static views = new KalturaESearchEntryFieldName('views');
-	static votes = new KalturaESearchEntryFieldName('votes');
+	static userNames = new KalturaESearchEntryFieldName('user_names');
 }
 KalturaTypesFactory.registerType('KalturaESearchEntryFieldName',KalturaESearchEntryFieldName);
