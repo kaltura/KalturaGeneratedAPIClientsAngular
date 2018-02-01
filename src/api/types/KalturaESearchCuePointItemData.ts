@@ -1,6 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaString } from './KalturaString';
 import { KalturaESearchItemData, KalturaESearchItemDataArgs } from './KalturaESearchItemData';
 
 export interface KalturaESearchCuePointItemDataArgs  extends KalturaESearchItemDataArgs {
@@ -8,12 +9,12 @@ export interface KalturaESearchCuePointItemDataArgs  extends KalturaESearchItemD
 	id? : string;
 	name? : string;
 	text? : string;
-	tags? : string;
+	tags? : KalturaString[];
 	startTime? : string;
 	endTime? : string;
 	subType? : string;
 	question? : string;
-	answers? : string;
+	answers? : KalturaString[];
 	hint? : string;
 	explanation? : string;
 	assetId? : string;
@@ -26,12 +27,12 @@ export class KalturaESearchCuePointItemData extends KalturaESearchItemData {
 	id : string;
 	name : string;
 	text : string;
-	tags : string;
+	tags : KalturaString[];
 	startTime : string;
 	endTime : string;
 	subType : string;
 	question : string;
-	answers : string;
+	answers : KalturaString[];
 	hint : string;
 	explanation : string;
 	assetId : string;
@@ -39,6 +40,8 @@ export class KalturaESearchCuePointItemData extends KalturaESearchItemData {
     constructor(data? : KalturaESearchCuePointItemDataArgs)
     {
         super(data);
+        if (typeof this.tags === 'undefined') this.tags = [];
+		if (typeof this.answers === 'undefined') this.answers = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -52,12 +55,12 @@ export class KalturaESearchCuePointItemData extends KalturaESearchItemData {
 				id : { type : 's' },
 				name : { type : 's' },
 				text : { type : 's' },
-				tags : { type : 's' },
+				tags : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
 				startTime : { type : 's' },
 				endTime : { type : 's' },
 				subType : { type : 's' },
 				question : { type : 's' },
-				answers : { type : 's' },
+				answers : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
 				hint : { type : 's' },
 				explanation : { type : 's' },
 				assetId : { type : 's' }

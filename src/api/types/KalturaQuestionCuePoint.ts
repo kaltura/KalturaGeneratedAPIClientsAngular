@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
 import { KalturaOptionalAnswer } from './KalturaOptionalAnswer';
+import { KalturaQuestionType } from './KalturaQuestionType';
 import { KalturaCuePoint, KalturaCuePointArgs } from './KalturaCuePoint';
 
 export interface KalturaQuestionCuePointArgs  extends KalturaCuePointArgs {
@@ -9,6 +10,7 @@ export interface KalturaQuestionCuePointArgs  extends KalturaCuePointArgs {
 	hint? : string;
 	question? : string;
 	explanation? : string;
+	questionType? : KalturaQuestionType;
 }
 
 
@@ -18,6 +20,7 @@ export class KalturaQuestionCuePoint extends KalturaCuePoint {
 	hint : string;
 	question : string;
 	explanation : string;
+	questionType : KalturaQuestionType;
 
     constructor(data? : KalturaQuestionCuePointArgs)
     {
@@ -35,7 +38,8 @@ export class KalturaQuestionCuePoint extends KalturaCuePoint {
 				optionalAnswers : { type : 'a', subTypeConstructor : KalturaOptionalAnswer, subType : 'KalturaOptionalAnswer' },
 				hint : { type : 's' },
 				question : { type : 's' },
-				explanation : { type : 's' }
+				explanation : { type : 's' },
+				questionType : { type : 'en', subTypeConstructor : KalturaQuestionType, subType : 'KalturaQuestionType' }
             }
         );
         return result;

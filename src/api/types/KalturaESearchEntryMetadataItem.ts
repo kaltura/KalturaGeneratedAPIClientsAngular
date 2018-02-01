@@ -1,16 +1,16 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
-import { KalturaESearchAbstractEntryItem, KalturaESearchAbstractEntryItemArgs } from './KalturaESearchAbstractEntryItem';
+import { KalturaESearchEntryAbstractNestedItem, KalturaESearchEntryAbstractNestedItemArgs } from './KalturaESearchEntryAbstractNestedItem';
 
-export interface KalturaESearchEntryMetadataItemArgs  extends KalturaESearchAbstractEntryItemArgs {
+export interface KalturaESearchEntryMetadataItemArgs  extends KalturaESearchEntryAbstractNestedItemArgs {
     xpath? : string;
 	metadataProfileId? : number;
 	metadataFieldId? : number;
 }
 
 
-export class KalturaESearchEntryMetadataItem extends KalturaESearchAbstractEntryItem {
+export class KalturaESearchEntryMetadataItem extends KalturaESearchEntryAbstractNestedItem {
 
     xpath : string;
 	metadataProfileId : number;

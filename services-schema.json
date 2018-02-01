@@ -24232,6 +24232,24 @@
             "properties": []
         },
         {
+            "name": "KalturaESearchEntryBaseNestedObject",
+            "base": "KalturaESearchEntryBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaESearchEntryNestedBaseItem",
+            "base": "KalturaESearchEntryBaseNestedObject",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaESearchHighlight",
             "base": "",
             "plugin": "elasticSearch",
@@ -46525,8 +46543,8 @@
                 {
                     "name": "tags",
                     "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
+                    "typeClassName": "KalturaString",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -46580,8 +46598,8 @@
                 {
                     "name": "answers",
                     "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
+                    "typeClassName": "KalturaString",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -53001,6 +53019,17 @@
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "questionType",
+                    "description": "",
+                    "typeClassName": "KalturaQuestionType",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -68867,27 +68896,6 @@
             ]
         },
         {
-            "name": "KalturaESearchCaptionItem",
-            "base": "KalturaESearchAbstractEntryItem",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "fieldName",
-                    "description": "",
-                    "typeClassName": "KalturaESearchCaptionFieldName",
-                    "type": "EnumOfString",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaESearchCategoryEntryItem",
             "base": "KalturaESearchAbstractEntryItem",
             "plugin": "elasticSearch",
@@ -68984,38 +68992,6 @@
             ]
         },
         {
-            "name": "KalturaESearchCuePointItem",
-            "base": "KalturaESearchAbstractEntryItem",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "fieldName",
-                    "description": "",
-                    "typeClassName": "KalturaESearchCuePointFieldName",
-                    "type": "EnumOfString",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "cuePointType",
-                    "description": "",
-                    "typeClassName": "KalturaCuePointType",
-                    "type": "EnumOfString",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaESearchEntryItem",
             "base": "KalturaESearchAbstractEntryItem",
             "plugin": "elasticSearch",
@@ -69028,49 +69004,6 @@
                     "description": "",
                     "typeClassName": "KalturaESearchEntryFieldName",
                     "type": "EnumOfString",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaESearchEntryMetadataItem",
-            "base": "KalturaESearchAbstractEntryItem",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "xpath",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "metadataProfileId",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "metadataFieldId",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -71790,6 +71723,92 @@
             ]
         },
         {
+            "name": "KalturaESearchEntryAbstractNestedItem",
+            "base": "KalturaESearchEntryNestedBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "searchTerm",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "itemType",
+                    "description": "",
+                    "typeClassName": "KalturaESearchItemType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "range",
+                    "description": "",
+                    "typeClassName": "KalturaESearchRange",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "addHighlight",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchNestedOperator",
+            "base": "KalturaESearchEntryNestedBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "operator",
+                    "description": "",
+                    "typeClassName": "KalturaESearchOperatorType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchItems",
+                    "description": "",
+                    "typeClassName": "KalturaESearchEntryNestedBaseItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaEmailNotificationTemplateFilter",
             "base": "KalturaEmailNotificationTemplateBaseFilter",
             "plugin": "emailNotification",
@@ -72840,6 +72859,91 @@
             "abstract": true,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaESearchCaptionItem",
+            "base": "KalturaESearchEntryAbstractNestedItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchCaptionFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchCuePointItem",
+            "base": "KalturaESearchEntryAbstractNestedItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchCuePointFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchEntryMetadataItem",
+            "base": "KalturaESearchEntryAbstractNestedItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "xpath",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "metadataProfileId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "metadataFieldId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaEdgeServerNodeBaseFilter",
@@ -76651,6 +76755,40 @@
                 {
                     "name": "MEMBERS_ONLY",
                     "value": "3"
+                }
+            ]
+        },
+        {
+            "name": "KalturaQuestionType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "FILL_IN_BLANK",
+                    "value": "5"
+                },
+                {
+                    "name": "GO_TO",
+                    "value": "7"
+                },
+                {
+                    "name": "HOT_SPOT",
+                    "value": "6"
+                },
+                {
+                    "name": "MULTIPLE_ANSWER_QUESTION",
+                    "value": "4"
+                },
+                {
+                    "name": "MULTIPLE_CHOICE_ANSWER",
+                    "value": "1"
+                },
+                {
+                    "name": "REFLECTION_POINT",
+                    "value": "3"
+                },
+                {
+                    "name": "TRUE_FALSE",
+                    "value": "2"
                 }
             ]
         },
@@ -82529,6 +82667,10 @@
                 {
                     "name": "TEXT",
                     "value": "text"
+                },
+                {
+                    "name": "TYPE",
+                    "value": "type"
                 }
             ]
         },
