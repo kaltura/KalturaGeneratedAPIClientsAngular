@@ -8779,6 +8779,36 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "exportToCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaUserFilter",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "metadataProfileId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "additionalFields",
+                            "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                            "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "add batch job that sends an email with a link to download an updated CSV that contains list of users",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "get",
                     "resultClassName": "KalturaUser",
                     "resultType": "Object",
@@ -8997,6 +9027,22 @@
                         }
                     ],
                     "description": "Reset user's password and send the user an email to generate a new one.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "serveCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Will serve a requested csv",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -21624,6 +21670,38 @@
                 },
                 {
                     "name": "name",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaCsvAdditionalFieldInfo",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "xpath",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -46402,6 +46480,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "label",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -56300,6 +56389,82 @@
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaUsersCsvJobData",
+            "base": "KalturaJobData",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "filter",
+                    "description": "The filter should return the list of users that need to be specified in the csv.",
+                    "typeClassName": "KalturaUserFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "metadataProfileId",
+                    "description": "The metadata profile we should look the xpath in",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "additionalFields",
+                    "description": "The xpath to look in the metadataProfileId  and the wanted csv field name",
+                    "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userName",
+                    "description": "The users name",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userMail",
+                    "description": "The users email",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputPath",
+                    "description": "The file location",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -79832,6 +79997,10 @@
                     "value": "tagSearch.TagResolve"
                 },
                 {
+                    "name": "USERS_CSV",
+                    "value": "46"
+                },
+                {
                     "name": "VALIDATE_LIVE_MEDIA_SERVERS",
                     "value": "38"
                 },
@@ -89660,6 +89829,10 @@
                 {
                     "name": "MAIL_TYPE_SYSTEM_USER_RESET_PASSWORD_SUCCESS",
                     "value": "111"
+                },
+                {
+                    "name": "MAIL_TYPE_USERS_CSV",
+                    "value": "133"
                 },
                 {
                     "name": "MAIL_TYPE_VIDEO_ADDED",

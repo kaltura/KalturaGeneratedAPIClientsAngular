@@ -76,6 +76,7 @@ export class KalturaBatchJobType extends KalturaObjectBase {
 	static storageExport = new KalturaBatchJobType('23');
 	static syncCategoryPrivacyContext = new KalturaBatchJobType('39');
 	static tagResolve = new KalturaBatchJobType('tagSearch.TagResolve');
+	static usersCsv = new KalturaBatchJobType('46');
 	static validateLiveMediaServers = new KalturaBatchJobType('38');
 	static virusScan = new KalturaBatchJobType('virusScan.VirusScan');
 	static widevineRepositorySync = new KalturaBatchJobType('widevine.WidevineRepositorySync');

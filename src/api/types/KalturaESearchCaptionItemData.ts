@@ -9,6 +9,7 @@ export interface KalturaESearchCaptionItemDataArgs  extends KalturaESearchItemDa
 	endsAt? : number;
 	language? : string;
 	captionAssetId? : string;
+	label? : string;
 }
 
 
@@ -19,6 +20,7 @@ export class KalturaESearchCaptionItemData extends KalturaESearchItemData {
 	endsAt : number;
 	language : string;
 	captionAssetId : string;
+	label : string;
 
     constructor(data? : KalturaESearchCaptionItemDataArgs)
     {
@@ -36,7 +38,8 @@ export class KalturaESearchCaptionItemData extends KalturaESearchItemData {
 				startsAt : { type : 'n' },
 				endsAt : { type : 'n' },
 				language : { type : 's' },
-				captionAssetId : { type : 's' }
+				captionAssetId : { type : 's' },
+				label : { type : 's' }
             }
         );
         return result;

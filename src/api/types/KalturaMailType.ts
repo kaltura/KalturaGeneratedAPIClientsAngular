@@ -52,6 +52,7 @@ export class KalturaMailType extends KalturaObjectBase {
 	static mailTypeSystemUserNewPassword = new KalturaMailType('112');
 	static mailTypeSystemUserResetPassword = new KalturaMailType('110');
 	static mailTypeSystemUserResetPasswordSuccess = new KalturaMailType('111');
+	static mailTypeUsersCsv = new KalturaMailType('133');
 	static mailTypeVideoAdded = new KalturaMailType('21');
 	static mailTypeVideoCreated = new KalturaMailType('31');
 	static mailTypeVideoIsReady = new KalturaMailType('62');
