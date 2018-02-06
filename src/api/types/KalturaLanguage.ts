@@ -566,6 +566,8 @@ export class KalturaLanguage extends KalturaObjectBase {
 	static yue = new KalturaLanguage('Cantonese');
 	static zai = new KalturaLanguage('Zapotec Isthmus');
 	static zh = new KalturaLanguage('Chinese');
+	static zhHans = new KalturaLanguage('Chinese (Simplified)');
+	static zhHant = new KalturaLanguage('Chinese (Traditional)');
 	static zu = new KalturaLanguage('Zulu');
 }
 KalturaTypesFactory.registerType('KalturaLanguage',KalturaLanguage);

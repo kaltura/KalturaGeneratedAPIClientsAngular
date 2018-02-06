@@ -8,7 +8,7 @@ export interface KalturaTransformMetadataJobDataArgs  extends KalturaJobDataArgs
     srcXsl? : KalturaFileContainer;
 	srcVersion? : number;
 	destVersion? : number;
-	destXsdPath? : string;
+	destXsd? : KalturaFileContainer;
 	metadataProfileId? : number;
 }
 
@@ -18,7 +18,7 @@ export class KalturaTransformMetadataJobData extends KalturaJobData {
     srcXsl : KalturaFileContainer;
 	srcVersion : number;
 	destVersion : number;
-	destXsdPath : string;
+	destXsd : KalturaFileContainer;
 	metadataProfileId : number;
 
     constructor(data? : KalturaTransformMetadataJobDataArgs)
@@ -36,7 +36,7 @@ export class KalturaTransformMetadataJobData extends KalturaJobData {
 				srcXsl : { type : 'o', subTypeConstructor : KalturaFileContainer, subType : 'KalturaFileContainer' },
 				srcVersion : { type : 'n' },
 				destVersion : { type : 'n' },
-				destXsdPath : { type : 's' },
+				destXsd : { type : 'o', subTypeConstructor : KalturaFileContainer, subType : 'KalturaFileContainer' },
 				metadataProfileId : { type : 'n' }
             }
         );

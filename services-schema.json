@@ -55335,10 +55335,10 @@
                     "default": "null"
                 },
                 {
-                    "name": "destXsdPath",
+                    "name": "destXsd",
                     "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
+                    "typeClassName": "KalturaFileContainer",
+                    "type": "Object",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -87621,6 +87621,14 @@
                     "value": "Chinese"
                 },
                 {
+                    "name": "ZH_HANS",
+                    "value": "Chinese (Simplified)"
+                },
+                {
+                    "name": "ZH_HANT",
+                    "value": "Chinese (Traditional)"
+                },
+                {
                     "name": "ZU",
                     "value": "Zulu"
                 }
@@ -88209,6 +88217,14 @@
                 {
                     "name": "ZH",
                     "value": "zh"
+                },
+                {
+                    "name": "ZH_HANS",
+                    "value": "zh_s"
+                },
+                {
+                    "name": "ZH_HANT",
+                    "value": "zh_t"
                 },
                 {
                     "name": "ZU",
