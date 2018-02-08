@@ -164,8 +164,6 @@ export class KalturaLanguageCode extends KalturaObjectBase {
 	static yi = new KalturaLanguageCode('yi');
 	static yo = new KalturaLanguageCode('yo');
 	static zh = new KalturaLanguageCode('zh');
-	static zhHans = new KalturaLanguageCode('zh_s');
-	static zhHant = new KalturaLanguageCode('zh_t');
 	static zu = new KalturaLanguageCode('zu');
 }
 KalturaTypesFactory.registerType('KalturaLanguageCode',KalturaLanguageCode);
