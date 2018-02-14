@@ -43,6 +43,7 @@ export class KalturaESearchEntryFieldName extends KalturaObjectBase {
 	static recordedEntryId = new KalturaESearchEntryFieldName('recorded_entry_id');
 	static redirectEntryId = new KalturaESearchEntryFieldName('redirect_entry_id');
 	static referenceId = new KalturaESearchEntryFieldName('reference_id');
+	static rootId = new KalturaESearchEntryFieldName('root_id');
 	static siteUrl = new KalturaESearchEntryFieldName('site_url');
 	static sourceType = new KalturaESearchEntryFieldName('source_type');
 	static startDate = new KalturaESearchEntryFieldName('start_date');
