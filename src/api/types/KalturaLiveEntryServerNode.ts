@@ -8,6 +8,7 @@ import { KalturaEntryServerNode, KalturaEntryServerNodeArgs } from './KalturaEnt
 export interface KalturaLiveEntryServerNodeArgs  extends KalturaEntryServerNodeArgs {
     streams? : KalturaLiveStreamParams[];
 	recordingInfo? : KalturaLiveEntryServerNodeRecordingInfo[];
+	isPlayableUser? : boolean;
 }
 
 
@@ -15,6 +16,7 @@ export class KalturaLiveEntryServerNode extends KalturaEntryServerNode {
 
     streams : KalturaLiveStreamParams[];
 	recordingInfo : KalturaLiveEntryServerNodeRecordingInfo[];
+	isPlayableUser : boolean;
 
     constructor(data? : KalturaLiveEntryServerNodeArgs)
     {
@@ -31,7 +33,8 @@ export class KalturaLiveEntryServerNode extends KalturaEntryServerNode {
             {
                 objectType : { type : 'c', default : 'KalturaLiveEntryServerNode' },
 				streams : { type : 'a', subTypeConstructor : KalturaLiveStreamParams, subType : 'KalturaLiveStreamParams' },
-				recordingInfo : { type : 'a', subTypeConstructor : KalturaLiveEntryServerNodeRecordingInfo, subType : 'KalturaLiveEntryServerNodeRecordingInfo' }
+				recordingInfo : { type : 'a', subTypeConstructor : KalturaLiveEntryServerNodeRecordingInfo, subType : 'KalturaLiveEntryServerNodeRecordingInfo' },
+				isPlayableUser : { type : 'b' }
             }
         );
         return result;
