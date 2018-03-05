@@ -6,7 +6,7 @@ import { KalturaConfigurableDistributionJobProviderData, KalturaConfigurableDist
 
 export interface KalturaFacebookDistributionJobProviderDataArgs  extends KalturaConfigurableDistributionJobProviderDataArgs {
     videoAssetFilePath? : string;
-	thumbAssetFilePath? : string;
+	thumbAssetId? : string;
 	captionsInfo? : KalturaFacebookCaptionDistributionInfo[];
 }
 
@@ -14,7 +14,7 @@ export interface KalturaFacebookDistributionJobProviderDataArgs  extends Kaltura
 export class KalturaFacebookDistributionJobProviderData extends KalturaConfigurableDistributionJobProviderData {
 
     videoAssetFilePath : string;
-	thumbAssetFilePath : string;
+	thumbAssetId : string;
 	captionsInfo : KalturaFacebookCaptionDistributionInfo[];
 
     constructor(data? : KalturaFacebookDistributionJobProviderDataArgs)
@@ -31,7 +31,7 @@ export class KalturaFacebookDistributionJobProviderData extends KalturaConfigura
             {
                 objectType : { type : 'c', default : 'KalturaFacebookDistributionJobProviderData' },
 				videoAssetFilePath : { type : 's' },
-				thumbAssetFilePath : { type : 's' },
+				thumbAssetId : { type : 's' },
 				captionsInfo : { type : 'a', subTypeConstructor : KalturaFacebookCaptionDistributionInfo, subType : 'KalturaFacebookCaptionDistributionInfo' }
             }
         );

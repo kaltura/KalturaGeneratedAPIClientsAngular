@@ -11,6 +11,7 @@ export interface KalturaQuestionCuePointArgs  extends KalturaCuePointArgs {
 	question? : string;
 	explanation? : string;
 	questionType? : KalturaQuestionType;
+	presentationOrder? : number;
 }
 
 
@@ -21,6 +22,7 @@ export class KalturaQuestionCuePoint extends KalturaCuePoint {
 	question : string;
 	explanation : string;
 	questionType : KalturaQuestionType;
+	presentationOrder : number;
 
     constructor(data? : KalturaQuestionCuePointArgs)
     {
@@ -39,7 +41,8 @@ export class KalturaQuestionCuePoint extends KalturaCuePoint {
 				hint : { type : 's' },
 				question : { type : 's' },
 				explanation : { type : 's' },
-				questionType : { type : 'en', subTypeConstructor : KalturaQuestionType, subType : 'KalturaQuestionType' }
+				questionType : { type : 'en', subTypeConstructor : KalturaQuestionType, subType : 'KalturaQuestionType' },
+				presentationOrder : { type : 'n' }
             }
         );
         return result;
