@@ -10,6 +10,7 @@ export interface KalturaDistributionFieldConfigArgs  extends KalturaObjectBaseAr
 	userFriendlyFieldName? : string;
 	entryMrssXslt? : string;
 	isRequired? : KalturaDistributionFieldRequiredStatus;
+	type? : string;
 	updateOnChange? : boolean;
 	updateParams? : KalturaString[];
 	triggerDeleteOnError? : boolean;
@@ -22,6 +23,7 @@ export class KalturaDistributionFieldConfig extends KalturaObjectBase {
 	userFriendlyFieldName : string;
 	entryMrssXslt : string;
 	isRequired : KalturaDistributionFieldRequiredStatus;
+	type : string;
 	updateOnChange : boolean;
 	updateParams : KalturaString[];
 	readonly isDefault : boolean;
@@ -44,6 +46,7 @@ export class KalturaDistributionFieldConfig extends KalturaObjectBase {
 				userFriendlyFieldName : { type : 's' },
 				entryMrssXslt : { type : 's' },
 				isRequired : { type : 'en', subTypeConstructor : KalturaDistributionFieldRequiredStatus, subType : 'KalturaDistributionFieldRequiredStatus' },
+				type : { type : 's' },
 				updateOnChange : { type : 'b' },
 				updateParams : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
 				isDefault : { type : 'b', readOnly : true },
