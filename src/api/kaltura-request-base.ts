@@ -1,42 +1,31 @@
-
-import { KalturaObjectMetadata } from './kaltura-object-base';
-import { KalturaBaseResponseProfile } from './types/KalturaBaseResponseProfile';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from './kaltura-object-base';
+import { KalturaRequestOptions, KalturaRequestOptionsArgs } from './kaltura-request-options';
+
 
 export interface KalturaRequestBaseArgs  extends KalturaObjectBaseArgs {
-    acceptedTypes? : {new(...args) : KalturaObjectBase}[];
-	partnerId? : number;
-	ks? : string;
-	responseProfile? : KalturaBaseResponseProfile;
 }
 
 
 export class KalturaRequestBase extends KalturaObjectBase {
 
-    acceptedTypes : {new(...args) : KalturaObjectBase}[];
-	partnerId : number;
-	ks : string;
-	responseProfile : KalturaBaseResponseProfile;
+    private _networkTag: string;
 
-    constructor(data : KalturaRequestBaseArgs)
-    {
+    constructor(data: KalturaRequestBaseArgs) {
         super(data);
-        if (typeof this.acceptedTypes === 'undefined') this.acceptedTypes = [];
     }
 
-    protected _getMetadata() : KalturaObjectMetadata
-    {
-        const result = super._getMetadata();
-        Object.assign(
-            result.properties,
-            {
-                apiVersion : { type : 'c', default : '3.3.0' },
-				partnerId : { type : 'n' },
-				ks : { type : 's' },
-				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' }
-            }
-        );
-        return result;
+    setNetworkTag(tag: string): this {
+        if (!tag || tag.length > 10) {
+            console.warn(`cannot set network tag longer than 10 characters. ignoring tag '${tag}`);
+        } else {
+            this._networkTag = tag;
+        }
+
+        return this;
+    }
+
+    getNetworkTag(): string {
+        return this._networkTag;
     }
 }
 

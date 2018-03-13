@@ -1,32 +1,13 @@
 
 
-import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaTypesFactory } from '../kaltura-types-factory';
-
-export class KalturaESearchEntryOrderByFieldName extends KalturaObjectBase {
-    private _value : string;
-    constructor( value?:string | number){
-        super();
-        this._value = value + '';
-    }
-
-    equals(obj : this) : boolean
-    {
-        return obj && obj.toString() === this._value;
-    }
-
-    toString(){
-        return this._value;
-    }
-
-    static createdAt = new KalturaESearchEntryOrderByFieldName('created_at');
-	static endDate = new KalturaESearchEntryOrderByFieldName('end_date');
-	static lastPlayedAt = new KalturaESearchEntryOrderByFieldName('last_played_at');
-	static _name = new KalturaESearchEntryOrderByFieldName('name');
-	static plays = new KalturaESearchEntryOrderByFieldName('plays');
-	static startDate = new KalturaESearchEntryOrderByFieldName('start_date');
-	static updatedAt = new KalturaESearchEntryOrderByFieldName('updated_at');
-	static views = new KalturaESearchEntryOrderByFieldName('views');
-	static votes = new KalturaESearchEntryOrderByFieldName('votes');
+export enum KalturaESearchEntryOrderByFieldName {
+    createdAt = 'created_at',
+	endDate = 'end_date',
+	lastPlayedAt = 'last_played_at',
+	_name = 'name',
+	plays = 'plays',
+	startDate = 'start_date',
+	updatedAt = 'updated_at',
+	views = 'views',
+	votes = 'votes'
 }
-KalturaTypesFactory.registerType('KalturaESearchEntryOrderByFieldName',KalturaESearchEntryOrderByFieldName);

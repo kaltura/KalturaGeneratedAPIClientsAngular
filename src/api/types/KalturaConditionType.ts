@@ -1,44 +1,25 @@
 
 
-import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaTypesFactory } from '../kaltura-types-factory';
-
-export class KalturaConditionType extends KalturaObjectBase {
-    private _value : string;
-    constructor( value?:string | number){
-        super();
-        this._value = value + '';
-    }
-
-    equals(obj : this) : boolean
-    {
-        return obj && obj.toString() === this._value;
-    }
-
-    toString(){
-        return this._value;
-    }
-
-    static activeEdgeValidate = new KalturaConditionType('14');
-	static anonymousIp = new KalturaConditionType('15');
-	static assetPropertiesCompare = new KalturaConditionType('8');
-	static assetType = new KalturaConditionType('16');
-	static authenticated = new KalturaConditionType('1');
-	static country = new KalturaConditionType('2');
-	static deliveryProfile = new KalturaConditionType('13');
-	static eventNotificationField = new KalturaConditionType('eventNotification.BooleanField');
-	static eventNotificationObjectChanged = new KalturaConditionType('eventNotification.ObjectChanged');
-	static fieldCompare = new KalturaConditionType('7');
-	static fieldMatch = new KalturaConditionType('6');
-	static geoDistance = new KalturaConditionType('10');
-	static hash = new KalturaConditionType('12');
-	static ipAddress = new KalturaConditionType('3');
-	static metadataFieldChanged = new KalturaConditionType('metadata.FieldChanged');
-	static metadataFieldCompare = new KalturaConditionType('metadata.FieldCompare');
-	static metadataFieldMatch = new KalturaConditionType('metadata.FieldMatch');
-	static orOperator = new KalturaConditionType('11');
-	static site = new KalturaConditionType('4');
-	static userAgent = new KalturaConditionType('5');
-	static userRole = new KalturaConditionType('9');
+export enum KalturaConditionType {
+    activeEdgeValidate = '14',
+	anonymousIp = '15',
+	assetPropertiesCompare = '8',
+	assetType = '16',
+	authenticated = '1',
+	country = '2',
+	deliveryProfile = '13',
+	eventNotificationField = 'eventNotification.BooleanField',
+	eventNotificationObjectChanged = 'eventNotification.ObjectChanged',
+	fieldCompare = '7',
+	fieldMatch = '6',
+	geoDistance = '10',
+	hash = '12',
+	ipAddress = '3',
+	metadataFieldChanged = 'metadata.FieldChanged',
+	metadataFieldCompare = 'metadata.FieldCompare',
+	metadataFieldMatch = 'metadata.FieldMatch',
+	orOperator = '11',
+	site = '4',
+	userAgent = '5',
+	userRole = '9'
 }
-KalturaTypesFactory.registerType('KalturaConditionType',KalturaConditionType);

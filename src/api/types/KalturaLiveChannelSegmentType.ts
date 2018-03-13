@@ -1,24 +1,5 @@
 
 
-import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaTypesFactory } from '../kaltura-types-factory';
-
-export class KalturaLiveChannelSegmentType extends KalturaObjectBase {
-    private _value : string;
-    constructor( value?:string | number){
-        super();
-        this._value = value + '';
-    }
-
-    equals(obj : this) : boolean
-    {
-        return obj && obj.toString() === this._value;
-    }
-
-    toString(){
-        return this._value;
-    }
-
-    static videoAndAudio = new KalturaLiveChannelSegmentType('1');
+export enum KalturaLiveChannelSegmentType {
+    videoAndAudio = '1'
 }
-KalturaTypesFactory.registerType('KalturaLiveChannelSegmentType',KalturaLiveChannelSegmentType);

@@ -1,25 +1,6 @@
 
 
-import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaTypesFactory } from '../kaltura-types-factory';
-
-export class KalturaUploadTokenOrderBy extends KalturaObjectBase {
-    private _value : string;
-    constructor( value?:string | number){
-        super();
-        this._value = value + '';
-    }
-
-    equals(obj : this) : boolean
-    {
-        return obj && obj.toString() === this._value;
-    }
-
-    toString(){
-        return this._value;
-    }
-
-    static createdAtAsc = new KalturaUploadTokenOrderBy('+createdAt');
-	static createdAtDesc = new KalturaUploadTokenOrderBy('-createdAt');
+export enum KalturaUploadTokenOrderBy {
+    createdAtAsc = '+createdAt',
+	createdAtDesc = '-createdAt'
 }
-KalturaTypesFactory.registerType('KalturaUploadTokenOrderBy',KalturaUploadTokenOrderBy);

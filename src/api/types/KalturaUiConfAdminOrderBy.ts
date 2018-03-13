@@ -1,27 +1,8 @@
 
 
-import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaTypesFactory } from '../kaltura-types-factory';
-
-export class KalturaUiConfAdminOrderBy extends KalturaObjectBase {
-    private _value : string;
-    constructor( value?:string | number){
-        super();
-        this._value = value + '';
-    }
-
-    equals(obj : this) : boolean
-    {
-        return obj && obj.toString() === this._value;
-    }
-
-    toString(){
-        return this._value;
-    }
-
-    static createdAtAsc = new KalturaUiConfAdminOrderBy('+createdAt');
-	static createdAtDesc = new KalturaUiConfAdminOrderBy('-createdAt');
-	static updatedAtAsc = new KalturaUiConfAdminOrderBy('+updatedAt');
-	static updatedAtDesc = new KalturaUiConfAdminOrderBy('-updatedAt');
+export enum KalturaUiConfAdminOrderBy {
+    createdAtAsc = '+createdAt',
+	createdAtDesc = '-createdAt',
+	updatedAtAsc = '+updatedAt',
+	updatedAtDesc = '-updatedAt'
 }
-KalturaTypesFactory.registerType('KalturaUiConfAdminOrderBy',KalturaUiConfAdminOrderBy);

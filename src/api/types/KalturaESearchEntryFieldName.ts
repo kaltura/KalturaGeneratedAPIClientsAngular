@@ -1,56 +1,37 @@
 
 
-import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaTypesFactory } from '../kaltura-types-factory';
-
-export class KalturaESearchEntryFieldName extends KalturaObjectBase {
-    private _value : string;
-    constructor( value?:string | number){
-        super();
-        this._value = value + '';
-    }
-
-    equals(obj : this) : boolean
-    {
-        return obj && obj.toString() === this._value;
-    }
-
-    toString(){
-        return this._value;
-    }
-
-    static accessControlId = new KalturaESearchEntryFieldName('access_control_id');
-	static adminTags = new KalturaESearchEntryFieldName('admin_tags');
-	static conversionProfileId = new KalturaESearchEntryFieldName('conversion_profile_id');
-	static createdAt = new KalturaESearchEntryFieldName('created_at');
-	static creatorId = new KalturaESearchEntryFieldName('creator_kuser_id');
-	static credit = new KalturaESearchEntryFieldName('credit');
-	static description = new KalturaESearchEntryFieldName('description');
-	static endDate = new KalturaESearchEntryFieldName('end_date');
-	static entitledUserEdit = new KalturaESearchEntryFieldName('entitled_kusers_edit');
-	static entitledUserPublish = new KalturaESearchEntryFieldName('entitled_kusers_publish');
-	static entryType = new KalturaESearchEntryFieldName('entry_type');
-	static externalSourceType = new KalturaESearchEntryFieldName('external_source_type');
-	static id = new KalturaESearchEntryFieldName('id');
-	static isLive = new KalturaESearchEntryFieldName('is_live');
-	static isQuiz = new KalturaESearchEntryFieldName('is_quiz');
-	static lengthInMsecs = new KalturaESearchEntryFieldName('length_in_msecs');
-	static mediaType = new KalturaESearchEntryFieldName('media_type');
-	static moderationStatus = new KalturaESearchEntryFieldName('moderation_status');
-	static _name = new KalturaESearchEntryFieldName('name');
-	static parentEntryId = new KalturaESearchEntryFieldName('parent_id');
-	static pushPublish = new KalturaESearchEntryFieldName('push_publish');
-	static recordedEntryId = new KalturaESearchEntryFieldName('recorded_entry_id');
-	static redirectEntryId = new KalturaESearchEntryFieldName('redirect_entry_id');
-	static referenceId = new KalturaESearchEntryFieldName('reference_id');
-	static rootId = new KalturaESearchEntryFieldName('root_id');
-	static siteUrl = new KalturaESearchEntryFieldName('site_url');
-	static sourceType = new KalturaESearchEntryFieldName('source_type');
-	static startDate = new KalturaESearchEntryFieldName('start_date');
-	static tags = new KalturaESearchEntryFieldName('tags');
-	static templateEntryId = new KalturaESearchEntryFieldName('template_entry_id');
-	static updatedAt = new KalturaESearchEntryFieldName('updated_at');
-	static userId = new KalturaESearchEntryFieldName('kuser_id');
-	static userNames = new KalturaESearchEntryFieldName('user_names');
+export enum KalturaESearchEntryFieldName {
+    accessControlId = 'access_control_id',
+	adminTags = 'admin_tags',
+	conversionProfileId = 'conversion_profile_id',
+	createdAt = 'created_at',
+	creatorId = 'creator_kuser_id',
+	credit = 'credit',
+	description = 'description',
+	endDate = 'end_date',
+	entitledUserEdit = 'entitled_kusers_edit',
+	entitledUserPublish = 'entitled_kusers_publish',
+	entryType = 'entry_type',
+	externalSourceType = 'external_source_type',
+	id = 'id',
+	isLive = 'is_live',
+	isQuiz = 'is_quiz',
+	lengthInMsecs = 'length_in_msecs',
+	mediaType = 'media_type',
+	moderationStatus = 'moderation_status',
+	_name = 'name',
+	parentEntryId = 'parent_id',
+	pushPublish = 'push_publish',
+	recordedEntryId = 'recorded_entry_id',
+	redirectEntryId = 'redirect_entry_id',
+	referenceId = 'reference_id',
+	rootId = 'root_id',
+	siteUrl = 'site_url',
+	sourceType = 'source_type',
+	startDate = 'start_date',
+	tags = 'tags',
+	templateEntryId = 'template_entry_id',
+	updatedAt = 'updated_at',
+	userId = 'kuser_id',
+	userNames = 'user_names'
 }
-KalturaTypesFactory.registerType('KalturaESearchEntryFieldName',KalturaESearchEntryFieldName);

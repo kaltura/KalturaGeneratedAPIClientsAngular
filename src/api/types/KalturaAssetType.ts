@@ -1,35 +1,16 @@
 
 
-import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaTypesFactory } from '../kaltura-types-factory';
-
-export class KalturaAssetType extends KalturaObjectBase {
-    private _value : string;
-    constructor( value?:string | number){
-        super();
-        this._value = value + '';
-    }
-
-    equals(obj : this) : boolean
-    {
-        return obj && obj.toString() === this._value;
-    }
-
-    toString(){
-        return this._value;
-    }
-
-    static attachment = new KalturaAssetType('attachment.Attachment');
-	static caption = new KalturaAssetType('caption.Caption');
-	static document = new KalturaAssetType('document.Document');
-	static flavor = new KalturaAssetType('1');
-	static image = new KalturaAssetType('document.Image');
-	static live = new KalturaAssetType('3');
-	static pdf = new KalturaAssetType('document.PDF');
-	static swf = new KalturaAssetType('document.SWF');
-	static thumbnail = new KalturaAssetType('2');
-	static timedThumbAsset = new KalturaAssetType('thumbCuePoint.timedThumb');
-	static transcript = new KalturaAssetType('transcript.Transcript');
-	static widevineFlavor = new KalturaAssetType('widevine.WidevineFlavor');
+export enum KalturaAssetType {
+    attachment = 'attachment.Attachment',
+	caption = 'caption.Caption',
+	document = 'document.Document',
+	flavor = '1',
+	image = 'document.Image',
+	live = '3',
+	pdf = 'document.PDF',
+	swf = 'document.SWF',
+	thumbnail = '2',
+	timedThumbAsset = 'thumbCuePoint.timedThumb',
+	transcript = 'transcript.Transcript',
+	widevineFlavor = 'widevine.WidevineFlavor'
 }
-KalturaTypesFactory.registerType('KalturaAssetType',KalturaAssetType);
