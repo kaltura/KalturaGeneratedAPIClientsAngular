@@ -1,5 +1,6 @@
 
 
 export enum KalturaFileAssetObjectType {
-    uiConf = '2'
+    entry = '3',
+	uiConf = '2'
 }

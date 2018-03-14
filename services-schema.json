@@ -84344,6 +84344,10 @@
             "type": "string",
             "values": [
                 {
+                    "name": "ENTRY",
+                    "value": "3"
+                },
+                {
                     "name": "UI_CONF",
                     "value": "2"
                 }
