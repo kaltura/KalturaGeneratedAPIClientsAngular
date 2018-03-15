@@ -16,6 +16,7 @@ export interface KalturaEntryServerNodeBaseFilterArgs  extends KalturaFilterArgs
 	statusEqual? : KalturaEntryServerNodeStatus;
 	statusIn? : string;
 	serverTypeEqual? : KalturaEntryServerNodeType;
+	serverTypeIn? : string;
 }
 
 
@@ -31,6 +32,7 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaFilter {
 	statusEqual : KalturaEntryServerNodeStatus;
 	statusIn : string;
 	serverTypeEqual : KalturaEntryServerNodeType;
+	serverTypeIn : string;
 
     constructor(data? : KalturaEntryServerNodeBaseFilterArgs)
     {
@@ -53,7 +55,8 @@ export class KalturaEntryServerNodeBaseFilter extends KalturaFilter {
 				updatedAtLessThanOrEqual : { type : 'd' },
 				statusEqual : { type : 'en', subTypeConstructor : KalturaEntryServerNodeStatus, subType : 'KalturaEntryServerNodeStatus' },
 				statusIn : { type : 's' },
-				serverTypeEqual : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' }
+				serverTypeEqual : { type : 'es', subTypeConstructor : KalturaEntryServerNodeType, subType : 'KalturaEntryServerNodeType' },
+				serverTypeIn : { type : 's' }
             }
         );
         return result;
