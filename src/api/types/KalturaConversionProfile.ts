@@ -7,6 +7,7 @@ import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaCropDimensions } from './KalturaCropDimensions';
 import { KalturaMediaParserType } from './KalturaMediaParserType';
 import { KalturaEntryReplacementOptions } from './KalturaEntryReplacementOptions';
+import { KalturaLanguage } from './KalturaLanguage';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaConversionProfileArgs  extends KalturaObjectBaseArgs {
@@ -31,6 +32,7 @@ export interface KalturaConversionProfileArgs  extends KalturaObjectBaseArgs {
 	detectGOP? : number;
 	mediaInfoXslTransformation? : string;
 	defaultReplacementOptions? : KalturaEntryReplacementOptions;
+	defaultAudioLang? : KalturaLanguage;
 }
 
 
@@ -61,6 +63,7 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 	detectGOP : number;
 	mediaInfoXslTransformation : string;
 	defaultReplacementOptions : KalturaEntryReplacementOptions;
+	defaultAudioLang : KalturaLanguage;
 
     constructor(data? : KalturaConversionProfileArgs)
     {
@@ -98,7 +101,8 @@ export class KalturaConversionProfile extends KalturaObjectBase {
 				conditionalProfiles : { type : 's' },
 				detectGOP : { type : 'n' },
 				mediaInfoXslTransformation : { type : 's' },
-				defaultReplacementOptions : { type : 'o', subTypeConstructor : KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions' }
+				defaultReplacementOptions : { type : 'o', subTypeConstructor : KalturaEntryReplacementOptions, subType : 'KalturaEntryReplacementOptions' },
+				defaultAudioLang : { type : 'es', subTypeConstructor : KalturaLanguage, subType : 'KalturaLanguage' }
             }
         );
         return result;

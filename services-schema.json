@@ -21406,6 +21406,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "defaultAudioLang",
+                    "description": "",
+                    "typeClassName": "KalturaLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -82855,6 +82866,18 @@
                 {
                     "name": "CREATED_AT",
                     "value": "created_at"
+                },
+                {
+                    "name": "ENTRIES_COUNT",
+                    "value": "entries_count"
+                },
+                {
+                    "name": "MEMBERS_COUNT",
+                    "value": "members_count"
+                },
+                {
+                    "name": "NAME",
+                    "value": "name"
                 },
                 {
                     "name": "UPDATED_AT",
