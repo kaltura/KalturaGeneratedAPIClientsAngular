@@ -1,10 +1,13 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaDryRunFileType } from './KalturaDryRunFileType';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaScheduledTaskJobDataArgs  extends KalturaJobDataArgs {
     maxResults? : number;
+	totalCount? : number;
+	fileFormat? : KalturaDryRunFileType;
 	resultsFilePath? : string;
 	referenceTime? : Date;
 }
@@ -13,6 +16,8 @@ export interface KalturaScheduledTaskJobDataArgs  extends KalturaJobDataArgs {
 export class KalturaScheduledTaskJobData extends KalturaJobData {
 
     maxResults : number;
+	totalCount : number;
+	fileFormat : KalturaDryRunFileType;
 	resultsFilePath : string;
 	referenceTime : Date;
 
@@ -29,6 +34,8 @@ export class KalturaScheduledTaskJobData extends KalturaJobData {
             {
                 objectType : { type : 'c', default : 'KalturaScheduledTaskJobData' },
 				maxResults : { type : 'n' },
+				totalCount : { type : 'n' },
+				fileFormat : { type : 'en', subTypeConstructor : KalturaDryRunFileType, subType : 'KalturaDryRunFileType' },
 				resultsFilePath : { type : 's' },
 				referenceTime : { type : 'd' }
             }

@@ -14491,6 +14491,22 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "serveDryRunResults",
+                    "resultClassName": null,
+                    "resultType": "File",
+                    "params": [
+                        {
+                            "name": "requestId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Serves dry run results by its request id",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "update",
                     "resultClassName": "KalturaScheduledTaskProfile",
                     "resultType": "Object",
@@ -53733,6 +53749,28 @@
                     "default": "null"
                 },
                 {
+                    "name": "totalCount",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fileFormat",
+                    "description": "",
+                    "typeClassName": "KalturaDryRunFileType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "resultsFilePath",
                     "description": "",
                     "typeClassName": "string",
@@ -75680,6 +75718,20 @@
                 {
                     "name": "ERROR",
                     "value": "3"
+                }
+            ]
+        },
+        {
+            "name": "KalturaDryRunFileType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "CSV",
+                    "value": "2"
+                },
+                {
+                    "name": "LIST_RESPONSE",
+                    "value": "1"
                 }
             ]
         },
