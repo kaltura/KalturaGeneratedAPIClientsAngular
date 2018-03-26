@@ -69998,7 +69998,7 @@
             "base": "KalturaEntryServerNodeFilter",
             "plugin": "",
             "description": "",
-            "abstract": true,
+            "abstract": false,
             "deprecated": false,
             "properties": []
         },
