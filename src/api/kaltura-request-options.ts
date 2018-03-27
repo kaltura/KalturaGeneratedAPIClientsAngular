@@ -1,13 +1,13 @@
 
 import { KalturaObjectMetadata } from './kaltura-object-base';
-import { InjectionToken } from '@angular/core';
 import { KalturaBaseResponseProfile } from './types/KalturaBaseResponseProfile';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from './kaltura-object-base';
+import { InjectionToken } from '@angular/core';
 
 export const KALTURA_CLIENT_DEFAULT_REQUEST_OPTIONS: InjectionToken<KalturaRequestOptionsArgs> = new InjectionToken('kaltura client default request options');
 
 export interface KalturaRequestOptionsArgs  extends KalturaObjectBaseArgs {
-    acceptedTypes? : {new(...args) : KalturaObjectBase}[];
+    acceptedTypes? : {new(...args: any[]) : KalturaObjectBase}[];
 	partnerId? : number;
 	ks? : string;
 	responseProfile? : KalturaBaseResponseProfile;
@@ -16,7 +16,7 @@ export interface KalturaRequestOptionsArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaRequestOptions extends KalturaObjectBase {
 
-    acceptedTypes : {new(...args) : KalturaObjectBase}[];
+    acceptedTypes : {new(...args: any[]) : KalturaObjectBase}[];
 	partnerId : number;
 	ks : string;
 	responseProfile : KalturaBaseResponseProfile;
@@ -42,4 +42,3 @@ export class KalturaRequestOptions extends KalturaObjectBase {
         return result;
     }
 }
-
