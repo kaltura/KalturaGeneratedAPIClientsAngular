@@ -8787,8 +8787,8 @@
                             "name": "filter",
                             "typeClassName": "KalturaUserFilter",
                             "type": "Object",
-                            "optional": false,
-                            "default": ""
+                            "optional": true,
+                            "default": "null"
                         },
                         {
                             "name": "metadataProfileId",
@@ -24601,27 +24601,6 @@
             ]
         },
         {
-            "name": "KalturaObject",
-            "base": "",
-            "plugin": "",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "relatedObjects",
-                    "description": "",
-                    "typeClassName": "KalturaListResponse",
-                    "type": "Map",
-                    "writeOnly": false,
-                    "readOnly": true,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaESearchResult",
             "base": "",
             "plugin": "elasticSearch",
@@ -24629,17 +24608,6 @@
             "abstract": true,
             "deprecated": false,
             "properties": [
-                {
-                    "name": "object",
-                    "description": "",
-                    "typeClassName": "KalturaObjectBase",
-                    "type": "Object",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
                 {
                     "name": "highlight",
                     "description": "",
@@ -28609,6 +28577,27 @@
                     "description": "Last update date as Unix timestamp (In seconds)",
                     "typeClassName": "",
                     "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaObject",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "relatedObjects",
+                    "description": "",
+                    "typeClassName": "KalturaListResponse",
+                    "type": "Map",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -46613,7 +46602,19 @@
             "description": "",
             "abstract": false,
             "deprecated": false,
-            "properties": []
+            "properties": [
+                {
+                    "name": "object",
+                    "description": "",
+                    "typeClassName": "KalturaCategory",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaESearchCuePointItemData",
@@ -46849,7 +46850,19 @@
             "description": "",
             "abstract": false,
             "deprecated": false,
-            "properties": []
+            "properties": [
+                {
+                    "name": "object",
+                    "description": "",
+                    "typeClassName": "KalturaBaseEntry",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaESearchMetadataItemData",
@@ -47029,7 +47042,19 @@
             "description": "",
             "abstract": false,
             "deprecated": false,
-            "properties": []
+            "properties": [
+                {
+                    "name": "object",
+                    "description": "",
+                    "typeClassName": "KalturaUser",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaCategoryUserBaseFilter",
@@ -82844,6 +82869,10 @@
                 {
                     "name": "FULL_NAME",
                     "value": "full_name"
+                },
+                {
+                    "name": "ID",
+                    "value": "id"
                 },
                 {
                     "name": "INHERITANCE_TYPE",
