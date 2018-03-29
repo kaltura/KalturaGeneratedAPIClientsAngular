@@ -7,7 +7,7 @@ import { KalturaCsvAdditionalFieldInfo } from './KalturaCsvAdditionalFieldInfo';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface UserExportToCsvActionArgs  extends KalturaRequestArgs {
-    filter? : KalturaUserFilter;
+    filter : KalturaUserFilter;
 	metadataProfileId? : number;
 	additionalFields? : KalturaCsvAdditionalFieldInfo[];
 }
@@ -28,7 +28,7 @@ export class UserExportToCsvAction extends KalturaRequest<string> {
 	metadataProfileId : number;
 	additionalFields : KalturaCsvAdditionalFieldInfo[];
 
-    constructor(data? : UserExportToCsvActionArgs)
+    constructor(data : UserExportToCsvActionArgs)
     {
         super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
         if (typeof this.additionalFields === 'undefined') this.additionalFields = [];
