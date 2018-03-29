@@ -1,7 +1,8 @@
 
 
 export enum KalturaDistributionProviderType {
-    avn = 'avnDistribution.AVN',
+    attUverse = 'attUverseDistribution.ATT_UVERSE',
+	avn = 'avnDistribution.AVN',
 	comcastMrss = 'comcastMrssDistribution.COMCAST_MRSS',
 	crossKaltura = 'crossKalturaDistribution.CROSS_KALTURA',
 	dailymotion = 'dailymotionDistribution.DAILYMOTION',
@@ -16,9 +17,19 @@ export enum KalturaDistributionProviderType {
 	idetic = 'ideticDistribution.IDETIC',
 	metroPcs = 'metroPcsDistribution.METRO_PCS',
 	msn = 'msnDistribution.MSN',
+	ndn = 'ndnDistribution.NDN',
+	podcast = 'podcastDistribution.PODCAST',
+	pushToNews = 'pushToNewsDistribution.PUSH_TO_NEWS',
 	quickplay = 'quickPlayDistribution.QUICKPLAY',
+	synacorHbo = 'synacorHboDistribution.SYNACOR_HBO',
 	syndication = '2',
+	timeWarner = 'timeWarnerDistribution.TIME_WARNER',
+	tvcom = 'tvComDistribution.TVCOM',
+	tvinci = 'tvinciDistribution.TVINCI',
 	unicorn = 'unicornDistribution.UNICORN',
+	uverse = 'uverseDistribution.UVERSE',
+	uverseClickToOrder = 'uverseClickToOrderDistribution.UVERSE_CLICK_TO_ORDER',
+	verizonVcast = 'verizonVcastDistribution.VERIZON_VCAST',
 	yahoo = 'yahooDistribution.YAHOO',
 	youtube = 'youTubeDistribution.YOUTUBE',
 	youtubeApi = 'youtubeApiDistribution.YOUTUBE_API'
