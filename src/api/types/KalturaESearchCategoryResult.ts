@@ -1,16 +1,17 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaCategory } from './KalturaCategory';
 import { KalturaESearchResult, KalturaESearchResultArgs } from './KalturaESearchResult';
 
 export interface KalturaESearchCategoryResultArgs  extends KalturaESearchResultArgs {
-    
+    object? : KalturaCategory;
 }
 
 
 export class KalturaESearchCategoryResult extends KalturaESearchResult {
 
-    
+    object : KalturaCategory;
 
     constructor(data? : KalturaESearchCategoryResultArgs)
     {
@@ -23,7 +24,8 @@ export class KalturaESearchCategoryResult extends KalturaESearchResult {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaESearchCategoryResult' }
+                objectType : { type : 'c', default : 'KalturaESearchCategoryResult' },
+				object : { type : 'o', subTypeConstructor : KalturaCategory, subType : 'KalturaCategory' }
             }
         );
         return result;

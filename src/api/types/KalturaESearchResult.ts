@@ -6,16 +6,14 @@ import { KalturaESearchItemDataResult } from './KalturaESearchItemDataResult';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaESearchResultArgs  extends KalturaObjectBaseArgs {
-    object? : KalturaObjectBase;
-	highlight? : KalturaESearchHighlight[];
+    highlight? : KalturaESearchHighlight[];
 	itemsData? : KalturaESearchItemDataResult[];
 }
 
 
 export class KalturaESearchResult extends KalturaObjectBase {
 
-    object : KalturaObjectBase;
-	highlight : KalturaESearchHighlight[];
+    highlight : KalturaESearchHighlight[];
 	itemsData : KalturaESearchItemDataResult[];
 
     constructor(data? : KalturaESearchResultArgs)
@@ -32,7 +30,6 @@ export class KalturaESearchResult extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaESearchResult' },
-				object : { type : 'o', subTypeConstructor : KalturaObjectBase, subType : 'KalturaObjectBase' },
 				highlight : { type : 'a', subTypeConstructor : KalturaESearchHighlight, subType : 'KalturaESearchHighlight' },
 				itemsData : { type : 'a', subTypeConstructor : KalturaESearchItemDataResult, subType : 'KalturaESearchItemDataResult' }
             }

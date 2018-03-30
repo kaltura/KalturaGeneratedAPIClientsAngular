@@ -52,6 +52,7 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 	explicitLive : KalturaNullableBoolean;
 	viewMode : KalturaViewMode;
 	recordingStatus : KalturaRecordingStatus;
+	readonly lastBroadcastEndTime : number;
 
     constructor(data? : KalturaLiveEntryArgs)
     {
@@ -84,7 +85,8 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 				segmentDuration : { type : 'n' },
 				explicitLive : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				viewMode : { type : 'en', subTypeConstructor : KalturaViewMode, subType : 'KalturaViewMode' },
-				recordingStatus : { type : 'en', subTypeConstructor : KalturaRecordingStatus, subType : 'KalturaRecordingStatus' }
+				recordingStatus : { type : 'en', subTypeConstructor : KalturaRecordingStatus, subType : 'KalturaRecordingStatus' },
+				lastBroadcastEndTime : { type : 'n', readOnly : true }
             }
         );
         return result;

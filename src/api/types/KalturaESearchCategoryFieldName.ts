@@ -11,6 +11,7 @@ export enum KalturaESearchCategoryFieldName {
 	entriesCount = 'entries_count',
 	fullIds = 'full_ids',
 	fullName = 'full_name',
+	id = 'id',
 	inheritanceType = 'inheritance_type',
 	inheritedParentId = 'inherited_parent_id',
 	membersCount = 'members_count',
