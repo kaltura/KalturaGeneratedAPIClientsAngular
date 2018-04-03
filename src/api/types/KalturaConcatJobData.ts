@@ -11,6 +11,7 @@ export interface KalturaConcatJobDataArgs  extends KalturaJobDataArgs {
 	offset? : number;
 	duration? : number;
 	concatenatedDuration? : number;
+	shouldSort? : boolean;
 }
 
 
@@ -22,6 +23,7 @@ export class KalturaConcatJobData extends KalturaJobData {
 	offset : number;
 	duration : number;
 	concatenatedDuration : number;
+	shouldSort : boolean;
 
     constructor(data? : KalturaConcatJobDataArgs)
     {
@@ -41,7 +43,8 @@ export class KalturaConcatJobData extends KalturaJobData {
 				flavorAssetId : { type : 's' },
 				offset : { type : 'n' },
 				duration : { type : 'n' },
-				concatenatedDuration : { type : 'n' }
+				concatenatedDuration : { type : 'n' },
+				shouldSort : { type : 'b' }
             }
         );
         return result;

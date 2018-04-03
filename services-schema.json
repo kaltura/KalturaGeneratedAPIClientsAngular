@@ -9453,6 +9453,36 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "updateCuePointsTimes",
+                    "resultClassName": "KalturaCuePoint",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "startTime",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "endTime",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "updateStatus",
                     "resultClassName": null,
                     "resultType": "Void",
@@ -11433,6 +11463,36 @@
                         }
                     ],
                     "description": "Update cue point by id",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateCuePointsTimes",
+                    "resultClassName": "KalturaCuePoint",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "startTime",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "endTime",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -43191,6 +43251,60 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "globalOffsetInDestination",
+                    "description": "global Offset In Destination in milliseconds",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaClipConcatJobData",
+            "base": "KalturaJobData",
+            "plugin": "",
+            "description": "Created by IntelliJ IDEA.\n User: roie.beck\n Date: 3/12/2018\n Time: 11:20 AM\n /",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "partnerId",
+                    "description": "$partnerId",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "priority",
+                    "description": "$priority",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "operationAttributes",
+                    "description": "clip operations",
+                    "typeClassName": "KalturaObject",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -43386,6 +43500,17 @@
                     "name": "concatenatedDuration",
                     "description": "duration of the concated video",
                     "typeClassName": "float",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "shouldSort",
+                    "description": "Should Sort the clip parts",
+                    "typeClassName": "bool",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -79961,6 +80086,10 @@
                     "value": "17"
                 },
                 {
+                    "name": "CLIP_CONCAT",
+                    "value": "47"
+                },
+                {
                     "name": "CONCAT",
                     "value": "35"
                 },
@@ -79987,6 +80116,10 @@
                 {
                     "name": "COPY_CAPTIONS",
                     "value": "43"
+                },
+                {
+                    "name": "COPY_CUE_POINTS",
+                    "value": "48"
                 },
                 {
                     "name": "COPY_PARTNER",

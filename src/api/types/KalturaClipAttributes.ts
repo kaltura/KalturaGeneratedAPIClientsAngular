@@ -6,6 +6,7 @@ import { KalturaOperationAttributes, KalturaOperationAttributesArgs } from './Ka
 export interface KalturaClipAttributesArgs  extends KalturaOperationAttributesArgs {
     offset? : number;
 	duration? : number;
+	globalOffsetInDestination? : number;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaClipAttributes extends KalturaOperationAttributes {
 
     offset : number;
 	duration : number;
+	globalOffsetInDestination : number;
 
     constructor(data? : KalturaClipAttributesArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaClipAttributes extends KalturaOperationAttributes {
             {
                 objectType : { type : 'c', default : 'KalturaClipAttributes' },
 				offset : { type : 'n' },
-				duration : { type : 'n' }
+				duration : { type : 'n' },
+				globalOffsetInDestination : { type : 'n' }
             }
         );
         return result;
