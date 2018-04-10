@@ -20825,6 +20825,60 @@
             ]
         },
         {
+            "name": "KalturaClipDescription",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sourceEntryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "startTime",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "duration",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "offsetInDestination",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaContext",
             "base": "",
             "plugin": "",
@@ -44178,17 +44232,6 @@
             "deprecated": false,
             "properties": [
                 {
-                    "name": "sourceEntryId",
-                    "description": "source entry Id",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
                     "name": "entryId",
                     "description": "entry Id",
                     "typeClassName": "string",
@@ -44200,21 +44243,10 @@
                     "default": "null"
                 },
                 {
-                    "name": "offset",
-                    "description": "clip offset",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "duration",
-                    "description": "clip duration",
-                    "typeClassName": "int",
-                    "type": "Simple",
+                    "name": "clipsDescriptionArray",
+                    "description": "an array of source start time and duration",
+                    "typeClassName": "KalturaClipDescription",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -92203,6 +92235,10 @@
                 {
                     "name": "CONTENT_INTERACTIONS",
                     "value": "3"
+                },
+                {
+                    "name": "ENTRY_USAGE",
+                    "value": "27"
                 },
                 {
                     "name": "LIVE",

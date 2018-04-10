@@ -1,28 +1,26 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaTypesFactory } from '../kaltura-types-factory';
+import { KalturaClipDescription } from './KalturaClipDescription';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaCopyCaptionsJobDataArgs  extends KalturaJobDataArgs {
-    sourceEntryId? : string;
-	entryId? : string;
-	offset? : number;
-	duration? : number;
+    entryId? : string;
+	clipsDescriptionArray? : KalturaClipDescription[];
 	fullCopy? : boolean;
 }
 
 
 export class KalturaCopyCaptionsJobData extends KalturaJobData {
 
-    sourceEntryId : string;
-	entryId : string;
-	offset : number;
-	duration : number;
+    entryId : string;
+	clipsDescriptionArray : KalturaClipDescription[];
 	fullCopy : boolean;
 
     constructor(data? : KalturaCopyCaptionsJobDataArgs)
     {
         super(data);
+        if (typeof this.clipsDescriptionArray === 'undefined') this.clipsDescriptionArray = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -32,10 +30,8 @@ export class KalturaCopyCaptionsJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaCopyCaptionsJobData' },
-				sourceEntryId : { type : 's' },
 				entryId : { type : 's' },
-				offset : { type : 'n' },
-				duration : { type : 'n' },
+				clipsDescriptionArray : { type : 'a', subTypeConstructor : KalturaClipDescription, subType : 'KalturaClipDescription' },
 				fullCopy : { type : 'b' }
             }
         );

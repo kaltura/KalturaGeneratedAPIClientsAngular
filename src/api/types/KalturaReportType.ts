@@ -6,6 +6,7 @@ export enum KalturaReportType {
 	contentContributions = '7',
 	contentDropoff = '2',
 	contentInteractions = '3',
+	entryUsage = '27',
 	live = '24',
 	mapOverlay = '4',
 	operatingSystem = '22',
