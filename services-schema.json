@@ -4168,8 +4168,8 @@
                 },
                 {
                     "name": "regenerateStreamToken",
-                    "resultClassName": null,
-                    "resultType": "Void",
+                    "resultClassName": "KalturaLiveEntry",
+                    "resultType": "Object",
                     "params": [
                         {
                             "name": "entryId",

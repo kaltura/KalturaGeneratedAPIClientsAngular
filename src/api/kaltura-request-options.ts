@@ -33,8 +33,7 @@ export class KalturaRequestOptions extends KalturaObjectBase {
         Object.assign(
             result.properties,
             {
-                apiVersion : { type : 'c', default : '3.3.0' },
-				partnerId : { type : 'n' },
+                partnerId : { type : 'n' },
 				ks : { type : 's' },
 				responseProfile : { type : 'o', subTypeConstructor : KalturaBaseResponseProfile, subType : 'KalturaBaseResponseProfile' }
             }

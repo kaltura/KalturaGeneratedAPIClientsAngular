@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
+import { KalturaLiveEntry } from './KalturaLiveEntry';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -13,18 +13,18 @@ export interface LiveStreamRegenerateStreamTokenActionArgs  extends KalturaReque
  *
  * Usage: Regenerate new secure token for liveStream
  *
- * Server response type:         void
+ * Server response type:         KalturaLiveEntry
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class LiveStreamRegenerateStreamTokenAction extends KalturaRequest<void> {
+export class LiveStreamRegenerateStreamTokenAction extends KalturaRequest<KalturaLiveEntry> {
 
     entryId : string;
 
     constructor(data : LiveStreamRegenerateStreamTokenActionArgs)
     {
-        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaLiveEntry', responseConstructor : KalturaLiveEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
