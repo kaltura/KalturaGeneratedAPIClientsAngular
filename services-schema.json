@@ -39805,17 +39805,6 @@
                     "default": "null"
                 },
                 {
-                    "name": "encryptionKey",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
                     "name": "remoteId",
                     "description": "",
                     "typeClassName": "string",
