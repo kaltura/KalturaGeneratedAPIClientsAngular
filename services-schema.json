@@ -69454,6 +69454,49 @@
             ]
         },
         {
+            "name": "KalturaESearchCategoryUserItem",
+            "base": "KalturaESearchAbstractCategoryItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchCategoryUserFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "permissionLevel",
+                    "description": "",
+                    "typeClassName": "KalturaCategoryUserPermissionLevel",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "permissionName",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchEntryItem",
             "base": "KalturaESearchAbstractEntryItem",
             "plugin": "elasticSearch",
@@ -83109,10 +83152,6 @@
                 {
                     "name": "USER_ID",
                     "value": "user_id"
-                },
-                {
-                    "name": "USER_IDS",
-                    "value": "user_ids"
                 }
             ]
         },
@@ -83139,6 +83178,16 @@
                 {
                     "name": "UPDATED_AT",
                     "value": "updated_at"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchCategoryUserFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "USER_ID",
+                    "value": "user_id"
                 }
             ]
         },

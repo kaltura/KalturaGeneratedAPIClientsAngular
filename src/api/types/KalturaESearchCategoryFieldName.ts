@@ -26,6 +26,5 @@ export enum KalturaESearchCategoryFieldName {
 	referenceId = 'reference_id',
 	tags = 'tags',
 	updatedAt = 'updated_at',
-	userId = 'user_id',
-	userIds = 'user_ids'
+	userId = 'user_id'
 }
