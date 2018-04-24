@@ -15,6 +15,7 @@ export interface KalturaITunesSyndicationFeedArgs  extends KalturaBaseSyndicatio
 	feedImageUrl? : string;
 	adultContent? : KalturaITunesSyndicationFeedAdultValues;
 	feedAuthor? : string;
+	enforceFeedAuthor? : boolean;
 	enforceOrder? : KalturaNullableBoolean;
 }
 
@@ -30,6 +31,7 @@ export class KalturaITunesSyndicationFeed extends KalturaBaseSyndicationFeed {
 	readonly category : KalturaITunesSyndicationFeedCategories;
 	adultContent : KalturaITunesSyndicationFeedAdultValues;
 	feedAuthor : string;
+	enforceFeedAuthor : boolean;
 	enforceOrder : KalturaNullableBoolean;
 
     constructor(data? : KalturaITunesSyndicationFeedArgs)
@@ -53,6 +55,7 @@ export class KalturaITunesSyndicationFeed extends KalturaBaseSyndicationFeed {
 				category : { type : 'es', readOnly : true, subTypeConstructor : KalturaITunesSyndicationFeedCategories, subType : 'KalturaITunesSyndicationFeedCategories' },
 				adultContent : { type : 'es', subTypeConstructor : KalturaITunesSyndicationFeedAdultValues, subType : 'KalturaITunesSyndicationFeedAdultValues' },
 				feedAuthor : { type : 's' },
+				enforceFeedAuthor : { type : 'b' },
 				enforceOrder : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );

@@ -50712,6 +50712,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "enforceFeedAuthor",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "enforceOrder",
                     "description": "true in case you want to enfore the palylist order on the",
                     "typeClassName": "KalturaNullableBoolean",
