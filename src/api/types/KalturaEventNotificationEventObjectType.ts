@@ -20,6 +20,7 @@ export enum KalturaEventNotificationEventObjectType {
 	dropFolderFile = 'dropFolderEventNotifications.DropFolderFile',
 	entry = '1',
 	entryDistribution = 'contentDistributionEventNotifications.EntryDistribution',
+	entryServerNode = '40',
 	flavorasset = '4',
 	flavorparams = '15',
 	flavorparamsconversionprofile = '16',

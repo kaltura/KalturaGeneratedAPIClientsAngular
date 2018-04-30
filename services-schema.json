@@ -2494,6 +2494,29 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "updateStatus",
+                    "resultClassName": "KalturaEntryServerNode",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "status",
+                            "typeClassName": "KalturaEntryServerNodeStatus",
+                            "type": "EnumOfInt",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "validateRegisteredEntryServerNode",
                     "resultClassName": null,
                     "resultType": "Void",
@@ -55487,6 +55510,15 @@
             ]
         },
         {
+            "name": "KalturaTaskEntryServerNode",
+            "base": "KalturaEntryServerNode",
+            "plugin": "",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaThumbAssetListResponse",
             "base": "KalturaListResponse",
             "plugin": "",
@@ -59654,6 +59686,49 @@
                 },
                 {
                     "name": "creatorUserIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaClippingTaskEntryServerNode",
+            "base": "KalturaTaskEntryServerNode",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "clipAttributes",
+                    "description": "",
+                    "typeClassName": "KalturaClipAttributes",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "clippedEntryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "liveEntryId",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -76322,6 +76397,10 @@
                     "value": "2"
                 },
                 {
+                    "name": "ERROR",
+                    "value": "-1"
+                },
+                {
                     "name": "MARKED_FOR_DELETION",
                     "value": "4"
                 },
@@ -76332,6 +76411,26 @@
                 {
                     "name": "STOPPED",
                     "value": "0"
+                },
+                {
+                    "name": "TASK_FINISHED",
+                    "value": "9"
+                },
+                {
+                    "name": "TASK_PENDING",
+                    "value": "5"
+                },
+                {
+                    "name": "TASK_PROCESSING",
+                    "value": "7"
+                },
+                {
+                    "name": "TASK_QUEUED",
+                    "value": "6"
+                },
+                {
+                    "name": "TASK_UPLOADING",
+                    "value": "8"
                 }
             ]
         },
@@ -83972,6 +84071,10 @@
                     "value": "1"
                 },
                 {
+                    "name": "LIVE_CLIPPING_TASK",
+                    "value": "2"
+                },
+                {
                     "name": "LIVE_PRIMARY",
                     "value": "0"
                 }
@@ -84198,6 +84301,10 @@
                 {
                     "name": "ENTRY_DISTRIBUTION",
                     "value": "contentDistributionEventNotifications.EntryDistribution"
+                },
+                {
+                    "name": "ENTRY_SERVER_NODE",
+                    "value": "40"
                 },
                 {
                     "name": "FLAVORASSET",
