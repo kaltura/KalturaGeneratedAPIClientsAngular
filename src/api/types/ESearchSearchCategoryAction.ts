@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaESearchResponse } from './KalturaESearchResponse';
+import { KalturaESearchCategoryResponse } from './KalturaESearchCategoryResponse';
 
 import { KalturaESearchCategoryParams } from './KalturaESearchCategoryParams';
 import { KalturaPager } from './KalturaPager';
@@ -16,19 +16,19 @@ export interface ESearchSearchCategoryActionArgs  extends KalturaRequestArgs {
  *
  * 
  *
- * Server response type:         KalturaESearchResponse
+ * Server response type:         KalturaESearchCategoryResponse
  * Server failure response type: KalturaAPIException
  * @class
  * @extends KalturaRequest
  */
-export class ESearchSearchCategoryAction extends KalturaRequest<KalturaESearchResponse> {
+export class ESearchSearchCategoryAction extends KalturaRequest<KalturaESearchCategoryResponse> {
 
     searchParams : KalturaESearchCategoryParams;
 	pager : KalturaPager;
 
     constructor(data : ESearchSearchCategoryActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaESearchResponse', responseConstructor : KalturaESearchResponse  });
+        super(data, {responseType : 'o', responseSubType : 'KalturaESearchCategoryResponse', responseConstructor : KalturaESearchCategoryResponse  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
