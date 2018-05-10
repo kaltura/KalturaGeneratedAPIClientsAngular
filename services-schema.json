@@ -77807,6 +77807,10 @@
                     "value": "7"
                 },
                 {
+                    "name": "RUNNING_BATCHES_LAST_EXECUTION_TIME",
+                    "value": "8"
+                },
+                {
                     "name": "RUNNING_BATCHES_MEMORY",
                     "value": "3"
                 },
