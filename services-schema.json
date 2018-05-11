@@ -3305,6 +3305,29 @@
                     ],
                     "description": "List all GroupUsers",
                     "enableInMultiRequest": 1
+                },
+                {
+                    "name": "sync",
+                    "resultClassName": "KalturaBulkUpload",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "userId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "groupIds",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "sync by userId and groupIds",
+                    "enableInMultiRequest": 1
                 }
             ]
         },
@@ -25255,6 +25278,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "userMode",
+                    "description": "",
+                    "typeClassName": "KalturaUserMode",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -29218,6 +29252,17 @@
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "creationMode",
+                    "description": "",
+                    "typeClassName": "KalturaGroupUserCreationMode",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
                     "optional": true,
                     "default": "null"
                 }
@@ -76689,6 +76734,20 @@
             ]
         },
         {
+            "name": "KalturaGroupUserCreationMode",
+            "type": "int",
+            "values": [
+                {
+                    "name": "AUTOMATIC",
+                    "value": "2"
+                },
+                {
+                    "name": "MANUAL",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "name": "KalturaGroupUserStatus",
             "type": "int",
             "values": [
@@ -78811,6 +78870,20 @@
                 {
                     "name": "REQUEST_TO_JOIN",
                     "value": "2"
+                }
+            ]
+        },
+        {
+            "name": "KalturaUserMode",
+            "type": "int",
+            "values": [
+                {
+                    "name": "NONE",
+                    "value": "0"
+                },
+                {
+                    "name": "PROTECTED_USER",
+                    "value": "1"
                 }
             ]
         },

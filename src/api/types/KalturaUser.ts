@@ -5,6 +5,7 @@ import { KalturaUserType } from './KalturaUserType';
 import { KalturaGender } from './KalturaGender';
 import { KalturaUserStatus } from './KalturaUserStatus';
 import { KalturaLanguageCode } from './KalturaLanguageCode';
+import { KalturaUserMode } from './KalturaUserMode';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaUserArgs  extends KalturaObjectBaseArgs {
@@ -37,6 +38,7 @@ export interface KalturaUserArgs  extends KalturaObjectBaseArgs {
 	isAccountOwner? : boolean;
 	allowedPartnerIds? : string;
 	allowedPartnerPackages? : string;
+	userMode? : KalturaUserMode;
 }
 
 
@@ -79,6 +81,7 @@ export class KalturaUser extends KalturaObjectBase {
 	isAccountOwner : boolean;
 	allowedPartnerIds : string;
 	allowedPartnerPackages : string;
+	userMode : KalturaUserMode;
 
     constructor(data? : KalturaUserArgs)
     {
@@ -128,7 +131,8 @@ export class KalturaUser extends KalturaObjectBase {
 				roleNames : { type : 's', readOnly : true },
 				isAccountOwner : { type : 'b' },
 				allowedPartnerIds : { type : 's' },
-				allowedPartnerPackages : { type : 's' }
+				allowedPartnerPackages : { type : 's' },
+				userMode : { type : 'en', subTypeConstructor : KalturaUserMode, subType : 'KalturaUserMode' }
             }
         );
         return result;
