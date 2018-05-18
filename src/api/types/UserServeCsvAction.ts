@@ -11,7 +11,7 @@ export interface UserServeCsvActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'user' action 'serveCsv'.
  *
- * Usage: Will serve a requested csv
+ * Usage: Will serve a requested CSV
  *
  * Server response type:         string
  * Server failure response type: KalturaAPIException

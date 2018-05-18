@@ -11,7 +11,7 @@ export interface UserLoginByKsActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'user' action 'loginByKs'.
  *
- * Usage: Loges a user to the destination account as long the ks user id exists in the desc acount and the loginData id match for both accounts
+ * Usage: Logs a user to the destination account provided the KS' user ID is associated with the destination account and the loginData ID matches
  *
  * Server response type:         KalturaSessionResponse
  * Server failure response type: KalturaAPIException

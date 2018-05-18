@@ -8691,7 +8691,7 @@
         {
             "id": "user",
             "name": "user",
-            "description": "Manage partner users on Kaltura's side\n The userId in kaltura is the unique Id in the partner's system, and the [partnerId,Id] couple are unique key in kaltura's DB",
+            "description": "Manage partner users on Kaltura's side\n The userId in kaltura is the unique ID in the partner's system, and the [partnerId,Id] couple are unique key in kaltura's DB",
             "actions": [
                 {
                     "name": "add",
@@ -8851,7 +8851,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "add batch job that sends an email with a link to download an updated CSV that contains list of users",
+                    "description": "Creates a batch job that sends an email with a link to download a CSV containing a list of users",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -8989,7 +8989,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Loges a user to the destination account as long the ks user id exists in the desc acount and the loginData id match for both accounts",
+                    "description": "Logs a user to the destination account provided the KS' user ID is associated with the destination account and the loginData ID matches",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -9088,7 +9088,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Will serve a requested csv",
+                    "description": "Will serve a requested CSV",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -9111,7 +9111,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Set initial users password",
+                    "description": "Set initial user password",
                     "enableInMultiRequest": 1
                 },
                 {

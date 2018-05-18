@@ -15,7 +15,7 @@ export interface UserExportToCsvActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'user' action 'exportToCsv'.
  *
- * Usage: add batch job that sends an email with a link to download an updated CSV that contains list of users
+ * Usage: Creates a batch job that sends an email with a link to download a CSV containing a list of users
  *
  * Server response type:         string
  * Server failure response type: KalturaAPIException

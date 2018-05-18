@@ -12,7 +12,7 @@ export interface UserSetInitialPasswordActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'user' action 'setInitialPassword'.
  *
- * Usage: Set initial users password
+ * Usage: Set initial user password
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException
