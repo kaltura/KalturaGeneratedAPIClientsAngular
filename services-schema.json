@@ -3324,6 +3324,20 @@
                             "type": "Simple",
                             "optional": false,
                             "default": ""
+                        },
+                        {
+                            "name": "removeFromExistingGroups",
+                            "typeClassName": "bool",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "true"
+                        },
+                        {
+                            "name": "createNewGroups",
+                            "typeClassName": "bool",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "true"
                         }
                     ],
                     "description": "sync by userId and groupIds",
