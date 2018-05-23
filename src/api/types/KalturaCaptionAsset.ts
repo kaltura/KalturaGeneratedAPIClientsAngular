@@ -16,6 +16,7 @@ export interface KalturaCaptionAssetArgs  extends KalturaAssetArgs {
 	format? : KalturaCaptionType;
 	parentId? : string;
 	accuracy? : number;
+	displayOnPlayer? : boolean;
 }
 
 
@@ -30,6 +31,7 @@ export class KalturaCaptionAsset extends KalturaAsset {
 	readonly status : KalturaCaptionAssetStatus;
 	parentId : string;
 	accuracy : number;
+	displayOnPlayer : boolean;
 
     constructor(data? : KalturaCaptionAssetArgs)
     {
@@ -51,7 +53,8 @@ export class KalturaCaptionAsset extends KalturaAsset {
 				format : { type : 'es', subTypeConstructor : KalturaCaptionType, subType : 'KalturaCaptionType' },
 				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaCaptionAssetStatus, subType : 'KalturaCaptionAssetStatus' },
 				parentId : { type : 's' },
-				accuracy : { type : 'n' }
+				accuracy : { type : 'n' },
+				displayOnPlayer : { type : 'b' }
             }
         );
         return result;

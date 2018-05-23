@@ -102,10 +102,9 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly crmId : string;
 	referenceId : string;
 	readonly timeAlignedRenditions : boolean;
-	eSearchLanguages : KalturaESearchLanguageItem[];
-	readonly publisherEnvironmentType : number;
 	readonly ovpEnvironmentUrl : string;
 	readonly ottEnvironmentUrl : string;
+	eSearchLanguages : KalturaESearchLanguageItem[];
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -176,10 +175,9 @@ export class KalturaPartner extends KalturaObjectBase {
 				crmId : { type : 's', readOnly : true },
 				referenceId : { type : 's' },
 				timeAlignedRenditions : { type : 'b', readOnly : true },
-				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' },
-				publisherEnvironmentType : { type : 'n', readOnly : true },
 				ovpEnvironmentUrl : { type : 's', readOnly : true },
-				ottEnvironmentUrl : { type : 's', readOnly : true }
+				ottEnvironmentUrl : { type : 's', readOnly : true },
+				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' }
             }
         );
         return result;
