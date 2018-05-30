@@ -16,6 +16,7 @@ export interface KalturaCuePointArgs  extends KalturaObjectBaseArgs {
 	forceStop? : KalturaNullableBoolean;
 	thumbOffset? : number;
 	systemName? : string;
+	isMomentary? : boolean;
 }
 
 
@@ -37,6 +38,7 @@ export class KalturaCuePoint extends KalturaObjectBase {
 	forceStop : KalturaNullableBoolean;
 	thumbOffset : number;
 	systemName : string;
+	isMomentary : boolean;
 
     constructor(data? : KalturaCuePointArgs)
     {
@@ -65,7 +67,8 @@ export class KalturaCuePoint extends KalturaObjectBase {
 				partnerSortValue : { type : 'n' },
 				forceStop : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				thumbOffset : { type : 'n' },
-				systemName : { type : 's' }
+				systemName : { type : 's' },
+				isMomentary : { type : 'b' }
             }
         );
         return result;
