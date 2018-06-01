@@ -17,6 +17,10 @@ export interface KalturaYouTubeDistributionJobProviderDataArgs  extends KalturaC
 	googleClientId? : string;
 	googleClientSecret? : string;
 	googleTokenData? : string;
+	captionsCsvMap? : string;
+	submitCsvMap? : string;
+	updateCsvMap? : string;
+	deleteVideoIds? : string;
 }
 
 
@@ -35,6 +39,10 @@ export class KalturaYouTubeDistributionJobProviderData extends KalturaConfigurab
 	googleClientId : string;
 	googleClientSecret : string;
 	googleTokenData : string;
+	captionsCsvMap : string;
+	submitCsvMap : string;
+	updateCsvMap : string;
+	deleteVideoIds : string;
 
     constructor(data? : KalturaYouTubeDistributionJobProviderDataArgs)
     {
@@ -60,7 +68,11 @@ export class KalturaYouTubeDistributionJobProviderData extends KalturaConfigurab
 				deleteXml : { type : 's' },
 				googleClientId : { type : 's' },
 				googleClientSecret : { type : 's' },
-				googleTokenData : { type : 's' }
+				googleTokenData : { type : 's' },
+				captionsCsvMap : { type : 's' },
+				submitCsvMap : { type : 's' },
+				updateCsvMap : { type : 's' },
+				deleteVideoIds : { type : 's' }
             }
         );
         return result;

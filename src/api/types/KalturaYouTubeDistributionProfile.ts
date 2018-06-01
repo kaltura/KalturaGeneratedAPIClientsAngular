@@ -43,6 +43,12 @@ export interface KalturaYouTubeDistributionProfileArgs  extends KalturaConfigura
 	deleteReference? : boolean;
 	releaseClaims? : boolean;
 	apiAuthorizeUrl? : string;
+	privacyStatus? : string;
+	enableContentId? : string;
+	thirdPartyAds? : string;
+	productListingAds? : string;
+	domainWhitelist? : string;
+	notifySubscribers? : string;
 }
 
 
@@ -86,6 +92,12 @@ export class KalturaYouTubeDistributionProfile extends KalturaConfigurableDistri
 	deleteReference : boolean;
 	releaseClaims : boolean;
 	apiAuthorizeUrl : string;
+	privacyStatus : string;
+	enableContentId : string;
+	thirdPartyAds : string;
+	productListingAds : string;
+	domainWhitelist : string;
+	notifySubscribers : string;
 
     constructor(data? : KalturaYouTubeDistributionProfileArgs)
     {
@@ -136,7 +148,13 @@ export class KalturaYouTubeDistributionProfile extends KalturaConfigurableDistri
 				captionAutosync : { type : 's' },
 				deleteReference : { type : 'b' },
 				releaseClaims : { type : 'b' },
-				apiAuthorizeUrl : { type : 's' }
+				apiAuthorizeUrl : { type : 's' },
+				privacyStatus : { type : 's' },
+				enableContentId : { type : 's' },
+				thirdPartyAds : { type : 's' },
+				productListingAds : { type : 's' },
+				domainWhitelist : { type : 's' },
+				notifySubscribers : { type : 's' }
             }
         );
         return result;

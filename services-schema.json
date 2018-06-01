@@ -15993,7 +15993,7 @@
                     "typeClassName": "bool",
                     "type": "Simple",
                     "writeOnly": false,
-                    "readOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -68901,6 +68901,50 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "captionsCsvMap",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "submitCsvMap",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updateCsvMap",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "deleteVideoIds",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -69321,6 +69365,72 @@
                 },
                 {
                     "name": "apiAuthorizeUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "privacyStatus",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableContentId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "thirdPartyAds",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "productListingAds",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "domainWhitelist",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "notifySubscribers",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -95150,6 +95260,10 @@
                 {
                     "name": "VERSION_2",
                     "value": "2"
+                },
+                {
+                    "name": "VERSION_3",
+                    "value": "3"
                 }
             ]
         },
