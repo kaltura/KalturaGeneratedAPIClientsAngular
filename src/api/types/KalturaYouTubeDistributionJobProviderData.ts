@@ -6,6 +6,7 @@ import { KalturaConfigurableDistributionJobProviderData, KalturaConfigurableDist
 export interface KalturaYouTubeDistributionJobProviderDataArgs  extends KalturaConfigurableDistributionJobProviderDataArgs {
     videoAssetFilePath? : string;
 	thumbAssetFilePath? : string;
+	thumbAssetId? : string;
 	captionAssetIds? : string;
 	sftpDirectory? : string;
 	sftpMetadataFilename? : string;
@@ -28,6 +29,7 @@ export class KalturaYouTubeDistributionJobProviderData extends KalturaConfigurab
 
     videoAssetFilePath : string;
 	thumbAssetFilePath : string;
+	thumbAssetId : string;
 	captionAssetIds : string;
 	sftpDirectory : string;
 	sftpMetadataFilename : string;
@@ -58,6 +60,7 @@ export class KalturaYouTubeDistributionJobProviderData extends KalturaConfigurab
                 objectType : { type : 'c', default : 'KalturaYouTubeDistributionJobProviderData' },
 				videoAssetFilePath : { type : 's' },
 				thumbAssetFilePath : { type : 's' },
+				thumbAssetId : { type : 's' },
 				captionAssetIds : { type : 's' },
 				sftpDirectory : { type : 's' },
 				sftpMetadataFilename : { type : 's' },
