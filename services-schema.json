@@ -45055,6 +45055,27 @@
             ]
         },
         {
+            "name": "KalturaDeliveryProfileLivePackager",
+            "base": "KalturaDeliveryProfile",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "livePackagerSigningDomain",
+                    "description": "Domain used to sign the live url",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaDeliveryProfileRtmp",
             "base": "KalturaDeliveryProfile",
             "plugin": "",
@@ -61950,6 +61971,38 @@
                     "name": "rendererClass",
                     "description": "rendererClass",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaDeliveryProfileLivePackagerHls",
+            "base": "KalturaDeliveryProfileLivePackager",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "disableExtraAttributes",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "forceProxy",
+                    "description": "",
+                    "typeClassName": "bool",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
