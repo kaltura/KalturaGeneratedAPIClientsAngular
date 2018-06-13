@@ -19197,6 +19197,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "publisherEnvironmentType",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "ovpEnvironmentUrl",
                     "description": "",
                     "typeClassName": "string",
