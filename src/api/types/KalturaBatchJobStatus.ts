@@ -13,5 +13,7 @@ export enum KalturaBatchJobStatus {
 	processed=3,
 	processing=2,
 	queued=1,
-	retry=9
+	retry=9,
+	suspend=13,
+	suspendAlmostDone=14
 }

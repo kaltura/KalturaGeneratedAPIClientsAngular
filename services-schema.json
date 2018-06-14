@@ -57435,6 +57435,38 @@
             ]
         },
         {
+            "name": "KalturaUrlTokenizerWowzaSecureToken",
+            "base": "KalturaUrlTokenizer",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "paramPrefix",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "hashAlgorithm",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaUserAgentRestriction",
             "base": "KalturaBaseRestriction",
             "plugin": "",
@@ -76274,6 +76306,14 @@
                 {
                     "name": "RETRY",
                     "value": "9"
+                },
+                {
+                    "name": "SUSPEND",
+                    "value": "13"
+                },
+                {
+                    "name": "SUSPEND_ALMOST_DONE",
+                    "value": "14"
                 }
             ]
         },
