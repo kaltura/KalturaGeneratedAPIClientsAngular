@@ -11,7 +11,7 @@ export interface AppTokenGetActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'appToken' action 'get'.
  *
- * Usage: Get application authentication token by id
+ * Usage: Get application authentication token by ID
  *
  * Server response type:         KalturaAppToken
  * Server failure response type: KalturaAPIException

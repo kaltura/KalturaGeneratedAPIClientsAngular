@@ -12,7 +12,7 @@ export interface AppTokenUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'appToken' action 'update'.
  *
- * Usage: Update application authentication token by id
+ * Usage: Update application authentication token by ID
  *
  * Server response type:         KalturaAppToken
  * Server failure response type: KalturaAPIException

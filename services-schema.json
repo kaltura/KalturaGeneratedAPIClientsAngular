@@ -380,7 +380,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Delete application authentication token by id",
+                    "description": "Delete application authentication token by ID",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -396,7 +396,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Get application authentication token by id",
+                    "description": "Get application authentication token by ID",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -463,7 +463,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "Starts a new KS (kaltura Session) based on application authentication token id",
+                    "description": "Starts a new KS (kaltura Session) based on an application authentication token ID",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -486,7 +486,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update application authentication token by id",
+                    "description": "Update application authentication token by ID",
                     "enableInMultiRequest": 1
                 }
             ]

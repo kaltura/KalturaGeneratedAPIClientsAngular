@@ -11,7 +11,7 @@ export interface AppTokenDeleteActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'appToken' action 'delete'.
  *
- * Usage: Delete application authentication token by id
+ * Usage: Delete application authentication token by ID
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException
