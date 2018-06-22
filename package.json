@@ -1,7 +1,7 @@
 {
   "name": "kaltura-ngx-client",
   "private": true,
-  "version": "3.3.0",
+  "version": "14.1.0",
   "description": "Kaltura Angular based client",
   "keywords": [
     "Kaltura"
