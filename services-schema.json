@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.1.0",
+    "apiVersion": "14.2.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -53947,7 +53947,7 @@
                 {
                     "name": "idEqual",
                     "description": "",
-                    "typeClassName": "int",
+                    "typeClassName": "bigint",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -62770,7 +62770,7 @@
                 {
                     "name": "idEqual",
                     "description": "",
-                    "typeClassName": "int",
+                    "typeClassName": "bigint",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -70732,7 +70732,7 @@
             "base": "KalturaEntryServerNodeFilter",
             "plugin": "",
             "description": "",
-            "abstract": false,
+            "abstract": true,
             "deprecated": false,
             "properties": []
         },
