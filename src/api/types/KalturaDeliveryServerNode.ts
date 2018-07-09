@@ -6,12 +6,14 @@ import { KalturaServerNode, KalturaServerNodeArgs } from './KalturaServerNode';
 
 export interface KalturaDeliveryServerNodeArgs  extends KalturaServerNodeArgs {
     deliveryProfileIds? : KalturaKeyValue[];
+	config? : string;
 }
 
 
 export class KalturaDeliveryServerNode extends KalturaServerNode {
 
     deliveryProfileIds : KalturaKeyValue[];
+	config : string;
 
     constructor(data? : KalturaDeliveryServerNodeArgs)
     {
@@ -26,7 +28,8 @@ export class KalturaDeliveryServerNode extends KalturaServerNode {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaDeliveryServerNode' },
-				deliveryProfileIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				deliveryProfileIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				config : { type : 's' }
             }
         );
         return result;

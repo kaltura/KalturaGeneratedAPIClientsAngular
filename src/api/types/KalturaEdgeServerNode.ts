@@ -5,14 +5,12 @@ import { KalturaDeliveryServerNode, KalturaDeliveryServerNodeArgs } from './Kalt
 
 export interface KalturaEdgeServerNodeArgs  extends KalturaDeliveryServerNodeArgs {
     playbackDomain? : string;
-	config? : string;
 }
 
 
 export class KalturaEdgeServerNode extends KalturaDeliveryServerNode {
 
     playbackDomain : string;
-	config : string;
 
     constructor(data? : KalturaEdgeServerNodeArgs)
     {
@@ -26,8 +24,7 @@ export class KalturaEdgeServerNode extends KalturaDeliveryServerNode {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaEdgeServerNode' },
-				playbackDomain : { type : 's' },
-				config : { type : 's' }
+				playbackDomain : { type : 's' }
             }
         );
         return result;
