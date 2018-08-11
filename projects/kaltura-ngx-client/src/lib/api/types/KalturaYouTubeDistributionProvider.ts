@@ -1,0 +1,32 @@
+
+import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
+import { KalturaDistributionProvider, KalturaDistributionProviderArgs } from './KalturaDistributionProvider';
+
+export interface KalturaYouTubeDistributionProviderArgs  extends KalturaDistributionProviderArgs {
+    
+}
+
+
+export class KalturaYouTubeDistributionProvider extends KalturaDistributionProvider {
+
+    
+
+    constructor(data? : KalturaYouTubeDistributionProviderArgs)
+    {
+        super(data);
+    }
+
+    protected _getMetadata() : KalturaObjectMetadata
+    {
+        const result = super._getMetadata();
+        Object.assign(
+            result.properties,
+            {
+                objectType : { type : 'c', default : 'KalturaYouTubeDistributionProvider' }
+            }
+        );
+        return result;
+    }
+}
+
+typesMappingStorage['KalturaYouTubeDistributionProvider'] = KalturaYouTubeDistributionProvider;

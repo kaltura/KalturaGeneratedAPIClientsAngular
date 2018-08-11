@@ -1,0 +1,33 @@
+
+
+export enum KalturaReportType {
+    applications = '16',
+	browsers = '23',
+	contentContributions = '7',
+	contentDropoff = '2',
+	contentInteractions = '3',
+	entryUsage = '27',
+	live = '24',
+	mapOverlay = '4',
+	operatingSystem = '22',
+	partnerUsage = '201',
+	platforms = '21',
+	quiz = 'quiz.QUIZ',
+	quizAggregateByQuestion = 'quiz.QUIZ_AGGREGATE_BY_QUESTION',
+	quizUserAggregateByQuestion = 'quiz.QUIZ_USER_AGGREGATE_BY_QUESTION',
+	quizUserPercentage = 'quiz.QUIZ_USER_PERCENTAGE',
+	specificUserEngagement = '12',
+	specificUserUsage = '18',
+	topContent = '1',
+	topContributors = '5',
+	topCreators = '20',
+	topPlaybackContext = '25',
+	topSyndication = '6',
+	userContentDropoff = '14',
+	userContentInteractions = '15',
+	userEngagement = '11',
+	userTopContent = '13',
+	userUsage = '17',
+	varUsage = '19',
+	vpaasUsage = '26'
+}
