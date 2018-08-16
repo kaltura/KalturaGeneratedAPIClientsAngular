@@ -16,6 +16,7 @@ export enum KalturaReportType {
 	quizAggregateByQuestion = 'quiz.QUIZ_AGGREGATE_BY_QUESTION',
 	quizUserAggregateByQuestion = 'quiz.QUIZ_USER_AGGREGATE_BY_QUESTION',
 	quizUserPercentage = 'quiz.QUIZ_USER_PERCENTAGE',
+	reachUsage = '28',
 	specificUserEngagement = '12',
 	specificUserUsage = '18',
 	topContent = '1',

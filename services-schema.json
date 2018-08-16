@@ -92893,6 +92893,10 @@
                     "value": "quiz.QUIZ_USER_PERCENTAGE"
                 },
                 {
+                    "name": "REACH_USAGE",
+                    "value": "28"
+                },
+                {
                     "name": "SPECIFIC_USER_ENGAGEMENT",
                     "value": "12"
                 },
