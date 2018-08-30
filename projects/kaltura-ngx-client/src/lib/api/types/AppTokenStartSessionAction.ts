@@ -11,6 +11,7 @@ export interface AppTokenStartSessionActionArgs  extends KalturaRequestArgs {
 	userId? : string;
 	type? : KalturaSessionType;
 	expiry? : number;
+	sessionPrivileges? : string;
 }
 
 /**
@@ -28,6 +29,7 @@ export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInf
 	userId : string;
 	type : KalturaSessionType;
 	expiry : number;
+	sessionPrivileges : string;
 
     constructor(data : AppTokenStartSessionActionArgs)
     {
@@ -46,7 +48,8 @@ export class AppTokenStartSessionAction extends KalturaRequest<KalturaSessionInf
 				tokenHash : { type : 's' },
 				userId : { type : 's' },
 				type : { type : 'en', subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
-				expiry : { type : 'n' }
+				expiry : { type : 'n' },
+				sessionPrivileges : { type : 's' }
             }
         );
         return result;

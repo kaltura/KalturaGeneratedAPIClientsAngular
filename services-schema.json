@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.5.0",
+    "apiVersion": "14.6.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -458,6 +458,13 @@
                         {
                             "name": "expiry",
                             "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "sessionPrivileges",
+                            "typeClassName": "string",
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
