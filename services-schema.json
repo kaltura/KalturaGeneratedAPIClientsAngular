@@ -6920,6 +6920,43 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "getFullPath",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "hostName",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "protocol",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "http"
+                        },
+                        {
+                            "name": "deliveryFormat",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "deliveryType",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "Get the edge server node full path",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "list",
                     "resultClassName": "KalturaServerNodeListResponse",
                     "resultType": "Object",
@@ -6976,6 +7013,13 @@
                             "type": "Object",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "serverNodeStatus",
+                            "typeClassName": "KalturaServerNodeStatus",
+                            "type": "EnumOfInt",
+                            "optional": true,
+                            "default": "1"
                         }
                     ],
                     "description": "Update server node status",
@@ -40266,6 +40310,17 @@
                     "description": "Comma separated list of edge servers playBack should be done from",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "seamlessFallbackEnabled",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -78236,6 +78291,10 @@
                 {
                     "name": "DISABLED",
                     "value": "2"
+                },
+                {
+                    "name": "NOT_HEALTHY",
+                    "value": "5"
                 },
                 {
                     "name": "NOT_REGISTERED",

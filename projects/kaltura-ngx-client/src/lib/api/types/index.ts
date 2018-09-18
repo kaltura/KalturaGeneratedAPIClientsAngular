@@ -1949,6 +1949,7 @@ export { ServerNodeDeleteAction, ServerNodeDeleteActionArgs } from './ServerNode
 export { ServerNodeDisableAction, ServerNodeDisableActionArgs } from './ServerNodeDisableAction'
 export { ServerNodeEnableAction, ServerNodeEnableActionArgs } from './ServerNodeEnableAction'
 export { ServerNodeGetAction, ServerNodeGetActionArgs } from './ServerNodeGetAction'
+export { ServerNodeGetFullPathAction, ServerNodeGetFullPathActionArgs } from './ServerNodeGetFullPathAction'
 export { ServerNodeListAction, ServerNodeListActionArgs } from './ServerNodeListAction'
 export { ServerNodeMarkOfflineAction, ServerNodeMarkOfflineActionArgs } from './ServerNodeMarkOfflineAction'
 export { ServerNodeReportStatusAction, ServerNodeReportStatusActionArgs } from './ServerNodeReportStatusAction'
