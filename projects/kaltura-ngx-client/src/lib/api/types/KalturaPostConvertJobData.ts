@@ -4,6 +4,7 @@ import { KalturaConvartableJobData, KalturaConvartableJobDataArgs } from './Kalt
 
 export interface KalturaPostConvertJobDataArgs  extends KalturaConvartableJobDataArgs {
     flavorAssetId? : string;
+	flavorAssetEncryptionKey? : string;
 	createThumb? : boolean;
 	thumbPath? : string;
 	thumbOffset? : number;
@@ -16,6 +17,7 @@ export interface KalturaPostConvertJobDataArgs  extends KalturaConvartableJobDat
 export class KalturaPostConvertJobData extends KalturaConvartableJobData {
 
     flavorAssetId : string;
+	flavorAssetEncryptionKey : string;
 	createThumb : boolean;
 	thumbPath : string;
 	thumbOffset : number;
@@ -36,6 +38,7 @@ export class KalturaPostConvertJobData extends KalturaConvartableJobData {
             {
                 objectType : { type : 'c', default : 'KalturaPostConvertJobData' },
 				flavorAssetId : { type : 's' },
+				flavorAssetEncryptionKey : { type : 's' },
 				createThumb : { type : 'b' },
 				thumbPath : { type : 's' },
 				thumbOffset : { type : 'n' },
