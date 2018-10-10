@@ -53987,6 +53987,39 @@
                     "default": "null"
                 },
                 {
+                    "name": "customVar1In",
+                    "description": "Filter by customVar1",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "customVar2In",
+                    "description": "Filter by customVar2",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "customVar3In",
+                    "description": "Filter by customVar3",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "timeZoneOffset",
                     "description": "Time zone offset in minutes",
                     "typeClassName": "int",
@@ -93003,6 +93036,10 @@
                 {
                     "name": "TOP_CREATORS",
                     "value": "20"
+                },
+                {
+                    "name": "TOP_CUSTOM_VAR1",
+                    "value": "29"
                 },
                 {
                     "name": "TOP_PLAYBACK_CONTEXT",

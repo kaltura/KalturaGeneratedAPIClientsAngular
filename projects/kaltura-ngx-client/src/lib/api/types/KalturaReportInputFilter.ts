@@ -8,6 +8,9 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	searchInTags? : boolean;
 	searchInAdminTags? : boolean;
 	categories? : string;
+	customVar1In? : string;
+	customVar2In? : string;
+	customVar3In? : string;
 	timeZoneOffset? : number;
 	interval? : KalturaReportInterval;
 }
@@ -19,6 +22,9 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	searchInTags : boolean;
 	searchInAdminTags : boolean;
 	categories : string;
+	customVar1In : string;
+	customVar2In : string;
+	customVar3In : string;
 	timeZoneOffset : number;
 	interval : KalturaReportInterval;
 
@@ -38,6 +44,9 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				searchInTags : { type : 'b' },
 				searchInAdminTags : { type : 'b' },
 				categories : { type : 's' },
+				customVar1In : { type : 's' },
+				customVar2In : { type : 's' },
+				customVar3In : { type : 's' },
 				timeZoneOffset : { type : 'n' },
 				interval : { type : 'es', subTypeConstructor : KalturaReportInterval, subType : 'KalturaReportInterval' }
             }

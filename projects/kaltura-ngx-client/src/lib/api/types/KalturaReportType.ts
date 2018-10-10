@@ -22,6 +22,7 @@ export enum KalturaReportType {
 	topContent = '1',
 	topContributors = '5',
 	topCreators = '20',
+	topCustomVar1 = '29',
 	topPlaybackContext = '25',
 	topSyndication = '6',
 	userContentDropoff = '14',
