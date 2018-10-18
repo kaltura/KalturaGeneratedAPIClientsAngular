@@ -9,6 +9,7 @@ export interface KalturaBulkUploadJobDataArgs  extends KalturaJobDataArgs {
     fileName? : string;
 	emailRecipients? : string;
 	numOfErrorObjects? : number;
+	privileges? : string;
 }
 
 
@@ -28,6 +29,7 @@ export class KalturaBulkUploadJobData extends KalturaJobData {
 	readonly type : KalturaBulkUploadType;
 	emailRecipients : string;
 	numOfErrorObjects : number;
+	privileges : string;
 
     constructor(data? : KalturaBulkUploadJobDataArgs)
     {
@@ -54,7 +56,8 @@ export class KalturaBulkUploadJobData extends KalturaJobData {
 				objectData : { type : 'o', readOnly : true, subTypeConstructor : KalturaBulkUploadObjectData, subType : 'KalturaBulkUploadObjectData' },
 				type : { type : 'es', readOnly : true, subTypeConstructor : KalturaBulkUploadType, subType : 'KalturaBulkUploadType' },
 				emailRecipients : { type : 's' },
-				numOfErrorObjects : { type : 'n' }
+				numOfErrorObjects : { type : 'n' },
+				privileges : { type : 's' }
             }
         );
         return result;

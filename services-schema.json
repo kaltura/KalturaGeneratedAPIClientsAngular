@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.6.0",
+    "apiVersion": "14.7.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -1185,7 +1185,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "serve action returan the original file.",
+                    "description": "serve action return the original file.",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -41749,6 +41749,17 @@
                     "name": "numOfErrorObjects",
                     "description": "Number of objects that finished on error status",
                     "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "privileges",
+                    "description": "privileges for the job",
+                    "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,

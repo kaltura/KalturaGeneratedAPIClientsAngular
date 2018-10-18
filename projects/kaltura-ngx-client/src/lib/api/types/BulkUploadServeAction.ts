@@ -11,7 +11,7 @@ export interface BulkUploadServeActionArgs  extends KalturaFileRequestArgs {
 /**
  * Build request payload for service 'bulkUpload' action 'serve'.
  *
- * Usage: serve action returan the original file
+ * Usage: serve action return the original file
  *
  * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException
