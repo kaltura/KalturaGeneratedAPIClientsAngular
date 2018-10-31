@@ -17,6 +17,7 @@ export interface KalturaConversionProfileAssetParamsArgs  extends KalturaObjectB
 	chunkedEncodeMode? : number;
 	twoPass? : KalturaNullableBoolean;
 	tags? : string;
+	overloadParams? : string;
 }
 
 
@@ -34,6 +35,7 @@ export class KalturaConversionProfileAssetParams extends KalturaObjectBase {
 	chunkedEncodeMode : number;
 	twoPass : KalturaNullableBoolean;
 	tags : string;
+	overloadParams : string;
 
     constructor(data? : KalturaConversionProfileAssetParamsArgs)
     {
@@ -58,7 +60,8 @@ export class KalturaConversionProfileAssetParams extends KalturaObjectBase {
 				contentAwareness : { type : 'n' },
 				chunkedEncodeMode : { type : 'n' },
 				twoPass : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				tags : { type : 's' }
+				tags : { type : 's' },
+				overloadParams : { type : 's' }
             }
         );
         return result;
