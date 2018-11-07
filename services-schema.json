@@ -69954,6 +69954,27 @@
             ]
         },
         {
+            "name": "KalturaDropFolderXmlBulkUploadJobData",
+            "base": "KalturaBulkUploadXmlJobData",
+            "plugin": "",
+            "description": "Represents the Bulk upload job data for drop folder xml bulk upload",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "dropFolderId",
+                    "description": "the job drop folder id",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchCategoryEntryItem",
             "base": "KalturaESearchAbstractEntryItem",
             "plugin": "elasticSearch",

@@ -871,6 +871,7 @@ export { KalturaDocumentEntryMatchAttributeCondition, KalturaDocumentEntryMatchA
 export { KalturaDocumentFlavorParamsOutput, KalturaDocumentFlavorParamsOutputArgs } from './KalturaDocumentFlavorParamsOutput'
 export { KalturaDoubleClickDistributionProviderBaseFilter, KalturaDoubleClickDistributionProviderBaseFilterArgs } from './KalturaDoubleClickDistributionProviderBaseFilter'
 export { KalturaDropFolderImportJobData, KalturaDropFolderImportJobDataArgs } from './KalturaDropFolderImportJobData'
+export { KalturaDropFolderXmlBulkUploadJobData, KalturaDropFolderXmlBulkUploadJobDataArgs } from './KalturaDropFolderXmlBulkUploadJobData'
 export { KalturaESearchCategoryEntryItem, KalturaESearchCategoryEntryItemArgs } from './KalturaESearchCategoryEntryItem'
 export { KalturaESearchCategoryItem, KalturaESearchCategoryItemArgs } from './KalturaESearchCategoryItem'
 export { KalturaESearchCategoryMetadataItem, KalturaESearchCategoryMetadataItemArgs } from './KalturaESearchCategoryMetadataItem'
