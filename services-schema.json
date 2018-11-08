@@ -69956,7 +69956,7 @@
         {
             "name": "KalturaDropFolderXmlBulkUploadJobData",
             "base": "KalturaBulkUploadXmlJobData",
-            "plugin": "",
+            "plugin": "dropFolderXmlBulkUpload",
             "description": "Represents the Bulk upload job data for drop folder xml bulk upload",
             "abstract": false,
             "deprecated": false,
