@@ -11,5 +11,6 @@ export enum KalturaESearchUserFieldName {
 	screenName = 'screen_name',
 	tags = 'tags',
 	type = 'user_type',
-	updatedAt = 'updated_at'
+	updatedAt = 'updated_at',
+	userId = 'user_id'
 }
