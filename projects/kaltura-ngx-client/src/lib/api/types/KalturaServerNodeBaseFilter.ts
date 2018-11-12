@@ -32,6 +32,8 @@ export interface KalturaServerNodeBaseFilterArgs  extends KalturaFilterArgs {
 	parentIdLike? : string;
 	parentIdMultiLikeOr? : string;
 	parentIdMultiLikeAnd? : string;
+	environmentEqual? : string;
+	environmentIn? : string;
 }
 
 
@@ -64,6 +66,8 @@ export class KalturaServerNodeBaseFilter extends KalturaFilter {
 	parentIdLike : string;
 	parentIdMultiLikeOr : string;
 	parentIdMultiLikeAnd : string;
+	environmentEqual : string;
+	environmentIn : string;
 
     constructor(data? : KalturaServerNodeBaseFilterArgs)
     {
@@ -103,7 +107,9 @@ export class KalturaServerNodeBaseFilter extends KalturaFilter {
 				dcIn : { type : 's' },
 				parentIdLike : { type : 's' },
 				parentIdMultiLikeOr : { type : 's' },
-				parentIdMultiLikeAnd : { type : 's' }
+				parentIdMultiLikeAnd : { type : 's' },
+				environmentEqual : { type : 's' },
+				environmentIn : { type : 's' }
             }
         );
         return result;
