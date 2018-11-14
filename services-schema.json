@@ -1201,7 +1201,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "serveLog action returan the original file.",
+                    "description": "serveLog action return the original file.",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -54044,6 +54044,17 @@
                 {
                     "name": "customVar3In",
                     "description": "Filter by customVar3",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "devicesIn",
+                    "description": "Filter by device",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
