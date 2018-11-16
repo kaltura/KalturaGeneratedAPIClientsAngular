@@ -12,6 +12,8 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	customVar2In? : string;
 	customVar3In? : string;
 	devicesIn? : string;
+	countriesIn? : string;
+	regionsIn? : string;
 	timeZoneOffset? : number;
 	interval? : KalturaReportInterval;
 }
@@ -27,6 +29,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	customVar2In : string;
 	customVar3In : string;
 	devicesIn : string;
+	countriesIn : string;
+	regionsIn : string;
 	timeZoneOffset : number;
 	interval : KalturaReportInterval;
 
@@ -50,6 +54,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				customVar2In : { type : 's' },
 				customVar3In : { type : 's' },
 				devicesIn : { type : 's' },
+				countriesIn : { type : 's' },
+				regionsIn : { type : 's' },
 				timeZoneOffset : { type : 'n' },
 				interval : { type : 'es', subTypeConstructor : KalturaReportInterval, subType : 'KalturaReportInterval' }
             }

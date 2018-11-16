@@ -3,6 +3,7 @@
 export enum KalturaReportType {
     applications = '16',
 	browsers = '23',
+	cities = '30',
 	contentContributions = '7',
 	contentDropoff = '2',
 	contentInteractions = '3',

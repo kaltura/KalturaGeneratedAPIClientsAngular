@@ -54064,6 +54064,28 @@
                     "default": "null"
                 },
                 {
+                    "name": "countriesIn",
+                    "description": "Filter by country",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "regionsIn",
+                    "description": "Filter by region",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "timeZoneOffset",
                     "description": "Time zone offset in minutes",
                     "typeClassName": "int",
@@ -93051,6 +93073,10 @@
                 {
                     "name": "BROWSERS",
                     "value": "23"
+                },
+                {
+                    "name": "CITIES",
+                    "value": "30"
                 },
                 {
                     "name": "CONTENT_CONTRIBUTIONS",
