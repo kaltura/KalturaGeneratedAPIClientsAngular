@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.8.0",
+    "apiVersion": "14.9.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -1393,6 +1393,36 @@
                         }
                     ],
                     "description": "update privacy context from the category",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateStatusfrombulk",
+                    "resultClassName": "KalturaBulkUpload",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "fileData",
+                            "typeClassName": null,
+                            "type": "File",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "bulkUploadData",
+                            "typeClassName": "KalturaBulkUploadJobData",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "bulkUploadCategoryEntryData",
+                            "typeClassName": "KalturaBulkUploadCategoryEntryData",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -81164,6 +81194,10 @@
             "type": "string",
             "values": [
                 {
+                    "name": "ACTIVATE",
+                    "value": "7"
+                },
+                {
                     "name": "ADD",
                     "value": "1"
                 },
@@ -81178,6 +81212,10 @@
                 {
                     "name": "DELETE",
                     "value": "3"
+                },
+                {
+                    "name": "REJECT",
+                    "value": "8"
                 },
                 {
                     "name": "REPLACE",
