@@ -54083,7 +54083,7 @@
                     "default": "null"
                 },
                 {
-                    "name": "devicesIn",
+                    "name": "deviceIn",
                     "description": "Filter by device",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -54094,7 +54094,7 @@
                     "default": "null"
                 },
                 {
-                    "name": "countriesIn",
+                    "name": "countryIn",
                     "description": "Filter by country",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -54105,8 +54105,30 @@
                     "default": "null"
                 },
                 {
-                    "name": "regionsIn",
+                    "name": "regionIn",
                     "description": "Filter by region",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "operatingSystemFamilyIn",
+                    "description": "Filter by operating system family",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "browserFamilyIn",
+                    "description": "Filter by browser family",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -93113,6 +93135,10 @@
                     "value": "23"
                 },
                 {
+                    "name": "BROWSERS_FAMIILES",
+                    "value": "33"
+                },
+                {
                     "name": "CITIES",
                     "value": "30"
                 },
@@ -93143,6 +93169,10 @@
                 {
                     "name": "OPERATING_SYSTEM",
                     "value": "22"
+                },
+                {
+                    "name": "OPERATING_SYSTEM_FAMILIES",
+                    "value": "32"
                 },
                 {
                     "name": "PARTNER_USAGE",

@@ -3,6 +3,7 @@
 export enum KalturaReportType {
     applications = '16',
 	browsers = '23',
+	browsersFamiiles = '33',
 	cities = '30',
 	contentContributions = '7',
 	contentDropoff = '2',
@@ -11,6 +12,7 @@ export enum KalturaReportType {
 	live = '24',
 	mapOverlay = '4',
 	operatingSystem = '22',
+	operatingSystemFamilies = '32',
 	partnerUsage = '201',
 	platforms = '21',
 	quiz = 'quiz.QUIZ',
