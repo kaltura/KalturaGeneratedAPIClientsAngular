@@ -1396,7 +1396,7 @@
                     "enableInMultiRequest": 1
                 },
                 {
-                    "name": "updateStatusfrombulk",
+                    "name": "updateStatusFromBulk",
                     "resultClassName": "KalturaBulkUpload",
                     "resultType": "Object",
                     "params": [

@@ -1716,7 +1716,7 @@ export { CategoryEntryIndexAction, CategoryEntryIndexActionArgs } from './Catego
 export { CategoryEntryListAction, CategoryEntryListActionArgs } from './CategoryEntryListAction'
 export { CategoryEntryRejectAction, CategoryEntryRejectActionArgs } from './CategoryEntryRejectAction'
 export { CategoryEntrySyncPrivacyContextAction, CategoryEntrySyncPrivacyContextActionArgs } from './CategoryEntrySyncPrivacyContextAction'
-export { CategoryEntryUpdateStatusfrombulkAction, CategoryEntryUpdateStatusfrombulkActionArgs } from './CategoryEntryUpdateStatusfrombulkAction'
+export { CategoryEntryUpdateStatusFromBulkAction, CategoryEntryUpdateStatusFromBulkActionArgs } from './CategoryEntryUpdateStatusFromBulkAction'
 export { CategoryAddAction, CategoryAddActionArgs } from './CategoryAddAction'
 export { CategoryAddFromBulkUploadAction, CategoryAddFromBulkUploadActionArgs } from './CategoryAddFromBulkUploadAction'
 export { CategoryDeleteAction, CategoryDeleteActionArgs } from './CategoryDeleteAction'
