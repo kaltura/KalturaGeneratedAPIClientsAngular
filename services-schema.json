@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.9.0",
+    "apiVersion": "14.10.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -19335,6 +19335,24 @@
             ]
         },
         {
+            "name": "KalturaESearchBaseItem",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaBeaconScheduledResourceBaseItem",
+            "base": "KalturaESearchBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaValue",
             "base": "",
             "plugin": "",
@@ -24618,15 +24636,6 @@
                     "default": "null"
                 }
             ]
-        },
-        {
-            "name": "KalturaESearchBaseItem",
-            "base": "",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": []
         },
         {
             "name": "KalturaESearchCategoryBaseItem",
@@ -59381,6 +59390,49 @@
             "abstract": false,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaBeaconAbstractScheduledResourceItem",
+            "base": "KalturaBeaconScheduledResourceBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "searchTerm",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "itemType",
+                    "description": "",
+                    "typeClassName": "KalturaESearchItemType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "range",
+                    "description": "",
+                    "typeClassName": "KalturaESearchRange",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaBulkUploadCsvJobData",
