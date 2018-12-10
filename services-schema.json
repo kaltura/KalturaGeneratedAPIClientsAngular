@@ -54027,7 +54027,7 @@
                 },
                 {
                     "name": "searchInTags",
-                    "description": "Search keywords in onjects tags",
+                    "description": "Search keywords in objects tags",
                     "typeClassName": "bool",
                     "type": "Simple",
                     "writeOnly": false,
@@ -54038,7 +54038,7 @@
                 },
                 {
                     "name": "searchInAdminTags",
-                    "description": "Search keywords in onjects admin tags",
+                    "description": "Search keywords in objects admin tags",
                     "typeClassName": "bool",
                     "type": "Simple",
                     "writeOnly": false,
@@ -54049,7 +54049,18 @@
                 },
                 {
                     "name": "categories",
-                    "description": "Search onjects in specified categories",
+                    "description": "Search objects in specified categories",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "categoriesIdsIn",
+                    "description": "Search objects in specified category ids",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -54125,6 +54136,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "citiesIn",
+                    "description": "Filter by city",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "operatingSystemFamilyIn",
                     "description": "Filter by operating system family",
                     "typeClassName": "string",
@@ -54162,6 +54184,28 @@
                     "description": "Aggregated results according to interval",
                     "typeClassName": "KalturaReportInterval",
                     "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "mediaTypeIn",
+                    "description": "Filter by media types",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sourceTypeIn",
+                    "description": "Filter by source types",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
