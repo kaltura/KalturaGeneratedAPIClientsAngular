@@ -3,8 +3,8 @@ node_js:
       - "9"
 before_install: npm install && npm run deploy
 script: 
-    - sed -e "s#@YOUR_PARTNER_ID@#$PARTNER_ID#g" -e "s#@YOUR_ADMIN_SECRET@#$ADMIN_SECRET#g" -e "s#@SERVICE_URL@#https://www.kaltura.com#g" projects/kaltura-ngx-client/src/tests/tests-config.template.ts > projects/kaltura-ngx-client/src/tests/tests-config.ts
-    - sed -e "s#@YOUR_PARTNER_ID@#$PARTNER_ID#g" -e "s#@YOUR_ADMIN_SECRET@#$ADMIN_SECRET#g" -e "s#@SERVICE_URL@#https://www.kaltura.com#g" -i projects/kaltura-ngx-client/src/tests/kaltura-request.spec.ts
+    - sed -e "s#1931861#$PARTNER_ID#g" -e "s#83c3d4449a3abbe92ca5966f5f010eb4#$ADMIN_SECRET#g" -e "s#https://www.kaltura.com#https://www.kaltura.com#g" projects/kaltura-ngx-client/src/tests/tests-config.template.ts > projects/kaltura-ngx-client/src/tests/tests-config.ts
+    - sed -e "s#1931861#$PARTNER_ID#g" -e "s#83c3d4449a3abbe92ca5966f5f010eb4#$ADMIN_SECRET#g" -e "s#https://www.kaltura.com#https://www.kaltura.com#g" -i projects/kaltura-ngx-client/src/tests/kaltura-request.spec.ts
     - npm run test
 notifications:
   email:
