@@ -11,7 +11,7 @@ export interface SyndicationFeedRequestConversionActionArgs  extends KalturaRequ
 /**
  * Build request payload for service 'syndicationFeed' action 'requestConversion'.
  *
- * Usage: request conversion for all entries that doesnt have the required flavor param
+ * Usage: request conversion for all entries that doesn't have the required flavor param
  * returns a comma-separated ids of conversion jobs
  *
  * Server response type:         string

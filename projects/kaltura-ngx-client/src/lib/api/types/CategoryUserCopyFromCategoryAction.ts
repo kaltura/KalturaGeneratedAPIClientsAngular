@@ -11,7 +11,7 @@ export interface CategoryUserCopyFromCategoryActionArgs  extends KalturaRequestA
 /**
  * Build request payload for service 'categoryUser' action 'copyFromCategory'.
  *
- * Usage: Copy all memeber from parent category
+ * Usage: Copy all member from parent category
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException

@@ -12,7 +12,7 @@ export interface MediaAddFromRecordedWebcamActionArgs  extends KalturaRequestArg
 /**
  * Build request payload for service 'media' action 'addFromRecordedWebcam'.
  *
- * Usage: Add new entry after the file was recored on the server and the token id exists
+ * Usage: Add new entry after the file was recorded on the server and the token id exists
  *
  * Server response type:         KalturaMediaEntry
  * Server failure response type: KalturaAPIException

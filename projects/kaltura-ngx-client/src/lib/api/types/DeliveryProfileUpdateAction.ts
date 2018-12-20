@@ -12,7 +12,7 @@ export interface DeliveryProfileUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'deliveryProfile' action 'update'.
  *
- * Usage: Update exisiting delivery
+ * Usage: Update existing delivery profile
  *
  * Server response type:         KalturaDeliveryProfile
  * Server failure response type: KalturaAPIException

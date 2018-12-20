@@ -22,7 +22,7 @@ export interface ReportGetUrlForReportAsCsvActionArgs  extends KalturaRequestArg
 /**
  * Build request payload for service 'report' action 'getUrlForReportAsCsv'.
  *
- * Usage: will create a Csv file for the given report and return the URL to access it
+ * Usage: will create a CSV file for the given report and return the URL to access it
  *
  * Server response type:         string
  * Server failure response type: KalturaAPIException

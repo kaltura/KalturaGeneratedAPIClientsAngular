@@ -14,7 +14,7 @@ export interface PlaylistUpdateActionArgs  extends KalturaRequestArgs {
  * Build request payload for service 'playlist' action 'update'.
  *
  * Usage: Update existing playlist
- * Note - you cannot change playlist type. updated playlist must be of the same type
+ * Note - you cannot change playlist type. Updated playlist must be of the same type
  *
  * Server response type:         KalturaPlaylist
  * Server failure response type: KalturaAPIException

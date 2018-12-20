@@ -12,7 +12,7 @@ export interface MixingAppendMediaEntryActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'mixing' action 'appendMediaEntry'.
  *
- * Usage: Appends a media entry to a the end of the mix timeline, this will save the mix timeline as a new version
+ * Usage: Appends a media entry to the end of the mix timeline, this will save the mix timeline as a new version
  *
  * Server response type:         KalturaMixEntry
  * Server failure response type: KalturaAPIException

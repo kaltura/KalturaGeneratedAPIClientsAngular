@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.10.0",
+    "apiVersion": "14.11.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -1031,7 +1031,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update entry thumbnail using url.",
+                    "description": "Update entry thumbnail using URL.",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -1706,7 +1706,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Copy all memeber from parent category",
+                    "description": "Copy all member from parent category",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -2196,7 +2196,7 @@
                             "default": "false"
                         }
                     ],
-                    "description": "serve action returan the file from dataContent field.",
+                    "description": "return the file from dataContent field.",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -2320,7 +2320,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update exisiting delivery",
+                    "description": "Update existing delivery profile",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -4698,7 +4698,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Add new entry after the file was recored on the server and the token id exists",
+                    "description": "Add new entry after the file was recorded on the server and the token id exists",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -5250,7 +5250,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update entry thumbnail using url",
+                    "description": "Update entry thumbnail using URL",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -5358,7 +5358,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Appends a media entry to a the end of the mix timeline, this will save the mix timeline as a new version.",
+                    "description": "Appends a media entry to the end of the mix timeline, this will save the mix timeline as a new version.",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -5659,7 +5659,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "Get usage statistics for a partner\n\t Calculation is done according to partner's package\n\t Additional data returned is a graph points of streaming usage in a timeframe\n\t The resolution can be \"days\" or \"months\"",
+                    "description": "Get usage statistics for a partner\n\t Calculation is done according to partner's package\n\t Additional data returned is a graph points of streaming usage in a time frame\n\t The resolution can be \"days\" or \"months\"",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -5682,7 +5682,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "List partners by filter with paging support\n\t Current implementation will only list the sub partners of the partner initiating the api call (using the current KS).\n\t This action is only partially implemented to support listing sub partners of a VAR partner.",
+                    "description": "List partners by filter with paging support\n\t Current implementation will only list the sub partners of the partner initiating the API call (using the current KS).\n\t This action is only partially implemented to support listing sub partners of a VAR partner.",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -5991,7 +5991,7 @@
         {
             "id": "playlist",
             "name": "playlist",
-            "description": "Playlist service lets you create,manage and play your playlists\n Playlists could be static (containing a fixed list of entries) or dynamic (baseed on a filter)",
+            "description": "Playlist service lets you create,manage and play your playlists\n Playlists could be static (containing a fixed list of entries) or dynamic (based on a filter)",
             "actions": [
                 {
                     "name": "add",
@@ -6170,7 +6170,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "Revrieve playlist for playing purpose, based on media entry filters",
+                    "description": "Retrieve playlist for playing purpose, based on media entry filters",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -6269,7 +6269,7 @@
                             "default": "false"
                         }
                     ],
-                    "description": "Update existing playlist\n\t Note - you cannot change playlist type. updated playlist must be of the same type.",
+                    "description": "Update existing playlist\n\t Note - you cannot change playlist type. Updated playlist must be of the same type.",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -6329,7 +6329,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "report getBaseTotal action allows to get a the total base for storage reports",
+                    "description": "report getBaseTotal action allows to get the total base for storage reports",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -6558,7 +6558,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "will create a Csv file for the given report and return the URL to access it",
+                    "description": "will create a CSV file for the given report and return the URL to access it",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -7587,7 +7587,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "request conversion for all entries that doesnt have the required flavor param\n\t returns a comma-separated ids of conversion jobs",
+                    "description": "request conversion for all entries that doesn't have the required flavor param\n\t returns a comma-separated ids of conversion jobs",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -9381,7 +9381,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update exisiting widget",
+                    "description": "Update existing widget",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -9411,7 +9411,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Creates new download job for multiple entry ids (comma separated), an email will be sent when the job is done\n\t This sevice support the following entries: \n\t - MediaEntry\n\t - Video will be converted using the flavor params id\n\t - Audio will be downloaded as MP3\n\t - Image will be downloaded as Jpeg\n\t - MixEntry will be flattened using the flavor params id\n\t - Other entry types are not supported\n\t Returns the admin email that the email message will be sent to",
+                    "description": "Creates new download job for multiple entry ids (comma separated), an email will be sent when the job is done\n\t This service support the following entries: \n\t - MediaEntry\n\t - Video will be converted using the flavor params id\n\t - Audio will be downloaded as MP3\n\t - Image will be downloaded as Jpeg\n\t - MixEntry will be flattened using the flavor params id\n\t - Other entry types are not supported\n\t Returns the admin email that the email message will be sent to",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -83927,6 +83927,10 @@
             "type": "string",
             "values": [
                 {
+                    "name": "CAPTION_ASSET_ID",
+                    "value": "caption_asset_id"
+                },
+                {
                     "name": "CONTENT",
                     "value": "content"
                 },
@@ -93235,10 +93239,6 @@
                     "value": "33"
                 },
                 {
-                    "name": "CITIES",
-                    "value": "30"
-                },
-                {
                     "name": "CONTENT_CONTRIBUTIONS",
                     "value": "7"
                 },
@@ -93261,6 +93261,18 @@
                 {
                     "name": "MAP_OVERLAY",
                     "value": "4"
+                },
+                {
+                    "name": "MAP_OVERLAY_CITY",
+                    "value": "30"
+                },
+                {
+                    "name": "MAP_OVERLAY_COUNTRY",
+                    "value": "36"
+                },
+                {
+                    "name": "MAP_OVERLAY_REGION",
+                    "value": "37"
                 },
                 {
                     "name": "OPERATING_SYSTEM",

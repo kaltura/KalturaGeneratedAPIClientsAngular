@@ -1,7 +1,8 @@
 
 
 export enum KalturaESearchCaptionFieldName {
-    content = 'content',
+    captionAssetId = 'caption_asset_id',
+	content = 'content',
 	endTime = 'end_time',
 	label = 'label',
 	language = 'language',

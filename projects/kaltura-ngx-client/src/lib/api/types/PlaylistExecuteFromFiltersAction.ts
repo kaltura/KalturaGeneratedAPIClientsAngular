@@ -16,7 +16,7 @@ export interface PlaylistExecuteFromFiltersActionArgs  extends KalturaRequestArg
 /**
  * Build request payload for service 'playlist' action 'executeFromFilters'.
  *
- * Usage: Revrieve playlist for playing purpose, based on media entry filters
+ * Usage: Retrieve playlist for playing purpose, based on media entry filters
  *
  * Server response type:         KalturaBaseEntry[]
  * Server failure response type: KalturaAPIException

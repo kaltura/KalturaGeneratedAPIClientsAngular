@@ -13,7 +13,7 @@ export interface DataServeActionArgs  extends KalturaFileRequestArgs {
 /**
  * Build request payload for service 'data' action 'serve'.
  *
- * Usage: serve action returan the file from dataContent field
+ * Usage: return the file from dataContent field
  *
  * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException

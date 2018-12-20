@@ -16,7 +16,7 @@ export interface PartnerGetUsageActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Get usage statistics for a partner
  * Calculation is done according to partner's package
- * Additional data returned is a graph points of streaming usage in a timeframe
+ * Additional data returned is a graph points of streaming usage in a time frame
  * The resolution can be "days" or "months"
  *
  * Server response type:         KalturaPartnerUsage

@@ -15,7 +15,7 @@ export interface ReportGetBaseTotalActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'report' action 'getBaseTotal'.
  *
- * Usage: report getBaseTotal action allows to get a the total base for storage reports
+ * Usage: report getBaseTotal action allows to get the total base for storage reports
  *
  * Server response type:         KalturaReportBaseTotal[]
  * Server failure response type: KalturaAPIException

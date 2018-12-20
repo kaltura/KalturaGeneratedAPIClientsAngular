@@ -12,7 +12,7 @@ export interface MediaUpdateThumbnailFromUrlActionArgs  extends KalturaRequestAr
 /**
  * Build request payload for service 'media' action 'updateThumbnailFromUrl'.
  *
- * Usage: Update entry thumbnail using url
+ * Usage: Update entry thumbnail using URL
  *
  * Server response type:         KalturaBaseEntry
  * Server failure response type: KalturaAPIException
