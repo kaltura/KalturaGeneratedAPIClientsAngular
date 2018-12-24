@@ -1,7 +1,7 @@
 export const TestsConfig = {
-  partnerId: "1931861",
+  partnerId: "@YOUR_PARTNER_ID@",
   userName: "testUser",
-  adminSecret: "83c3d4449a3abbe92ca5966f5f010eb4",
+  adminSecret: "@YOUR_ADMIN_SECRET@",
   endpointUrl: "https://www.kaltura.com",
   clientTag: "ngx-tests"
 };
