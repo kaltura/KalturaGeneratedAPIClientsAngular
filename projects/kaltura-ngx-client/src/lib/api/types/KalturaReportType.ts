@@ -2,6 +2,7 @@
 
 export enum KalturaReportType {
     applications = '16',
+	appDomainUniqueActiveUsers = '40',
 	browsers = '23',
 	browsersFamilies = '33',
 	contentContributions = '7',

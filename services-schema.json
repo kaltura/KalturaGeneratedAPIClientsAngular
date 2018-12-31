@@ -93318,6 +93318,10 @@
                     "value": "16"
                 },
                 {
+                    "name": "APP_DOMAIN_UNIQUE_ACTIVE_USERS",
+                    "value": "40"
+                },
+                {
                     "name": "BROWSERS",
                     "value": "23"
                 },
