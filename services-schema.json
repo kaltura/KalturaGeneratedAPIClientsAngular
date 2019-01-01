@@ -84310,6 +84310,10 @@
                     "value": "entitled_kusers_publish"
                 },
                 {
+                    "name": "ENTITLED_USER_VIEW",
+                    "value": "entitled_kusers_view"
+                },
+                {
                     "name": "ENTRY_TYPE",
                     "value": "entry_type"
                 },

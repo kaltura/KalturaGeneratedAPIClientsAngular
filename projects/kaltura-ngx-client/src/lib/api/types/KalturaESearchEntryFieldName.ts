@@ -11,6 +11,7 @@ export enum KalturaESearchEntryFieldName {
 	endDate = 'end_date',
 	entitledUserEdit = 'entitled_kusers_edit',
 	entitledUserPublish = 'entitled_kusers_publish',
+	entitledUserView = 'entitled_kusers_view',
 	entryType = 'entry_type',
 	externalSourceType = 'external_source_type',
 	id = 'id',
