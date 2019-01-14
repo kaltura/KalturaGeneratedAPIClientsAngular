@@ -329,6 +329,7 @@ export { KalturaBulkUploadResultCategory, KalturaBulkUploadResultCategoryArgs } 
 export { KalturaBulkUploadResultCategoryEntry, KalturaBulkUploadResultCategoryEntryArgs } from './KalturaBulkUploadResultCategoryEntry'
 export { KalturaBulkUploadResultCategoryUser, KalturaBulkUploadResultCategoryUserArgs } from './KalturaBulkUploadResultCategoryUser'
 export { KalturaBulkUploadResultEntry, KalturaBulkUploadResultEntryArgs } from './KalturaBulkUploadResultEntry'
+export { KalturaBulkUploadResultJob, KalturaBulkUploadResultJobArgs } from './KalturaBulkUploadResultJob'
 export { KalturaBulkUploadResultScheduleEvent, KalturaBulkUploadResultScheduleEventArgs } from './KalturaBulkUploadResultScheduleEvent'
 export { KalturaBulkUploadResultScheduleResource, KalturaBulkUploadResultScheduleResourceArgs } from './KalturaBulkUploadResultScheduleResource'
 export { KalturaBulkUploadResultUser, KalturaBulkUploadResultUserArgs } from './KalturaBulkUploadResultUser'
