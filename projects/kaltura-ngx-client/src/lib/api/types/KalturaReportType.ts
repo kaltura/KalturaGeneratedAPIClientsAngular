@@ -26,6 +26,7 @@ export enum KalturaReportType {
 	specificUserEngagement = '12',
 	specificUserUsage = '18',
 	topContent = '1',
+	topContentContributors = '39',
 	topContentCreator = '38',
 	topContributors = '5',
 	topCreators = '20',

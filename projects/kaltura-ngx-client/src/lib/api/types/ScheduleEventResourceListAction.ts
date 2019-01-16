@@ -9,6 +9,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface ScheduleEventResourceListActionArgs  extends KalturaRequestArgs {
     filter? : KalturaScheduleEventResourceFilter;
 	pager? : KalturaFilterPager;
+	filterBlackoutConflicts? : boolean;
 }
 
 /**
@@ -23,10 +24,12 @@ export class ScheduleEventResourceListAction extends KalturaRequest<KalturaSched
 
     filter : KalturaScheduleEventResourceFilter;
 	pager : KalturaFilterPager;
+	filterBlackoutConflicts : boolean;
 
     constructor(data? : ScheduleEventResourceListActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaScheduleEventResourceListResponse', responseConstructor : KalturaScheduleEventResourceListResponse  });
+        if (typeof this.filterBlackoutConflicts === 'undefined') this.filterBlackoutConflicts = true;
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -38,7 +41,8 @@ export class ScheduleEventResourceListAction extends KalturaRequest<KalturaSched
                 service : { type : 'c', default : 'schedule_scheduleeventresource' },
 				action : { type : 'c', default : 'list' },
 				filter : { type : 'o', subTypeConstructor : KalturaScheduleEventResourceFilter, subType : 'KalturaScheduleEventResourceFilter' },
-				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' }
+				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' },
+				filterBlackoutConflicts : { type : 'b' }
             }
         );
         return result;

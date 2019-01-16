@@ -1,6 +1,7 @@
 
 
 export enum KalturaScheduleEventType {
-    liveStream=2,
+    blackout=3,
+	liveStream=2,
 	record=1
 }

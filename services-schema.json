@@ -14277,6 +14277,13 @@
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "scheduleEventConflictType",
+                            "typeClassName": "KalturaScheduleEventConflictType",
+                            "type": "EnumOfInt",
+                            "optional": true,
+                            "default": "1"
                         }
                     ],
                     "description": "List conflicting events for resourcesIds by event's dates",
@@ -14539,6 +14546,13 @@
                             "type": "Object",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "filterBlackoutConflicts",
+                            "typeClassName": "bool",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "true"
                         }
                     ],
                     "description": "List KalturaScheduleEventResource objects",
@@ -41490,6 +41504,15 @@
             ]
         },
         {
+            "name": "KalturaBlackoutScheduleEvent",
+            "base": "KalturaScheduleEvent",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaBpmEventNotificationIntegrationJobTriggerData",
             "base": "KalturaIntegrationJobTriggerData",
             "plugin": "bpmEventNotificationIntegration",
@@ -49107,6 +49130,17 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "blackoutConflicts",
+                    "description": "Blackout schedule events the conflict with this event",
+                    "typeClassName": "KalturaScheduleEvent",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -75396,6 +75430,15 @@
             "properties": []
         },
         {
+            "name": "KalturaBlackoutScheduleEventFilter",
+            "base": "KalturaRecordScheduleEventBaseFilter",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaDocumentFlavorParamsFilter",
             "base": "KalturaDocumentFlavorParamsBaseFilter",
             "plugin": "document",
@@ -78463,6 +78506,24 @@
             ]
         },
         {
+            "name": "KalturaScheduleEventConflictType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "BLACKOUT_CONFLICT",
+                    "value": "2"
+                },
+                {
+                    "name": "BOTH",
+                    "value": "3"
+                },
+                {
+                    "name": "RESOURCE_CONFLICT",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "name": "KalturaScheduleEventRecurrenceType",
             "type": "int",
             "values": [
@@ -78502,6 +78563,10 @@
             "name": "KalturaScheduleEventType",
             "type": "int",
             "values": [
+                {
+                    "name": "BLACKOUT",
+                    "value": "3"
+                },
                 {
                     "name": "LIVE_STREAM",
                     "value": "2"
@@ -93441,6 +93506,10 @@
                 {
                     "name": "TOP_CONTENT",
                     "value": "1"
+                },
+                {
+                    "name": "TOP_CONTENT_CONTRIBUTORS",
+                    "value": "39"
                 },
                 {
                     "name": "TOP_CONTENT_CREATOR",

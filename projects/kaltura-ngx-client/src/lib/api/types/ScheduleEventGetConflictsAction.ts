@@ -3,12 +3,14 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaScheduleEventListResponse } from './KalturaScheduleEventListResponse';
 
 import { KalturaScheduleEvent } from './KalturaScheduleEvent';
+import { KalturaScheduleEventConflictType } from './KalturaScheduleEventConflictType';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ScheduleEventGetConflictsActionArgs  extends KalturaRequestArgs {
     resourceIds : string;
 	scheduleEvent : KalturaScheduleEvent;
 	scheduleEventIdToIgnore? : string;
+	scheduleEventConflictType? : KalturaScheduleEventConflictType;
 }
 
 /**
@@ -24,10 +26,12 @@ export class ScheduleEventGetConflictsAction extends KalturaRequest<KalturaSched
     resourceIds : string;
 	scheduleEvent : KalturaScheduleEvent;
 	scheduleEventIdToIgnore : string;
+	scheduleEventConflictType : KalturaScheduleEventConflictType;
 
     constructor(data : ScheduleEventGetConflictsActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaScheduleEventListResponse', responseConstructor : KalturaScheduleEventListResponse  });
+        if (typeof this.scheduleEventConflictType === 'undefined') this.scheduleEventConflictType = 1;
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -40,7 +44,8 @@ export class ScheduleEventGetConflictsAction extends KalturaRequest<KalturaSched
 				action : { type : 'c', default : 'getConflicts' },
 				resourceIds : { type : 's' },
 				scheduleEvent : { type : 'o', subTypeConstructor : KalturaScheduleEvent, subType : 'KalturaScheduleEvent' },
-				scheduleEventIdToIgnore : { type : 's' }
+				scheduleEventIdToIgnore : { type : 's' },
+				scheduleEventConflictType : { type : 'en', subTypeConstructor : KalturaScheduleEventConflictType, subType : 'KalturaScheduleEventConflictType' }
             }
         );
         return result;
