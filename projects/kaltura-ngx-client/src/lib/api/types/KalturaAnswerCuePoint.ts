@@ -8,6 +8,7 @@ export interface KalturaAnswerCuePointArgs  extends KalturaCuePointArgs {
     parentId? : string;
 	quizUserEntryId? : string;
 	answerKey? : string;
+	openAnswer? : string;
 }
 
 
@@ -16,6 +17,7 @@ export class KalturaAnswerCuePoint extends KalturaCuePoint {
     parentId : string;
 	quizUserEntryId : string;
 	answerKey : string;
+	openAnswer : string;
 	readonly isCorrect : KalturaNullableBoolean;
 	readonly correctAnswerKeys : KalturaString[];
 	readonly explanation : string;
@@ -36,6 +38,7 @@ export class KalturaAnswerCuePoint extends KalturaCuePoint {
 				parentId : { type : 's' },
 				quizUserEntryId : { type : 's' },
 				answerKey : { type : 's' },
+				openAnswer : { type : 's' },
 				isCorrect : { type : 'en', readOnly : true, subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				correctAnswerKeys : { type : 'a', readOnly : true, subTypeConstructor : KalturaString, subType : 'KalturaString' },
 				explanation : { type : 's', readOnly : true }

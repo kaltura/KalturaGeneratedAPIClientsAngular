@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.12.0",
+    "apiVersion": "14.13.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -40780,6 +40780,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "openAnswer",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "isCorrect",
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
@@ -54027,6 +54038,17 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "feedback",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -78362,6 +78384,10 @@
                     "value": "1"
                 },
                 {
+                    "name": "OPEN_QUESTION",
+                    "value": "8"
+                },
+                {
                     "name": "REFLECTION_POINT",
                     "value": "3"
                 },
@@ -93530,6 +93556,10 @@
                 {
                     "name": "TOP_PLAYBACK_CONTEXT",
                     "value": "25"
+                },
+                {
+                    "name": "TOP_SOURCES",
+                    "value": "41"
                 },
                 {
                     "name": "TOP_SYNDICATION",
