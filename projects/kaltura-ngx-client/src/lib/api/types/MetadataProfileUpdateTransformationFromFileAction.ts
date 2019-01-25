@@ -12,7 +12,7 @@ export interface MetadataProfileUpdateTransformationFromFileActionArgs  extends 
 /**
  * Build request payload for service 'metadataProfile' action 'updateTransformationFromFile'.
  *
- * Usage: Update an existing metadata object xslt file
+ * Usage: Update an existing metadata object XSLT file
  *
  * Server response type:         KalturaMetadataProfile
  * Server failure response type: KalturaAPIException

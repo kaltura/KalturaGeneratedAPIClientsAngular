@@ -4145,7 +4145,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Creates perioding metadata sync-point events on a live stream",
+                    "description": "Creates periodic metadata sync-point events on a live stream",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -7377,7 +7377,7 @@
         {
             "id": "storageprofile",
             "name": "storageProfile",
-            "description": "Storage Profiles service",
+            "description": "The Storage Profile service allows you to export your Kaltura content to external storage volumes.\n This service is disabled by default, please contact your account manager if you wish to enable it for your partner.",
             "actions": [
                 {
                     "name": "add",
@@ -9867,7 +9867,7 @@
         {
             "id": "audit_audittrail",
             "name": "auditTrail",
-            "description": "Audit Trail service",
+            "description": "The Audit Trail service allows you to keep track of changes made to various Kaltura objects. \n This service is disabled by default.",
             "actions": [
                 {
                     "name": "add",
@@ -13238,7 +13238,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Allows you to add a metadata xml data from remote URL.\n\t Enables different permissions than addFromUrl action.",
+                    "description": "Allows you to add a metadata XML data from remote URL.\n\t Enables different permissions than addFromUrl action.",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -13312,7 +13312,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Allows you to add a metadata xml data from remote URL",
+                    "description": "Allows you to add a metadata XML data from remote URL",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -13781,7 +13781,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update an existing metadata object xslt file",
+                    "description": "Update an existing metadata object XSLT file",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -14865,7 +14865,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update exisitng short link",
+                    "description": "Update existing short link",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -15140,7 +15140,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Update exisitng virus scan profile, it is possible to update the virus scan profile id too",
+                    "description": "Update existing virus scan profile, it is possible to update the virus scan profile id too",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -40819,6 +40819,17 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "feedback",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"

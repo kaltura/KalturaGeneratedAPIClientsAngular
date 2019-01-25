@@ -9,6 +9,7 @@ export interface KalturaAnswerCuePointArgs  extends KalturaCuePointArgs {
 	quizUserEntryId? : string;
 	answerKey? : string;
 	openAnswer? : string;
+	feedback? : string;
 }
 
 
@@ -21,6 +22,7 @@ export class KalturaAnswerCuePoint extends KalturaCuePoint {
 	readonly isCorrect : KalturaNullableBoolean;
 	readonly correctAnswerKeys : KalturaString[];
 	readonly explanation : string;
+	feedback : string;
 
     constructor(data? : KalturaAnswerCuePointArgs)
     {
@@ -41,7 +43,8 @@ export class KalturaAnswerCuePoint extends KalturaCuePoint {
 				openAnswer : { type : 's' },
 				isCorrect : { type : 'en', readOnly : true, subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				correctAnswerKeys : { type : 'a', readOnly : true, subTypeConstructor : KalturaString, subType : 'KalturaString' },
-				explanation : { type : 's', readOnly : true }
+				explanation : { type : 's', readOnly : true },
+				feedback : { type : 's' }
             }
         );
         return result;

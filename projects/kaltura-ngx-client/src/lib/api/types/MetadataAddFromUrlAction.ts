@@ -15,7 +15,7 @@ export interface MetadataAddFromUrlActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'metadata' action 'addFromUrl'.
  *
- * Usage: Allows you to add a metadata xml data from remote URL
+ * Usage: Allows you to add a metadata XML data from remote URL
  *
  * Server response type:         KalturaMetadata
  * Server failure response type: KalturaAPIException

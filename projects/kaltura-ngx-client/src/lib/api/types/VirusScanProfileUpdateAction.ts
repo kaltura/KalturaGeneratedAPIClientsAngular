@@ -12,7 +12,7 @@ export interface VirusScanProfileUpdateActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'virusScanProfile' action 'update'.
  *
- * Usage: Update exisitng virus scan profile, it is possible to update the virus scan profile id too
+ * Usage: Update existing virus scan profile, it is possible to update the virus scan profile id too
  *
  * Server response type:         KalturaVirusScanProfile
  * Server failure response type: KalturaAPIException
