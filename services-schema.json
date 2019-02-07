@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.13.0",
+    "apiVersion": "14.14.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -54397,6 +54397,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "ownerIdsIn",
+                    "description": "Filter by entry owner",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -84570,6 +84581,18 @@
                     "value": "plays"
                 },
                 {
+                    "name": "PLAYS_LAST_1_DAY",
+                    "value": "plays_last_1_day"
+                },
+                {
+                    "name": "PLAYS_LAST_30_DAYS",
+                    "value": "plays_last_30_days"
+                },
+                {
+                    "name": "PLAYS_LAST_7_DAYS",
+                    "value": "plays_last_7_days"
+                },
+                {
                     "name": "START_DATE",
                     "value": "start_date"
                 },
@@ -84580,6 +84603,18 @@
                 {
                     "name": "VIEWS",
                     "value": "views"
+                },
+                {
+                    "name": "VIEWS_LAST_1_DAY",
+                    "value": "views_last_1_day"
+                },
+                {
+                    "name": "VIEWS_LAST_30_DAYS",
+                    "value": "views_last_30_days"
+                },
+                {
+                    "name": "VIEWS_LAST_7_DAYS",
+                    "value": "views_last_7_days"
                 },
                 {
                     "name": "VOTES",
