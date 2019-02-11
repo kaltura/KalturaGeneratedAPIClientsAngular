@@ -42,5 +42,6 @@ export enum KalturaReportType {
 	userTopContent = '13',
 	userUsage = '17',
 	varUsage = '19',
-	vpaasUsage = '26'
+	vpaasUsage = '26',
+	vpaasUsageMulti = '42'
 }
