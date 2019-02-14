@@ -4,6 +4,7 @@ import { KalturaReportGraph } from './KalturaReportGraph';
 
 import { KalturaReportType } from './KalturaReportType';
 import { KalturaReportInputFilter } from './KalturaReportInputFilter';
+import { KalturaReportResponseOptions } from './KalturaReportResponseOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ReportGetGraphsActionArgs  extends KalturaRequestArgs {
@@ -11,6 +12,7 @@ export interface ReportGetGraphsActionArgs  extends KalturaRequestArgs {
 	reportInputFilter : KalturaReportInputFilter;
 	dimension? : string;
 	objectIds? : string;
+	responseOptions? : KalturaReportResponseOptions;
 }
 
 /**
@@ -27,6 +29,7 @@ export class ReportGetGraphsAction extends KalturaRequest<KalturaReportGraph[]> 
 	reportInputFilter : KalturaReportInputFilter;
 	dimension : string;
 	objectIds : string;
+	responseOptions : KalturaReportResponseOptions;
 
     constructor(data : ReportGetGraphsActionArgs)
     {
@@ -44,7 +47,8 @@ export class ReportGetGraphsAction extends KalturaRequest<KalturaReportGraph[]> 
 				reportType : { type : 'es', subTypeConstructor : KalturaReportType, subType : 'KalturaReportType' },
 				reportInputFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
 				dimension : { type : 's' },
-				objectIds : { type : 's' }
+				objectIds : { type : 's' },
+				responseOptions : { type : 'o', subTypeConstructor : KalturaReportResponseOptions, subType : 'KalturaReportResponseOptions' }
             }
         );
         return result;

@@ -4,12 +4,14 @@ import { KalturaReportBaseTotal } from './KalturaReportBaseTotal';
 
 import { KalturaReportType } from './KalturaReportType';
 import { KalturaReportInputFilter } from './KalturaReportInputFilter';
+import { KalturaReportResponseOptions } from './KalturaReportResponseOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ReportGetBaseTotalActionArgs  extends KalturaRequestArgs {
     reportType : KalturaReportType;
 	reportInputFilter : KalturaReportInputFilter;
 	objectIds? : string;
+	responseOptions? : KalturaReportResponseOptions;
 }
 
 /**
@@ -25,6 +27,7 @@ export class ReportGetBaseTotalAction extends KalturaRequest<KalturaReportBaseTo
     reportType : KalturaReportType;
 	reportInputFilter : KalturaReportInputFilter;
 	objectIds : string;
+	responseOptions : KalturaReportResponseOptions;
 
     constructor(data : ReportGetBaseTotalActionArgs)
     {
@@ -41,7 +44,8 @@ export class ReportGetBaseTotalAction extends KalturaRequest<KalturaReportBaseTo
 				action : { type : 'c', default : 'getBaseTotal' },
 				reportType : { type : 'es', subTypeConstructor : KalturaReportType, subType : 'KalturaReportType' },
 				reportInputFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
-				objectIds : { type : 's' }
+				objectIds : { type : 's' },
+				responseOptions : { type : 'o', subTypeConstructor : KalturaReportResponseOptions, subType : 'KalturaReportResponseOptions' }
             }
         );
         return result;

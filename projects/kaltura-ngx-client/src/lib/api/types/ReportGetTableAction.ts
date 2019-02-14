@@ -5,6 +5,7 @@ import { KalturaReportTable } from './KalturaReportTable';
 import { KalturaReportType } from './KalturaReportType';
 import { KalturaReportInputFilter } from './KalturaReportInputFilter';
 import { KalturaFilterPager } from './KalturaFilterPager';
+import { KalturaReportResponseOptions } from './KalturaReportResponseOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ReportGetTableActionArgs  extends KalturaRequestArgs {
@@ -13,6 +14,7 @@ export interface ReportGetTableActionArgs  extends KalturaRequestArgs {
 	pager : KalturaFilterPager;
 	order? : string;
 	objectIds? : string;
+	responseOptions? : KalturaReportResponseOptions;
 }
 
 /**
@@ -30,6 +32,7 @@ export class ReportGetTableAction extends KalturaRequest<KalturaReportTable> {
 	pager : KalturaFilterPager;
 	order : string;
 	objectIds : string;
+	responseOptions : KalturaReportResponseOptions;
 
     constructor(data : ReportGetTableActionArgs)
     {
@@ -48,7 +51,8 @@ export class ReportGetTableAction extends KalturaRequest<KalturaReportTable> {
 				reportInputFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
 				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' },
 				order : { type : 's' },
-				objectIds : { type : 's' }
+				objectIds : { type : 's' },
+				responseOptions : { type : 'o', subTypeConstructor : KalturaReportResponseOptions, subType : 'KalturaReportResponseOptions' }
             }
         );
         return result;

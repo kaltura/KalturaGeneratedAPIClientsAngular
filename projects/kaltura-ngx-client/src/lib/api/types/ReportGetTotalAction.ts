@@ -4,12 +4,14 @@ import { KalturaReportTotal } from './KalturaReportTotal';
 
 import { KalturaReportType } from './KalturaReportType';
 import { KalturaReportInputFilter } from './KalturaReportInputFilter';
+import { KalturaReportResponseOptions } from './KalturaReportResponseOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ReportGetTotalActionArgs  extends KalturaRequestArgs {
     reportType : KalturaReportType;
 	reportInputFilter : KalturaReportInputFilter;
 	objectIds? : string;
+	responseOptions? : KalturaReportResponseOptions;
 }
 
 /**
@@ -25,6 +27,7 @@ export class ReportGetTotalAction extends KalturaRequest<KalturaReportTotal> {
     reportType : KalturaReportType;
 	reportInputFilter : KalturaReportInputFilter;
 	objectIds : string;
+	responseOptions : KalturaReportResponseOptions;
 
     constructor(data : ReportGetTotalActionArgs)
     {
@@ -41,7 +44,8 @@ export class ReportGetTotalAction extends KalturaRequest<KalturaReportTotal> {
 				action : { type : 'c', default : 'getTotal' },
 				reportType : { type : 'es', subTypeConstructor : KalturaReportType, subType : 'KalturaReportType' },
 				reportInputFilter : { type : 'o', subTypeConstructor : KalturaReportInputFilter, subType : 'KalturaReportInputFilter' },
-				objectIds : { type : 's' }
+				objectIds : { type : 's' },
+				responseOptions : { type : 'o', subTypeConstructor : KalturaReportResponseOptions, subType : 'KalturaReportResponseOptions' }
             }
         );
         return result;

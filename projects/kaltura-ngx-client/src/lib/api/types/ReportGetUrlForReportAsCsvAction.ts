@@ -5,6 +5,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaReportType } from './KalturaReportType';
 import { KalturaReportInputFilter } from './KalturaReportInputFilter';
 import { KalturaFilterPager } from './KalturaFilterPager';
+import { KalturaReportResponseOptions } from './KalturaReportResponseOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface ReportGetUrlForReportAsCsvActionArgs  extends KalturaRequestArgs {
@@ -17,6 +18,7 @@ export interface ReportGetUrlForReportAsCsvActionArgs  extends KalturaRequestArg
 	pager? : KalturaFilterPager;
 	order? : string;
 	objectIds? : string;
+	responseOptions? : KalturaReportResponseOptions;
 }
 
 /**
@@ -38,6 +40,7 @@ export class ReportGetUrlForReportAsCsvAction extends KalturaRequest<string> {
 	pager : KalturaFilterPager;
 	order : string;
 	objectIds : string;
+	responseOptions : KalturaReportResponseOptions;
 
     constructor(data : ReportGetUrlForReportAsCsvActionArgs)
     {
@@ -60,7 +63,8 @@ export class ReportGetUrlForReportAsCsvAction extends KalturaRequest<string> {
 				dimension : { type : 's' },
 				pager : { type : 'o', subTypeConstructor : KalturaFilterPager, subType : 'KalturaFilterPager' },
 				order : { type : 's' },
-				objectIds : { type : 's' }
+				objectIds : { type : 's' },
+				responseOptions : { type : 'o', subTypeConstructor : KalturaReportResponseOptions, subType : 'KalturaReportResponseOptions' }
             }
         );
         return result;

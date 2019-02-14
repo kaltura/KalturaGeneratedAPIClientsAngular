@@ -6327,6 +6327,13 @@
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "responseOptions",
+                            "typeClassName": "KalturaReportResponseOptions",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "report getBaseTotal action allows to get the total base for storage reports",
@@ -6410,6 +6417,13 @@
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "responseOptions",
+                            "typeClassName": "KalturaReportResponseOptions",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "report getGraphs action allows to get a graph data for a specific report.",
@@ -6454,6 +6468,13 @@
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "responseOptions",
+                            "typeClassName": "KalturaReportResponseOptions",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "report getTable action allows to get a graph data for a specific report.",
@@ -6482,6 +6503,13 @@
                             "name": "objectIds",
                             "typeClassName": "string",
                             "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "responseOptions",
+                            "typeClassName": "KalturaReportResponseOptions",
+                            "type": "Object",
                             "optional": true,
                             "default": "null"
                         }
@@ -6554,6 +6582,13 @@
                             "name": "objectIds",
                             "typeClassName": "string",
                             "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "responseOptions",
+                            "typeClassName": "KalturaReportResponseOptions",
+                            "type": "Object",
                             "optional": true,
                             "default": "null"
                         }
@@ -35270,6 +35305,27 @@
                     "description": "",
                     "typeClassName": "KalturaString",
                     "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReportResponseOptions",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "delimiter",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,

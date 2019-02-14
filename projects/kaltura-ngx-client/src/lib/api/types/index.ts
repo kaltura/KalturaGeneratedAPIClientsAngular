@@ -234,6 +234,7 @@ export { KalturaReportBaseTotal, KalturaReportBaseTotalArgs } from './KalturaRep
 export { KalturaReportGraph, KalturaReportGraphArgs } from './KalturaReportGraph'
 export { KalturaReportInputBaseFilter, KalturaReportInputBaseFilterArgs } from './KalturaReportInputBaseFilter'
 export { KalturaReportResponse, KalturaReportResponseArgs } from './KalturaReportResponse'
+export { KalturaReportResponseOptions, KalturaReportResponseOptionsArgs } from './KalturaReportResponseOptions'
 export { KalturaReportTable, KalturaReportTableArgs } from './KalturaReportTable'
 export { KalturaReportTotal, KalturaReportTotalArgs } from './KalturaReportTotal'
 export { KalturaRequestConfiguration, KalturaRequestConfigurationArgs } from './KalturaRequestConfiguration'
