@@ -1,12 +1,12 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
-import { KalturaObject } from './KalturaObject';
+import { KalturaOperationAttributes } from './KalturaOperationAttributes';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
 export interface KalturaClipConcatJobDataArgs  extends KalturaJobDataArgs {
     partnerId? : number;
 	priority? : number;
-	operationAttributes? : KalturaObject[];
+	operationAttributes? : KalturaOperationAttributes[];
 }
 
 
@@ -14,7 +14,7 @@ export class KalturaClipConcatJobData extends KalturaJobData {
 
     partnerId : number;
 	priority : number;
-	operationAttributes : KalturaObject[];
+	operationAttributes : KalturaOperationAttributes[];
 
     constructor(data? : KalturaClipConcatJobDataArgs)
     {
@@ -31,7 +31,7 @@ export class KalturaClipConcatJobData extends KalturaJobData {
                 objectType : { type : 'c', default : 'KalturaClipConcatJobData' },
 				partnerId : { type : 'n' },
 				priority : { type : 'n' },
-				operationAttributes : { type : 'a', subTypeConstructor : KalturaObject, subType : 'KalturaObject' }
+				operationAttributes : { type : 'a', subTypeConstructor : KalturaOperationAttributes, subType : 'KalturaOperationAttributes' }
             }
         );
         return result;

@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.14.0",
+    "apiVersion": "14.15.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -43915,7 +43915,7 @@
                 {
                     "name": "operationAttributes",
                     "description": "clip operations",
-                    "typeClassName": "KalturaObject",
+                    "typeClassName": "KalturaOperationAttributes",
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
@@ -54481,6 +54481,28 @@
                     "description": "",
                     "typeClassName": "KalturaESearchEntryOperator",
                     "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryCreatedAtGreaterThanOrEqual",
+                    "description": "Entry created at greater than or equal as Unix timestamp",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryCreatedAtLessThanOrEqual",
+                    "description": "Entry created at less than or equal as Unix timestamp",
+                    "typeClassName": "",
+                    "type": "Date",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
