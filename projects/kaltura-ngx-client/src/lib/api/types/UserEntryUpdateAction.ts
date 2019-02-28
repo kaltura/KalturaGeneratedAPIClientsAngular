@@ -1,8 +1,7 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
-
 import { KalturaUserEntry } from './KalturaUserEntry';
+
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface UserEntryUpdateActionArgs  extends KalturaRequestArgs {
@@ -15,17 +14,17 @@ export interface UserEntryUpdateActionArgs  extends KalturaRequestArgs {
  *
  * 
  *
- * Server response type:         void
+ * Server response type:         KalturaUserEntry
  * Server failure response type: KalturaAPIException
  */
-export class UserEntryUpdateAction extends KalturaRequest<void> {
+export class UserEntryUpdateAction extends KalturaRequest<KalturaUserEntry> {
 
     id : number;
 	userEntry : KalturaUserEntry;
 
     constructor(data : UserEntryUpdateActionArgs)
     {
-        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaUserEntry', responseConstructor : KalturaUserEntry  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
