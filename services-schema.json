@@ -9962,6 +9962,105 @@
             ]
         },
         {
+            "id": "beacon_beacon",
+            "name": "beacon",
+            "description": "Sending beacons on objects",
+            "actions": [
+                {
+                    "name": "add",
+                    "resultClassName": "bool",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "beacon",
+                            "typeClassName": "KalturaBeacon",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "shouldLog",
+                            "typeClassName": "KalturaNullableBoolean",
+                            "type": "EnumOfInt",
+                            "optional": true,
+                            "default": "0"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "enhanceSearch",
+                    "resultClassName": "KalturaBeaconListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaBeaconEnhanceFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaBeaconListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaBeaconFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "searchScheduledResource",
+                    "resultClassName": "KalturaBeaconListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "searchParams",
+                            "typeClassName": "KalturaBeaconSearchParams",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
             "id": "bulkupload_bulk",
             "name": "bulk",
             "description": "Bulk upload service is used to upload & manage bulk uploads",
@@ -10617,6 +10716,85 @@
                         }
                     ],
                     "description": "Search caption asset items by filter, pager and free text",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "confmaps_confmaps",
+            "name": "confMaps",
+            "description": "",
+            "actions": [
+                {
+                    "name": "add",
+                    "resultClassName": "KalturaConfMaps",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "map",
+                            "typeClassName": "KalturaConfMaps",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Add configuration map",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "get",
+                    "resultClassName": "KalturaConfMaps",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaConfMapsFilter",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Get configuration map",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "getMapNames",
+                    "resultClassName": "KalturaString",
+                    "resultType": "ArrayOfObjects",
+                    "params": [],
+                    "description": "List configuration maps names",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaConfMapsListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaConfMapsFilter",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "List configuration maps",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "update",
+                    "resultClassName": "KalturaConfMaps",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "map",
+                            "typeClassName": "KalturaConfMaps",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update configuration map",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -14777,6 +14955,45 @@
                         }
                     ],
                     "description": "Update an existing scheduled task profile",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "searchhistory_searchhistory",
+            "name": "searchHistory",
+            "description": "",
+            "actions": [
+                {
+                    "name": "delete",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "searchTerm",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaESearchHistoryListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaESearchHistoryFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -19384,6 +19601,104 @@
             ]
         },
         {
+            "name": "KalturaBeacon",
+            "base": "",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "id",
+                    "description": "Beacon id",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "indexType",
+                    "description": "Beacon indexType",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAt",
+                    "description": "Beacon update date as Unix timestamp (In seconds)",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "relatedObjectType",
+                    "description": "The object which this beacon belongs to",
+                    "typeClassName": "KalturaBeaconObjectTypes",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "eventType",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "objectId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "privateData",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "rawData",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchBaseItem",
             "base": "",
             "plugin": "elasticSearch",
@@ -19400,6 +19715,90 @@
             "abstract": true,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaBeaconSearchParams",
+            "base": "",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objectId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchOrderByItem",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sortOrder",
+                    "description": "",
+                    "typeClassName": "KalturaESearchSortOrder",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconSearchScheduledResourceOrderByItem",
+            "base": "KalturaESearchOrderByItem",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconScheduledResourceOrderByFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconSearchScheduledResourceOrderBy",
+            "base": "",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "orderItems",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconSearchScheduledResourceOrderByItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaValue",
@@ -21198,6 +21597,115 @@
                     "description": "",
                     "typeClassName": "int",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaConfMaps",
+            "base": "",
+            "plugin": "confMaps",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "name",
+                    "description": "Name of the map",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "content",
+                    "description": "Ini file content",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "isEditable",
+                    "description": "IsEditable - true / false",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "lastUpdate",
+                    "description": "Time of the last update",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "relatedHost",
+                    "description": "Regex that represent the host/s that this map affect",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "version",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sourceLocation",
+                    "description": "",
+                    "typeClassName": "KalturaConfMapsSourceLocation",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "remarks",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "status",
+                    "description": "map status",
+                    "typeClassName": "KalturaConfMapsStatus",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -24774,6 +25282,15 @@
             ]
         },
         {
+            "name": "KalturaESearchBaseFilter",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaESearchCategoryBaseItem",
             "base": "KalturaESearchBaseItem",
             "plugin": "elasticSearch",
@@ -24980,20 +25497,42 @@
             ]
         },
         {
-            "name": "KalturaESearchOrderByItem",
+            "name": "KalturaESearchHistory",
             "base": "",
-            "plugin": "elasticSearch",
+            "plugin": "searchHistory",
             "description": "",
-            "abstract": true,
+            "abstract": false,
             "deprecated": false,
             "properties": [
                 {
-                    "name": "sortOrder",
+                    "name": "searchTerm",
                     "description": "",
-                    "typeClassName": "KalturaESearchSortOrder",
-                    "type": "EnumOfString",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
-                    "readOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchedObject",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -41604,6 +42143,199 @@
             ]
         },
         {
+            "name": "KalturaBeaconBaseFilter",
+            "base": "KalturaFilter",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "updatedAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "relatedObjectTypeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "relatedObjectTypeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconObjectTypes",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "eventTypeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "objectIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconEnhanceFilter",
+            "base": "KalturaFilter",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "externalElasticQueryObject",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "indexTypeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconIndexType",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaBeacon",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconScheduledResourceOperator",
+            "base": "KalturaBeaconScheduledResourceBaseItem",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "operator",
+                    "description": "",
+                    "typeClassName": "KalturaESearchOperatorType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchItems",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconScheduledResourceBaseItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconScheduledResourceSearchParams",
+            "base": "KalturaBeaconSearchParams",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "searchOperator",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconScheduledResourceOperator",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "orderBy",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconSearchScheduledResourceOrderBy",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaBlackoutScheduleEvent",
             "base": "KalturaScheduleEvent",
             "plugin": "schedule",
@@ -44131,6 +44863,27 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaConfMapsListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "confMaps",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaConfMaps",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -47618,6 +48371,59 @@
                     "name": "objects",
                     "description": "",
                     "typeClassName": "KalturaESearchEntryResult",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchHistoryFilter",
+            "base": "KalturaESearchBaseFilter",
+            "plugin": "searchHistory",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "searchTermStartsWith",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchedObjectIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchHistoryListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "searchHistory",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaESearchHistory",
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
@@ -59787,6 +60593,27 @@
             ]
         },
         {
+            "name": "KalturaBeaconFilter",
+            "base": "KalturaBeaconBaseFilter",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "indexTypeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconIndexType",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaBulkUploadCsvJobData",
             "base": "KalturaBulkUploadJobData",
             "plugin": "bulkUploadCsv",
@@ -60815,6 +61642,49 @@
                     "name": "profileSystemName",
                     "description": "Metadata profile system name",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaConfMapsBaseFilter",
+            "base": "KalturaRelatedFilter",
+            "plugin": "confMaps",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "nameEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "relatedHostEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "versionEqual",
+                    "description": "",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -69958,6 +70828,27 @@
             ]
         },
         {
+            "name": "KalturaBeaconScheduledResourceItem",
+            "base": "KalturaBeaconAbstractScheduledResourceItem",
+            "plugin": "beacon",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaBeaconScheduledResourceFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaBusinessProcessNotificationTemplateBaseFilter",
             "base": "KalturaEventNotificationTemplateFilter",
             "plugin": "businessProcessNotification",
@@ -70079,6 +70970,15 @@
             "plugin": "comcastMrssDistribution",
             "description": "",
             "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaConfMapsFilter",
+            "base": "KalturaConfMapsBaseFilter",
+            "plugin": "confMaps",
+            "description": "",
+            "abstract": false,
             "deprecated": false,
             "properties": []
         },
@@ -76530,6 +77430,20 @@
             ]
         },
         {
+            "name": "KalturaConfMapsStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "STATUS_DISABLED",
+                    "value": "0"
+                },
+                {
+                    "name": "STATUS_ENABLED",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "name": "KalturaContributionPolicyType",
             "type": "int",
             "values": [
@@ -81651,6 +82565,120 @@
             ]
         },
         {
+            "name": "KalturaBeaconIndexType",
+            "type": "string",
+            "values": [
+                {
+                    "name": "LOG",
+                    "value": "Log"
+                },
+                {
+                    "name": "STATE",
+                    "value": "State"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconObjectTypes",
+            "type": "string",
+            "values": [
+                {
+                    "name": "ENTRY_BEACON",
+                    "value": "4"
+                },
+                {
+                    "name": "ENTRY_SERVER_NODE_BEACON",
+                    "value": "2"
+                },
+                {
+                    "name": "SCHEDULE_RESOURCE_BEACON",
+                    "value": "1"
+                },
+                {
+                    "name": "SERVER_NODE_BEACON",
+                    "value": "3"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "OBJECT_ID_ASC",
+                    "value": "+objectId"
+                },
+                {
+                    "name": "OBJECT_ID_DESC",
+                    "value": "-objectId"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconScheduledResourceFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "EVENT_TYPE",
+                    "value": "event_type"
+                },
+                {
+                    "name": "IS_LOG",
+                    "value": "is_log"
+                },
+                {
+                    "name": "OBJECT_ID",
+                    "value": "object_id"
+                },
+                {
+                    "name": "RECORDING",
+                    "value": "recording"
+                },
+                {
+                    "name": "RESOURCE_NAME",
+                    "value": "resource_name"
+                },
+                {
+                    "name": "STATUS",
+                    "value": "status"
+                },
+                {
+                    "name": "UPDATED_AT",
+                    "value": "updated_at"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBeaconScheduledResourceOrderByFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "RECORDING",
+                    "value": "recording_phase"
+                },
+                {
+                    "name": "RESOURCE_NAME",
+                    "value": "resource_Name"
+                },
+                {
+                    "name": "STATUS",
+                    "value": "app_status"
+                },
+                {
+                    "name": "UPDATED_AT",
+                    "value": "updated_at"
+                }
+            ]
+        },
+        {
             "name": "KalturaBulkUploadAction",
             "type": "string",
             "values": [
@@ -82416,6 +83444,20 @@
                 {
                     "name": "USER_ROLE",
                     "value": "9"
+                }
+            ]
+        },
+        {
+            "name": "KalturaConfMapsSourceLocation",
+            "type": "string",
+            "values": [
+                {
+                    "name": "DB",
+                    "value": "database"
+                },
+                {
+                    "name": "FS",
+                    "value": "FileSystem"
                 }
             ]
         },
