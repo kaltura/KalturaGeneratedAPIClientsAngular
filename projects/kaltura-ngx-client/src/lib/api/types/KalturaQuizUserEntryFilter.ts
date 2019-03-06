@@ -3,13 +3,13 @@ import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-ba
 import { KalturaQuizUserEntryBaseFilter, KalturaQuizUserEntryBaseFilterArgs } from './KalturaQuizUserEntryBaseFilter';
 
 export interface KalturaQuizUserEntryFilterArgs  extends KalturaQuizUserEntryBaseFilterArgs {
-    
+    versionEqual? : number;
 }
 
 
 export class KalturaQuizUserEntryFilter extends KalturaQuizUserEntryBaseFilter {
 
-    
+    versionEqual : number;
 
     constructor(data? : KalturaQuizUserEntryFilterArgs)
     {
@@ -22,7 +22,8 @@ export class KalturaQuizUserEntryFilter extends KalturaQuizUserEntryBaseFilter {
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaQuizUserEntryFilter' }
+                objectType : { type : 'c', default : 'KalturaQuizUserEntryFilter' },
+				versionEqual : { type : 'n' }
             }
         );
         return result;

@@ -12,6 +12,7 @@ export interface KalturaQuizArgs  extends KalturaObjectBaseArgs {
 	showCorrectAfterSubmission? : KalturaNullableBoolean;
 	allowDownload? : KalturaNullableBoolean;
 	showGradeAfterSubmission? : KalturaNullableBoolean;
+	maxRetakesAllowed? : number;
 }
 
 
@@ -25,6 +26,7 @@ export class KalturaQuiz extends KalturaObjectBase {
 	showCorrectAfterSubmission : KalturaNullableBoolean;
 	allowDownload : KalturaNullableBoolean;
 	showGradeAfterSubmission : KalturaNullableBoolean;
+	maxRetakesAllowed : number;
 
     constructor(data? : KalturaQuizArgs)
     {
@@ -46,7 +48,8 @@ export class KalturaQuiz extends KalturaObjectBase {
 				allowAnswerUpdate : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				showCorrectAfterSubmission : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				allowDownload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				showGradeAfterSubmission : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				showGradeAfterSubmission : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				maxRetakesAllowed : { type : 'n' }
             }
         );
         return result;

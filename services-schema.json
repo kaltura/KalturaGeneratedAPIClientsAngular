@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.15.0",
+    "apiVersion": "14.16.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -3378,6 +3378,29 @@
                         }
                     ],
                     "description": "sync by userId and groupIds",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "update",
+                    "resultClassName": "KalturaGroupUser",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "groupUserId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "groupUser",
+                            "typeClassName": "KalturaGroupUser",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "update GroupUser",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -30013,6 +30036,17 @@
             "deprecated": false,
             "properties": [
                 {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "userId",
                     "description": "",
                     "typeClassName": "string",
@@ -30086,6 +30120,17 @@
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userRole",
+                    "description": "",
+                    "typeClassName": "KalturaGroupUserRole",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
                     "optional": true,
                     "default": "null"
                 }
@@ -30955,6 +31000,17 @@
                 {
                     "name": "videoOffsetInPercentage",
                     "description": "Create thumbnail from the videoLengthpercentage second",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "interval",
+                    "description": "interval in seconds for creating thumbnail",
                     "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
@@ -35511,6 +35567,17 @@
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "maxRetakesAllowed",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -54944,6 +55011,17 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "version",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -75780,7 +75858,19 @@
             "description": "",
             "abstract": false,
             "deprecated": false,
-            "properties": []
+            "properties": [
+                {
+                    "name": "versionEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaSshDropFolderBaseFilter",
@@ -78599,6 +78689,20 @@
                 },
                 {
                     "name": "MANUAL",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaGroupUserRole",
+            "type": "int",
+            "values": [
+                {
+                    "name": "MANAGER",
+                    "value": "2"
+                },
+                {
+                    "name": "MEMBER",
                     "value": "1"
                 }
             ]
@@ -83494,6 +83598,10 @@
                 {
                     "name": "AVI",
                     "value": "avi"
+                },
+                {
+                    "name": "BIF",
+                    "value": "bif"
                 },
                 {
                     "name": "BMP",

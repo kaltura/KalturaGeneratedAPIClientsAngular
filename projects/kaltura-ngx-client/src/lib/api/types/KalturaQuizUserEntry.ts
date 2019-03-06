@@ -11,6 +11,7 @@ export class KalturaQuizUserEntry extends KalturaUserEntry {
 
     readonly score : number;
 	feedback : string;
+	readonly version : number;
 
     constructor(data? : KalturaQuizUserEntryArgs)
     {
@@ -25,7 +26,8 @@ export class KalturaQuizUserEntry extends KalturaUserEntry {
             {
                 objectType : { type : 'c', default : 'KalturaQuizUserEntry' },
 				score : { type : 'n', readOnly : true },
-				feedback : { type : 's' }
+				feedback : { type : 's' },
+				version : { type : 'n', readOnly : true }
             }
         );
         return result;

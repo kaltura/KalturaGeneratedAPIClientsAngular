@@ -3,6 +3,7 @@
 export enum KalturaContainerFormat {
     applehttp = 'applehttp',
 	avi = 'avi',
+	bif = 'bif',
 	bmp = 'bmp',
 	copy = 'copy',
 	flv = 'flv',
