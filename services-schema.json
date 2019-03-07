@@ -14397,6 +14397,550 @@
             ]
         },
         {
+            "id": "reach_vendorcatalogitem",
+            "name": "vendorCatalogItem",
+            "description": "Vendor Catalog Item Service",
+            "actions": [
+                {
+                    "name": "add",
+                    "resultClassName": "KalturaVendorCatalogItem",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "vendorCatalogItem",
+                            "typeClassName": "KalturaVendorCatalogItem",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Allows you to add an service catalog item",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "delete",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Delete vedor catalog item object",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "get",
+                    "resultClassName": "KalturaVendorCatalogItem",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Retrieve specific catalog item by id",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaVendorCatalogItemListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaVendorCatalogItemFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "List KalturaVendorCatalogItem objects",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "update",
+                    "resultClassName": "KalturaVendorCatalogItem",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "vendorCatalogItem",
+                            "typeClassName": "KalturaVendorCatalogItem",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update an existing vedor catalog item object",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateStatus",
+                    "resultClassName": "KalturaVendorCatalogItem",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "status",
+                            "typeClassName": "KalturaVendorCatalogItemStatus",
+                            "type": "EnumOfInt",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update vendor catalog item status by id",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "reach_reachprofile",
+            "name": "reachProfile",
+            "description": "Reach Profile Service",
+            "actions": [
+                {
+                    "name": "add",
+                    "resultClassName": "KalturaReachProfile",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "reachProfile",
+                            "typeClassName": "KalturaReachProfile",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Allows you to add a partner specific reach profile",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "delete",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Delete vednor profile by id",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "get",
+                    "resultClassName": "KalturaReachProfile",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Retrieve specific reach profile by id",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaReachProfileListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaReachProfileFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "List KalturaReachProfile objects",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "syncCredit",
+                    "resultClassName": "KalturaReachProfile",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "reachProfileId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "sync vednor profile credit",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "update",
+                    "resultClassName": "KalturaReachProfile",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "reachProfile",
+                            "typeClassName": "KalturaReachProfile",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update an existing reach profile object",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateStatus",
+                    "resultClassName": "KalturaReachProfile",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "status",
+                            "typeClassName": "KalturaReachProfileStatus",
+                            "type": "EnumOfInt",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update reach profile status by id",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "reach_entryvendortask",
+            "name": "entryVendorTask",
+            "description": "Entry Vendor Task Service",
+            "actions": [
+                {
+                    "name": "abort",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "abortReason",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "Cancel entry task. will only occur for task in PENDING or PENDING_MODERATION status",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "add",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "entryVendorTask",
+                            "typeClassName": "KalturaEntryVendorTask",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Allows you to add a entry vendor task",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "approve",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Approve entry vendor task for execution.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "exportToCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaEntryVendorTaskFilter",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "add batch job that sends an email with a link to download an updated CSV that contains list of users",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "extendAccessKey",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Extend access key in case the existing one has expired.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "get",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Retrieve specific entry vendor task by id",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "getJobs",
+                    "resultClassName": "KalturaEntryVendorTaskListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaEntryVendorTaskFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "get KalturaEntryVendorTask objects for specific vendor partner",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaEntryVendorTaskListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaEntryVendorTaskFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "List KalturaEntryVendorTask objects",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "reject",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "rejectReason",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "Reject entry vendor task for execution.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "serveCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Will serve a requested csv",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "update",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "entryVendorTask",
+                            "typeClassName": "KalturaEntryVendorTask",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update entry vendor task. Only the properties that were set will be updated.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateJob",
+                    "resultClassName": "KalturaEntryVendorTask",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "entryVendorTask",
+                            "typeClassName": "KalturaEntryVendorTask",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update entry vendor task. Only the properties that were set will be updated.",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "reach_partnercatalogitem",
+            "name": "PartnerCatalogItem",
+            "description": "Partner Catalog Item Service",
+            "actions": [
+                {
+                    "name": "add",
+                    "resultClassName": "KalturaVendorCatalogItem",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Assign existing catalogItem to specific account",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "delete",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Remove existing catalogItem from specific account",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
             "id": "schedule_scheduleevent",
             "name": "scheduleEvent",
             "description": "The ScheduleEvent service enables you to create and manage (update, delete, retrieve, etc.) scheduled recording events.",
@@ -18299,6 +18843,15 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaBaseVendorCredit",
+            "base": "",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaJobData",
@@ -23651,6 +24204,38 @@
             ]
         },
         {
+            "name": "KalturaDictionary",
+            "base": "",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "language",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaDistributionFieldConfig",
             "base": "",
             "plugin": "contentDistribution",
@@ -26870,6 +27455,300 @@
                     "type": "EnumOfString",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorTaskData",
+            "base": "",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaEntryVendorTask",
+            "base": "",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "bigint",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "queueTime",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "finishTime",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "status",
+                    "description": "",
+                    "typeClassName": "KalturaEntryVendorTaskStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reachProfileId",
+                    "description": "The profile id from which this task base config is taken from",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "catalogItemId",
+                    "description": "The catalog item Id containing the task description",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "price",
+                    "description": "The charged price to execute this task",
+                    "typeClassName": "float",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userId",
+                    "description": "The ID of the user who created this task",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "moderatingUser",
+                    "description": "The user ID that approved this task for execution (in case moderation is requested)",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "errDescription",
+                    "description": "Err description provided by provider in case job execution has failed",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "accessKey",
+                    "description": "Access key generated by Kaltura to allow vendors to ingest the end result to the destination",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "version",
+                    "description": "Vendor generated by Kaltura representing the entry vendor task version correlated to the entry version",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "notes",
+                    "description": "User generated notes that should be taken into account by the vendor while executing the task",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "dictionary",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "context",
+                    "description": "Task context",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "accuracy",
+                    "description": "Task result accuracy percentage",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputObjectId",
+                    "description": "Task main object generated by executing the task",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerData",
+                    "description": "Json object containing extra task data required by the requester",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "creationMode",
+                    "description": "Task creation mode",
+                    "typeClassName": "KalturaEntryVendorTaskCreationMode",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "taskJobData",
+                    "description": "",
+                    "typeClassName": "KalturaVendorTaskData",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -35583,6 +36462,280 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "scoreType",
+                    "description": "",
+                    "typeClassName": "KalturaScoreType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReachProfile",
+            "base": "",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "name",
+                    "description": "The name of the profile",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "status",
+                    "description": "",
+                    "typeClassName": "KalturaReachProfileStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "profileType",
+                    "description": "",
+                    "typeClassName": "KalturaReachProfileType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "defaultOutputFormat",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemOutputFormat",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableMachineModeration",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableHumanModeration",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "autoDisplayMachineCaptionsOnPlayer",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "autoDisplayHumanCaptionsOnPlayer",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableMetadataExtraction",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableSpeakerChangeIndication",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableAudioTags",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableProfanityRemoval",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "maxCharactersPerCaptionLine",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "contentDeletionPolicy",
+                    "description": "",
+                    "typeClassName": "KalturaReachProfileContentDeletionPolicy",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "rules",
+                    "description": "",
+                    "typeClassName": "KalturaRule",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "credit",
+                    "description": "",
+                    "typeClassName": "KalturaBaseVendorCredit",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "usedCredit",
+                    "description": "",
+                    "typeClassName": "float",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "dictionaries",
+                    "description": "",
+                    "typeClassName": "KalturaDictionary",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "flavorParamsIds",
+                    "description": "Comma separated flavorParamsIds that the vendor should look for it matching asset when trying to download the asset",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -40039,6 +41192,169 @@
             ]
         },
         {
+            "name": "KalturaVendorCatalogItemPricing",
+            "base": "",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "pricePerUnit",
+                    "description": "",
+                    "typeClassName": "float",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "priceFunction",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemPriceFunction",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCatalogItem",
+            "base": "",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "name",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "systemName",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "status",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceType",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceFeature",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceFeature",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "turnAroundTime",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceTurnAroundTime",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "pricing",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemPricing",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaVirusScanProfile",
             "base": "",
             "plugin": "virusScan",
@@ -41317,6 +42633,27 @@
             ]
         },
         {
+            "name": "KalturaAddEntryVendorTaskAction",
+            "base": "KalturaRuleAction",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "catalogItemIds",
+                    "description": "Catalog Item Id",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaAdminUser",
             "base": "KalturaUser",
             "plugin": "",
@@ -41324,6 +42661,49 @@
             "abstract": false,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaAlignmentVendorTaskData",
+            "base": "KalturaVendorTaskData",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "textTranscriptAssetId",
+                    "description": "The id of the text transcript object the vendor should use while runing the alignment task",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "jsonTranscriptAssetId",
+                    "description": "Optional - The id of the json transcript object the vendor should update once alignment task processing is done",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "captionAssetId",
+                    "description": "Optional - The id of the caption asset object the vendor should update once alignment task processing is done",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaAmazonS3StorageProfile",
@@ -44163,6 +45543,104 @@
             ]
         },
         {
+            "name": "KalturaCatalogItemAdvancedFilter",
+            "base": "KalturaSearchItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "serviceTypeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceTypeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceFeatureEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceFeature",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceFeatureIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "turnAroundTimeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceTurnAroundTime",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "turnAroundTimeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sourceLanguageEqual",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "targetLanguageEqual",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaCategoryEntryAdvancedFilter",
             "base": "KalturaSearchItem",
             "plugin": "",
@@ -44208,6 +45686,49 @@
                     "description": "",
                     "typeClassName": "int",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaCategoryEntryCondition",
+            "base": "KalturaCondition",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "categoryId",
+                    "description": "Category id to check condition for",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "categoryUserPermission",
+                    "description": "Minimum category user level permission to validate",
+                    "typeClassName": "KalturaCategoryUserPermissionLevel",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "comparison",
+                    "description": "Comparing operator",
+                    "typeClassName": "KalturaSearchConditionComparison",
+                    "type": "EnumOfString",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -50316,6 +51837,343 @@
             ]
         },
         {
+            "name": "KalturaEntryVendorTaskBaseFilter",
+            "base": "KalturaRelatedFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "idEqual",
+                    "description": "",
+                    "typeClassName": "bigint",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "queueTimeGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "queueTimeLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "finishTimeGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "finishTimeLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryIdEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusEqual",
+                    "description": "",
+                    "typeClassName": "KalturaEntryVendorTaskStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reachProfileIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reachProfileIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "catalogItemIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "catalogItemIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userIdEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "contextEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEntryVendorTaskFilter",
+            "base": "KalturaEntryVendorTaskBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "freeText",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEntryVendorTaskCsvJobData",
+            "base": "KalturaJobData",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "filter",
+                    "description": "The filter should return the list of users that need to be specified in the csv.",
+                    "typeClassName": "KalturaEntryVendorTaskFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userName",
+                    "description": "The users name",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userMail",
+                    "description": "The users email",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputPath",
+                    "description": "The file location",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEntryVendorTaskListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaEntryVendorTask",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaEventCuePoint",
             "base": "KalturaCuePoint",
             "plugin": "eventCuePoint",
@@ -55005,6 +56863,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "calculatedScore",
+                    "description": "",
+                    "typeClassName": "float",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "feedback",
                     "description": "",
                     "typeClassName": "string",
@@ -55020,6 +56889,27 @@
                     "description": "",
                     "typeClassName": "int",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReachProfileListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaReachProfile",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -57741,6 +59631,49 @@
             "properties": []
         },
         {
+            "name": "KalturaUnlimitedVendorCredit",
+            "base": "KalturaBaseVendorCredit",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "credit",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fromDate",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "toDate",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaUploadTokenBaseFilter",
             "base": "KalturaFilter",
             "plugin": "",
@@ -58612,6 +60545,167 @@
             "abstract": false,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaVendorAlignmentCatalogItem",
+            "base": "KalturaVendorCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sourceLanguage",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputFormat",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemOutputFormat",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCaptionsCatalogItem",
+            "base": "KalturaVendorCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sourceLanguage",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputFormat",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemOutputFormat",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableSpeakerId",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fixedPriceAddons",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCatalogItemListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCredit",
+            "base": "KalturaBaseVendorCredit",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "credit",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fromDate",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "overageCredit",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "addOn",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaViewHistoryUserEntry",
@@ -67770,6 +69864,169 @@
             ]
         },
         {
+            "name": "KalturaReachProfileBaseFilter",
+            "base": "KalturaRelatedFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "idEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusEqual",
+                    "description": "",
+                    "typeClassName": "KalturaReachProfileStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "profileTypeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaReachProfileType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "profileTypeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReachReportInputFilter",
+            "base": "KalturaReportInputFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "serviceType",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceFeature",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceFeature",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "turnAroundTime",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceTurnAroundTime",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaRecalculateResponseProfileCacheJobData",
             "base": "KalturaRecalculateCacheJobData",
             "plugin": "",
@@ -68882,6 +71139,27 @@
             ]
         },
         {
+            "name": "KalturaTimeRangeVendorCredit",
+            "base": "KalturaVendorCredit",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "toDate",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaTimedThumbAsset",
             "base": "KalturaThumbAsset",
             "plugin": "thumbCuePoint",
@@ -69555,6 +71833,224 @@
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCatalogItemBaseFilter",
+            "base": "KalturaRelatedFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "idEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idNotIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceTypeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceTypeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceFeatureEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceFeature",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serviceFeatureIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "turnAroundTimeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorServiceTurnAroundTime",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "turnAroundTimeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorTranslationCatalogItem",
+            "base": "KalturaVendorCaptionsCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "targetLanguage",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -72771,6 +75267,15 @@
             "properties": []
         },
         {
+            "name": "KalturaReachProfileFilter",
+            "base": "KalturaReachProfileBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaRemoteDropFolderBaseFilter",
             "base": "KalturaDropFolderFilter",
             "plugin": "dropFolder",
@@ -72778,6 +75283,27 @@
             "abstract": true,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaReoccurringVendorCredit",
+            "base": "KalturaTimeRangeVendorCredit",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "frequency",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCreditRecurrenceFrequency",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaScheduleEventFilter",
@@ -73251,6 +75777,27 @@
             "abstract": false,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaVendorCatalogItemFilter",
+            "base": "KalturaVendorCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "partnerIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaWebcamTokenResource",
@@ -75222,6 +77769,60 @@
             ]
         },
         {
+            "name": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "base": "KalturaVendorCatalogItemFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sourceLanguageEqual",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sourceLanguageIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputFormatEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemOutputFormat",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputFormatIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaViewHistoryUserEntryFilter",
             "base": "KalturaUserEntryFilter",
             "plugin": "viewHistory",
@@ -75918,6 +78519,24 @@
             "properties": []
         },
         {
+            "name": "KalturaVendorAlignmentCatalogItemFilter",
+            "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaVendorCaptionsCatalogItemFilter",
+            "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaYahooDistributionProfileBaseFilter",
             "base": "KalturaConfigurableDistributionProfileFilter",
             "plugin": "yahooDistribution",
@@ -76541,6 +79160,38 @@
             "properties": []
         },
         {
+            "name": "KalturaVendorTranslationCatalogItemBaseFilter",
+            "base": "KalturaVendorCaptionsCatalogItemFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "targetLanguageEqual",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "targetLanguageIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaWidevineFlavorAssetBaseFilter",
             "base": "KalturaFlavorAssetFilter",
             "plugin": "widevine",
@@ -76733,6 +79384,15 @@
             "name": "KalturaTranscriptAssetFilter",
             "base": "KalturaTranscriptAssetBaseFilter",
             "plugin": "transcript",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaVendorTranslationCatalogItemFilter",
+            "base": "KalturaVendorTranslationCatalogItemBaseFilter",
+            "plugin": "reach",
             "description": "",
             "abstract": false,
             "deprecated": false,
@@ -78466,6 +81126,58 @@
             ]
         },
         {
+            "name": "KalturaEntryVendorTaskCreationMode",
+            "type": "int",
+            "values": [
+                {
+                    "name": "AUTOMATIC",
+                    "value": "2"
+                },
+                {
+                    "name": "MANUAL",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEntryVendorTaskStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ABORTED",
+                    "value": "7"
+                },
+                {
+                    "name": "ERROR",
+                    "value": "6"
+                },
+                {
+                    "name": "PENDING",
+                    "value": "1"
+                },
+                {
+                    "name": "PENDING_ENTRY_READY",
+                    "value": "8"
+                },
+                {
+                    "name": "PENDING_MODERATION",
+                    "value": "4"
+                },
+                {
+                    "name": "PROCESSING",
+                    "value": "3"
+                },
+                {
+                    "name": "READY",
+                    "value": "2"
+                },
+                {
+                    "name": "REJECTED",
+                    "value": "5"
+                }
+            ]
+        },
+        {
             "name": "KalturaEventNotificationTemplateStatus",
             "type": "int",
             "values": [
@@ -79570,6 +82282,64 @@
             ]
         },
         {
+            "name": "KalturaReachProfileContentDeletionPolicy",
+            "type": "int",
+            "values": [
+                {
+                    "name": "DELETE_AFTER_MONTH",
+                    "value": "4"
+                },
+                {
+                    "name": "DELETE_AFTER_THREE_MONTHS",
+                    "value": "5"
+                },
+                {
+                    "name": "DELETE_AFTER_WEEK",
+                    "value": "3"
+                },
+                {
+                    "name": "DELETE_ONCE_PROCESSED",
+                    "value": "2"
+                },
+                {
+                    "name": "DO_NOTHING",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReachProfileStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "name": "DELETED",
+                    "value": "3"
+                },
+                {
+                    "name": "DISABLED",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReachProfileType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "FREE_TRIAL",
+                    "value": "1"
+                },
+                {
+                    "name": "PAID",
+                    "value": "2"
+                }
+            ]
+        },
+        {
             "name": "KalturaRecordStatus",
             "type": "int",
             "values": [
@@ -79862,6 +82632,32 @@
                 {
                     "name": "RUNNING_BATCHES_NETWORK",
                     "value": "4"
+                }
+            ]
+        },
+        {
+            "name": "KalturaScoreType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "AVERAGE",
+                    "value": "5"
+                },
+                {
+                    "name": "FIRST",
+                    "value": "4"
+                },
+                {
+                    "name": "HIGHEST",
+                    "value": "1"
+                },
+                {
+                    "name": "LATEST",
+                    "value": "3"
+                },
+                {
+                    "name": "LOWEST",
+                    "value": "2"
                 }
             ]
         },
@@ -80924,6 +83720,120 @@
                 {
                     "name": "USER",
                     "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCatalogItemOutputFormat",
+            "type": "int",
+            "values": [
+                {
+                    "name": "DFXP",
+                    "value": "2"
+                },
+                {
+                    "name": "SRT",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCatalogItemStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "name": "DELETED",
+                    "value": "3"
+                },
+                {
+                    "name": "DEPRECATED",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorServiceFeature",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ALIGNMENT",
+                    "value": "3"
+                },
+                {
+                    "name": "CAPTIONS",
+                    "value": "1"
+                },
+                {
+                    "name": "TRANSLATION",
+                    "value": "2"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorServiceTurnAroundTime",
+            "type": "int",
+            "values": [
+                {
+                    "name": "BEST_EFFORT",
+                    "value": "-1"
+                },
+                {
+                    "name": "EIGHT_HOURS",
+                    "value": "28800"
+                },
+                {
+                    "name": "FORTY_EIGHT_HOURS",
+                    "value": "172800"
+                },
+                {
+                    "name": "IMMEDIATE",
+                    "value": "0"
+                },
+                {
+                    "name": "SIX_HOURS",
+                    "value": "21600"
+                },
+                {
+                    "name": "TEN_DAYS",
+                    "value": "864000"
+                },
+                {
+                    "name": "THIRTY_MINUTES",
+                    "value": "1800"
+                },
+                {
+                    "name": "THREE_HOURS",
+                    "value": "10800"
+                },
+                {
+                    "name": "TWELVE_HOURS",
+                    "value": "43200"
+                },
+                {
+                    "name": "TWENTY_FOUR_HOURS",
+                    "value": "86400"
+                },
+                {
+                    "name": "TWO_HOURS",
+                    "value": "7200"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorServiceType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "HUMAN",
+                    "value": "1"
+                },
+                {
+                    "name": "MACHINE",
+                    "value": "2"
                 }
             ]
         },
@@ -82535,6 +85445,10 @@
                     "value": "26"
                 },
                 {
+                    "name": "ENTRY_VENDOR_TASK_CSV",
+                    "value": "reach.EntryVendorTasksCsv"
+                },
+                {
                     "name": "EVENT_NOTIFICATION_HANDLER",
                     "value": "eventNotification.EventNotificationHandler"
                 },
@@ -82645,6 +85559,10 @@
                 {
                     "name": "SYNC_CATEGORY_PRIVACY_CONTEXT",
                     "value": "39"
+                },
+                {
+                    "name": "SYNC_REACH_CREDIT_TASK",
+                    "value": "reach.SyncReachCreditTask"
                 },
                 {
                     "name": "TAG_RESOLVE",
@@ -83173,6 +86091,92 @@
             ]
         },
         {
+            "name": "KalturaCatalogItemLanguage",
+            "type": "string",
+            "values": [
+                {
+                    "name": "AR",
+                    "value": "Arabic"
+                },
+                {
+                    "name": "CMN",
+                    "value": "Mandarin Chinese"
+                },
+                {
+                    "name": "DE",
+                    "value": "German"
+                },
+                {
+                    "name": "EN",
+                    "value": "English"
+                },
+                {
+                    "name": "EN_GB",
+                    "value": "English (British)"
+                },
+                {
+                    "name": "EN_US",
+                    "value": "English (American)"
+                },
+                {
+                    "name": "ES",
+                    "value": "Spanish"
+                },
+                {
+                    "name": "FR",
+                    "value": "French"
+                },
+                {
+                    "name": "HE",
+                    "value": "Hebrew"
+                },
+                {
+                    "name": "HI",
+                    "value": "Hindi"
+                },
+                {
+                    "name": "IT",
+                    "value": "Italian"
+                },
+                {
+                    "name": "JA",
+                    "value": "Japanese"
+                },
+                {
+                    "name": "KO",
+                    "value": "Korean"
+                },
+                {
+                    "name": "NL",
+                    "value": "Dutch"
+                },
+                {
+                    "name": "PT",
+                    "value": "Portuguese"
+                },
+                {
+                    "name": "RU",
+                    "value": "Russian"
+                },
+                {
+                    "name": "TH",
+                    "value": "Thai"
+                },
+                {
+                    "name": "TR",
+                    "value": "Turkish"
+                },
+                {
+                    "name": "YUE",
+                    "value": "Cantonese"
+                },
+                {
+                    "name": "ZH",
+                    "value": "Chinese"
+                }
+            ]
+        },
+        {
             "name": "KalturaCategoryEntryAdvancedOrderBy",
             "type": "string",
             "values": [
@@ -83492,6 +86496,10 @@
                 {
                     "name": "DELIVERY_PROFILE",
                     "value": "13"
+                },
+                {
+                    "name": "EVENT_CATEGORY_ENTRY",
+                    "value": "reach.CategoryEntry"
                 },
                 {
                     "name": "EVENT_NOTIFICATION_FIELD",
@@ -86472,6 +89480,68 @@
                 {
                     "name": "PLAYLIST",
                     "value": "5"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEntryVendorTaskOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "FINISH_TIME_ASC",
+                    "value": "+finishTime"
+                },
+                {
+                    "name": "FINISH_TIME_DESC",
+                    "value": "-finishTime"
+                },
+                {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
+                },
+                {
+                    "name": "PRICE_ASC",
+                    "value": "+price"
+                },
+                {
+                    "name": "PRICE_DESC",
+                    "value": "-price"
+                },
+                {
+                    "name": "QUEUE_TIME_ASC",
+                    "value": "+queueTime"
+                },
+                {
+                    "name": "QUEUE_TIME_DESC",
+                    "value": "-queueTime"
+                },
+                {
+                    "name": "STATUS_ASC",
+                    "value": "+status"
+                },
+                {
+                    "name": "STATUS_DESC",
+                    "value": "-status"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
                 }
             ]
         },
@@ -94624,6 +97694,44 @@
                 {
                     "name": "UPDATED_AT_DESC",
                     "value": "-updatedAt"
+                },
+                {
+                    "name": "VERSION_ASC",
+                    "value": "+version"
+                },
+                {
+                    "name": "VERSION_DESC",
+                    "value": "-version"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReachProfileOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
                 }
             ]
         },
@@ -94778,6 +97886,10 @@
                 {
                     "name": "CONTENT_INTERACTIONS",
                     "value": "3"
+                },
+                {
+                    "name": "CONTENT_REPORT_REASONS",
+                    "value": "44"
                 },
                 {
                     "name": "ENTRY_USAGE",
@@ -94951,6 +98063,10 @@
             "name": "KalturaRuleActionType",
             "type": "string",
             "values": [
+                {
+                    "name": "ADD_ENTRY_VENDOR_TASK",
+                    "value": "reach.ADD_ENTRY_VENDOR_TASK"
+                },
                 {
                     "name": "ADD_TO_STORAGE",
                     "value": "4"
@@ -96134,6 +99250,132 @@
                 {
                     "name": "NAME_DESC",
                     "value": "-name"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCaptionsCatalogItemOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCatalogItemOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCatalogItemPriceFunction",
+            "type": "string",
+            "values": [
+                {
+                    "name": "PRICE_PER_MINUTE",
+                    "value": "kReachUtils::calcPricePerMinute"
+                },
+                {
+                    "name": "PRICE_PER_SECOND",
+                    "value": "kReachUtils::calcPricePerSecond"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorCreditRecurrenceFrequency",
+            "type": "string",
+            "values": [
+                {
+                    "name": "DAILY",
+                    "value": "day"
+                },
+                {
+                    "name": "MONTHLY",
+                    "value": "month"
+                },
+                {
+                    "name": "WEEKLY",
+                    "value": "week"
+                },
+                {
+                    "name": "YEARLY",
+                    "value": "year"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorTranslationCatalogItemOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
                 },
                 {
                     "name": "UPDATED_AT_ASC",

@@ -1,7 +1,8 @@
 
 
 export enum KalturaRuleActionType {
-    addToStorage = '4',
+    addEntryVendorTask = 'reach.ADD_ENTRY_VENDOR_TASK',
+	addToStorage = '4',
 	block = '1',
 	drmPolicy = 'drm.DRM_POLICY',
 	limitDeliveryProfiles = '5',

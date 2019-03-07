@@ -10,6 +10,7 @@ export interface KalturaQuizUserEntryArgs  extends KalturaUserEntryArgs {
 export class KalturaQuizUserEntry extends KalturaUserEntry {
 
     readonly score : number;
+	readonly calculatedScore : number;
 	feedback : string;
 	readonly version : number;
 
@@ -26,6 +27,7 @@ export class KalturaQuizUserEntry extends KalturaUserEntry {
             {
                 objectType : { type : 'c', default : 'KalturaQuizUserEntry' },
 				score : { type : 'n', readOnly : true },
+				calculatedScore : { type : 'n', readOnly : true },
 				feedback : { type : 's' },
 				version : { type : 'n', readOnly : true }
             }

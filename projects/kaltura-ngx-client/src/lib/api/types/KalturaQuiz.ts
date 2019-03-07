@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
 import { KalturaKeyValue } from './KalturaKeyValue';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
+import { KalturaScoreType } from './KalturaScoreType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaQuizArgs  extends KalturaObjectBaseArgs {
@@ -13,6 +14,7 @@ export interface KalturaQuizArgs  extends KalturaObjectBaseArgs {
 	allowDownload? : KalturaNullableBoolean;
 	showGradeAfterSubmission? : KalturaNullableBoolean;
 	maxRetakesAllowed? : number;
+	scoreType? : KalturaScoreType;
 }
 
 
@@ -27,6 +29,7 @@ export class KalturaQuiz extends KalturaObjectBase {
 	allowDownload : KalturaNullableBoolean;
 	showGradeAfterSubmission : KalturaNullableBoolean;
 	maxRetakesAllowed : number;
+	scoreType : KalturaScoreType;
 
     constructor(data? : KalturaQuizArgs)
     {
@@ -49,7 +52,8 @@ export class KalturaQuiz extends KalturaObjectBase {
 				showCorrectAfterSubmission : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				allowDownload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				showGradeAfterSubmission : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				maxRetakesAllowed : { type : 'n' }
+				maxRetakesAllowed : { type : 'n' },
+				scoreType : { type : 'en', subTypeConstructor : KalturaScoreType, subType : 'KalturaScoreType' }
             }
         );
         return result;
