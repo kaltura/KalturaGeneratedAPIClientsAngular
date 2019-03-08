@@ -36453,7 +36453,7 @@
                     "default": "null"
                 },
                 {
-                    "name": "maxRetakesAllowed",
+                    "name": "attemptsAllowed",
                     "description": "",
                     "typeClassName": "int",
                     "type": "Simple",
@@ -43790,6 +43790,27 @@
             "abstract": false,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaBooleanEventNotificationCondition",
+            "base": "KalturaCondition",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "booleanEventNotificationIds",
+                    "description": "The boolean event notification ids",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaBpmEventNotificationIntegrationJobTriggerData",
@@ -86488,6 +86509,10 @@
                 {
                     "name": "AUTHENTICATED",
                     "value": "1"
+                },
+                {
+                    "name": "BOOLEAN",
+                    "value": "17"
                 },
                 {
                     "name": "COUNTRY",

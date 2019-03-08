@@ -6,6 +6,7 @@ export enum KalturaConditionType {
 	assetPropertiesCompare = '8',
 	assetType = '16',
 	authenticated = '1',
+	boolean = '17',
 	country = '2',
 	deliveryProfile = '13',
 	eventCategoryEntry = 'reach.CategoryEntry',

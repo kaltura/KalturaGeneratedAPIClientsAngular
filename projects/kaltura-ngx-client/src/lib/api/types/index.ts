@@ -338,6 +338,7 @@ export { KalturaBeaconListResponse, KalturaBeaconListResponseArgs } from './Kalt
 export { KalturaBeaconScheduledResourceOperator, KalturaBeaconScheduledResourceOperatorArgs } from './KalturaBeaconScheduledResourceOperator'
 export { KalturaBeaconScheduledResourceSearchParams, KalturaBeaconScheduledResourceSearchParamsArgs } from './KalturaBeaconScheduledResourceSearchParams'
 export { KalturaBlackoutScheduleEvent, KalturaBlackoutScheduleEventArgs } from './KalturaBlackoutScheduleEvent'
+export { KalturaBooleanEventNotificationCondition, KalturaBooleanEventNotificationConditionArgs } from './KalturaBooleanEventNotificationCondition'
 export { KalturaBpmEventNotificationIntegrationJobTriggerData, KalturaBpmEventNotificationIntegrationJobTriggerDataArgs } from './KalturaBpmEventNotificationIntegrationJobTriggerData'
 export { KalturaBulkDownloadJobData, KalturaBulkDownloadJobDataArgs } from './KalturaBulkDownloadJobData'
 export { KalturaBulkServiceFilterData, KalturaBulkServiceFilterDataArgs } from './KalturaBulkServiceFilterData'
