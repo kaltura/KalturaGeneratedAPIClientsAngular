@@ -12850,6 +12850,29 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "searchGroup",
+                    "resultClassName": "KalturaESearchGroupResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "searchParams",
+                            "typeClassName": "KalturaESearchGroupParams",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "searchUser",
                     "resultClassName": "KalturaESearchUserResponse",
                     "resultType": "Object",
@@ -26105,197 +26128,6 @@
             ]
         },
         {
-            "name": "KalturaESearchHistory",
-            "base": "",
-            "plugin": "searchHistory",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "searchTerm",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": true,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "searchedObject",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": true,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "timestamp",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": true,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaESearchOrderBy",
-            "base": "",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "orderItems",
-                    "description": "",
-                    "typeClassName": "KalturaESearchOrderByItem",
-                    "type": "ArrayOfObjects",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaESearchParams",
-            "base": "",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "objectStatuses",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "objectId",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "orderBy",
-                    "description": "",
-                    "typeClassName": "KalturaESearchOrderBy",
-                    "type": "Object",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaESearchRange",
-            "base": "",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "greaterThanOrEqual",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "lessThanOrEqual",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "greaterThan",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "lessThan",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaESearchResponse",
-            "base": "",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "totalCount",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": true,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaESearchUserBaseItem",
-            "base": "KalturaESearchBaseItem",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": []
-        },
-        {
             "name": "KalturaUser",
             "base": "",
             "plugin": "",
@@ -26722,6 +26554,250 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaGroup",
+            "base": "KalturaUser",
+            "plugin": "group",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "typeClassName": "KalturaUserType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "membersCount",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchGroupResult",
+            "base": "KalturaESearchResult",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "object",
+                    "description": "",
+                    "typeClassName": "KalturaGroup",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchHistory",
+            "base": "",
+            "plugin": "searchHistory",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "searchTerm",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchedObject",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "timestamp",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchOrderBy",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "orderItems",
+                    "description": "",
+                    "typeClassName": "KalturaESearchOrderByItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchParams",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objectStatuses",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "objectId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "orderBy",
+                    "description": "",
+                    "typeClassName": "KalturaESearchOrderBy",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchRange",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "greaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "lessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "greaterThan",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "lessThan",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchResponse",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "totalCount",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchUserBaseItem",
+            "base": "KalturaESearchBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaESearchUserResult",
@@ -49990,6 +50066,110 @@
             ]
         },
         {
+            "name": "KalturaESearchGroupOrderByItem",
+            "base": "KalturaESearchOrderByItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sortField",
+                    "description": "",
+                    "typeClassName": "KalturaESearchGroupOrderByFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchUserOperator",
+            "base": "KalturaESearchUserBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "operator",
+                    "description": "",
+                    "typeClassName": "KalturaESearchOperatorType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchItems",
+                    "description": "",
+                    "typeClassName": "KalturaESearchUserBaseItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchGroupOperator",
+            "base": "KalturaESearchUserOperator",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaESearchGroupParams",
+            "base": "KalturaESearchParams",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "searchOperator",
+                    "description": "",
+                    "typeClassName": "KalturaESearchGroupOperator",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchGroupResponse",
+            "base": "KalturaESearchResponse",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaESearchGroupResult",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchHistoryFilter",
             "base": "KalturaESearchBaseFilter",
             "plugin": "searchHistory",
@@ -50152,38 +50332,6 @@
                     "description": "",
                     "typeClassName": "KalturaESearchUserOrderByFieldName",
                     "type": "EnumOfString",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaESearchUserOperator",
-            "base": "KalturaESearchUserBaseItem",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "operator",
-                    "description": "",
-                    "typeClassName": "KalturaESearchOperatorType",
-                    "type": "EnumOfInt",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "searchItems",
-                    "description": "",
-                    "typeClassName": "KalturaESearchUserBaseItem",
-                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -74152,6 +74300,27 @@
             ]
         },
         {
+            "name": "KalturaESearchGroupItem",
+            "base": "KalturaESearchAbstractUserItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchGroupFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchUnifiedItem",
             "base": "KalturaESearchAbstractEntryItem",
             "plugin": "elasticSearch",
@@ -76974,6 +77143,15 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaESearchGroupMetadataItem",
+            "base": "KalturaESearchUserMetadataItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaESearchNestedOperator",
@@ -88917,6 +89095,82 @@
             ]
         },
         {
+            "name": "KalturaESearchGroupFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT",
+                    "value": "created_at"
+                },
+                {
+                    "name": "EMAIL",
+                    "value": "email"
+                },
+                {
+                    "name": "FIRST_NAME",
+                    "value": "first_name"
+                },
+                {
+                    "name": "GROUP_IDS",
+                    "value": "group_ids"
+                },
+                {
+                    "name": "LAST_NAME",
+                    "value": "last_name"
+                },
+                {
+                    "name": "PERMISSION_NAMES",
+                    "value": "permission_names"
+                },
+                {
+                    "name": "ROLE_IDS",
+                    "value": "role_ids"
+                },
+                {
+                    "name": "SCREEN_NAME",
+                    "value": "screen_name"
+                },
+                {
+                    "name": "TAGS",
+                    "value": "tags"
+                },
+                {
+                    "name": "UPDATED_AT",
+                    "value": "updated_at"
+                },
+                {
+                    "name": "USER_ID",
+                    "value": "user_id"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchGroupOrderByFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT",
+                    "value": "created_at"
+                },
+                {
+                    "name": "MEMBERS_COUNT",
+                    "value": "members_count"
+                },
+                {
+                    "name": "SCREEN_NAME",
+                    "value": "screen_name"
+                },
+                {
+                    "name": "UPDATED_AT",
+                    "value": "updated_at"
+                },
+                {
+                    "name": "USER_ID",
+                    "value": "puser_id"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchLanguage",
             "type": "string",
             "values": [
@@ -89131,8 +89385,16 @@
                     "value": "created_at"
                 },
                 {
+                    "name": "SCREEN_NAME",
+                    "value": "screen_name"
+                },
+                {
                     "name": "UPDATED_AT",
                     "value": "updated_at"
+                },
+                {
+                    "name": "USER_ID",
+                    "value": "puser_id"
                 }
             ]
         },
@@ -97953,8 +98215,16 @@
                     "value": "201"
                 },
                 {
+                    "name": "PERCENTILES",
+                    "value": "43"
+                },
+                {
                     "name": "PLATFORMS",
                     "value": "21"
+                },
+                {
+                    "name": "PLAYER_RELATED_INTERACTIONS",
+                    "value": "45"
                 },
                 {
                     "name": "QUIZ",
