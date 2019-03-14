@@ -20,6 +20,7 @@ export enum KalturaReportType {
 	partnerUsage = '201',
 	percentiles = '43',
 	platforms = '21',
+	playbackRate = '46',
 	playerRelatedInteractions = '45',
 	quiz = 'quiz.QUIZ',
 	quizAggregateByQuestion = 'quiz.QUIZ_AGGREGATE_BY_QUESTION',
