@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
 import { KalturaESearchGroupFieldName } from './KalturaESearchGroupFieldName';
-import { KalturaESearchAbstractUserItem, KalturaESearchAbstractUserItemArgs } from './KalturaESearchAbstractUserItem';
+import { KalturaESearchAbstractGroupItem, KalturaESearchAbstractGroupItemArgs } from './KalturaESearchAbstractGroupItem';
 
-export interface KalturaESearchGroupItemArgs  extends KalturaESearchAbstractUserItemArgs {
+export interface KalturaESearchGroupItemArgs  extends KalturaESearchAbstractGroupItemArgs {
     fieldName? : KalturaESearchGroupFieldName;
 }
 
 
-export class KalturaESearchGroupItem extends KalturaESearchAbstractUserItem {
+export class KalturaESearchGroupItem extends KalturaESearchAbstractGroupItem {
 
     fieldName : KalturaESearchGroupFieldName;
 

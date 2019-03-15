@@ -1,15 +1,19 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
-import { KalturaESearchUserMetadataItem, KalturaESearchUserMetadataItemArgs } from './KalturaESearchUserMetadataItem';
+import { KalturaESearchAbstractGroupItem, KalturaESearchAbstractGroupItemArgs } from './KalturaESearchAbstractGroupItem';
 
-export interface KalturaESearchGroupMetadataItemArgs  extends KalturaESearchUserMetadataItemArgs {
-    
+export interface KalturaESearchGroupMetadataItemArgs  extends KalturaESearchAbstractGroupItemArgs {
+    xpath? : string;
+	metadataProfileId? : number;
+	metadataFieldId? : number;
 }
 
 
-export class KalturaESearchGroupMetadataItem extends KalturaESearchUserMetadataItem {
+export class KalturaESearchGroupMetadataItem extends KalturaESearchAbstractGroupItem {
 
-    
+    xpath : string;
+	metadataProfileId : number;
+	metadataFieldId : number;
 
     constructor(data? : KalturaESearchGroupMetadataItemArgs)
     {
@@ -22,7 +26,10 @@ export class KalturaESearchGroupMetadataItem extends KalturaESearchUserMetadataI
         Object.assign(
             result.properties,
             {
-                objectType : { type : 'c', default : 'KalturaESearchGroupMetadataItem' }
+                objectType : { type : 'c', default : 'KalturaESearchGroupMetadataItem' },
+				xpath : { type : 's' },
+				metadataProfileId : { type : 'n' },
+				metadataFieldId : { type : 'n' }
             }
         );
         return result;
