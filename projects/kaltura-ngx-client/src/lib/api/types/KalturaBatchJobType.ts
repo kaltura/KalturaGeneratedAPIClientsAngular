@@ -33,6 +33,7 @@ export enum KalturaBatchJobType {
 	emailIngestion = '26',
 	entryVendorTaskCsv = 'reach.EntryVendorTasksCsv',
 	eventNotificationHandler = 'eventNotification.EventNotificationHandler',
+	exportCsv = '49',
 	extractMedia = '14',
 	filesyncImport = '29',
 	flatten = '3',

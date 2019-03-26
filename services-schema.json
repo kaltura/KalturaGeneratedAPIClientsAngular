@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.16.0",
+    "apiVersion": "14.17.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -2572,6 +2572,29 @@
             ]
         },
         {
+            "id": "exportcsv",
+            "name": "exportcsv",
+            "description": "Export CSV service is used to manage CSV exports of objects",
+            "actions": [
+                {
+                    "name": "serveCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Will serve a requested CSV",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
             "id": "fileasset",
             "name": "fileAsset",
             "description": "Manage file assets",
@@ -4954,6 +4977,22 @@
                         }
                     ],
                     "description": "Delete a media entry.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "exportToCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "data",
+                            "typeClassName": "KalturaMediaEsearchExportToCsvJobData",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Creates a batch job that sends an email with a link to download a CSV containing a list of entries",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -13302,6 +13341,29 @@
                         }
                     ],
                     "description": "Adds a new group (user of type group).",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "clone",
+                    "resultClassName": "KalturaGroup",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "originalGroupId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "newGroupName",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "clone the group (groupId), and set group id with the neeGroupName.",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -36921,6 +36983,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "vendorTaskProcessingRegion",
+                    "description": "Indicates in which region the task processing should task place",
+                    "typeClassName": "KalturaVendorTaskProcessingRegion",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -52129,322 +52202,6 @@
             ]
         },
         {
-            "name": "KalturaEntryVendorTaskBaseFilter",
-            "base": "KalturaRelatedFilter",
-            "plugin": "reach",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "idEqual",
-                    "description": "",
-                    "typeClassName": "bigint",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "idIn",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "vendorPartnerIdEqual",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "vendorPartnerIdIn",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "createdAtGreaterThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "createdAtLessThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "updatedAtGreaterThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "updatedAtLessThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "queueTimeGreaterThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "queueTimeLessThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "finishTimeGreaterThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "finishTimeLessThanOrEqual",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "entryIdEqual",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "statusEqual",
-                    "description": "",
-                    "typeClassName": "KalturaEntryVendorTaskStatus",
-                    "type": "EnumOfInt",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "statusIn",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "reachProfileIdEqual",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "reachProfileIdIn",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "catalogItemIdEqual",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "catalogItemIdIn",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "userIdEqual",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "contextEqual",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaEntryVendorTaskFilter",
-            "base": "KalturaEntryVendorTaskBaseFilter",
-            "plugin": "reach",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "freeText",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaEntryVendorTaskCsvJobData",
-            "base": "KalturaJobData",
-            "plugin": "reach",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "filter",
-                    "description": "The filter should return the list of users that need to be specified in the csv.",
-                    "typeClassName": "KalturaEntryVendorTaskFilter",
-                    "type": "Object",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "userName",
-                    "description": "The users name",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "userMail",
-                    "description": "The users email",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "outputPath",
-                    "description": "The file location",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaEntryVendorTaskListResponse",
             "base": "KalturaListResponse",
             "plugin": "reach",
@@ -52851,6 +52608,49 @@
                 {
                     "name": "xslt",
                     "description": "The XSLT to execute",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaExportCsvJobData",
+            "base": "KalturaJobData",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "userName",
+                    "description": "The users name",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userMail",
+                    "description": "The users email",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputPath",
+                    "description": "The file location",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -60754,82 +60554,6 @@
             ]
         },
         {
-            "name": "KalturaUsersCsvJobData",
-            "base": "KalturaJobData",
-            "plugin": "",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "filter",
-                    "description": "The filter should return the list of users that need to be specified in the csv.",
-                    "typeClassName": "KalturaUserFilter",
-                    "type": "Object",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "metadataProfileId",
-                    "description": "The metadata profile we should look the xpath in",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "additionalFields",
-                    "description": "The xpath to look in the metadataProfileId  and the wanted csv field name",
-                    "typeClassName": "KalturaCsvAdditionalFieldInfo",
-                    "type": "ArrayOfObjects",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "userName",
-                    "description": "The users name",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "userMail",
-                    "description": "The users email",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "outputPath",
-                    "description": "The file location",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaValidateActiveEdgeCondition",
             "base": "KalturaCondition",
             "plugin": "",
@@ -66502,6 +66226,289 @@
             "properties": []
         },
         {
+            "name": "KalturaEntryVendorTaskBaseFilter",
+            "base": "KalturaRelatedFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "idEqual",
+                    "description": "",
+                    "typeClassName": "bigint",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vendorPartnerIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "queueTimeGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "queueTimeLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "finishTimeGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "finishTimeLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryIdEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusEqual",
+                    "description": "",
+                    "typeClassName": "KalturaEntryVendorTaskStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reachProfileIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reachProfileIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "catalogItemIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "catalogItemIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userIdEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "contextEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEntryVendorTaskFilter",
+            "base": "KalturaEntryVendorTaskBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "freeText",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEntryVendorTaskCsvJobData",
+            "base": "KalturaExportCsvJobData",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "filter",
+                    "description": "The filter should return the list of users that need to be specified in the csv.",
+                    "typeClassName": "KalturaEntryVendorTaskFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaEventNotificationTemplateFilter",
             "base": "KalturaEventNotificationTemplateBaseFilter",
             "plugin": "eventNotification",
@@ -68663,6 +68670,27 @@
                     "description": "Metadata profile system name",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaMediaEsearchExportToCsvJobData",
+            "base": "KalturaExportCsvJobData",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "searchParams",
+                    "description": "Esearch parameters for the entry search",
+                    "typeClassName": "KalturaESearchEntryParams",
+                    "type": "Object",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -72166,6 +72194,49 @@
                     "description": "",
                     "typeClassName": "",
                     "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaUsersCsvJobData",
+            "base": "KalturaExportCsvJobData",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "filter",
+                    "description": "The filter should return the list of users that need to be specified in the csv.",
+                    "typeClassName": "KalturaUserFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "metadataProfileId",
+                    "description": "The metadata profile we should look the xpath in",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "additionalFields",
+                    "description": "The xpath to look in the metadataProfileId  and the wanted csv field name",
+                    "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -84227,6 +84298,10 @@
                     "value": "172800"
                 },
                 {
+                    "name": "FOUR_DAYS",
+                    "value": "345600"
+                },
+                {
                     "name": "IMMEDIATE",
                     "value": "0"
                 },
@@ -84271,6 +84346,20 @@
                 {
                     "name": "MACHINE",
                     "value": "2"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorTaskProcessingRegion",
+            "type": "int",
+            "values": [
+                {
+                    "name": "EU",
+                    "value": "2"
+                },
+                {
+                    "name": "US",
+                    "value": "1"
                 }
             ]
         },
@@ -85888,6 +85977,10 @@
                 {
                     "name": "EVENT_NOTIFICATION_HANDLER",
                     "value": "eventNotification.EventNotificationHandler"
+                },
+                {
+                    "name": "EXPORT_CSV",
+                    "value": "49"
                 },
                 {
                     "name": "EXTRACT_MEDIA",
@@ -96280,6 +96373,10 @@
                 {
                     "name": "MAIL_TYPE_NOTIFY_ERR",
                     "value": "70"
+                },
+                {
+                    "name": "MAIL_TYPE_OBJECTS_CSV",
+                    "value": "135"
                 },
                 {
                     "name": "MAIL_TYPE_PASSWORD_RESET",

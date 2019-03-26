@@ -25,6 +25,7 @@ export enum KalturaMailType {
 	mailTypeNewCommentInKalturaYouSubscribed = '43',
 	mailTypeNewCommentInProfile = '13',
 	mailTypeNotifyErr = '70',
+	mailTypeObjectsCsv = '135',
 	mailTypePasswordReset = '51',
 	mailTypeRegisterConfirm = '50',
 	mailTypeRegisterConfirmVideoService = '54',

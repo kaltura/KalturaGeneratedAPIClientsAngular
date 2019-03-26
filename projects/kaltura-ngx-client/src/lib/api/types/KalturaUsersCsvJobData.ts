@@ -2,26 +2,20 @@
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
 import { KalturaUserFilter } from './KalturaUserFilter';
 import { KalturaCsvAdditionalFieldInfo } from './KalturaCsvAdditionalFieldInfo';
-import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
+import { KalturaExportCsvJobData, KalturaExportCsvJobDataArgs } from './KalturaExportCsvJobData';
 
-export interface KalturaUsersCsvJobDataArgs  extends KalturaJobDataArgs {
+export interface KalturaUsersCsvJobDataArgs  extends KalturaExportCsvJobDataArgs {
     filter? : KalturaUserFilter;
 	metadataProfileId? : number;
 	additionalFields? : KalturaCsvAdditionalFieldInfo[];
-	userName? : string;
-	userMail? : string;
-	outputPath? : string;
 }
 
 
-export class KalturaUsersCsvJobData extends KalturaJobData {
+export class KalturaUsersCsvJobData extends KalturaExportCsvJobData {
 
     filter : KalturaUserFilter;
 	metadataProfileId : number;
 	additionalFields : KalturaCsvAdditionalFieldInfo[];
-	userName : string;
-	userMail : string;
-	outputPath : string;
 
     constructor(data? : KalturaUsersCsvJobDataArgs)
     {
@@ -38,10 +32,7 @@ export class KalturaUsersCsvJobData extends KalturaJobData {
                 objectType : { type : 'c', default : 'KalturaUsersCsvJobData' },
 				filter : { type : 'o', subTypeConstructor : KalturaUserFilter, subType : 'KalturaUserFilter' },
 				metadataProfileId : { type : 'n' },
-				additionalFields : { type : 'a', subTypeConstructor : KalturaCsvAdditionalFieldInfo, subType : 'KalturaCsvAdditionalFieldInfo' },
-				userName : { type : 's' },
-				userMail : { type : 's' },
-				outputPath : { type : 's' }
+				additionalFields : { type : 'a', subTypeConstructor : KalturaCsvAdditionalFieldInfo, subType : 'KalturaCsvAdditionalFieldInfo' }
             }
         );
         return result;

@@ -4,6 +4,7 @@ export enum KalturaVendorServiceTurnAroundTime {
     bestEffort=-1,
 	eightHours=28800,
 	fortyEightHours=172800,
+	fourDays=345600,
 	immediate=0,
 	sixHours=21600,
 	tenDays=864000,

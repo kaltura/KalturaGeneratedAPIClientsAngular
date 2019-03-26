@@ -1,22 +1,16 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
 import { KalturaEntryVendorTaskFilter } from './KalturaEntryVendorTaskFilter';
-import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
+import { KalturaExportCsvJobData, KalturaExportCsvJobDataArgs } from './KalturaExportCsvJobData';
 
-export interface KalturaEntryVendorTaskCsvJobDataArgs  extends KalturaJobDataArgs {
+export interface KalturaEntryVendorTaskCsvJobDataArgs  extends KalturaExportCsvJobDataArgs {
     filter? : KalturaEntryVendorTaskFilter;
-	userName? : string;
-	userMail? : string;
-	outputPath? : string;
 }
 
 
-export class KalturaEntryVendorTaskCsvJobData extends KalturaJobData {
+export class KalturaEntryVendorTaskCsvJobData extends KalturaExportCsvJobData {
 
     filter : KalturaEntryVendorTaskFilter;
-	userName : string;
-	userMail : string;
-	outputPath : string;
 
     constructor(data? : KalturaEntryVendorTaskCsvJobDataArgs)
     {
@@ -30,10 +24,7 @@ export class KalturaEntryVendorTaskCsvJobData extends KalturaJobData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaEntryVendorTaskCsvJobData' },
-				filter : { type : 'o', subTypeConstructor : KalturaEntryVendorTaskFilter, subType : 'KalturaEntryVendorTaskFilter' },
-				userName : { type : 's' },
-				userMail : { type : 's' },
-				outputPath : { type : 's' }
+				filter : { type : 'o', subTypeConstructor : KalturaEntryVendorTaskFilter, subType : 'KalturaEntryVendorTaskFilter' }
             }
         );
         return result;
