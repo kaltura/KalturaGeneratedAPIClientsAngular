@@ -36468,7 +36468,7 @@
                     "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
-                    "insertOnly": false,
+                    "insertOnly": true,
                     "optional": true,
                     "default": "null"
                 },
