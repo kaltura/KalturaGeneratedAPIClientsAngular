@@ -6365,6 +6365,22 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "exportToCsv",
+                    "resultClassName": "KalturaReportExportResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "params",
+                            "typeClassName": "KalturaReportExportParams",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "getBaseTotal",
                     "resultClassName": "KalturaReportBaseTotal",
                     "resultType": "ArrayOfObjects",
@@ -37213,38 +37229,6 @@
             ]
         },
         {
-            "name": "KalturaReportGraph",
-            "base": "",
-            "plugin": "",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "id",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "data",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaReportInputBaseFilter",
             "base": "",
             "plugin": "",
@@ -37299,16 +37283,48 @@
             ]
         },
         {
-            "name": "KalturaReportResponse",
-            "base": "",
+            "name": "KalturaESearchEntryOperator",
+            "base": "KalturaESearchEntryBaseItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "operator",
+                    "description": "",
+                    "typeClassName": "KalturaESearchOperatorType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchItems",
+                    "description": "",
+                    "typeClassName": "KalturaESearchEntryBaseItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReportInputFilter",
+            "base": "KalturaReportInputBaseFilter",
             "plugin": "",
             "description": "",
             "abstract": false,
             "deprecated": false,
             "properties": [
                 {
-                    "name": "columns",
-                    "description": "",
+                    "name": "keywords",
+                    "description": "Search keywords to filter objects",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -37318,10 +37334,241 @@
                     "default": "null"
                 },
                 {
-                    "name": "results",
+                    "name": "searchInTags",
+                    "description": "Search keywords in objects tags",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "searchInAdminTags",
+                    "description": "Search keywords in objects admin tags",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "categories",
+                    "description": "Search objects in specified categories",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "categoriesIdsIn",
+                    "description": "Search objects in specified category ids",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "customVar1In",
+                    "description": "Filter by customVar1",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "customVar2In",
+                    "description": "Filter by customVar2",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "customVar3In",
+                    "description": "Filter by customVar3",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "deviceIn",
+                    "description": "Filter by device",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "countryIn",
+                    "description": "Filter by country",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "regionIn",
+                    "description": "Filter by region",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "citiesIn",
+                    "description": "Filter by city",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "operatingSystemFamilyIn",
+                    "description": "Filter by operating system family",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "browserFamilyIn",
+                    "description": "Filter by browser family",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "timeZoneOffset",
+                    "description": "Time zone offset in minutes",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "interval",
+                    "description": "Aggregated results according to interval",
+                    "typeClassName": "KalturaReportInterval",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "mediaTypeIn",
+                    "description": "Filter by media types",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sourceTypeIn",
+                    "description": "Filter by source types",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "ownerIdsIn",
+                    "description": "Filter by entry owner",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryOperator",
                     "description": "",
-                    "typeClassName": "KalturaString",
-                    "type": "ArrayOfObjects",
+                    "typeClassName": "KalturaESearchEntryOperator",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryCreatedAtGreaterThanOrEqual",
+                    "description": "Entry created at greater than or equal as Unix timestamp",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryCreatedAtLessThanOrEqual",
+                    "description": "Entry created at less than or equal as Unix timestamp",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -37354,6 +37601,232 @@
                     "description": "",
                     "typeClassName": "bool",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReportExportItem",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "reportTitle",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "action",
+                    "description": "",
+                    "typeClassName": "KalturaReportExportItemType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reportType",
+                    "description": "",
+                    "typeClassName": "KalturaReportType",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "filter",
+                    "description": "",
+                    "typeClassName": "KalturaReportInputFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "order",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "objectIds",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "responseOptions",
+                    "description": "",
+                    "typeClassName": "KalturaReportResponseOptions",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReportExportParams",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "recipientEmail",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "timeZoneOffset",
+                    "description": "Time zone offset in minutes (between client to UTC)",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reportItems",
+                    "description": "",
+                    "typeClassName": "KalturaReportExportItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReportExportResponse",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "referenceJobId",
+                    "description": "",
+                    "typeClassName": "bigint",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "reportEmail",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReportGraph",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaReportResponse",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "columns",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "results",
+                    "description": "",
+                    "typeClassName": "KalturaString",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -50165,38 +50638,6 @@
             ]
         },
         {
-            "name": "KalturaESearchEntryOperator",
-            "base": "KalturaESearchEntryBaseItem",
-            "plugin": "elasticSearch",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "operator",
-                    "description": "",
-                    "typeClassName": "KalturaESearchOperatorType",
-                    "type": "EnumOfInt",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "searchItems",
-                    "description": "",
-                    "typeClassName": "KalturaESearchEntryBaseItem",
-                    "type": "ArrayOfObjects",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaESearchEntryParams",
             "base": "KalturaESearchParams",
             "plugin": "elasticSearch",
@@ -57147,227 +57588,18 @@
             ]
         },
         {
-            "name": "KalturaReportInputFilter",
-            "base": "KalturaReportInputBaseFilter",
+            "name": "KalturaReportExportJobData",
+            "base": "KalturaJobData",
             "plugin": "",
             "description": "",
             "abstract": false,
             "deprecated": false,
             "properties": [
                 {
-                    "name": "keywords",
-                    "description": "Search keywords to filter objects",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "searchInTags",
-                    "description": "Search keywords in objects tags",
-                    "typeClassName": "bool",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "searchInAdminTags",
-                    "description": "Search keywords in objects admin tags",
-                    "typeClassName": "bool",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "categories",
-                    "description": "Search objects in specified categories",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "categoriesIdsIn",
-                    "description": "Search objects in specified category ids",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "customVar1In",
-                    "description": "Filter by customVar1",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "customVar2In",
-                    "description": "Filter by customVar2",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "customVar3In",
-                    "description": "Filter by customVar3",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "deviceIn",
-                    "description": "Filter by device",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "countryIn",
-                    "description": "Filter by country",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "regionIn",
-                    "description": "Filter by region",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "citiesIn",
-                    "description": "Filter by city",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "operatingSystemFamilyIn",
-                    "description": "Filter by operating system family",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "browserFamilyIn",
-                    "description": "Filter by browser family",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "timeZoneOffset",
-                    "description": "Time zone offset in minutes",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "interval",
-                    "description": "Aggregated results according to interval",
-                    "typeClassName": "KalturaReportInterval",
-                    "type": "EnumOfString",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "mediaTypeIn",
-                    "description": "Filter by media types",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "sourceTypeIn",
-                    "description": "Filter by source types",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "ownerIdsIn",
-                    "description": "Filter by entry owner",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "entryOperator",
+                    "name": "recipientEmail",
                     "description": "",
-                    "typeClassName": "KalturaESearchEntryOperator",
-                    "type": "Object",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -57375,10 +57607,10 @@
                     "default": "null"
                 },
                 {
-                    "name": "entryCreatedAtGreaterThanOrEqual",
-                    "description": "Entry created at greater than or equal as Unix timestamp",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "name": "reportItems",
+                    "description": "",
+                    "typeClassName": "KalturaReportExportItem",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -57386,18 +57618,7 @@
                     "default": "null"
                 },
                 {
-                    "name": "entryCreatedAtLessThanOrEqual",
-                    "description": "Entry created at less than or equal as Unix timestamp",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "entryIdIn",
+                    "name": "filePaths",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -82888,6 +83109,24 @@
             ]
         },
         {
+            "name": "KalturaReportExportItemType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "GRAPH",
+                    "value": "3"
+                },
+                {
+                    "name": "TABLE",
+                    "value": "1"
+                },
+                {
+                    "name": "TOTAL",
+                    "value": "2"
+                }
+            ]
+        },
+        {
             "name": "KalturaResponseProfileStatus",
             "type": "int",
             "values": [
@@ -86065,6 +86304,10 @@
                 {
                     "name": "RECALCULATE_CACHE",
                     "value": "41"
+                },
+                {
+                    "name": "REPORT_EXPORT",
+                    "value": "50"
                 },
                 {
                     "name": "SCHEDULED_TASK",
@@ -96389,6 +96632,18 @@
                 {
                     "name": "MAIL_TYPE_REGISTER_CONFIRM_VIDEO_SERVICE",
                     "value": "54"
+                },
+                {
+                    "name": "MAIL_TYPE_REPORT_EXPORT_ABORT",
+                    "value": "138"
+                },
+                {
+                    "name": "MAIL_TYPE_REPORT_EXPORT_FAILURE",
+                    "value": "137"
+                },
+                {
+                    "name": "MAIL_TYPE_REPORT_EXPORT_SUCCESS",
+                    "value": "136"
                 },
                 {
                     "name": "MAIL_TYPE_ROUGHCUT_CREATED",
