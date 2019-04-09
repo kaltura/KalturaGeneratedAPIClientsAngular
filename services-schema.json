@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.17.0",
+    "apiVersion": "14.18.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -8669,8 +8669,8 @@
                 },
                 {
                     "name": "bulkDelete",
-                    "resultClassName": "int",
-                    "resultType": "Simple",
+                    "resultClassName": "KalturaBulkUpload",
+                    "resultType": "Object",
                     "params": [
                         {
                             "name": "filter",
@@ -9568,7 +9568,7 @@
                 },
                 {
                     "name": "clone",
-                    "resultClassName": "KalturaCuePoint",
+                    "resultClassName": "KalturaAnnotation",
                     "resultType": "Object",
                     "params": [
                         {
@@ -9584,6 +9584,13 @@
                             "type": "Simple",
                             "optional": false,
                             "default": ""
+                        },
+                        {
+                            "name": "parentId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "Clone cuePoint with id to given entry",
@@ -44621,7 +44628,7 @@
             ]
         },
         {
-            "name": "KalturaBulkServiceFilterData",
+            "name": "KalturaBulkServiceFilterDataBase",
             "base": "KalturaBulkServiceData",
             "plugin": "bulkUploadFilter",
             "description": "Represents the Bulk service input for filter bulk upload",
@@ -44632,17 +44639,6 @@
                     "name": "filter",
                     "description": "Filter for extracting the objects list to upload",
                     "typeClassName": "KalturaFilter",
-                    "type": "Object",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "templateObject",
-                    "description": "Template object for new object creation",
-                    "typeClassName": "KalturaObjectBase",
                     "type": "Object",
                     "writeOnly": false,
                     "readOnly": false,
@@ -45813,6 +45809,27 @@
                     "name": "group",
                     "description": "",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBulkUploadResultUserEntry",
+            "base": "KalturaBulkUploadResult",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "userEntryId",
+                    "description": "",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -56760,6 +56777,28 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "createdAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idGreaterThan",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -60837,6 +60876,38 @@
             ]
         },
         {
+            "name": "KalturaVendorAudioDescriptionCatalogItem",
+            "base": "KalturaVendorCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sourceLanguage",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "flavorParamsId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaVendorCaptionsCatalogItem",
             "base": "KalturaVendorCatalogItem",
             "plugin": "reach",
@@ -63044,6 +63115,27 @@
                     "description": "",
                     "typeClassName": "KalturaBeaconIndexType",
                     "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBulkServiceFilterData",
+            "base": "KalturaBulkServiceFilterDataBase",
+            "plugin": "bulkUploadFilter",
+            "description": "Represents the Bulk service input for filter bulk upload",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "templateObject",
+                    "description": "Template object for new object creation",
+                    "typeClassName": "KalturaObjectBase",
+                    "type": "Object",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -76489,6 +76581,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "partnerId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -79249,6 +79352,15 @@
         },
         {
             "name": "KalturaVendorAlignmentCatalogItemFilter",
+            "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaVendorAudioDescriptionCatalogItemFilter",
             "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
             "plugin": "reach",
             "description": "",
@@ -84511,6 +84623,10 @@
                     "value": "3"
                 },
                 {
+                    "name": "AUDIO_DESCRIPTION",
+                    "value": "4"
+                },
+                {
                     "name": "CAPTIONS",
                     "value": "1"
                 },
@@ -86550,6 +86666,10 @@
                 {
                     "name": "USER",
                     "value": "3"
+                },
+                {
+                    "name": "USER_ENTRY",
+                    "value": "6"
                 }
             ]
         },
@@ -86876,6 +86996,10 @@
                     "value": "Mandarin Chinese"
                 },
                 {
+                    "name": "DA",
+                    "value": "Danish"
+                },
+                {
                     "name": "DE",
                     "value": "German"
                 },
@@ -86896,6 +87020,10 @@
                     "value": "Spanish"
                 },
                 {
+                    "name": "FI",
+                    "value": "Finnish"
+                },
+                {
                     "name": "FR",
                     "value": "French"
                 },
@@ -86906,6 +87034,10 @@
                 {
                     "name": "HI",
                     "value": "Hindi"
+                },
+                {
+                    "name": "IS",
+                    "value": "Icelandic"
                 },
                 {
                     "name": "IT",
@@ -86924,12 +87056,20 @@
                     "value": "Dutch"
                 },
                 {
+                    "name": "NO",
+                    "value": "Norwegian"
+                },
+                {
                     "name": "PT",
                     "value": "Portuguese"
                 },
                 {
                     "name": "RU",
                     "value": "Russian"
+                },
+                {
+                    "name": "SV",
+                    "value": "Swedish"
                 },
                 {
                     "name": "TH",

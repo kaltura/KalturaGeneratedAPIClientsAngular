@@ -8,6 +8,7 @@ export interface KalturaUserEntryFilterArgs  extends KalturaUserEntryBaseFilterA
 	isAnonymous? : KalturaNullableBoolean;
 	privacyContextEqual? : string;
 	privacyContextIn? : string;
+	partnerId? : number;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaUserEntryFilter extends KalturaUserEntryBaseFilter {
 	isAnonymous : KalturaNullableBoolean;
 	privacyContextEqual : string;
 	privacyContextIn : string;
+	partnerId : number;
 
     constructor(data? : KalturaUserEntryFilterArgs)
     {
@@ -33,7 +35,8 @@ export class KalturaUserEntryFilter extends KalturaUserEntryBaseFilter {
 				userIdEqualCurrent : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				isAnonymous : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				privacyContextEqual : { type : 's' },
-				privacyContextIn : { type : 's' }
+				privacyContextIn : { type : 's' },
+				partnerId : { type : 'n' }
             }
         );
         return result;

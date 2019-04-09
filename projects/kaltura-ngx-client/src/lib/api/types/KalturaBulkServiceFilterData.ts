@@ -1,19 +1,16 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
-import { KalturaFilter } from './KalturaFilter';
 import { KalturaObjectBase } from '../kaltura-object-base';
-import { KalturaBulkServiceData, KalturaBulkServiceDataArgs } from './KalturaBulkServiceData';
+import { KalturaBulkServiceFilterDataBase, KalturaBulkServiceFilterDataBaseArgs } from './KalturaBulkServiceFilterDataBase';
 
-export interface KalturaBulkServiceFilterDataArgs  extends KalturaBulkServiceDataArgs {
-    filter? : KalturaFilter;
-	templateObject? : KalturaObjectBase;
+export interface KalturaBulkServiceFilterDataArgs  extends KalturaBulkServiceFilterDataBaseArgs {
+    templateObject? : KalturaObjectBase;
 }
 
 
-export class KalturaBulkServiceFilterData extends KalturaBulkServiceData {
+export class KalturaBulkServiceFilterData extends KalturaBulkServiceFilterDataBase {
 
-    filter : KalturaFilter;
-	templateObject : KalturaObjectBase;
+    templateObject : KalturaObjectBase;
 
     constructor(data? : KalturaBulkServiceFilterDataArgs)
     {
@@ -27,7 +24,6 @@ export class KalturaBulkServiceFilterData extends KalturaBulkServiceData {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaBulkServiceFilterData' },
-				filter : { type : 'o', subTypeConstructor : KalturaFilter, subType : 'KalturaFilter' },
 				templateObject : { type : 'o', subTypeConstructor : KalturaObjectBase, subType : 'KalturaObjectBase' }
             }
         );

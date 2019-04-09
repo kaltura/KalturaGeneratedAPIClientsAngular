@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
+import { KalturaBulkUpload } from './KalturaBulkUpload';
 
 import { KalturaUserEntryFilter } from './KalturaUserEntryFilter';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
@@ -14,16 +14,16 @@ export interface UserEntryBulkDeleteActionArgs  extends KalturaRequestArgs {
  *
  * 
  *
- * Server response type:         number
+ * Server response type:         KalturaBulkUpload
  * Server failure response type: KalturaAPIException
  */
-export class UserEntryBulkDeleteAction extends KalturaRequest<number> {
+export class UserEntryBulkDeleteAction extends KalturaRequest<KalturaBulkUpload> {
 
     filter : KalturaUserEntryFilter;
 
     constructor(data : UserEntryBulkDeleteActionArgs)
     {
-        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaBulkUpload', responseConstructor : KalturaBulkUpload  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

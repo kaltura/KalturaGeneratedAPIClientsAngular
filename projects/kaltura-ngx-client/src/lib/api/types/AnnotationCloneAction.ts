@@ -1,12 +1,13 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-import { KalturaCuePoint } from './KalturaCuePoint';
+import { KalturaAnnotation } from './KalturaAnnotation';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface AnnotationCloneActionArgs  extends KalturaRequestArgs {
     id : string;
 	entryId : string;
+	parentId? : string;
 }
 
 /**
@@ -14,17 +15,18 @@ export interface AnnotationCloneActionArgs  extends KalturaRequestArgs {
  *
  * Usage: Clone cuePoint with id to given entry
  *
- * Server response type:         KalturaCuePoint
+ * Server response type:         KalturaAnnotation
  * Server failure response type: KalturaAPIException
  */
-export class AnnotationCloneAction extends KalturaRequest<KalturaCuePoint> {
+export class AnnotationCloneAction extends KalturaRequest<KalturaAnnotation> {
 
     id : string;
 	entryId : string;
+	parentId : string;
 
     constructor(data : AnnotationCloneActionArgs)
     {
-        super(data, {responseType : 'o', responseSubType : 'KalturaCuePoint', responseConstructor : KalturaCuePoint  });
+        super(data, {responseType : 'o', responseSubType : 'KalturaAnnotation', responseConstructor : KalturaAnnotation  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -36,7 +38,8 @@ export class AnnotationCloneAction extends KalturaRequest<KalturaCuePoint> {
                 service : { type : 'c', default : 'annotation_annotation' },
 				action : { type : 'c', default : 'clone' },
 				id : { type : 's' },
-				entryId : { type : 's' }
+				entryId : { type : 's' },
+				parentId : { type : 's' }
             }
         );
         return result;

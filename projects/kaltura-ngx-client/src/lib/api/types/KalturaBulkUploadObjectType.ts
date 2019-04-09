@@ -8,5 +8,6 @@ export enum KalturaBulkUploadObjectType {
 	job = 'bulkUploadFilter.JOB',
 	scheduleEvent = 'scheduleBulkUpload.SCHEDULE_EVENT',
 	scheduleResource = 'scheduleBulkUpload.SCHEDULE_RESOURCE',
-	user = '3'
+	user = '3',
+	userEntry = '6'
 }
