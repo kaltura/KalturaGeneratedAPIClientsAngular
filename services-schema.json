@@ -1,5 +1,5 @@
 {
-    "apiVersion": "14.18.0",
+    "apiVersion": "14.19.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -8669,8 +8669,8 @@
                 },
                 {
                     "name": "bulkDelete",
-                    "resultClassName": "KalturaBulkUpload",
-                    "resultType": "Object",
+                    "resultClassName": "int",
+                    "resultType": "Simple",
                     "params": [
                         {
                             "name": "filter",
