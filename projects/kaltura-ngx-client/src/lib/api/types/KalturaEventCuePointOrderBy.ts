@@ -3,6 +3,8 @@
 export enum KalturaEventCuePointOrderBy {
     createdAtAsc = '+createdAt',
 	createdAtDesc = '-createdAt',
+	intIdAsc = '+intId',
+	intIdDesc = '-intId',
 	partnerSortValueAsc = '+partnerSortValue',
 	partnerSortValueDesc = '-partnerSortValue',
 	startTimeAsc = '+startTime',

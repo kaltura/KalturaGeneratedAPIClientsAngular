@@ -16946,6 +16946,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "intId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "cuePointType",
                     "description": "",
                     "typeClassName": "KalturaCuePointType",
@@ -84951,6 +84962,14 @@
                     "value": "-endTime"
                 },
                 {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
+                },
+                {
                     "name": "PARTNER_SORT_VALUE_ASC",
                     "value": "+partnerSortValue"
                 },
@@ -85129,6 +85148,14 @@
                     "value": "-endTime"
                 },
                 {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
+                },
+                {
                     "name": "PARTNER_SORT_VALUE_ASC",
                     "value": "+partnerSortValue"
                 },
@@ -85173,6 +85200,14 @@
                 {
                     "name": "CREATED_AT_DESC",
                     "value": "-createdAt"
+                },
+                {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
                 },
                 {
                     "name": "PARTNER_SORT_VALUE_ASC",
@@ -87318,6 +87353,14 @@
                     "value": "-endTime"
                 },
                 {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
+                },
+                {
                     "name": "PARTNER_SORT_VALUE_ASC",
                     "value": "+partnerSortValue"
                 },
@@ -87779,6 +87822,14 @@
                 {
                     "name": "CREATED_AT_DESC",
                     "value": "-createdAt"
+                },
+                {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
                 },
                 {
                     "name": "PARTNER_SORT_VALUE_ASC",
@@ -90557,6 +90608,14 @@
                 {
                     "name": "CREATED_AT_DESC",
                     "value": "-createdAt"
+                },
+                {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
                 },
                 {
                     "name": "PARTNER_SORT_VALUE_ASC",
@@ -98632,6 +98691,14 @@
                     "value": "-createdAt"
                 },
                 {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
+                },
+                {
                     "name": "PARTNER_SORT_VALUE_ASC",
                     "value": "+partnerSortValue"
                 },
@@ -99813,6 +99880,14 @@
                 {
                     "name": "CREATED_AT_DESC",
                     "value": "-createdAt"
+                },
+                {
+                    "name": "INT_ID_ASC",
+                    "value": "+intId"
+                },
+                {
+                    "name": "INT_ID_DESC",
+                    "value": "-intId"
                 },
                 {
                     "name": "PARTNER_SORT_VALUE_ASC",

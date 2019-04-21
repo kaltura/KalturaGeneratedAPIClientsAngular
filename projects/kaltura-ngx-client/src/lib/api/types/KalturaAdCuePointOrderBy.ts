@@ -7,6 +7,8 @@ export enum KalturaAdCuePointOrderBy {
 	durationDesc = '-duration',
 	endTimeAsc = '+endTime',
 	endTimeDesc = '-endTime',
+	intIdAsc = '+intId',
+	intIdDesc = '-intId',
 	partnerSortValueAsc = '+partnerSortValue',
 	partnerSortValueDesc = '-partnerSortValue',
 	startTimeAsc = '+startTime',

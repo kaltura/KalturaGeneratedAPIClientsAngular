@@ -21,6 +21,7 @@ export interface KalturaCuePointArgs  extends KalturaObjectBaseArgs {
 export class KalturaCuePoint extends KalturaObjectBase {
 
     readonly id : string;
+	readonly intId : number;
 	readonly cuePointType : KalturaCuePointType;
 	readonly status : KalturaCuePointStatus;
 	entryId : string;
@@ -52,6 +53,7 @@ export class KalturaCuePoint extends KalturaObjectBase {
             {
                 objectType : { type : 'c', default : 'KalturaCuePoint' },
 				id : { type : 's', readOnly : true },
+				intId : { type : 'n', readOnly : true },
 				cuePointType : { type : 'es', readOnly : true, subTypeConstructor : KalturaCuePointType, subType : 'KalturaCuePointType' },
 				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaCuePointStatus, subType : 'KalturaCuePointStatus' },
 				entryId : { type : 's' },
