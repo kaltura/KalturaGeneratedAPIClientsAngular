@@ -5,7 +5,8 @@ export interface Environment {
         fileFormatValue: number
     }
     response: {
-        nestedResponse: boolean
+        nestedResponse: boolean,
+        customErrorInHttp500: boolean
     };
 }
 
@@ -16,6 +17,7 @@ export const environment: Environment = {
         fileFormatValue: 1
     },
     response: {
-        nestedResponse: false
+        nestedResponse: false,
+        customErrorInHttp500: false
     }
 }

@@ -74966,6 +74966,38 @@
             ]
         },
         {
+            "name": "KalturaESearchGroupUserItem",
+            "base": "KalturaESearchAbstractUserItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaEsearchGroupUserFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "creationMode",
+                    "description": "",
+                    "typeClassName": "KalturaGroupUserCreationMode",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchUnifiedItem",
             "base": "KalturaESearchAbstractEntryItem",
             "plugin": "elasticSearch",
@@ -90594,6 +90626,16 @@
                 {
                     "name": "UPDATED_AT_DESC",
                     "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEsearchGroupUserFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "GROUP_IDS",
+                    "value": "group_ids"
                 }
             ]
         },
