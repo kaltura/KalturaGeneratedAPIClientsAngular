@@ -12,6 +12,7 @@ export interface KalturaBatchHistoryDataArgs  extends KalturaObjectBaseArgs {
 	errNumber? : number;
 	hostName? : string;
 	sessionId? : string;
+	schedulerName? : string;
 }
 
 
@@ -26,6 +27,7 @@ export class KalturaBatchHistoryData extends KalturaObjectBase {
 	errNumber : number;
 	hostName : string;
 	sessionId : string;
+	schedulerName : string;
 
     constructor(data? : KalturaBatchHistoryDataArgs)
     {
@@ -47,7 +49,8 @@ export class KalturaBatchHistoryData extends KalturaObjectBase {
 				errType : { type : 'n' },
 				errNumber : { type : 'n' },
 				hostName : { type : 's' },
-				sessionId : { type : 's' }
+				sessionId : { type : 's' },
+				schedulerName : { type : 's' }
             }
         );
         return result;
