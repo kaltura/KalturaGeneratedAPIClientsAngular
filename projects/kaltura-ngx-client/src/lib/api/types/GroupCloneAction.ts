@@ -6,7 +6,8 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface GroupCloneActionArgs  extends KalturaRequestArgs {
     originalGroupId : string;
-	newGroupName : string;
+	newGroupId : string;
+	newGroupName? : string;
 }
 
 /**
@@ -20,6 +21,7 @@ export interface GroupCloneActionArgs  extends KalturaRequestArgs {
 export class GroupCloneAction extends KalturaRequest<KalturaGroup> {
 
     originalGroupId : string;
+	newGroupId : string;
 	newGroupName : string;
 
     constructor(data : GroupCloneActionArgs)
@@ -36,6 +38,7 @@ export class GroupCloneAction extends KalturaRequest<KalturaGroup> {
                 service : { type : 'c', default : 'group_group' },
 				action : { type : 'c', default : 'clone' },
 				originalGroupId : { type : 's' },
+				newGroupId : { type : 's' },
 				newGroupName : { type : 's' }
             }
         );

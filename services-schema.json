@@ -13379,11 +13379,18 @@
                             "default": ""
                         },
                         {
-                            "name": "newGroupName",
+                            "name": "newGroupId",
                             "typeClassName": "string",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
+                        },
+                        {
+                            "name": "newGroupName",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "clone the group (groupId), and set group id with the neeGroupName.",
