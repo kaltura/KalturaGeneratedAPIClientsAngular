@@ -276,6 +276,7 @@ export enum KalturaLanguage {
 	la = 'Latin',
 	lad = 'Ladino',
 	lah = 'Lahnda',
+	lb = 'Luxembourgish (Letzeburgesch)',
 	lbe = 'Lak',
 	lez = 'Lezghian',
 	lhu = 'Lahu',

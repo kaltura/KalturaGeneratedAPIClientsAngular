@@ -37,6 +37,7 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 	streamPassword : string;
 	readonly streamUsername : string;
 	readonly primaryServerNodeId : number;
+	readonly sipToken : string;
 
     constructor(data? : KalturaLiveStreamEntryArgs)
     {
@@ -66,7 +67,8 @@ export class KalturaLiveStreamEntry extends KalturaLiveEntry {
 				encodingIP2 : { type : 's' },
 				streamPassword : { type : 's' },
 				streamUsername : { type : 's', readOnly : true },
-				primaryServerNodeId : { type : 'n', readOnly : true }
+				primaryServerNodeId : { type : 'n', readOnly : true },
+				sipToken : { type : 's', readOnly : true }
             }
         );
         return result;

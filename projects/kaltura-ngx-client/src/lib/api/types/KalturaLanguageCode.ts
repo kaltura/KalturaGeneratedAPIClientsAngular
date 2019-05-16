@@ -72,6 +72,7 @@ export enum KalturaLanguageCode {
 	ku = 'ku',
 	ky = 'ky',
 	la = 'la',
+	lb = 'lb',
 	li = 'li',
 	ln = 'ln',
 	lo = 'lo',
