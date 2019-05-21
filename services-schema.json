@@ -5657,6 +5657,22 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "getPublicInfo",
+                    "resultClassName": "KalturaPartnerPublicInfo",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "Returns partner public info by Id",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "getSecrets",
                     "resultClassName": "KalturaPartner",
                     "resultType": "Object",
@@ -35720,6 +35736,38 @@
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaPartnerPublicInfo",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "analyticsUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "ottEnvironmentUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
