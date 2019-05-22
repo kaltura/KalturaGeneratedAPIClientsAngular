@@ -113,6 +113,7 @@ export enum KalturaLanguage {
 	com = 'Comanche',
 	coo = 'Comox',
 	cop = 'Coptic',
+	crg = 'Michif',
 	crh = 'Crimean Tatar',
 	crx = 'Carrier',
 	cs = 'Czech',
