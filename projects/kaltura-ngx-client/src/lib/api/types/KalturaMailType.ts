@@ -34,6 +34,7 @@ export enum KalturaMailType {
 	mailTypeReportExportSuccess = '136',
 	mailTypeRoughcutCreated = '22',
 	mailTypeRoughcutCreatedSubscribed = '41',
+	mailTypeSipFailure = '139',
 	mailTypeSystemUserCredentialsSaved = '113',
 	mailTypeSystemUserNewPassword = '112',
 	mailTypeSystemUserResetPassword = '110',

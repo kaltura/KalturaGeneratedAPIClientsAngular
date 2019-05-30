@@ -1,14 +1,14 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
 import { KalturaScheduleEventType } from './KalturaScheduleEventType';
-import { KalturaBulkUploadJobData, KalturaBulkUploadJobDataArgs } from './KalturaBulkUploadJobData';
+import { KalturaBulkUploadScheduleEventJobData, KalturaBulkUploadScheduleEventJobDataArgs } from './KalturaBulkUploadScheduleEventJobData';
 
-export interface KalturaBulkUploadICalJobDataArgs  extends KalturaBulkUploadJobDataArgs {
+export interface KalturaBulkUploadICalJobDataArgs  extends KalturaBulkUploadScheduleEventJobDataArgs {
     eventsType? : KalturaScheduleEventType;
 }
 
 
-export class KalturaBulkUploadICalJobData extends KalturaBulkUploadJobData {
+export class KalturaBulkUploadICalJobData extends KalturaBulkUploadScheduleEventJobData {
 
     eventsType : KalturaScheduleEventType;
 

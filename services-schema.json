@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.0.0",
+    "apiVersion": "15.1.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -15207,7 +15207,7 @@
                         },
                         {
                             "name": "bulkUploadData",
-                            "typeClassName": "KalturaBulkUploadICalJobData",
+                            "typeClassName": "KalturaBulkUploadScheduleEventJobData",
                             "type": "Object",
                             "optional": true,
                             "default": "null"
@@ -45663,6 +45663,182 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "templateEntryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "eventType",
+                    "description": "",
+                    "typeClassName": "KalturaScheduleEventType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "title",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "description",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "tags",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "categoryIds",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "resourceId",
+                    "description": "ID of the resource specified for the new event.",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "startTime",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "duration",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "endTime",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "recurrence",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "coEditors",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "coPublishers",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "eventOrganizerId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "contentOwnerId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "templateEntryType",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -63328,25 +63504,13 @@
             ]
         },
         {
-            "name": "KalturaBulkUploadICalJobData",
+            "name": "KalturaBulkUploadScheduleEventJobData",
             "base": "KalturaBulkUploadJobData",
             "plugin": "scheduleBulkUpload",
-            "description": "Represents the Bulk upload job data for iCal bulk upload",
-            "abstract": false,
+            "description": "Represents the abstract Bulk upload job data for general bulk upload",
+            "abstract": true,
             "deprecated": false,
-            "properties": [
-                {
-                    "name": "eventsType",
-                    "description": "The type of the events that ill be created by this upload",
-                    "typeClassName": "KalturaScheduleEventType",
-                    "type": "EnumOfInt",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
+            "properties": []
         },
         {
             "name": "KalturaBulkUploadXmlJobData",
@@ -74284,6 +74448,59 @@
                     "description": "",
                     "typeClassName": "KalturaBeaconScheduledResourceFieldName",
                     "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBulkUploadICalJobData",
+            "base": "KalturaBulkUploadScheduleEventJobData",
+            "plugin": "scheduleBulkUpload",
+            "description": "Represents the Bulk upload job data for iCal bulk upload",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "eventsType",
+                    "description": "The type of the events that ill be created by this upload",
+                    "typeClassName": "KalturaScheduleEventType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBulkUploadScheduleEventCsvJobData",
+            "base": "KalturaBulkUploadScheduleEventJobData",
+            "plugin": "scheduleBulkUpload",
+            "description": "Represents the Bulk upload job data for CSV bulk upload",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "csvVersion",
+                    "description": "The version of the csv file",
+                    "typeClassName": "KalturaBulkUploadCsvVersion",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "columns",
+                    "description": "Array containing CSV headers",
+                    "typeClassName": "KalturaString",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -97004,6 +97221,10 @@
                 {
                     "name": "MAIL_TYPE_ROUGHCUT_CREATED_SUBSCRIBED",
                     "value": "41"
+                },
+                {
+                    "name": "MAIL_TYPE_SIP_FAILURE",
+                    "value": "139"
                 },
                 {
                     "name": "MAIL_TYPE_SYSTEM_USER_CREDENTIALS_SAVED",

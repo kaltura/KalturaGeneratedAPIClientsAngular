@@ -2,12 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaBulkUpload } from './KalturaBulkUpload';
 
-import { KalturaBulkUploadICalJobData } from './KalturaBulkUploadICalJobData';
+import { KalturaBulkUploadScheduleEventJobData } from './KalturaBulkUploadScheduleEventJobData';
 import { KalturaUploadRequest, KalturaUploadRequestArgs } from '../kaltura-upload-request';
 
 export interface ScheduleEventAddFromBulkUploadActionArgs  extends KalturaUploadRequestArgs {
     fileData : File;
-	bulkUploadData? : KalturaBulkUploadICalJobData;
+	bulkUploadData? : KalturaBulkUploadScheduleEventJobData;
 }
 
 /**
@@ -21,7 +21,7 @@ export interface ScheduleEventAddFromBulkUploadActionArgs  extends KalturaUpload
 export class ScheduleEventAddFromBulkUploadAction extends KalturaUploadRequest<KalturaBulkUpload> {
 
     fileData : File;
-	bulkUploadData : KalturaBulkUploadICalJobData;
+	bulkUploadData : KalturaBulkUploadScheduleEventJobData;
 
     constructor(data : ScheduleEventAddFromBulkUploadActionArgs)
     {
@@ -37,7 +37,7 @@ export class ScheduleEventAddFromBulkUploadAction extends KalturaUploadRequest<K
                 service : { type : 'c', default : 'schedule_scheduleevent' },
 				action : { type : 'c', default : 'addFromBulkUpload' },
 				fileData : { type : 'f' },
-				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkUploadICalJobData, subType : 'KalturaBulkUploadICalJobData' }
+				bulkUploadData : { type : 'o', subTypeConstructor : KalturaBulkUploadScheduleEventJobData, subType : 'KalturaBulkUploadScheduleEventJobData' }
             }
         );
         return result;
