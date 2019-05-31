@@ -19,6 +19,7 @@ export enum KalturaCatalogItemLanguage {
 	ko = 'Korean',
 	nl = 'Dutch',
 	no = 'Norwegian',
+	pl = 'Polish',
 	pt = 'Portuguese',
 	ru = 'Russian',
 	sv = 'Swedish',
