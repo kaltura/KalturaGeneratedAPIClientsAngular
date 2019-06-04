@@ -26692,6 +26692,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "processStatus",
+                    "description": "",
+                    "typeClassName": "KalturaGroupProcessStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -63459,6 +63470,28 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "processObjectId",
+                    "description": "The object in process",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "processObjectType",
+                    "description": "The type of the object in process",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -82588,6 +82621,20 @@
                 {
                     "name": "DELETED",
                     "value": "3"
+                }
+            ]
+        },
+        {
+            "name": "KalturaGroupProcessStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "NONE",
+                    "value": "0"
+                },
+                {
+                    "name": "PROCESSING",
+                    "value": "1"
                 }
             ]
         },

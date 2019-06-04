@@ -6,6 +6,8 @@ import { KalturaBulkUploadJobData, KalturaBulkUploadJobDataArgs } from './Kaltur
 
 export interface KalturaBulkUploadCsvJobDataArgs  extends KalturaBulkUploadJobDataArgs {
     columns? : KalturaString[];
+	processObjectId? : string;
+	processObjectType? : string;
 }
 
 
@@ -13,6 +15,8 @@ export class KalturaBulkUploadCsvJobData extends KalturaBulkUploadJobData {
 
     readonly csvVersion : KalturaBulkUploadCsvVersion;
 	columns : KalturaString[];
+	processObjectId : string;
+	processObjectType : string;
 
     constructor(data? : KalturaBulkUploadCsvJobDataArgs)
     {
@@ -28,7 +32,9 @@ export class KalturaBulkUploadCsvJobData extends KalturaBulkUploadJobData {
             {
                 objectType : { type : 'c', default : 'KalturaBulkUploadCsvJobData' },
 				csvVersion : { type : 'en', readOnly : true, subTypeConstructor : KalturaBulkUploadCsvVersion, subType : 'KalturaBulkUploadCsvVersion' },
-				columns : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' }
+				columns : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' },
+				processObjectId : { type : 's' },
+				processObjectType : { type : 's' }
             }
         );
         return result;

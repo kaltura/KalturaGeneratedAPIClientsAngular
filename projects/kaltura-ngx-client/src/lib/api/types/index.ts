@@ -1364,6 +1364,7 @@ export { KalturaFlavorReadyBehaviorType } from './KalturaFlavorReadyBehaviorType
 export { KalturaGender } from './KalturaGender'
 export { KalturaGenericDistributionProviderParser } from './KalturaGenericDistributionProviderParser'
 export { KalturaGenericDistributionProviderStatus } from './KalturaGenericDistributionProviderStatus'
+export { KalturaGroupProcessStatus } from './KalturaGroupProcessStatus'
 export { KalturaGroupUserCreationMode } from './KalturaGroupUserCreationMode'
 export { KalturaGroupUserRole } from './KalturaGroupUserRole'
 export { KalturaGroupUserStatus } from './KalturaGroupUserStatus'

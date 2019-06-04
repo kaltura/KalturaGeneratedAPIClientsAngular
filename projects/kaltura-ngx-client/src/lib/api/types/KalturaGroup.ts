@@ -1,15 +1,17 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
+import { KalturaGroupProcessStatus } from './KalturaGroupProcessStatus';
 import { KalturaBaseUser, KalturaBaseUserArgs } from './KalturaBaseUser';
 
 export interface KalturaGroupArgs  extends KalturaBaseUserArgs {
-    
+    processStatus? : KalturaGroupProcessStatus;
 }
 
 
 export class KalturaGroup extends KalturaBaseUser {
 
     readonly membersCount : number;
+	processStatus : KalturaGroupProcessStatus;
 
     constructor(data? : KalturaGroupArgs)
     {
@@ -23,7 +25,8 @@ export class KalturaGroup extends KalturaBaseUser {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaGroup' },
-				membersCount : { type : 'n', readOnly : true }
+				membersCount : { type : 'n', readOnly : true },
+				processStatus : { type : 'en', subTypeConstructor : KalturaGroupProcessStatus, subType : 'KalturaGroupProcessStatus' }
             }
         );
         return result;
