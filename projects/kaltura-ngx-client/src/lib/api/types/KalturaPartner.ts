@@ -105,6 +105,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly ovpEnvironmentUrl : string;
 	readonly ottEnvironmentUrl : string;
 	eSearchLanguages : KalturaESearchLanguageItem[];
+	readonly authenticationType : boolean;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -178,7 +179,8 @@ export class KalturaPartner extends KalturaObjectBase {
 				publisherEnvironmentType : { type : 'n', readOnly : true },
 				ovpEnvironmentUrl : { type : 's', readOnly : true },
 				ottEnvironmentUrl : { type : 's', readOnly : true },
-				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' }
+				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' },
+				authenticationType : { type : 'b', readOnly : true }
             }
         );
         return result;

@@ -9079,6 +9079,22 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "generateQrCode",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "hashKey",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "get QR image content",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "get",
                     "resultClassName": "KalturaUser",
                     "resultType": "Object",
@@ -20731,6 +20747,17 @@
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "authenticationType",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
