@@ -20754,7 +20754,7 @@
                 {
                     "name": "authenticationType",
                     "description": "",
-                    "typeClassName": "bool",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
@@ -45716,8 +45716,8 @@
                 {
                     "name": "eventType",
                     "description": "",
-                    "typeClassName": "KalturaScheduleEventType",
-                    "type": "EnumOfInt",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -46790,6 +46790,17 @@
                     "name": "categoryId",
                     "description": "Category id to check condition for",
                     "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "categoryIds",
+                    "description": "Category id's to check condition for",
+                    "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -61300,6 +61311,27 @@
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVendorChapteringCatalogItem",
+            "base": "KalturaVendorCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sourceLanguage",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -79797,6 +79829,15 @@
             "properties": []
         },
         {
+            "name": "KalturaVendorChapteringCatalogItemFilter",
+            "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaYahooDistributionProfileBaseFilter",
             "base": "KalturaConfigurableDistributionProfileFilter",
             "plugin": "yahooDistribution",
@@ -85062,6 +85103,10 @@
                 {
                     "name": "CAPTIONS",
                     "value": "1"
+                },
+                {
+                    "name": "CHAPTERING",
+                    "value": "5"
                 },
                 {
                     "name": "TRANSLATION",
