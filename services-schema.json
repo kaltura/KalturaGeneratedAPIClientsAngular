@@ -256,8 +256,8 @@
                 },
                 {
                     "name": "setInitialPassword",
-                    "resultClassName": null,
-                    "resultType": "Void",
+                    "resultClassName": "KalturaAuthentication",
+                    "resultType": "Object",
                     "params": [
                         {
                             "name": "hashKey",
@@ -9333,8 +9333,8 @@
                 },
                 {
                     "name": "setInitialPassword",
-                    "resultClassName": null,
-                    "resultType": "Void",
+                    "resultClassName": "KalturaAuthentication",
+                    "resultType": "Object",
                     "params": [
                         {
                             "name": "hashKey",
@@ -18320,6 +18320,27 @@
             ]
         },
         {
+            "name": "KalturaAuthentication",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "qrCode",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaOperationAttributes",
             "base": "",
             "plugin": "",
@@ -20754,8 +20775,8 @@
                 {
                     "name": "authenticationType",
                     "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
+                    "typeClassName": "KalturaPartnerAuthenticationType",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -83262,6 +83283,24 @@
                 },
                 {
                     "name": "TRUE_VALUE",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaPartnerAuthenticationType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "PASSWORD_ONLY",
+                    "value": "0"
+                },
+                {
+                    "name": "SSO",
+                    "value": "2"
+                },
+                {
+                    "name": "TWO_FACTOR_AUTH",
                     "value": "1"
                 }
             ]
