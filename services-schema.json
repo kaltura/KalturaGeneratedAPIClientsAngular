@@ -93083,6 +93083,10 @@
                     "value": "Aleut"
                 },
                 {
+                    "name": "ALG",
+                    "value": "Algonquian languages"
+                },
+                {
                     "name": "ALN",
                     "value": "Albanian (Gheg)"
                 },
@@ -93157,6 +93161,10 @@
                 {
                     "name": "AS_",
                     "value": "Assamese"
+                },
+                {
+                    "name": "ATH",
+                    "value": "Athapascan languages"
                 },
                 {
                     "name": "ATJ",
@@ -93421,6 +93429,10 @@
                 {
                     "name": "COP",
                     "value": "Coptic"
+                },
+                {
+                    "name": "CR",
+                    "value": "Cree"
                 },
                 {
                     "name": "CRG",
@@ -93831,6 +93843,10 @@
                     "value": "Inupiak"
                 },
                 {
+                    "name": "IKT",
+                    "value": "Inuinnaqtun"
+                },
+                {
                     "name": "ILO",
                     "value": "Iloko"
                 },
@@ -93841,6 +93857,10 @@
                 {
                     "name": "INH",
                     "value": "Ingush"
+                },
+                {
+                    "name": "IRO",
+                    "value": "Iroquoian languages"
                 },
                 {
                     "name": "IS",
@@ -94427,6 +94447,10 @@
                     "value": "Occitan"
                 },
                 {
+                    "name": "OJ",
+                    "value": "Ojibwe, Ojibwa"
+                },
+                {
                     "name": "OJB",
                     "value": "Ojibwa Northwestern"
                 },
@@ -94663,6 +94687,10 @@
                     "value": "Sakha"
                 },
                 {
+                    "name": "SAL",
+                    "value": "Salishan languages"
+                },
+                {
                     "name": "SAM",
                     "value": "Aramaic Samaritan"
                 },
@@ -94769,6 +94797,10 @@
                 {
                     "name": "SMA",
                     "value": "Southern Sami"
+                },
+                {
+                    "name": "SMI",
+                    "value": "Sami languages"
                 },
                 {
                     "name": "SMJ",
@@ -94893,6 +94925,10 @@
                 {
                     "name": "TBW",
                     "value": "Tagbanwa"
+                },
+                {
+                    "name": "TCE",
+                    "value": "Southern Tutchone"
                 },
                 {
                     "name": "TCX",
@@ -95173,6 +95209,10 @@
                 {
                     "name": "ZU",
                     "value": "Zulu"
+                },
+                {
+                    "name": "ZXX",
+                    "value": "No linguistic content"
                 }
             ]
         },
@@ -95193,6 +95233,10 @@
                     "value": "af"
                 },
                 {
+                    "name": "ALG",
+                    "value": "alg"
+                },
+                {
                     "name": "AM",
                     "value": "am"
                 },
@@ -95203,6 +95247,10 @@
                 {
                     "name": "AS_",
                     "value": "as"
+                },
+                {
+                    "name": "ATH",
+                    "value": "ath"
                 },
                 {
                     "name": "AY",
@@ -95251,6 +95299,14 @@
                 {
                     "name": "CO",
                     "value": "co"
+                },
+                {
+                    "name": "CR",
+                    "value": "cr"
+                },
+                {
+                    "name": "CRG",
+                    "value": "crg"
                 },
                 {
                     "name": "CS",
@@ -95393,8 +95449,16 @@
                     "value": "ik"
                 },
                 {
+                    "name": "IKT",
+                    "value": "ikt"
+                },
+                {
                     "name": "IN",
                     "value": "in"
+                },
+                {
+                    "name": "IRO",
+                    "value": "iro"
                 },
                 {
                     "name": "IS",
@@ -95497,6 +95561,10 @@
                     "value": "mi"
                 },
                 {
+                    "name": "MIC",
+                    "value": "mic"
+                },
+                {
                     "name": "MK",
                     "value": "mk"
                 },
@@ -95526,7 +95594,7 @@
                 },
                 {
                     "name": "MU",
-                    "value": "multilingual"
+                    "value": "mu"
                 },
                 {
                     "name": "MY",
@@ -95551,6 +95619,18 @@
                 {
                     "name": "OC",
                     "value": "oc"
+                },
+                {
+                    "name": "OJ",
+                    "value": "oj"
+                },
+                {
+                    "name": "OJS",
+                    "value": "ojs"
+                },
+                {
+                    "name": "OJW",
+                    "value": "ojw"
                 },
                 {
                     "name": "OM",
@@ -95605,6 +95685,10 @@
                     "value": "sa"
                 },
                 {
+                    "name": "SAL",
+                    "value": "sal"
+                },
+                {
                     "name": "SD",
                     "value": "sd"
                 },
@@ -95631,6 +95715,10 @@
                 {
                     "name": "SM",
                     "value": "sm"
+                },
+                {
+                    "name": "SMI",
+                    "value": "smi"
                 },
                 {
                     "name": "SN",
@@ -95671,6 +95759,10 @@
                 {
                     "name": "TA",
                     "value": "ta"
+                },
+                {
+                    "name": "TCE",
+                    "value": "tce"
                 },
                 {
                     "name": "TE",
@@ -95729,6 +95821,10 @@
                     "value": "uk"
                 },
                 {
+                    "name": "UN",
+                    "value": "un"
+                },
+                {
                     "name": "UR",
                     "value": "ur"
                 },
@@ -95767,6 +95863,10 @@
                 {
                     "name": "ZU",
                     "value": "zu"
+                },
+                {
+                    "name": "ZXX",
+                    "value": "zxx"
                 }
             ]
         },
