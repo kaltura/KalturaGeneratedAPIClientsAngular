@@ -93279,6 +93279,10 @@
                     "value": "Bini"
                 },
                 {
+                    "name": "BLA",
+                    "value": "Siksika"
+                },
+                {
                     "name": "BN",
                     "value": "Bengali (Bangla)"
                 },
@@ -94295,6 +94299,10 @@
                     "value": "Moldavian"
                 },
                 {
+                    "name": "MOE",
+                    "value": "Montagnais"
+                },
+                {
                     "name": "MOH",
                     "value": "Mohawk"
                 },
@@ -94469,6 +94477,10 @@
                 {
                     "name": "OJW",
                     "value": "Ojibwa Western"
+                },
+                {
+                    "name": "OKA",
+                    "value": "Okanagan"
                 },
                 {
                     "name": "OM",
@@ -95281,6 +95293,10 @@
                     "value": "bi"
                 },
                 {
+                    "name": "BLA",
+                    "value": "bla"
+                },
+                {
                     "name": "BN",
                     "value": "bn"
                 },
@@ -95581,6 +95597,10 @@
                     "value": "mo"
                 },
                 {
+                    "name": "MOE",
+                    "value": "moe"
+                },
+                {
                     "name": "MR",
                     "value": "mr"
                 },
@@ -95631,6 +95651,10 @@
                 {
                     "name": "OJW",
                     "value": "ojw"
+                },
+                {
+                    "name": "OKA",
+                    "value": "oka"
                 },
                 {
                     "name": "OM",
