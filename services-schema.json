@@ -99572,8 +99572,20 @@
                     "value": "days"
                 },
                 {
+                    "name": "HOURS",
+                    "value": "hours"
+                },
+                {
+                    "name": "MINUTES",
+                    "value": "minutes"
+                },
+                {
                     "name": "MONTHS",
                     "value": "months"
+                },
+                {
+                    "name": "TEN_SECONDS",
+                    "value": "ten_seconds"
                 }
             ]
         },
@@ -99624,8 +99636,24 @@
                     "value": "3"
                 },
                 {
+                    "name": "CONTENT_REALTIME",
+                    "value": "10012"
+                },
+                {
                     "name": "CONTENT_REPORT_REASONS",
                     "value": "44"
+                },
+                {
+                    "name": "DISCOVERY_REALTIME",
+                    "value": "10007"
+                },
+                {
+                    "name": "ENTRY_LEVEL_USERS_DISCOVERY_REALTIME",
+                    "value": "10008"
+                },
+                {
+                    "name": "ENTRY_LEVEL_USERS_STATUS_REALTIME",
+                    "value": "10009"
                 },
                 {
                     "name": "ENTRY_USAGE",
@@ -99644,12 +99672,24 @@
                     "value": "30"
                 },
                 {
+                    "name": "MAP_OVERLAY_CITY_REALTIME",
+                    "value": "10003"
+                },
+                {
                     "name": "MAP_OVERLAY_COUNTRY",
                     "value": "36"
                 },
                 {
+                    "name": "MAP_OVERLAY_COUNTRY_REALTIME",
+                    "value": "10001"
+                },
+                {
                     "name": "MAP_OVERLAY_REGION",
                     "value": "37"
+                },
+                {
+                    "name": "MAP_OVERLAY_REGION_REALTIME",
+                    "value": "10002"
                 },
                 {
                     "name": "OPERATING_SYSTEM",
@@ -99672,12 +99712,28 @@
                     "value": "21"
                 },
                 {
+                    "name": "PLATFORMS_DISCOVERY_REALTIME",
+                    "value": "10010"
+                },
+                {
+                    "name": "PLATFORMS_REALTIME",
+                    "value": "10004"
+                },
+                {
                     "name": "PLAYBACK_RATE",
                     "value": "46"
                 },
                 {
+                    "name": "PLAYBACK_TYPE_REALTIME",
+                    "value": "10011"
+                },
+                {
                     "name": "PLAYER_RELATED_INTERACTIONS",
                     "value": "45"
+                },
+                {
+                    "name": "QOS_OVERVIEW_REALTIME",
+                    "value": "10006"
                 },
                 {
                     "name": "QUIZ",
@@ -99746,6 +99802,10 @@
                 {
                     "name": "UNIQUE_USERS_PLAY",
                     "value": "35"
+                },
+                {
+                    "name": "USERS_OVERVIEW_REALTIME",
+                    "value": "10005"
                 },
                 {
                     "name": "USER_CONTENT_DROPOFF",
