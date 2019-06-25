@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.1.0",
+    "apiVersion": "15.2.0",
     "services": [
         {
             "id": "accesscontrolprofile",
