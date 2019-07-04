@@ -41582,17 +41582,6 @@
                     "insertOnly": true,
                     "optional": true,
                     "default": "null"
-                },
-                {
-                    "name": "minimumChunkSize",
-                    "description": "set the minimum size in bytes for each uploaded part of the file",
-                    "typeClassName": "float",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": true,
-                    "optional": true,
-                    "default": "null"
                 }
             ]
         },
