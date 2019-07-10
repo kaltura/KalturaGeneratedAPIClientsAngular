@@ -8,6 +8,7 @@ export interface PartnerGetSecretsActionArgs  extends KalturaRequestArgs {
     partnerId : number;
 	adminEmail : string;
 	cmsPassword : string;
+	otp? : string;
 }
 
 /**
@@ -23,6 +24,7 @@ export class PartnerGetSecretsAction extends KalturaRequest<KalturaPartner> {
     partnerId : number;
 	adminEmail : string;
 	cmsPassword : string;
+	otp : string;
 
     constructor(data : PartnerGetSecretsActionArgs)
     {
@@ -39,7 +41,8 @@ export class PartnerGetSecretsAction extends KalturaRequest<KalturaPartner> {
 				action : { type : 'c', default : 'getSecrets' },
 				partnerId : { type : 'n' },
 				adminEmail : { type : 's' },
-				cmsPassword : { type : 's' }
+				cmsPassword : { type : 's' },
+				otp : { type : 's' }
             }
         );
         return result;

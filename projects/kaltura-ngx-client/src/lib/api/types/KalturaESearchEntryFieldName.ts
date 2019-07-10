@@ -22,6 +22,7 @@ export enum KalturaESearchEntryFieldName {
 	moderationStatus = 'moderation_status',
 	_name = 'name',
 	parentEntryId = 'parent_id',
+	partnerSortValue = 'partner_sort_value',
 	pushPublish = 'push_publish',
 	recordedEntryId = 'recorded_entry_id',
 	redirectEntryId = 'redirect_entry_id',

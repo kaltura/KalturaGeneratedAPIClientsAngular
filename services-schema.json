@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.2.0",
+    "apiVersion": "15.3.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -5697,6 +5697,13 @@
                             "type": "Simple",
                             "optional": false,
                             "default": ""
+                        },
+                        {
+                            "name": "otp",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "Retrieve partner secret and admin secret",
@@ -20389,6 +20396,17 @@
                 },
                 {
                     "name": "notificationsConfig",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "allowedFromEmailWhiteList",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -90248,6 +90266,10 @@
                 {
                     "name": "PARENT_ENTRY_ID",
                     "value": "parent_id"
+                },
+                {
+                    "name": "PARTNER_SORT_VALUE",
+                    "value": "partner_sort_value"
                 },
                 {
                     "name": "PUSH_PUBLISH",
