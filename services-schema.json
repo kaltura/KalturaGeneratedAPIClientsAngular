@@ -309,6 +309,13 @@
                             "type": "Simple",
                             "optional": true,
                             "default": ""
+                        },
+                        {
+                            "name": "otp",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "Update admin user password and email",
@@ -9426,6 +9433,13 @@
                         },
                         {
                             "name": "newLastName",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "otp",
                             "typeClassName": "string",
                             "type": "Simple",
                             "optional": true,
@@ -25283,6 +25297,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "distributeTrigger",
+                    "description": "The event that trigger the automatic distribute",
+                    "typeClassName": "KalturaDistributeTrigger",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -26510,6 +26535,123 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchAggregationItem",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "size",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchAggregation",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "aggregations",
+                    "description": "",
+                    "typeClassName": "KalturaESearchAggregationItem",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchAggregationBucket",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "value",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "count",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchAggregationResponseItem",
+            "base": "",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "buckets",
+                    "description": "",
+                    "typeClassName": "KalturaESearchAggregationBucket",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -48089,6 +48231,71 @@
             ]
         },
         {
+            "name": "KalturaConvertCaptionAssetJobData",
+            "base": "KalturaJobData",
+            "plugin": "caption",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "captionAssetId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fileLocation",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fileEncryptionKey",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fromType",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "toType",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaConvertEntryFlavorsObjectTask",
             "base": "KalturaObjectTask",
             "plugin": "scheduledTask",
@@ -50760,6 +50967,27 @@
             ]
         },
         {
+            "name": "KalturaESearchCategoryAggregationItem",
+            "base": "KalturaESearchAggregationItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchCategoryAggregateByFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchCategoryOrderByItem",
             "base": "KalturaESearchOrderByItem",
             "plugin": "elasticSearch",
@@ -51008,6 +51236,48 @@
             ]
         },
         {
+            "name": "KalturaESearchCuepointsAggregationItem",
+            "base": "KalturaESearchAggregationItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchCuePointAggregateByFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchEntryAggregationItem",
+            "base": "KalturaESearchAggregationItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchEntryAggregateByFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchEntryOrderByItem",
             "base": "KalturaESearchOrderByItem",
             "plugin": "elasticSearch",
@@ -51046,6 +51316,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "aggregations",
+                    "description": "",
+                    "typeClassName": "KalturaESearchAggregation",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -51061,6 +51342,17 @@
                     "name": "objects",
                     "description": "",
                     "typeClassName": "KalturaESearchEntryResult",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "aggregations",
+                    "description": "",
+                    "typeClassName": "KalturaESearchAggregationResponseItem",
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
@@ -51212,6 +51504,27 @@
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchMetadataAggregationItem",
+            "base": "KalturaESearchAggregationItem",
+            "plugin": "elasticSearch",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fieldName",
+                    "description": "",
+                    "typeClassName": "KalturaESearchMetadataAggregateByFieldName",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -81764,6 +82077,20 @@
             ]
         },
         {
+            "name": "KalturaDistributeTrigger",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ENTRY_READY",
+                    "value": "1"
+                },
+                {
+                    "name": "MODERATION_APPROVED",
+                    "value": "2"
+                }
+            ]
+        },
+        {
             "name": "KalturaDistributionAction",
             "type": "int",
             "values": [
@@ -86797,6 +87124,10 @@
                     "value": "0"
                 },
                 {
+                    "name": "CONVERT_CAPTION_ASSET",
+                    "value": "caption.convertcaptionasset"
+                },
+                {
                     "name": "CONVERT_COLLECTION",
                     "value": "22"
                 },
@@ -87531,6 +87862,10 @@
                 {
                     "name": "DFXP",
                     "value": "2"
+                },
+                {
+                    "name": "SCC",
+                    "value": "5"
                 },
                 {
                     "name": "SRT",
@@ -89954,6 +90289,16 @@
             ]
         },
         {
+            "name": "KalturaESearchCategoryAggregateByFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CATEGORY_NAME",
+                    "value": "category_name"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchCategoryEntryFieldName",
             "type": "string",
             "values": [
@@ -90126,6 +90471,20 @@
             ]
         },
         {
+            "name": "KalturaESearchCuePointAggregateByFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "TAGS",
+                    "value": "tags"
+                },
+                {
+                    "name": "TYPE",
+                    "value": "type"
+                }
+            ]
+        },
+        {
             "name": "KalturaESearchCuePointFieldName",
             "type": "string",
             "values": [
@@ -90176,6 +90535,28 @@
                 {
                     "name": "TYPE",
                     "value": "type"
+                }
+            ]
+        },
+        {
+            "name": "KalturaESearchEntryAggregateByFieldName",
+            "type": "string",
+            "values": [
+                {
+                    "name": "ACCESS_CONTROL_PROFILE",
+                    "value": "access_control_profile_id"
+                },
+                {
+                    "name": "ENTRY_TYPE",
+                    "value": "entry_type"
+                },
+                {
+                    "name": "MEDIA_TYPE",
+                    "value": "media_type"
+                },
+                {
+                    "name": "TAGS",
+                    "value": "tags"
                 }
             ]
         },
@@ -90604,6 +90985,11 @@
                     "value": "Turkish"
                 }
             ]
+        },
+        {
+            "name": "KalturaESearchMetadataAggregateByFieldName",
+            "type": "string",
+            "values": []
         },
         {
             "name": "KalturaESearchSortOrder",

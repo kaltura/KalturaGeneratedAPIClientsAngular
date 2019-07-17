@@ -9,6 +9,7 @@ export enum KalturaBatchJobType {
 	clipConcat = '47',
 	concat = '35',
 	convert = '0',
+	convertCaptionAsset = 'caption.convertcaptionasset',
 	convertCollection = '22',
 	convertLiveSegment = '36',
 	convertProfile = '10',
