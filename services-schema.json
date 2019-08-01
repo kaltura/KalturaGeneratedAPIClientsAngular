@@ -85511,6 +85511,10 @@
                     "value": "28800"
                 },
                 {
+                    "name": "FIVE_DAYS",
+                    "value": "432000"
+                },
+                {
                     "name": "FORTY_EIGHT_HOURS",
                     "value": "172800"
                 },
