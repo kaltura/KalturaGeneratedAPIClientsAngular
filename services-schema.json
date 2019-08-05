@@ -65495,6 +65495,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "distributedAttachmentAssets",
+                    "description": "Key-value array where the keys are IDs of distributed caption assets in the source account and the values are the matching IDs in the target account",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "distributedCuePoints",
                     "description": "Key-value array where the keys are IDs of distributed cue points in the source account and the values are the matching IDs in the target account",
                     "typeClassName": "string",
@@ -65605,6 +65616,50 @@
                 },
                 {
                     "name": "distributeCaptions",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "designatedCategories",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "distributeCategories",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "collaboratorsCustomMetadataProfileId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "collaboratorsFromCustomMetadataProfile",
                     "description": "",
                     "typeClassName": "bool",
                     "type": "Simple",
@@ -65726,6 +65781,17 @@
                 },
                 {
                     "name": "mapCaptionParamsIds",
+                    "description": "",
+                    "typeClassName": "KalturaKeyValue",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "mapAttachmentParamsIds",
                     "description": "",
                     "typeClassName": "KalturaKeyValue",
                     "type": "ArrayOfObjects",

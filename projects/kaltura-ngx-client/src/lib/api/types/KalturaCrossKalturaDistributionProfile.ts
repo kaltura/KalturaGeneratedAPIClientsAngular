@@ -12,6 +12,10 @@ export interface KalturaCrossKalturaDistributionProfileArgs  extends KalturaConf
 	metadataXslt? : string;
 	metadataXpathsTriggerUpdate? : KalturaStringValue[];
 	distributeCaptions? : boolean;
+	designatedCategories? : string;
+	distributeCategories? : boolean;
+	collaboratorsCustomMetadataProfileId? : string;
+	collaboratorsFromCustomMetadataProfile? : boolean;
 	distributeCuePoints? : boolean;
 	distributeRemoteFlavorAssetContent? : boolean;
 	distributeRemoteThumbAssetContent? : boolean;
@@ -23,6 +27,7 @@ export interface KalturaCrossKalturaDistributionProfileArgs  extends KalturaConf
 	mapFlavorParamsIds? : KalturaKeyValue[];
 	mapThumbParamsIds? : KalturaKeyValue[];
 	mapCaptionParamsIds? : KalturaKeyValue[];
+	mapAttachmentParamsIds? : KalturaKeyValue[];
 }
 
 
@@ -35,6 +40,10 @@ export class KalturaCrossKalturaDistributionProfile extends KalturaConfigurableD
 	metadataXslt : string;
 	metadataXpathsTriggerUpdate : KalturaStringValue[];
 	distributeCaptions : boolean;
+	designatedCategories : string;
+	distributeCategories : boolean;
+	collaboratorsCustomMetadataProfileId : string;
+	collaboratorsFromCustomMetadataProfile : boolean;
 	distributeCuePoints : boolean;
 	distributeRemoteFlavorAssetContent : boolean;
 	distributeRemoteThumbAssetContent : boolean;
@@ -46,6 +55,7 @@ export class KalturaCrossKalturaDistributionProfile extends KalturaConfigurableD
 	mapFlavorParamsIds : KalturaKeyValue[];
 	mapThumbParamsIds : KalturaKeyValue[];
 	mapCaptionParamsIds : KalturaKeyValue[];
+	mapAttachmentParamsIds : KalturaKeyValue[];
 
     constructor(data? : KalturaCrossKalturaDistributionProfileArgs)
     {
@@ -58,6 +68,7 @@ export class KalturaCrossKalturaDistributionProfile extends KalturaConfigurableD
 		if (typeof this.mapFlavorParamsIds === 'undefined') this.mapFlavorParamsIds = [];
 		if (typeof this.mapThumbParamsIds === 'undefined') this.mapThumbParamsIds = [];
 		if (typeof this.mapCaptionParamsIds === 'undefined') this.mapCaptionParamsIds = [];
+		if (typeof this.mapAttachmentParamsIds === 'undefined') this.mapAttachmentParamsIds = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -74,6 +85,10 @@ export class KalturaCrossKalturaDistributionProfile extends KalturaConfigurableD
 				metadataXslt : { type : 's' },
 				metadataXpathsTriggerUpdate : { type : 'a', subTypeConstructor : KalturaStringValue, subType : 'KalturaStringValue' },
 				distributeCaptions : { type : 'b' },
+				designatedCategories : { type : 's' },
+				distributeCategories : { type : 'b' },
+				collaboratorsCustomMetadataProfileId : { type : 's' },
+				collaboratorsFromCustomMetadataProfile : { type : 'b' },
 				distributeCuePoints : { type : 'b' },
 				distributeRemoteFlavorAssetContent : { type : 'b' },
 				distributeRemoteThumbAssetContent : { type : 'b' },
@@ -84,7 +99,8 @@ export class KalturaCrossKalturaDistributionProfile extends KalturaConfigurableD
 				mapStorageProfileIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
 				mapFlavorParamsIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
 				mapThumbParamsIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
-				mapCaptionParamsIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				mapCaptionParamsIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				mapAttachmentParamsIds : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
             }
         );
         return result;

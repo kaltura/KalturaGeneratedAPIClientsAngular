@@ -7,6 +7,7 @@ export interface KalturaCrossKalturaDistributionJobProviderDataArgs  extends Kal
 	distributedThumbAssets? : string;
 	distributedMetadata? : string;
 	distributedCaptionAssets? : string;
+	distributedAttachmentAssets? : string;
 	distributedCuePoints? : string;
 	distributedThumbCuePoints? : string;
 	distributedTimedThumbAssets? : string;
@@ -19,6 +20,7 @@ export class KalturaCrossKalturaDistributionJobProviderData extends KalturaConfi
 	distributedThumbAssets : string;
 	distributedMetadata : string;
 	distributedCaptionAssets : string;
+	distributedAttachmentAssets : string;
 	distributedCuePoints : string;
 	distributedThumbCuePoints : string;
 	distributedTimedThumbAssets : string;
@@ -39,6 +41,7 @@ export class KalturaCrossKalturaDistributionJobProviderData extends KalturaConfi
 				distributedThumbAssets : { type : 's' },
 				distributedMetadata : { type : 's' },
 				distributedCaptionAssets : { type : 's' },
+				distributedAttachmentAssets : { type : 's' },
 				distributedCuePoints : { type : 's' },
 				distributedThumbCuePoints : { type : 's' },
 				distributedTimedThumbAssets : { type : 's' }
