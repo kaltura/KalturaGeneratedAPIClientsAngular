@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.4.0",
+    "apiVersion": "15.5.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -67597,6 +67597,27 @@
                     "description": "The filter should return the list of users that need to be specified in the csv.",
                     "typeClassName": "KalturaEntryVendorTaskFilter",
                     "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaEventNotificationDispatchScope",
+            "base": "KalturaEventNotificationScope",
+            "plugin": "eventNotification",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "dynamicValues",
+                    "description": "",
+                    "typeClassName": "KalturaKeyValue",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
