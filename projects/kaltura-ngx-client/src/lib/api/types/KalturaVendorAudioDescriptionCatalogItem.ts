@@ -6,6 +6,7 @@ import { KalturaVendorCatalogItem, KalturaVendorCatalogItemArgs } from './Kaltur
 export interface KalturaVendorAudioDescriptionCatalogItemArgs  extends KalturaVendorCatalogItemArgs {
     sourceLanguage? : KalturaCatalogItemLanguage;
 	flavorParamsId? : number;
+	clearAudioFlavorParamsId? : number;
 }
 
 
@@ -13,6 +14,7 @@ export class KalturaVendorAudioDescriptionCatalogItem extends KalturaVendorCatal
 
     sourceLanguage : KalturaCatalogItemLanguage;
 	flavorParamsId : number;
+	clearAudioFlavorParamsId : number;
 
     constructor(data? : KalturaVendorAudioDescriptionCatalogItemArgs)
     {
@@ -27,7 +29,8 @@ export class KalturaVendorAudioDescriptionCatalogItem extends KalturaVendorCatal
             {
                 objectType : { type : 'c', default : 'KalturaVendorAudioDescriptionCatalogItem' },
 				sourceLanguage : { type : 'es', subTypeConstructor : KalturaCatalogItemLanguage, subType : 'KalturaCatalogItemLanguage' },
-				flavorParamsId : { type : 'n' }
+				flavorParamsId : { type : 'n' },
+				clearAudioFlavorParamsId : { type : 'n' }
             }
         );
         return result;
