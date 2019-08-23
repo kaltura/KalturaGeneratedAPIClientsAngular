@@ -690,6 +690,7 @@ export { KalturaUrlTokenizerChinaCache, KalturaUrlTokenizerChinaCacheArgs } from
 export { KalturaUrlTokenizerCht, KalturaUrlTokenizerChtArgs } from './KalturaUrlTokenizerCht'
 export { KalturaUrlTokenizerCloudFront, KalturaUrlTokenizerCloudFrontArgs } from './KalturaUrlTokenizerCloudFront'
 export { KalturaUrlTokenizerKs, KalturaUrlTokenizerKsArgs } from './KalturaUrlTokenizerKs'
+export { KalturaUrlTokenizerL3, KalturaUrlTokenizerL3Args } from './KalturaUrlTokenizerL3'
 export { KalturaUrlTokenizerLevel3, KalturaUrlTokenizerLevel3Args } from './KalturaUrlTokenizerLevel3'
 export { KalturaUrlTokenizerLimeLight, KalturaUrlTokenizerLimeLightArgs } from './KalturaUrlTokenizerLimeLight'
 export { KalturaUrlTokenizerVelocix, KalturaUrlTokenizerVelocixArgs } from './KalturaUrlTokenizerVelocix'

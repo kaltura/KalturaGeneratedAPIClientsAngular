@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.5.0",
+    "apiVersion": "15.6.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -61194,6 +61194,38 @@
                 {
                     "name": "additionalUris",
                     "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaUrlTokenizerL3",
+            "base": "KalturaUrlTokenizer",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "gen",
+                    "description": "gen",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "paramName",
+                    "description": "paramName",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
