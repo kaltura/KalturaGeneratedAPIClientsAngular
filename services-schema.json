@@ -100166,12 +100166,24 @@
                     "value": "33"
                 },
                 {
+                    "name": "BROWSERS_FAMILIES_VPAAS",
+                    "value": "20009"
+                },
+                {
+                    "name": "BROWSERS_VPAAS",
+                    "value": "20007"
+                },
+                {
                     "name": "CONTENT_CONTRIBUTIONS",
                     "value": "7"
                 },
                 {
                     "name": "CONTENT_DROPOFF",
                     "value": "2"
+                },
+                {
+                    "name": "CONTENT_DROPOFF_VPAAS",
+                    "value": "20001"
                 },
                 {
                     "name": "CONTENT_INTERACTIONS",
@@ -100184,6 +100196,10 @@
                 {
                     "name": "CONTENT_REPORT_REASONS",
                     "value": "44"
+                },
+                {
+                    "name": "CONTENT_REPORT_REASONS_VPAAS",
+                    "value": "20018"
                 },
                 {
                     "name": "DISCOVERY_REALTIME",
@@ -100218,12 +100234,20 @@
                     "value": "10003"
                 },
                 {
+                    "name": "MAP_OVERLAY_CITY_VPAAS",
+                    "value": "20014"
+                },
+                {
                     "name": "MAP_OVERLAY_COUNTRY",
                     "value": "36"
                 },
                 {
                     "name": "MAP_OVERLAY_COUNTRY_REALTIME",
                     "value": "10001"
+                },
+                {
+                    "name": "MAP_OVERLAY_COUNTRY_VPAAS",
+                    "value": "20012"
                 },
                 {
                     "name": "MAP_OVERLAY_REGION",
@@ -100234,6 +100258,10 @@
                     "value": "10002"
                 },
                 {
+                    "name": "MAP_OVERLAY_REGION_VPAAS",
+                    "value": "20013"
+                },
+                {
                     "name": "OPERATING_SYSTEM",
                     "value": "22"
                 },
@@ -100242,8 +100270,20 @@
                     "value": "32"
                 },
                 {
+                    "name": "OPERATING_SYSTEM_FAMILIES_VPAAS",
+                    "value": "20008"
+                },
+                {
+                    "name": "OPERATING_SYSTEM_VPAAS",
+                    "value": "20006"
+                },
+                {
                     "name": "PARTNER_USAGE",
                     "value": "201"
+                },
+                {
+                    "name": "PARTNER_USAGE_VPAAS",
+                    "value": "20021"
                 },
                 {
                     "name": "PERCENTILES",
@@ -100262,8 +100302,16 @@
                     "value": "10004"
                 },
                 {
+                    "name": "PLATFORMS_VPAAS",
+                    "value": "20005"
+                },
+                {
                     "name": "PLAYBACK_RATE",
                     "value": "46"
+                },
+                {
+                    "name": "PLAYBACK_RATE_VPAAS",
+                    "value": "20020"
                 },
                 {
                     "name": "PLAYBACK_TYPE_REALTIME",
@@ -100272,6 +100320,10 @@
                 {
                     "name": "PLAYER_RELATED_INTERACTIONS",
                     "value": "45"
+                },
+                {
+                    "name": "PLAYER_RELATED_INTERACTIONS_VPAAS",
+                    "value": "20019"
                 },
                 {
                     "name": "QOS_OVERVIEW_REALTIME",
@@ -100314,8 +100366,16 @@
                     "value": "39"
                 },
                 {
+                    "name": "TOP_CONTENT_CONTRIBUTORS_VPAAS",
+                    "value": "20016"
+                },
+                {
                     "name": "TOP_CONTENT_CREATOR",
                     "value": "38"
+                },
+                {
+                    "name": "TOP_CONTENT_CREATOR_VPAAS",
+                    "value": "20015"
                 },
                 {
                     "name": "TOP_CONTRIBUTORS",
@@ -100338,12 +100398,24 @@
                     "value": "41"
                 },
                 {
+                    "name": "TOP_SOURCES_VPAAS",
+                    "value": "20017"
+                },
+                {
                     "name": "TOP_SYNDICATION",
                     "value": "6"
                 },
                 {
+                    "name": "TOP_SYNDICATION_VPAAS",
+                    "value": "20002"
+                },
+                {
                     "name": "UNIQUE_USERS_PLAY",
                     "value": "35"
+                },
+                {
+                    "name": "UNIQUE_USERS_PLAY_VPAAS",
+                    "value": "20011"
                 },
                 {
                     "name": "USERS_OVERVIEW_REALTIME",
@@ -100366,12 +100438,24 @@
                     "value": "34"
                 },
                 {
+                    "name": "USER_ENGAGEMENT_TIMELINE_VPAAS",
+                    "value": "20010"
+                },
+                {
                     "name": "USER_TOP_CONTENT",
                     "value": "13"
                 },
                 {
+                    "name": "USER_TOP_CONTENT_VPAAS",
+                    "value": "20003"
+                },
+                {
                     "name": "USER_USAGE",
                     "value": "17"
+                },
+                {
+                    "name": "USER_USAGE_VPAAS",
+                    "value": "20004"
                 },
                 {
                     "name": "VAR_USAGE",
