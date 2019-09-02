@@ -14,7 +14,7 @@ export enum KalturaCatalogItemLanguage {
 	fr = 'French',
 	he = 'Hebrew',
 	hi = 'Hindi',
-	id = 'Indonesian',
+	hu = 'Hungarian',
 	in = 'Indonesian',
 	is = 'Icelandic',
 	it = 'Italian',
