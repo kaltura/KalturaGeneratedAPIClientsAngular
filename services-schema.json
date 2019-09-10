@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.6.0",
+    "apiVersion": "15.7.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -100437,6 +100437,10 @@
                     "value": "20002"
                 },
                 {
+                    "name": "TOP_USER_CONTENT",
+                    "value": "47"
+                },
+                {
                     "name": "UNIQUE_USERS_PLAY",
                     "value": "35"
                 },
@@ -100467,6 +100471,10 @@
                 {
                     "name": "USER_ENGAGEMENT_TIMELINE_VPAAS",
                     "value": "20010"
+                },
+                {
+                    "name": "USER_HIGHLIGHTS",
+                    "value": "48"
                 },
                 {
                     "name": "USER_TOP_CONTENT",
