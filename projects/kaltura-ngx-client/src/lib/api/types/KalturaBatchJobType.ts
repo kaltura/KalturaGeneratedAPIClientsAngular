@@ -32,7 +32,6 @@ export enum KalturaBatchJobType {
 	dropFolderWatcher = 'dropFolder.DropFolderWatcher',
 	dvdcreator = '5',
 	emailIngestion = '26',
-	entryVendorTaskCsv = 'reach.EntryVendorTasksCsv',
 	eventNotificationHandler = 'eventNotification.EventNotificationHandler',
 	exportCsv = '49',
 	extractMedia = '14',
@@ -63,10 +62,8 @@ export enum KalturaBatchJobType {
 	storageDelete = '25',
 	storageExport = '23',
 	syncCategoryPrivacyContext = '39',
-	syncReachCreditTask = 'reach.SyncReachCreditTask',
 	tagResolve = 'tagSearch.TagResolve',
 	usersCsv = '46',
 	validateLiveMediaServers = '38',
-	virusScan = 'virusScan.VirusScan',
-	widevineRepositorySync = 'widevine.WidevineRepositorySync'
+	virusScan = 'virusScan.VirusScan'
 }
