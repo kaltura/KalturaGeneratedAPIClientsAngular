@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.8.0",
+    "apiVersion": "15.9.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -35118,6 +35118,17 @@
                 },
                 {
                     "name": "lastPlayedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "lastPlayedAtLessThanOrEqualOrNull",
                     "description": "",
                     "typeClassName": "",
                     "type": "Date",
