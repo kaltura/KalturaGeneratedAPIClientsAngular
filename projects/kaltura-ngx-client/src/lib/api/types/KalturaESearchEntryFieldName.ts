@@ -3,6 +3,7 @@
 export enum KalturaESearchEntryFieldName {
     accessControlId = 'access_control_id',
 	adminTags = 'admin_tags',
+	captionsContent = 'captions_content',
 	conversionProfileId = 'conversion_profile_id',
 	createdAt = 'created_at',
 	creatorId = 'creator_kuser_id',
