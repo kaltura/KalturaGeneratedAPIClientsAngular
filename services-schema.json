@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.9.0",
+    "apiVersion": "15.10.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -52362,7 +52362,7 @@
             ]
         },
         {
-            "name": "KalturaUserBaseFilter",
+            "name": "KalturaBaseUserBaseFilter",
             "base": "KalturaRelatedFilter",
             "plugin": "",
             "description": "",
@@ -52373,28 +52373,6 @@
                     "name": "partnerIdEqual",
                     "description": "",
                     "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "typeEqual",
-                    "description": "",
-                    "typeClassName": "KalturaUserType",
-                    "type": "EnumOfInt",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "typeIn",
-                    "description": "",
-                    "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -52513,6 +52491,80 @@
                     "default": "null"
                 },
                 {
+                    "name": "updatedAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBaseUserFilter",
+            "base": "KalturaBaseUserBaseFilter",
+            "plugin": "",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaUserBaseFilter",
+            "base": "KalturaBaseUserFilter",
+            "plugin": "",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "typeEqual",
+                    "description": "",
+                    "typeClassName": "KalturaUserType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "typeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "isAdminEqual",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "firstNameStartsWith",
                     "description": "",
                     "typeClassName": "string",
@@ -52528,17 +52580,6 @@
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "isAdminEqual",
-                    "description": "",
-                    "typeClassName": "KalturaNullableBoolean",
-                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -77955,15 +77996,6 @@
             ]
         },
         {
-            "name": "KalturaAdminUserBaseFilter",
-            "base": "KalturaUserFilter",
-            "plugin": "",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": []
-        },
-        {
             "name": "KalturaAmazonS3StorageProfileFilter",
             "base": "KalturaAmazonS3StorageProfileBaseFilter",
             "plugin": "",
@@ -79127,15 +79159,6 @@
             "properties": []
         },
         {
-            "name": "KalturaGroupFilter",
-            "base": "KalturaUserFilter",
-            "plugin": "group",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": []
-        },
-        {
             "name": "KalturaHttpNotificationTemplateFilter",
             "base": "KalturaHttpNotificationTemplateBaseFilter",
             "plugin": "httpNotification",
@@ -79752,15 +79775,6 @@
             "name": "KalturaAdCuePointFilter",
             "base": "KalturaAdCuePointBaseFilter",
             "plugin": "adCuePoint",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": []
-        },
-        {
-            "name": "KalturaAdminUserFilter",
-            "base": "KalturaAdminUserBaseFilter",
-            "plugin": "",
             "description": "",
             "abstract": false,
             "deprecated": false,
@@ -80424,6 +80438,15 @@
             "properties": []
         },
         {
+            "name": "KalturaAdminUserBaseFilter",
+            "base": "KalturaUserFilter",
+            "plugin": "",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaAvnDistributionProfileFilter",
             "base": "KalturaAvnDistributionProfileBaseFilter",
             "plugin": "avnDistribution",
@@ -80795,6 +80818,15 @@
             "properties": []
         },
         {
+            "name": "KalturaGroupFilter",
+            "base": "KalturaUserFilter",
+            "plugin": "group",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaHuluDistributionProfileFilter",
             "base": "KalturaHuluDistributionProfileBaseFilter",
             "plugin": "huluDistribution",
@@ -81091,6 +81123,15 @@
             "name": "KalturaYoutubeApiDistributionProfileFilter",
             "base": "KalturaYoutubeApiDistributionProfileBaseFilter",
             "plugin": "youtubeApiDistribution",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaAdminUserFilter",
+            "base": "KalturaAdminUserBaseFilter",
+            "plugin": "",
             "description": "",
             "abstract": false,
             "deprecated": false,
@@ -86120,6 +86161,14 @@
                 {
                     "name": "ID_DESC",
                     "value": "-id"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
                 }
             ]
         },
@@ -87167,6 +87216,36 @@
                 {
                     "name": "TYPE_DESC",
                     "value": "-type"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaBaseUserOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
                 },
                 {
                     "name": "UPDATED_AT_ASC",
@@ -101767,6 +101846,14 @@
                 {
                     "name": "ID_DESC",
                     "value": "-id"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
                 }
             ]
         },

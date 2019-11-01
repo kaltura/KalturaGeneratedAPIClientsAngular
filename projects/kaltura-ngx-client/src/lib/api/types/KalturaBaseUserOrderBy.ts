@@ -1,6 +1,6 @@
 
 
-export enum KalturaUserOrderBy {
+export enum KalturaBaseUserOrderBy {
     createdAtAsc = '+createdAt',
 	createdAtDesc = '-createdAt',
 	idAsc = '+id',
