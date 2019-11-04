@@ -15,6 +15,7 @@ export enum KalturaReportType {
 	contentReportReasons = '44',
 	contentReportReasonsVpaas = '20018',
 	discoveryRealtime = '10007',
+	discoveryViewRealtime = '10013',
 	entryLevelUsersDiscoveryRealtime = '10008',
 	entryLevelUsersStatusRealtime = '10009',
 	entryUsage = '27',

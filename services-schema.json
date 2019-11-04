@@ -100382,6 +100382,10 @@
                     "value": "10007"
                 },
                 {
+                    "name": "DISCOVERY_VIEW_REALTIME",
+                    "value": "10013"
+                },
+                {
                     "name": "ENTRY_LEVEL_USERS_DISCOVERY_REALTIME",
                     "value": "10008"
                 },
