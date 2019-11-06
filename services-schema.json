@@ -90964,6 +90964,10 @@
                     "value": "is_quiz"
                 },
                 {
+                    "name": "LAST_PLAYED_AT",
+                    "value": "last_played_at"
+                },
+                {
                     "name": "LENGTH_IN_MSECS",
                     "value": "length_in_msecs"
                 },
@@ -90986,6 +90990,10 @@
                 {
                     "name": "PARTNER_SORT_VALUE",
                     "value": "partner_sort_value"
+                },
+                {
+                    "name": "PLAYS",
+                    "value": "plays"
                 },
                 {
                     "name": "PUSH_PUBLISH",
