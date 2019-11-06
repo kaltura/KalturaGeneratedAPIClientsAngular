@@ -63343,6 +63343,27 @@
             ]
         },
         {
+            "name": "KalturaApFeedDropFolder",
+            "base": "KalturaFeedDropFolder",
+            "plugin": "ApFeedDropFolder",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "apApiKey",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaAppTokenFilter",
             "base": "KalturaAppTokenBaseFilter",
             "plugin": "",
@@ -90512,6 +90533,10 @@
             "name": "KalturaDropFolderType",
             "type": "string",
             "values": [
+                {
+                    "name": "AP_FEED",
+                    "value": "ApFeedDropFolder.AP_FEED"
+                },
                 {
                     "name": "FEED",
                     "value": "FeedDropFolder.FEED"

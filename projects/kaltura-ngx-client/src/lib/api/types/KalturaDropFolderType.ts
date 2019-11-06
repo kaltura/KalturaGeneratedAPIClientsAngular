@@ -1,7 +1,8 @@
 
 
 export enum KalturaDropFolderType {
-    feed = 'FeedDropFolder.FEED',
+    apFeed = 'ApFeedDropFolder.AP_FEED',
+	feed = 'FeedDropFolder.FEED',
 	ftp = '2',
 	local = '1',
 	s3 = '6',
