@@ -28,6 +28,8 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	entryCreatedAtGreaterThanOrEqual? : Date;
 	entryCreatedAtLessThanOrEqual? : Date;
 	entryIdIn? : string;
+	playbackTypeIn? : string;
+	playbackContextIdsIn? : string;
 }
 
 
@@ -56,6 +58,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	entryCreatedAtGreaterThanOrEqual : Date;
 	entryCreatedAtLessThanOrEqual : Date;
 	entryIdIn : string;
+	playbackTypeIn : string;
+	playbackContextIdsIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -91,7 +95,9 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				entryOperator : { type : 'o', subTypeConstructor : KalturaESearchEntryOperator, subType : 'KalturaESearchEntryOperator' },
 				entryCreatedAtGreaterThanOrEqual : { type : 'd' },
 				entryCreatedAtLessThanOrEqual : { type : 'd' },
-				entryIdIn : { type : 's' }
+				entryIdIn : { type : 's' },
+				playbackTypeIn : { type : 's' },
+				playbackContextIdsIn : { type : 's' }
             }
         );
         return result;

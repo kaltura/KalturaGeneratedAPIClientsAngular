@@ -38,6 +38,12 @@ export interface KalturaMediaInfoArgs  extends KalturaObjectBaseArgs {
 	contentStreams? : string;
 	complexityValue? : number;
 	maxGOP? : number;
+	matrixCoefficients? : string;
+	colorTransfer? : string;
+	colorPrimaries? : string;
+	pixelFormat? : string;
+	chromaSubsampling? : string;
+	bitsDepth? : number;
 }
 
 
@@ -78,6 +84,12 @@ export class KalturaMediaInfo extends KalturaObjectBase {
 	contentStreams : string;
 	complexityValue : number;
 	maxGOP : number;
+	matrixCoefficients : string;
+	colorTransfer : string;
+	colorPrimaries : string;
+	pixelFormat : string;
+	chromaSubsampling : string;
+	bitsDepth : number;
 
     constructor(data? : KalturaMediaInfoArgs)
     {
@@ -125,7 +137,13 @@ export class KalturaMediaInfo extends KalturaObjectBase {
 				isFastStart : { type : 'n' },
 				contentStreams : { type : 's' },
 				complexityValue : { type : 'n' },
-				maxGOP : { type : 'n' }
+				maxGOP : { type : 'n' },
+				matrixCoefficients : { type : 's' },
+				colorTransfer : { type : 's' },
+				colorPrimaries : { type : 's' },
+				pixelFormat : { type : 's' },
+				chromaSubsampling : { type : 's' },
+				bitsDepth : { type : 'n' }
             }
         );
         return result;

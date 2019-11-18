@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.10.0",
+    "apiVersion": "15.11.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -32171,6 +32171,72 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "matrixCoefficients",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "colorTransfer",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "colorPrimaries",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "pixelFormat",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "chromaSubsampling",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "bitsDepth",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -34617,6 +34683,28 @@
                     "description": "",
                     "typeClassName": "",
                     "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "rankLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "float",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "rankGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "float",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -37958,6 +38046,28 @@
                 {
                     "name": "entryIdIn",
                     "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "playbackTypeIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "playbackContextIdsIn",
+                    "description": "filter by playback context ids",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -100335,6 +100445,10 @@
                     "value": "months"
                 },
                 {
+                    "name": "TEN_MINUTES",
+                    "value": "ten_minutes"
+                },
+                {
                     "name": "TEN_SECONDS",
                     "value": "ten_seconds"
                 }
@@ -100537,6 +100651,190 @@
                 {
                     "name": "PLAYER_RELATED_INTERACTIONS_VPAAS",
                     "value": "20019"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT",
+                    "value": "30014"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_BROWSERS",
+                    "value": "30020"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_BROWSERS_FAMILIES",
+                    "value": "30019"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_CITY",
+                    "value": "30018"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_COUNTRY",
+                    "value": "30016"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_ENTRY",
+                    "value": "30024"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_ISP",
+                    "value": "30025"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_OPERATING_SYSTEM",
+                    "value": "30022"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_OPERATING_SYSTEM_FAMILIES",
+                    "value": "30021"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_PLATFORMS",
+                    "value": "30015"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_PLAYER_VERSION",
+                    "value": "30023"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_REGION",
+                    "value": "30017"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING",
+                    "value": "30038"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_BROWSERS",
+                    "value": "30042"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_BROWSERS_FAMILIES",
+                    "value": "30041"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_CODES",
+                    "value": "30039"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_ENTRY",
+                    "value": "30046"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_OPERATING_SYSTEM",
+                    "value": "30044"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_OPERATING_SYSTEM_FAMILIES",
+                    "value": "30043"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_PLATFORMS",
+                    "value": "30040"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_PLAYER_VERSION",
+                    "value": "30045"
+                },
+                {
+                    "name": "QOE_EXPERIENCE",
+                    "value": "30002"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_BROWSERS",
+                    "value": "30008"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_BROWSERS_FAMILIES",
+                    "value": "30007"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_CITY",
+                    "value": "30006"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_COUNTRY",
+                    "value": "30004"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_ENTRY",
+                    "value": "30012"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_ISP",
+                    "value": "30013"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_OPERATING_SYSTEM",
+                    "value": "30010"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_OPERATING_SYSTEM_FAMILIES",
+                    "value": "30009"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_PLATFORMS",
+                    "value": "30003"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_PLAYER_VERSION",
+                    "value": "30011"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_REGION",
+                    "value": "30005"
+                },
+                {
+                    "name": "QOE_OVERVIEW",
+                    "value": "30001"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY",
+                    "value": "30026"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_BROWSERS",
+                    "value": "30032"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_BROWSERS_FAMILIES",
+                    "value": "30031"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_CITY",
+                    "value": "30030"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_COUNTRY",
+                    "value": "30028"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_ENTRY",
+                    "value": "30036"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_ISP",
+                    "value": "30037"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_OPERATING_SYSTEM",
+                    "value": "30034"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_OPERATING_SYSTEM_FAMILIES",
+                    "value": "30033"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_PLATFORMS",
+                    "value": "30027"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_PLAYER_VERSION",
+                    "value": "30035"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_REGION",
+                    "value": "30029"
                 },
                 {
                     "name": "QOS_OVERVIEW_REALTIME",
