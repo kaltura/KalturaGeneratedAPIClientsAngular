@@ -27,6 +27,7 @@ export enum KalturaESearchEntryFieldName {
 	partnerSortValue = 'partner_sort_value',
 	plays = 'plays',
 	pushPublish = 'push_publish',
+	rank = 'rank',
 	recordedEntryId = 'recorded_entry_id',
 	redirectEntryId = 'redirect_entry_id',
 	referenceId = 'reference_id',

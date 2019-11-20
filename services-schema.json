@@ -63453,27 +63453,6 @@
             ]
         },
         {
-            "name": "KalturaApFeedDropFolder",
-            "base": "KalturaFeedDropFolder",
-            "plugin": "ApFeedDropFolder",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "apApiKey",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaAppTokenFilter",
             "base": "KalturaAppTokenBaseFilter",
             "plugin": "",
@@ -90644,10 +90623,6 @@
             "type": "string",
             "values": [
                 {
-                    "name": "AP_FEED",
-                    "value": "ApFeedDropFolder.AP_FEED"
-                },
-                {
                     "name": "FEED",
                     "value": "FeedDropFolder.FEED"
                 },
@@ -91110,6 +91085,10 @@
                     "value": "push_publish"
                 },
                 {
+                    "name": "RANK",
+                    "value": "rank"
+                },
+                {
                     "name": "RECORDED_ENTRY_ID",
                     "value": "recorded_entry_id"
                 },
@@ -91194,6 +91173,10 @@
                 {
                     "name": "PLAYS_LAST_7_DAYS",
                     "value": "plays_last_7_days"
+                },
+                {
+                    "name": "RANK",
+                    "value": "rank"
                 },
                 {
                     "name": "START_DATE",
@@ -100903,6 +100886,10 @@
                 {
                     "name": "TOP_PLAYBACK_CONTEXT",
                     "value": "25"
+                },
+                {
+                    "name": "TOP_PLAYBACK_CONTEXT_VPAAS",
+                    "value": "20022"
                 },
                 {
                     "name": "TOP_SOURCES",

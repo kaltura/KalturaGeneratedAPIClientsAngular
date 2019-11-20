@@ -109,6 +109,7 @@ export enum KalturaReportType {
 	topCreators = '20',
 	topCustomVar1 = '29',
 	topPlaybackContext = '25',
+	topPlaybackContextVpaas = '20022',
 	topSources = '41',
 	topSourcesVpaas = '20017',
 	topSyndication = '6',
