@@ -11,5 +11,6 @@ export enum KalturaMetadataObjectType {
 	partner = '4',
 	questionCuePoint = 'quiz.QuestionCuePoint',
 	thumbCuePoint = 'thumbCuePointMetadata.thumbCuePoint',
-	user = '3'
+	user = '3',
+	userEntry = '6'
 }

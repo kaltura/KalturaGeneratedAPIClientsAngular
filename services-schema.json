@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.11.0",
+    "apiVersion": "15.12.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -10893,6 +10893,14 @@
                         }
                     ],
                     "description": "Get configuration map",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "getCacheVersionId",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [],
+                    "description": "Get configuration map cache key",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -22864,6 +22872,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "rawData",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "isEditable",
                     "description": "IsEditable - true / false",
                     "typeClassName": "bool",
@@ -22875,7 +22894,7 @@
                     "default": "null"
                 },
                 {
-                    "name": "lastUpdate",
+                    "name": "createdAt",
                     "description": "Time of the last update",
                     "typeClassName": "",
                     "type": "Date",
@@ -98820,6 +98839,10 @@
                 {
                     "name": "USER",
                     "value": "3"
+                },
+                {
+                    "name": "USER_ENTRY",
+                    "value": "6"
                 }
             ]
         },
