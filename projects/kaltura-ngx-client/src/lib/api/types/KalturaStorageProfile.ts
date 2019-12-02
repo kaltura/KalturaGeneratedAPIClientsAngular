@@ -37,6 +37,8 @@ export interface KalturaStorageProfileArgs  extends KalturaObjectBaseArgs {
 	publicKey? : string;
 	passPhrase? : string;
 	shouldExportThumbs? : boolean;
+	mappedPackagerUrl? : string;
+	regularPackagerUrl? : string;
 }
 
 
@@ -74,6 +76,8 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 	publicKey : string;
 	passPhrase : string;
 	shouldExportThumbs : boolean;
+	mappedPackagerUrl : string;
+	regularPackagerUrl : string;
 
     constructor(data? : KalturaStorageProfileArgs)
     {
@@ -121,7 +125,9 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 				privateKey : { type : 's' },
 				publicKey : { type : 's' },
 				passPhrase : { type : 's' },
-				shouldExportThumbs : { type : 'b' }
+				shouldExportThumbs : { type : 'b' },
+				mappedPackagerUrl : { type : 's' },
+				regularPackagerUrl : { type : 's' }
             }
         );
         return result;
