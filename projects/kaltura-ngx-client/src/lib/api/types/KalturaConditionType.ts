@@ -16,6 +16,7 @@ export enum KalturaConditionType {
 	fieldMatch = '6',
 	geoDistance = '10',
 	hash = '12',
+	httpHeader = '18',
 	ipAddress = '3',
 	metadataFieldChanged = 'metadata.FieldChanged',
 	metadataFieldCompare = 'metadata.FieldCompare',

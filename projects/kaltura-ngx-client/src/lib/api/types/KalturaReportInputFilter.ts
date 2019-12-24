@@ -30,6 +30,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	entryIdIn? : string;
 	playbackTypeIn? : string;
 	playbackContextIdsIn? : string;
+	rootEntryIdIn? : string;
 }
 
 
@@ -60,6 +61,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	entryIdIn : string;
 	playbackTypeIn : string;
 	playbackContextIdsIn : string;
+	rootEntryIdIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -97,7 +99,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				entryCreatedAtLessThanOrEqual : { type : 'd' },
 				entryIdIn : { type : 's' },
 				playbackTypeIn : { type : 's' },
-				playbackContextIdsIn : { type : 's' }
+				playbackContextIdsIn : { type : 's' },
+				rootEntryIdIn : { type : 's' }
             }
         );
         return result;

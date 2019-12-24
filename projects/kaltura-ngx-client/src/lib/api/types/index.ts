@@ -990,6 +990,7 @@ export { KalturaGenericDistributionProviderBaseFilter, KalturaGenericDistributio
 export { KalturaGenericSyndicationFeedBaseFilter, KalturaGenericSyndicationFeedBaseFilterArgs } from './KalturaGenericSyndicationFeedBaseFilter'
 export { KalturaGoogleVideoSyndicationFeedBaseFilter, KalturaGoogleVideoSyndicationFeedBaseFilterArgs } from './KalturaGoogleVideoSyndicationFeedBaseFilter'
 export { KalturaGroupUserFilter, KalturaGroupUserFilterArgs } from './KalturaGroupUserFilter'
+export { KalturaHttpHeaderCondition, KalturaHttpHeaderConditionArgs } from './KalturaHttpHeaderCondition'
 export { KalturaHttpNotificationTemplateBaseFilter, KalturaHttpNotificationTemplateBaseFilterArgs } from './KalturaHttpNotificationTemplateBaseFilter'
 export { KalturaHuluDistributionProviderBaseFilter, KalturaHuluDistributionProviderBaseFilterArgs } from './KalturaHuluDistributionProviderBaseFilter'
 export { KalturaITunesSyndicationFeedBaseFilter, KalturaITunesSyndicationFeedBaseFilterArgs } from './KalturaITunesSyndicationFeedBaseFilter'
