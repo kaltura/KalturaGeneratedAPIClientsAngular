@@ -154,6 +154,7 @@ export { KalturaVendorTaskData, KalturaVendorTaskDataArgs } from './KalturaVendo
 export { KalturaEntryVendorTask, KalturaEntryVendorTaskArgs } from './KalturaEntryVendorTask'
 export { KalturaEventNotificationParameter, KalturaEventNotificationParameterArgs } from './KalturaEventNotificationParameter'
 export { KalturaEventNotificationTemplate, KalturaEventNotificationTemplateArgs } from './KalturaEventNotificationTemplate'
+export { KalturaExportToCsvOptions, KalturaExportToCsvOptionsArgs } from './KalturaExportToCsvOptions'
 export { KalturaObjectIdentifier, KalturaObjectIdentifierArgs } from './KalturaObjectIdentifier'
 export { KalturaExtendingItemMrssParameter, KalturaExtendingItemMrssParameterArgs } from './KalturaExtendingItemMrssParameter'
 export { KalturaPlayableEntry, KalturaPlayableEntryArgs } from './KalturaPlayableEntry'

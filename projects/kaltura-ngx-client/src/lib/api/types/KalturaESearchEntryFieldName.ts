@@ -39,5 +39,6 @@ export enum KalturaESearchEntryFieldName {
 	templateEntryId = 'template_entry_id',
 	updatedAt = 'updated_at',
 	userId = 'kuser_id',
-	userNames = 'user_names'
+	userNames = 'user_names',
+	votes = 'votes'
 }
