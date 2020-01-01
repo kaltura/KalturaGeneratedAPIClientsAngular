@@ -20,6 +20,7 @@ export enum KalturaReportType {
 	entryLevelUsersStatusRealtime = '10009',
 	entryUsage = '27',
 	interactiveVideoTopNodes = '50',
+	latestPlayedEntries = '51',
 	live = '24',
 	mapOverlay = '4',
 	mapOverlayCity = '30',

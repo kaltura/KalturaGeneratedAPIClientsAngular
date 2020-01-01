@@ -2130,6 +2130,7 @@ export { SyndicationFeedGetEntryCountAction, SyndicationFeedGetEntryCountActionA
 export { SyndicationFeedListAction, SyndicationFeedListActionArgs } from './SyndicationFeedListAction'
 export { SyndicationFeedRequestConversionAction, SyndicationFeedRequestConversionActionArgs } from './SyndicationFeedRequestConversionAction'
 export { SyndicationFeedUpdateAction, SyndicationFeedUpdateActionArgs } from './SyndicationFeedUpdateAction'
+export { SystemGetHealthCheckAction, SystemGetHealthCheckActionArgs } from './SystemGetHealthCheckAction'
 export { SystemGetTimeAction, SystemGetTimeActionArgs } from './SystemGetTimeAction'
 export { SystemGetVersionAction, SystemGetVersionActionArgs } from './SystemGetVersionAction'
 export { SystemPingAction, SystemPingActionArgs } from './SystemPingAction'

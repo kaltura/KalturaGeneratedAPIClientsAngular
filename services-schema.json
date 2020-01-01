@@ -7764,6 +7764,14 @@
             "description": "System service is used for internal system helpers & to retrieve system level information",
             "actions": [
                 {
+                    "name": "getHealthCheck",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "getTime",
                     "resultClassName": "int",
                     "resultType": "Simple",
@@ -100674,6 +100682,10 @@
                 {
                     "name": "INTERACTIVE_VIDEO_TOP_NODES",
                     "value": "50"
+                },
+                {
+                    "name": "LATEST_PLAYED_ENTRIES",
+                    "value": "51"
                 },
                 {
                     "name": "LIVE",
