@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.14.0",
+    "apiVersion": "15.15.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -4125,6 +4125,22 @@
                         }
                     ],
                     "description": "Append recorded video to live entry",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "archive",
+                    "resultClassName": "bool",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "liveEntryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Archive a live entry which was recorded",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -33115,6 +33131,28 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "shouldAutoArchive",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "nonDeletedCuePointsTags",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -56139,6 +56177,27 @@
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaLiveEntryArchiveJobData",
+            "base": "KalturaJobData",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "liveEntryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -87794,6 +87853,10 @@
                 {
                     "name": "INTEGRATION",
                     "value": "integration.Integration"
+                },
+                {
+                    "name": "LIVE_ENTRY_ARCHIVE",
+                    "value": "51"
                 },
                 {
                     "name": "LIVE_REPORT_EXPORT",

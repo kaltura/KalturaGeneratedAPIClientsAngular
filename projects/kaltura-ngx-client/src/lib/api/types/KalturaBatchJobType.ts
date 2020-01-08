@@ -42,6 +42,7 @@ export enum KalturaBatchJobType {
 	index = '32',
 	indexTags = 'tagSearch.IndexTagsByPrivacyContext',
 	integration = 'integration.Integration',
+	liveEntryArchive = '51',
 	liveReportExport = '40',
 	liveToVod = '42',
 	mail = '15',
