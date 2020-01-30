@@ -4,7 +4,6 @@ import { KalturaBaseVendorCredit, KalturaBaseVendorCreditArgs } from './KalturaB
 
 export interface KalturaUnlimitedVendorCreditArgs  extends KalturaBaseVendorCreditArgs {
     fromDate? : Date;
-	toDate? : Date;
 }
 
 
@@ -12,7 +11,6 @@ export class KalturaUnlimitedVendorCredit extends KalturaBaseVendorCredit {
 
     readonly credit : number;
 	fromDate : Date;
-	toDate : Date;
 
     constructor(data? : KalturaUnlimitedVendorCreditArgs)
     {
@@ -27,8 +25,7 @@ export class KalturaUnlimitedVendorCredit extends KalturaBaseVendorCredit {
             {
                 objectType : { type : 'c', default : 'KalturaUnlimitedVendorCredit' },
 				credit : { type : 'n', readOnly : true },
-				fromDate : { type : 'd' },
-				toDate : { type : 'd' }
+				fromDate : { type : 'd' }
             }
         );
         return result;

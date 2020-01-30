@@ -18,7 +18,9 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	regionIn? : string;
 	citiesIn? : string;
 	operatingSystemFamilyIn? : string;
+	operatingSystemIn? : string;
 	browserFamilyIn? : string;
+	browserIn? : string;
 	timeZoneOffset? : number;
 	interval? : KalturaReportInterval;
 	mediaTypeIn? : string;
@@ -31,6 +33,9 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	playbackTypeIn? : string;
 	playbackContextIdsIn? : string;
 	rootEntryIdIn? : string;
+	errorCodeIn? : string;
+	playerVersionIn? : string;
+	ispIn? : string;
 }
 
 
@@ -49,7 +54,9 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	regionIn : string;
 	citiesIn : string;
 	operatingSystemFamilyIn : string;
+	operatingSystemIn : string;
 	browserFamilyIn : string;
+	browserIn : string;
 	timeZoneOffset : number;
 	interval : KalturaReportInterval;
 	mediaTypeIn : string;
@@ -62,6 +69,9 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	playbackTypeIn : string;
 	playbackContextIdsIn : string;
 	rootEntryIdIn : string;
+	errorCodeIn : string;
+	playerVersionIn : string;
+	ispIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -88,7 +98,9 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				regionIn : { type : 's' },
 				citiesIn : { type : 's' },
 				operatingSystemFamilyIn : { type : 's' },
+				operatingSystemIn : { type : 's' },
 				browserFamilyIn : { type : 's' },
+				browserIn : { type : 's' },
 				timeZoneOffset : { type : 'n' },
 				interval : { type : 'es', subTypeConstructor : KalturaReportInterval, subType : 'KalturaReportInterval' },
 				mediaTypeIn : { type : 's' },
@@ -100,7 +112,10 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				entryIdIn : { type : 's' },
 				playbackTypeIn : { type : 's' },
 				playbackContextIdsIn : { type : 's' },
-				rootEntryIdIn : { type : 's' }
+				rootEntryIdIn : { type : 's' },
+				errorCodeIn : { type : 's' },
+				playerVersionIn : { type : 's' },
+				ispIn : { type : 's' }
             }
         );
         return result;

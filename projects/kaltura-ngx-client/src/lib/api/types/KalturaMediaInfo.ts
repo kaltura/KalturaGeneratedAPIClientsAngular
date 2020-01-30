@@ -42,6 +42,7 @@ export interface KalturaMediaInfoArgs  extends KalturaObjectBaseArgs {
 	colorTransfer? : string;
 	colorPrimaries? : string;
 	pixelFormat? : string;
+	colorSpace? : string;
 	chromaSubsampling? : string;
 	bitsDepth? : number;
 }
@@ -88,6 +89,7 @@ export class KalturaMediaInfo extends KalturaObjectBase {
 	colorTransfer : string;
 	colorPrimaries : string;
 	pixelFormat : string;
+	colorSpace : string;
 	chromaSubsampling : string;
 	bitsDepth : number;
 
@@ -142,6 +144,7 @@ export class KalturaMediaInfo extends KalturaObjectBase {
 				colorTransfer : { type : 's' },
 				colorPrimaries : { type : 's' },
 				pixelFormat : { type : 's' },
+				colorSpace : { type : 's' },
 				chromaSubsampling : { type : 's' },
 				bitsDepth : { type : 'n' }
             }

@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.15.0",
+    "apiVersion": "15.16.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -4284,6 +4284,22 @@
                         }
                     ],
                     "description": "Get live stream entry by ID.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "getDetails",
+                    "resultClassName": "KalturaLiveStreamDetails",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Delivering the status of a live stream (on-air/offline) if it is possible",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -32308,6 +32324,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "colorSpace",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "chromaSubsampling",
                     "description": "",
                     "typeClassName": "string",
@@ -34060,6 +34087,71 @@
             ]
         },
         {
+            "name": "KalturaLiveStreamDetails",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "primaryStreamStatus",
+                    "description": "The status of the primary stream",
+                    "typeClassName": "KalturaEntryServerNodeStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "secondaryStreamStatus",
+                    "description": "The status of the secondary stream",
+                    "typeClassName": "KalturaEntryServerNodeStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "viewMode",
+                    "description": "",
+                    "typeClassName": "KalturaViewMode",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "wasBroadcast",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "broadcastStatus",
+                    "description": "",
+                    "typeClassName": "KalturaLiveStreamBroadcastStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaLiveStreamEntry",
             "base": "KalturaLiveEntry",
             "plugin": "",
@@ -34113,6 +34205,28 @@
                 },
                 {
                     "name": "secondaryBroadcastingUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "primarySecuredBroadcastingUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "secondarySecuredBroadcastingUrl",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -38058,8 +38172,30 @@
                     "default": "null"
                 },
                 {
+                    "name": "operatingSystemIn",
+                    "description": "Filter by operating system",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "browserFamilyIn",
                     "description": "Filter by browser family",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "browserIn",
+                    "description": "Filter by browser",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -38192,6 +38328,39 @@
                 {
                     "name": "rootEntryIdIn",
                     "description": "filter by root entry ids",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "errorCodeIn",
+                    "description": "filter by error code",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "playerVersionIn",
+                    "description": "filter by player version",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "ispIn",
+                    "description": "filter by isp",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -53545,6 +53714,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "serverNodeIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "createdAtLessThanOrEqual",
                     "description": "",
                     "typeClassName": "",
@@ -61084,17 +61264,6 @@
                 },
                 {
                     "name": "fromDate",
-                    "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "toDate",
                     "description": "",
                     "typeClassName": "",
                     "type": "Date",
@@ -83920,6 +84089,24 @@
             ]
         },
         {
+            "name": "KalturaLiveStreamBroadcastStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "LIVE",
+                    "value": "3"
+                },
+                {
+                    "name": "OFFLINE",
+                    "value": "1"
+                },
+                {
+                    "name": "PREVIEW",
+                    "value": "2"
+                }
+            ]
+        },
+        {
             "name": "KalturaMailJobStatus",
             "type": "int",
             "values": [
@@ -100863,6 +101050,10 @@
                     "value": "30014"
                 },
                 {
+                    "name": "QOE_ENGAGEMENT_APPLICATION_VERSION",
+                    "value": "30062"
+                },
+                {
                     "name": "QOE_ENGAGEMENT_BROWSERS",
                     "value": "30020"
                 },
@@ -100877,6 +101068,18 @@
                 {
                     "name": "QOE_ENGAGEMENT_COUNTRY",
                     "value": "30016"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_CUSTOM_VAR1",
+                    "value": "30052"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_CUSTOM_VAR2",
+                    "value": "30053"
+                },
+                {
+                    "name": "QOE_ENGAGEMENT_CUSTOM_VAR3",
+                    "value": "30054"
                 },
                 {
                     "name": "QOE_ENGAGEMENT_ENTRY",
@@ -100911,6 +101114,10 @@
                     "value": "30038"
                 },
                 {
+                    "name": "QOE_ERROR_TRACKING_APPLICATION_VERSION",
+                    "value": "30064"
+                },
+                {
                     "name": "QOE_ERROR_TRACKING_BROWSERS",
                     "value": "30042"
                 },
@@ -100921,6 +101128,18 @@
                 {
                     "name": "QOE_ERROR_TRACKING_CODES",
                     "value": "30039"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_CUSTOM_VAR1",
+                    "value": "30058"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_CUSTOM_VAR2",
+                    "value": "30059"
+                },
+                {
+                    "name": "QOE_ERROR_TRACKING_CUSTOM_VAR3",
+                    "value": "30060"
                 },
                 {
                     "name": "QOE_ERROR_TRACKING_ENTRY",
@@ -100947,6 +101166,10 @@
                     "value": "30002"
                 },
                 {
+                    "name": "QOE_EXPERIENCE_APPLICATION_VERSION",
+                    "value": "30061"
+                },
+                {
                     "name": "QOE_EXPERIENCE_BROWSERS",
                     "value": "30008"
                 },
@@ -100961,6 +101184,18 @@
                 {
                     "name": "QOE_EXPERIENCE_COUNTRY",
                     "value": "30004"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_CUSTOM_VAR1",
+                    "value": "30049"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_CUSTOM_VAR2",
+                    "value": "30050"
+                },
+                {
+                    "name": "QOE_EXPERIENCE_CUSTOM_VAR3",
+                    "value": "30051"
                 },
                 {
                     "name": "QOE_EXPERIENCE_ENTRY",
@@ -101003,6 +101238,10 @@
                     "value": "30026"
                 },
                 {
+                    "name": "QOE_STREAM_QUALITY_APPLICATION_VERSION",
+                    "value": "30063"
+                },
+                {
                     "name": "QOE_STREAM_QUALITY_BROWSERS",
                     "value": "30032"
                 },
@@ -101017,6 +101256,18 @@
                 {
                     "name": "QOE_STREAM_QUALITY_COUNTRY",
                     "value": "30028"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_CUSTOM_VAR1",
+                    "value": "30055"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_CUSTOM_VAR2",
+                    "value": "30056"
+                },
+                {
+                    "name": "QOE_STREAM_QUALITY_CUSTOM_VAR3",
+                    "value": "30057"
                 },
                 {
                     "name": "QOE_STREAM_QUALITY_ENTRY",
