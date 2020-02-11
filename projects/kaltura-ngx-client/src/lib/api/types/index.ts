@@ -512,6 +512,7 @@ export { KalturaUserBaseFilter, KalturaUserBaseFilterArgs } from './KalturaUserB
 export { KalturaUserFilter, KalturaUserFilterArgs } from './KalturaUserFilter'
 export { KalturaEmailNotificationUserRecipientJobData, KalturaEmailNotificationUserRecipientJobDataArgs } from './KalturaEmailNotificationUserRecipientJobData'
 export { KalturaEmailNotificationUserRecipientProvider, KalturaEmailNotificationUserRecipientProviderArgs } from './KalturaEmailNotificationUserRecipientProvider'
+export { KalturaEntryCaptionAdvancedFilter, KalturaEntryCaptionAdvancedFilterArgs } from './KalturaEntryCaptionAdvancedFilter'
 export { KalturaEntryCaptionAssetSearchItem, KalturaEntryCaptionAssetSearchItemArgs } from './KalturaEntryCaptionAssetSearchItem'
 export { KalturaEntryContext, KalturaEntryContextArgs } from './KalturaEntryContext'
 export { KalturaEntryContextDataParams, KalturaEntryContextDataParamsArgs } from './KalturaEntryContextDataParams'
