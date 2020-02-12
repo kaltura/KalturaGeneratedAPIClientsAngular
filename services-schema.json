@@ -4138,6 +4138,13 @@
                             "type": "Simple",
                             "optional": false,
                             "default": ""
+                        },
+                        {
+                            "name": "vodEntryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
                         }
                     ],
                     "description": "Archive a live entry which was recorded",
@@ -56427,6 +56434,17 @@
             "properties": [
                 {
                     "name": "liveEntryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "vodEntryId",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
