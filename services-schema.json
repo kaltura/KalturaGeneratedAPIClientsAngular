@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.18.0",
+    "apiVersion": "15.19.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -53765,6 +53765,17 @@
                 },
                 {
                     "name": "serverNodeIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serverNodeIdNotIn",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
