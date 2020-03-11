@@ -109,6 +109,14 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly ottEnvironmentUrl : string;
 	eSearchLanguages : KalturaESearchLanguageItem[];
 	readonly authenticationType : KalturaPartnerAuthenticationType;
+	readonly extendedFreeTrailExpiryReason : string;
+	readonly extendedFreeTrailExpiryDate : number;
+	readonly extendedFreeTrail : number;
+	readonly extendedFreeTrailEndsWarning : boolean;
+	readonly eightyPercentWarning : number;
+	readonly usageLimitWarning : number;
+	readonly lastFreeTrialNotificationDay : number;
+	readonly monitorUsage : number;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -184,7 +192,15 @@ export class KalturaPartner extends KalturaObjectBase {
 				ovpEnvironmentUrl : { type : 's', readOnly : true },
 				ottEnvironmentUrl : { type : 's', readOnly : true },
 				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' },
-				authenticationType : { type : 'en', readOnly : true, subTypeConstructor : KalturaPartnerAuthenticationType, subType : 'KalturaPartnerAuthenticationType' }
+				authenticationType : { type : 'en', readOnly : true, subTypeConstructor : KalturaPartnerAuthenticationType, subType : 'KalturaPartnerAuthenticationType' },
+				extendedFreeTrailExpiryReason : { type : 's', readOnly : true },
+				extendedFreeTrailExpiryDate : { type : 'n', readOnly : true },
+				extendedFreeTrail : { type : 'n', readOnly : true },
+				extendedFreeTrailEndsWarning : { type : 'b', readOnly : true },
+				eightyPercentWarning : { type : 'n', readOnly : true },
+				usageLimitWarning : { type : 'n', readOnly : true },
+				lastFreeTrialNotificationDay : { type : 'n', readOnly : true },
+				monitorUsage : { type : 'n', readOnly : true }
             }
         );
         return result;

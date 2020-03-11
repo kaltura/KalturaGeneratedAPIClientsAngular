@@ -63,6 +63,7 @@ export enum KalturaBatchJobType {
 	serverNodeMonitor = '45',
 	storageDelete = '25',
 	storageExport = '23',
+	storageUpdate = '52',
 	syncCategoryPrivacyContext = '39',
 	syncReachCreditTask = 'reach.SyncReachCreditTask',
 	tagResolve = 'tagSearch.TagResolve',

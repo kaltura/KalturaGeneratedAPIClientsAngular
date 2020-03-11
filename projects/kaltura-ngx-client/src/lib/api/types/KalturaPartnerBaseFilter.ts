@@ -22,6 +22,7 @@ export interface KalturaPartnerBaseFilterArgs  extends KalturaFilterArgs {
 	partnerNameDescriptionWebsiteAdminNameAdminEmailLike? : string;
 	createdAtGreaterThanOrEqual? : Date;
 	idGreaterThan? : number;
+	monitorUsageEqual? : number;
 }
 
 
@@ -44,6 +45,7 @@ export class KalturaPartnerBaseFilter extends KalturaFilter {
 	partnerNameDescriptionWebsiteAdminNameAdminEmailLike : string;
 	createdAtGreaterThanOrEqual : Date;
 	idGreaterThan : number;
+	monitorUsageEqual : number;
 
     constructor(data? : KalturaPartnerBaseFilterArgs)
     {
@@ -73,7 +75,8 @@ export class KalturaPartnerBaseFilter extends KalturaFilter {
 				partnerGroupTypeEqual : { type : 'en', subTypeConstructor : KalturaPartnerGroupType, subType : 'KalturaPartnerGroupType' },
 				partnerNameDescriptionWebsiteAdminNameAdminEmailLike : { type : 's' },
 				createdAtGreaterThanOrEqual : { type : 'd' },
-				idGreaterThan : { type : 'n' }
+				idGreaterThan : { type : 'n' },
+				monitorUsageEqual : { type : 'n' }
             }
         );
         return result;

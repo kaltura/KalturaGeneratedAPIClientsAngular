@@ -15,6 +15,7 @@ export enum KalturaMailType {
 	mailTypeClipAdded = '30',
 	mailTypeClipAddedYourKaltura = '20',
 	mailTypeClipContributed = '40',
+	mailTypeExtendedFreeTrialEndsWarning = '87',
 	mailTypeKalturaNewsletter = '10',
 	mailTypeLiveReportExportAbort = '132',
 	mailTypeLiveReportExportFailure = '131',
