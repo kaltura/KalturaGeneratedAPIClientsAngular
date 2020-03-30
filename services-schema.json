@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.19.0",
+    "apiVersion": "15.20.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -33505,6 +33505,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "broadcastTime",
+                    "description": "The time when the entry was first live with view_all",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -38478,6 +38489,17 @@
                 {
                     "name": "applicationVersionIn",
                     "description": "filter by application version",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "nodeIdsIn",
+                    "description": "filter by node id",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -57685,6 +57707,17 @@
                     "name": "inputEntitledUsersPublish",
                     "description": "The input entitled users publish to set on the entry",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "resetMediaRepurposingProcess",
+                    "description": "Should clear the media repurposing data and therefore reset the process",
+                    "typeClassName": "bool",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -101186,6 +101219,10 @@
                 {
                     "name": "BROWSERS_VPAAS",
                     "value": "20007"
+                },
+                {
+                    "name": "CATEGORY_HIGHLIGHTS",
+                    "value": "52"
                 },
                 {
                     "name": "CONTENT_CONTRIBUTIONS",

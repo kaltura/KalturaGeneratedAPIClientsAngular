@@ -28,6 +28,7 @@ export interface KalturaLiveEntryArgs  extends KalturaMediaEntryArgs {
 	explicitLive? : KalturaNullableBoolean;
 	viewMode? : KalturaViewMode;
 	recordingStatus? : KalturaRecordingStatus;
+	broadcastTime? : number;
 }
 
 
@@ -52,6 +53,7 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 	viewMode : KalturaViewMode;
 	recordingStatus : KalturaRecordingStatus;
 	readonly lastBroadcastEndTime : number;
+	broadcastTime : number;
 
     constructor(data? : KalturaLiveEntryArgs)
     {
@@ -85,7 +87,8 @@ export class KalturaLiveEntry extends KalturaMediaEntry {
 				explicitLive : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				viewMode : { type : 'en', subTypeConstructor : KalturaViewMode, subType : 'KalturaViewMode' },
 				recordingStatus : { type : 'en', subTypeConstructor : KalturaRecordingStatus, subType : 'KalturaRecordingStatus' },
-				lastBroadcastEndTime : { type : 'n', readOnly : true }
+				lastBroadcastEndTime : { type : 'n', readOnly : true },
+				broadcastTime : { type : 'n' }
             }
         );
         return result;

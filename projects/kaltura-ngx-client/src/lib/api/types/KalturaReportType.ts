@@ -7,6 +7,7 @@ export enum KalturaReportType {
 	browsersFamilies = '33',
 	browsersFamiliesVpaas = '20009',
 	browsersVpaas = '20007',
+	categoryHighlights = '52',
 	contentContributions = '7',
 	contentDropoff = '2',
 	contentDropoffVpaas = '20001',

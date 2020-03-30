@@ -11,6 +11,7 @@ export interface KalturaModifyEntryObjectTaskArgs  extends KalturaObjectTaskArgs
 	inputUserId? : string;
 	inputEntitledUsersEdit? : string;
 	inputEntitledUsersPublish? : string;
+	resetMediaRepurposingProcess? : boolean;
 }
 
 
@@ -23,6 +24,7 @@ export class KalturaModifyEntryObjectTask extends KalturaObjectTask {
 	inputUserId : string;
 	inputEntitledUsersEdit : string;
 	inputEntitledUsersPublish : string;
+	resetMediaRepurposingProcess : boolean;
 
     constructor(data? : KalturaModifyEntryObjectTaskArgs)
     {
@@ -44,7 +46,8 @@ export class KalturaModifyEntryObjectTask extends KalturaObjectTask {
 				outputMetadata : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
 				inputUserId : { type : 's' },
 				inputEntitledUsersEdit : { type : 's' },
-				inputEntitledUsersPublish : { type : 's' }
+				inputEntitledUsersPublish : { type : 's' },
+				resetMediaRepurposingProcess : { type : 'b' }
             }
         );
         return result;

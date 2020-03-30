@@ -37,6 +37,7 @@ export interface KalturaReportInputFilterArgs  extends KalturaReportInputBaseFil
 	playerVersionIn? : string;
 	ispIn? : string;
 	applicationVersionIn? : string;
+	nodeIdsIn? : string;
 }
 
 
@@ -74,6 +75,7 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 	playerVersionIn : string;
 	ispIn : string;
 	applicationVersionIn : string;
+	nodeIdsIn : string;
 
     constructor(data? : KalturaReportInputFilterArgs)
     {
@@ -118,7 +120,8 @@ export class KalturaReportInputFilter extends KalturaReportInputBaseFilter {
 				errorCodeIn : { type : 's' },
 				playerVersionIn : { type : 's' },
 				ispIn : { type : 's' },
-				applicationVersionIn : { type : 's' }
+				applicationVersionIn : { type : 's' },
+				nodeIdsIn : { type : 's' }
             }
         );
         return result;
