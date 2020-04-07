@@ -1,5 +1,5 @@
 {
-    "apiVersion": "15.20.0",
+    "apiVersion": "16.0.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -86602,6 +86602,10 @@
                     "value": "0"
                 },
                 {
+                    "name": "ONE_BUSINESS_DAY",
+                    "value": "129600"
+                },
+                {
                     "name": "SIX_HOURS",
                     "value": "21600"
                 },
@@ -86624,6 +86628,10 @@
                 {
                     "name": "TWENTY_FOUR_HOURS",
                     "value": "86400"
+                },
+                {
+                    "name": "TWO_BUSINESS_DAYS",
+                    "value": "216000"
                 },
                 {
                     "name": "TWO_HOURS",
