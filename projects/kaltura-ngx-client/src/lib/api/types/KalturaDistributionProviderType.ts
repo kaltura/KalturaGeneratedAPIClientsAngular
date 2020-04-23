@@ -16,6 +16,7 @@ export enum KalturaDistributionProviderType {
 	idetic = 'ideticDistribution.IDETIC',
 	metroPcs = 'metroPcsDistribution.METRO_PCS',
 	msn = 'msnDistribution.MSN',
+	podcast = 'podcastDistribution.PODCAST',
 	quickplay = 'quickPlayDistribution.QUICKPLAY',
 	syndication = '2',
 	unicorn = 'unicornDistribution.UNICORN',

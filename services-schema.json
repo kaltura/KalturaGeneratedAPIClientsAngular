@@ -4077,6 +4077,29 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "allocateConferenceRoom",
+                    "resultClassName": "KalturaRoomDetails",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "env",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Allocates a conference room or returns ones that has already been allocated",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "appendRecording",
                     "resultClassName": "KalturaLiveEntry",
                     "resultType": "Object",
@@ -4271,6 +4294,29 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "finishConf",
+                    "resultClassName": "bool",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "serverNodeId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "When the conf is finished this API should be called.",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "get",
                     "resultClassName": "KalturaLiveStreamEntry",
                     "resultType": "Object",
@@ -4369,6 +4415,22 @@
                         }
                     ],
                     "description": "Regenerate new secure token for liveStream",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "registerConf",
+                    "resultClassName": "bool",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Mark that the conference has actually started",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -14737,6 +14799,84 @@
             ]
         },
         {
+            "id": "rating_rating",
+            "name": "rating",
+            "description": "Allows user to manipulate their entry rating",
+            "actions": [
+                {
+                    "name": "checkRating",
+                    "resultClassName": "int",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "getRatingCounts",
+                    "resultClassName": "KalturaRatingCountListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaRatingCountFilter",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "rate",
+                    "resultClassName": "int",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "rank",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "removeRating",
+                    "resultClassName": "bool",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
             "id": "reach_vendorcatalogitem",
             "name": "vendorCatalogItem",
             "description": "Vendor Catalog Item Service",
@@ -16030,6 +16170,205 @@
             ]
         },
         {
+            "id": "sip_pexip",
+            "name": "pexip",
+            "description": "",
+            "actions": [
+                {
+                    "name": "generateSipUrl",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "regenerate",
+                            "typeClassName": "bool",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "false"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "handleIncomingCall",
+                    "resultClassName": "bool",
+                    "resultType": "Simple",
+                    "params": [],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "listRooms",
+                    "resultClassName": "KalturaStringValue",
+                    "resultType": "ArrayOfObjects",
+                    "params": [
+                        {
+                            "name": "offset",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "0"
+                        },
+                        {
+                            "name": "pageSize",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "500"
+                        },
+                        {
+                            "name": "activeOnly",
+                            "typeClassName": "bool",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "false"
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "sso_sso",
+            "name": "sso",
+            "description": "",
+            "actions": [
+                {
+                    "name": "add",
+                    "resultClassName": "KalturaSso",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "sso",
+                            "typeClassName": "KalturaSso",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Adds a new sso configuration.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "delete",
+                    "resultClassName": "KalturaSso",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "ssoId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Delete sso by ID",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "get",
+                    "resultClassName": "KalturaSso",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "ssoId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Retrieves sso object",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaSsoListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaSsoFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "Lists sso objects that are associated with an account.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "login",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "userId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "applicationType",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "partnerId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "Login with SSO, getting redirect url according to application type and partner Id\n\t or according to application type and domain",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "update",
+                    "resultClassName": "KalturaSso",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "ssoId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "sso",
+                            "typeClassName": "KalturaSso",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update sso by ID",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
             "id": "tagsearch_tag",
             "name": "tag",
             "description": "Search object tags",
@@ -16093,6 +16432,29 @@
                         }
                     ],
                     "description": "",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "thumbnail_thumbnail",
+            "name": "thumbnail",
+            "description": "",
+            "actions": [
+                {
+                    "name": "transform",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "transformString",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Retrieves a thumbnail according to the required transformation",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -16176,6 +16538,83 @@
                         }
                     ],
                     "description": "Function to change a sub-publisher's status",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
+            "id": "vendor_zoomvendor",
+            "name": "zoomVendor",
+            "description": "",
+            "actions": [
+                {
+                    "name": "deAuthorization",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "fetchRegistrationPage",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "tokensData",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "iv",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "oauthValidation",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "recordingComplete",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "submitRegistration",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "accountId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "integrationSetting",
+                            "typeClassName": "KalturaZoomIntegrationSetting",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -37563,6 +38002,49 @@
             ]
         },
         {
+            "name": "KalturaRatingCount",
+            "base": "",
+            "plugin": "rating",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "entryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "rank",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "count",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaReachProfile",
             "base": "",
             "plugin": "reach",
@@ -39093,6 +39575,71 @@
             ]
         },
         {
+            "name": "KalturaRoomDetails",
+            "base": "",
+            "plugin": "conference",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "serverUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "entryId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "token",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "expiry",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "serverName",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaScheduleEventRecurrence",
             "base": "",
             "plugin": "schedule",
@@ -40586,6 +41133,115 @@
                     "name": "assetParamsId",
                     "description": "",
                     "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaSso",
+            "base": "",
+            "plugin": "sso",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "applicationType",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "domain",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "status",
+                    "description": "",
+                    "typeClassName": "KalturaSsoStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAt",
+                    "description": "Creation date as Unix timestamp (In seconds)",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAt",
+                    "description": "Last update date as Unix timestamp (In seconds)",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "redirectUrl",
+                    "description": "Redirect URL for a specific application type and (partner id or domain)",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -43928,6 +44584,126 @@
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaZoomIntegrationSetting",
+            "base": "",
+            "plugin": "vendor",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "defaultUserId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "zoomCategory",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "accountId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableRecordingUpload",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createUserIfNotExist",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "handleParticipantMode",
+                    "description": "",
+                    "typeClassName": "KalturaHandleParticipantsMode",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "zoomUserMatchingMode",
+                    "description": "",
+                    "typeClassName": "KalturaZoomUsersMatching",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "zoomUserPostfix",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "zoomWebinarCategory",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableWebinarUploads",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -48367,6 +49143,59 @@
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaConferenceEntryServerNode",
+            "base": "KalturaEntryServerNode",
+            "plugin": "conference",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "confRoomStatus",
+                    "description": "",
+                    "typeClassName": "KalturaConferenceRoomStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "registered",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaConferenceServerNode",
+            "base": "KalturaServerNode",
+            "plugin": "conference",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "serviceBaseUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -58536,6 +59365,101 @@
             ]
         },
         {
+            "name": "KalturaPodcastDistributionJobProviderData",
+            "base": "KalturaDistributionJobProviderData",
+            "plugin": "podcastDistribution",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "xml",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "metadataProfileId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "distributionProfileId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaPodcastDistributionProfile",
+            "base": "KalturaDistributionProfile",
+            "plugin": "podcastDistribution",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "xsl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "feedId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "metadataProfileId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaPodcastDistributionProvider",
+            "base": "KalturaDistributionProvider",
+            "plugin": "podcastDistribution",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaProvisionJobData",
             "base": "KalturaJobData",
             "plugin": "",
@@ -58946,6 +59870,27 @@
             ]
         },
         {
+            "name": "KalturaRatingCountListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "rating",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaRatingCount",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaReachProfileListResponse",
             "base": "KalturaListResponse",
             "plugin": "reach",
@@ -58972,6 +59917,15 @@
             "plugin": "",
             "description": "",
             "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaRegistrationUserEntry",
+            "base": "KalturaUserEntry",
+            "plugin": "registration",
+            "description": "",
+            "abstract": false,
             "deprecated": false,
             "properties": []
         },
@@ -60324,6 +61278,58 @@
             ]
         },
         {
+            "name": "KalturaSipEntryServerNode",
+            "base": "KalturaEntryServerNode",
+            "plugin": "sip",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sipRoomId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sipPrimaryAdpId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sipSecondaryAdpId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaSipServerNode",
+            "base": "KalturaServerNode",
+            "plugin": "sip",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaSiteRestriction",
             "base": "KalturaBaseRestriction",
             "plugin": "",
@@ -60349,6 +61355,27 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaSsoListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "sso",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaSso",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -72326,6 +73353,38 @@
             ]
         },
         {
+            "name": "KalturaRatingCountBaseFilter",
+            "base": "KalturaRelatedFilter",
+            "plugin": "rating",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "entryIdEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "rankIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaReachProfileBaseFilter",
             "base": "KalturaRelatedFilter",
             "plugin": "reach",
@@ -73486,6 +74545,126 @@
                 },
                 {
                     "name": "passPhrase",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaSsoBaseFilter",
+            "base": "KalturaRelatedFilter",
+            "plugin": "sso",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "idEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "applicationTypeEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "domainEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusEqual",
+                    "description": "",
+                    "typeClassName": "KalturaSsoStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "redirectUrlEqual",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -76115,6 +77294,24 @@
             "properties": []
         },
         {
+            "name": "KalturaConferenceEntryServerNodeBaseFilter",
+            "base": "KalturaEntryServerNodeFilter",
+            "plugin": "conference",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaConferenceServerNodeBaseFilter",
+            "base": "KalturaServerNodeFilter",
+            "plugin": "conference",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaConfigurableDistributionProfileBaseFilter",
             "base": "KalturaDistributionProfileFilter",
             "plugin": "contentDistribution",
@@ -77476,6 +78673,15 @@
             "properties": []
         },
         {
+            "name": "KalturaLiveClusterMediaServerNode",
+            "base": "KalturaMediaServerNode",
+            "plugin": "liveCluster",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaLiveEntryCompareAttributeCondition",
             "base": "KalturaSearchComparableAttributeCondition",
             "plugin": "",
@@ -77924,6 +79130,24 @@
             ]
         },
         {
+            "name": "KalturaPodcastDistributionProfileBaseFilter",
+            "base": "KalturaDistributionProfileFilter",
+            "plugin": "podcastDistribution",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaPodcastDistributionProviderBaseFilter",
+            "base": "KalturaDistributionProviderFilter",
+            "plugin": "podcastDistribution",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaPushNotificationTemplateBaseFilter",
             "base": "KalturaEventNotificationTemplateFilter",
             "plugin": "pushNotification",
@@ -77938,6 +79162,15 @@
             "plugin": "quickPlayDistribution",
             "description": "",
             "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaRatingCountFilter",
+            "base": "KalturaRatingCountBaseFilter",
+            "plugin": "rating",
+            "description": "",
+            "abstract": false,
             "deprecated": false,
             "properties": []
         },
@@ -78182,6 +79415,24 @@
             "properties": []
         },
         {
+            "name": "KalturaSipEntryServerNodeBaseFilter",
+            "base": "KalturaEntryServerNodeFilter",
+            "plugin": "sip",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaSipServerNodeBaseFilter",
+            "base": "KalturaServerNodeFilter",
+            "plugin": "sip",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaSshUrlResource",
             "base": "KalturaUrlResource",
             "plugin": "",
@@ -78223,6 +79474,15 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaSsoFilter",
+            "base": "KalturaSsoBaseFilter",
+            "plugin": "sso",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaSwfFlavorParamsOutput",
@@ -79368,6 +80628,24 @@
             "properties": []
         },
         {
+            "name": "KalturaConferenceEntryServerNodeFilter",
+            "base": "KalturaConferenceEntryServerNodeBaseFilter",
+            "plugin": "conference",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaConferenceServerNodeFilter",
+            "base": "KalturaConferenceServerNodeBaseFilter",
+            "plugin": "conference",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaConfigurableDistributionProfileFilter",
             "base": "KalturaConfigurableDistributionProfileBaseFilter",
             "plugin": "contentDistribution",
@@ -80085,6 +81363,24 @@
             "properties": []
         },
         {
+            "name": "KalturaPodcastDistributionProfileFilter",
+            "base": "KalturaPodcastDistributionProfileBaseFilter",
+            "plugin": "podcastDistribution",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaPodcastDistributionProviderFilter",
+            "base": "KalturaPodcastDistributionProviderBaseFilter",
+            "plugin": "podcastDistribution",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaPushNotificationTemplateFilter",
             "base": "KalturaPushNotificationTemplateBaseFilter",
             "plugin": "pushNotification",
@@ -80155,6 +81451,15 @@
             "properties": []
         },
         {
+            "name": "KalturaRegistrationUserEntryFilter",
+            "base": "KalturaUserEntryFilter",
+            "plugin": "registration",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaRemoteDropFolderFilter",
             "base": "KalturaRemoteDropFolderBaseFilter",
             "plugin": "dropFolder",
@@ -80203,6 +81508,24 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaSipEntryServerNodeFilter",
+            "base": "KalturaSipEntryServerNodeBaseFilter",
+            "plugin": "sip",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaSipServerNodeFilter",
+            "base": "KalturaSipServerNodeBaseFilter",
+            "plugin": "sip",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaSyndicationDistributionProfileFilter",
@@ -81992,6 +83315,15 @@
             "properties": []
         },
         {
+            "name": "KalturaLiveClusterMediaServerNodeBaseFilter",
+            "base": "KalturaMediaServerNodeFilter",
+            "plugin": "liveCluster",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaLiveParamsFilter",
             "base": "KalturaLiveParamsBaseFilter",
             "plugin": "",
@@ -82204,6 +83536,15 @@
             "plugin": "document",
             "description": "",
             "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaLiveClusterMediaServerNodeFilter",
+            "base": "KalturaLiveClusterMediaServerNodeBaseFilter",
+            "plugin": "liveCluster",
+            "description": "",
+            "abstract": false,
             "deprecated": false,
             "properties": []
         },
@@ -82900,6 +84241,24 @@
                 {
                     "name": "STATUS_ENABLED",
                     "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaConferenceRoomStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "CREATED",
+                    "value": "1"
+                },
+                {
+                    "name": "ENDED",
+                    "value": "3"
+                },
+                {
+                    "name": "READY",
+                    "value": "2"
                 }
             ]
         },
@@ -84168,6 +85527,24 @@
                 {
                     "name": "DELETED",
                     "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaHandleParticipantsMode",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ADD_AS_CO_PUBLISHERS",
+                    "value": "0"
+                },
+                {
+                    "name": "ADD_AS_CO_VIEWERS",
+                    "value": "1"
+                },
+                {
+                    "name": "IGNORE",
+                    "value": "2"
                 }
             ]
         },
@@ -85610,6 +86987,24 @@
             ]
         },
         {
+            "name": "KalturaSsoStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "name": "DELETED",
+                    "value": "3"
+                },
+                {
+                    "name": "DISABLED",
+                    "value": "1"
+                }
+            ]
+        },
+        {
             "name": "KalturaStatsEventType",
             "type": "int",
             "values": [
@@ -86796,6 +88191,24 @@
                 {
                     "name": "UPDATE_ACTION",
                     "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaZoomUsersMatching",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ADD_POSTFIX",
+                    "value": "1"
+                },
+                {
+                    "name": "DO_NOT_MODIFY",
+                    "value": "0"
+                },
+                {
+                    "name": "REMOVE_POSTFIX",
+                    "value": "2"
                 }
             ]
         },
@@ -89550,6 +90963,36 @@
             ]
         },
         {
+            "name": "KalturaConferenceServerNodeOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "HEARTBEAT_TIME_ASC",
+                    "value": "+heartbeatTime"
+                },
+                {
+                    "name": "HEARTBEAT_TIME_DESC",
+                    "value": "-heartbeatTime"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
             "name": "KalturaConfigurableDistributionProfileOrderBy",
             "type": "string",
             "values": [
@@ -90724,6 +92167,10 @@
                 {
                     "name": "MSN",
                     "value": "msnDistribution.MSN"
+                },
+                {
+                    "name": "PODCAST",
+                    "value": "podcastDistribution.PODCAST"
                 },
                 {
                     "name": "QUICKPLAY",
@@ -92597,6 +94044,10 @@
                     "value": "-1"
                 },
                 {
+                    "name": "CONFERENCE_ENTRY_SERVER",
+                    "value": "conference.CONFERENCE_ENTRY_SERVER"
+                },
+                {
                     "name": "DATA",
                     "value": "6"
                 },
@@ -92627,6 +94078,10 @@
                 {
                     "name": "PLAYLIST",
                     "value": "5"
+                },
+                {
+                    "name": "SIP_ENTRY_SERVER",
+                    "value": "sip.SIP_ENTRY_SERVER"
                 }
             ]
         },
@@ -100892,6 +102347,33 @@
             ]
         },
         {
+            "name": "KalturaPodcastDistributionProfileOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaPodcastDistributionProviderOrderBy",
+            "type": "string",
+            "values": []
+        },
+        {
             "name": "KalturaPushNotificationCommandType",
             "type": "string",
             "values": [
@@ -101033,6 +102515,11 @@
                     "value": "-updatedAt"
                 }
             ]
+        },
+        {
+            "name": "KalturaRatingCountOrderBy",
+            "type": "string",
+            "values": []
         },
         {
             "name": "KalturaReachProfileOrderBy",
@@ -102219,8 +103706,20 @@
             "type": "string",
             "values": [
                 {
+                    "name": "CONFERENCE_SERVER",
+                    "value": "conference.CONFERENCE_SERVER"
+                },
+                {
                     "name": "EDGE",
                     "value": "1"
+                },
+                {
+                    "name": "LIVE_CLUSTER_MEDIA_SERVER",
+                    "value": "liveCluster.LIVE_CLUSTER_MEDIA_SERVER"
+                },
+                {
+                    "name": "SIP_SERVER",
+                    "value": "sip.SIP_SERVER"
                 },
                 {
                     "name": "WOWZA_MEDIA_SERVER",
@@ -102285,6 +103784,36 @@
                 {
                     "name": "EXPIRES_AT_DESC",
                     "value": "-expiresAt"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
+                }
+            ]
+        },
+        {
+            "name": "KalturaSipServerNodeOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "HEARTBEAT_TIME_ASC",
+                    "value": "+heartbeatTime"
+                },
+                {
+                    "name": "HEARTBEAT_TIME_DESC",
+                    "value": "-heartbeatTime"
                 },
                 {
                     "name": "UPDATED_AT_ASC",
@@ -102974,6 +104503,10 @@
                 {
                     "name": "QUIZ",
                     "value": "quiz.QUIZ"
+                },
+                {
+                    "name": "REGISTRATION",
+                    "value": "registration.REGISTRATION"
                 },
                 {
                     "name": "VIEW_HISTORY",
