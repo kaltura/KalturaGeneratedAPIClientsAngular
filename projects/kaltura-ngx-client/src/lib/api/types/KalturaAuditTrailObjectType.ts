@@ -21,6 +21,7 @@ export enum KalturaAuditTrailObjectType {
 	moderation = 'moderation',
 	partner = 'Partner',
 	permission = 'Permission',
+	reachProfile = 'ReachProfile',
 	roughcut = 'roughcutEntry',
 	syndication = 'syndicationFeed',
 	thumbnailAsset = 'thumbAsset',

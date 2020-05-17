@@ -9,5 +9,6 @@ export enum KalturaBulkUploadObjectType {
 	scheduleEvent = 'scheduleBulkUpload.SCHEDULE_EVENT',
 	scheduleResource = 'scheduleBulkUpload.SCHEDULE_RESOURCE',
 	user = '3',
-	userEntry = '6'
+	userEntry = '6',
+	vendorCatalogItem = '7'
 }

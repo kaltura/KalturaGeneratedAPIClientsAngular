@@ -9,5 +9,6 @@ export enum KalturaBulkUploadAction {
 	reject = '8',
 	replace = '4',
 	transformXslt = '5',
-	update = '2'
+	update = '2',
+	updateStatus = '9'
 }

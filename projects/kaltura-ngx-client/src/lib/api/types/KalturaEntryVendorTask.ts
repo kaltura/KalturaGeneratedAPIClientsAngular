@@ -5,6 +5,7 @@ import { KalturaEntryVendorTaskCreationMode } from './KalturaEntryVendorTaskCrea
 import { KalturaVendorTaskData } from './KalturaVendorTaskData';
 import { KalturaVendorServiceType } from './KalturaVendorServiceType';
 import { KalturaVendorServiceFeature } from './KalturaVendorServiceFeature';
+import { KalturaVendorServiceTurnAroundTime } from './KalturaVendorServiceTurnAroundTime';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaEntryVendorTaskArgs  extends KalturaObjectBaseArgs {
@@ -52,6 +53,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 	readonly expectedFinishTime : Date;
 	readonly serviceType : KalturaVendorServiceType;
 	readonly serviceFeature : KalturaVendorServiceFeature;
+	readonly turnAroundTime : KalturaVendorServiceTurnAroundTime;
 
     constructor(data? : KalturaEntryVendorTaskArgs)
     {
@@ -92,7 +94,8 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 				taskJobData : { type : 'o', subTypeConstructor : KalturaVendorTaskData, subType : 'KalturaVendorTaskData' },
 				expectedFinishTime : { type : 'd', readOnly : true },
 				serviceType : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceType, subType : 'KalturaVendorServiceType' },
-				serviceFeature : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceFeature, subType : 'KalturaVendorServiceFeature' }
+				serviceFeature : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceFeature, subType : 'KalturaVendorServiceFeature' },
+				turnAroundTime : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceTurnAroundTime, subType : 'KalturaVendorServiceTurnAroundTime' }
             }
         );
         return result;

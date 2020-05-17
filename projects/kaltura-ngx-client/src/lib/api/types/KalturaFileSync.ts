@@ -9,6 +9,8 @@ export interface KalturaFileSyncArgs  extends KalturaObjectBaseArgs {
     status? : KalturaFileSyncStatus;
 	fileRoot? : string;
 	filePath? : string;
+	srcPath? : string;
+	srcEncKey? : string;
 }
 
 
@@ -39,6 +41,8 @@ export class KalturaFileSync extends KalturaObjectBase {
 	readonly isCurrentDc : boolean;
 	readonly isDir : boolean;
 	readonly originalId : number;
+	srcPath : string;
+	srcEncKey : string;
 
     constructor(data? : KalturaFileSyncArgs)
     {
@@ -76,7 +80,9 @@ export class KalturaFileSync extends KalturaObjectBase {
 				fileDiscSize : { type : 'n', readOnly : true },
 				isCurrentDc : { type : 'b', readOnly : true },
 				isDir : { type : 'b', readOnly : true },
-				originalId : { type : 'n', readOnly : true }
+				originalId : { type : 'n', readOnly : true },
+				srcPath : { type : 's' },
+				srcEncKey : { type : 's' }
             }
         );
         return result;
