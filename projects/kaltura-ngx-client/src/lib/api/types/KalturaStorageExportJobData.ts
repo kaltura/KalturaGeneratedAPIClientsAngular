@@ -5,6 +5,8 @@ import { KalturaStorageJobData, KalturaStorageJobDataArgs } from './KalturaStora
 export interface KalturaStorageExportJobDataArgs  extends KalturaStorageJobDataArgs {
     force? : boolean;
 	createLink? : boolean;
+	assetId? : string;
+	externalUrl? : string;
 }
 
 
@@ -12,6 +14,8 @@ export class KalturaStorageExportJobData extends KalturaStorageJobData {
 
     force : boolean;
 	createLink : boolean;
+	assetId : string;
+	externalUrl : string;
 
     constructor(data? : KalturaStorageExportJobDataArgs)
     {
@@ -26,7 +30,9 @@ export class KalturaStorageExportJobData extends KalturaStorageJobData {
             {
                 objectType : { type : 'c', default : 'KalturaStorageExportJobData' },
 				force : { type : 'b' },
-				createLink : { type : 'b' }
+				createLink : { type : 'b' },
+				assetId : { type : 's' },
+				externalUrl : { type : 's' }
             }
         );
         return result;

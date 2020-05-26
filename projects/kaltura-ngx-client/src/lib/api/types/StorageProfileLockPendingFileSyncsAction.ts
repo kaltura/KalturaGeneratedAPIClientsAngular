@@ -32,6 +32,7 @@ export class StorageProfileLockPendingFileSyncsAction extends KalturaRequest<Kal
     constructor(data : StorageProfileLockPendingFileSyncsActionArgs)
     {
         super(data, {responseType : 'o', responseSubType : 'KalturaLockFileSyncsResponse', responseConstructor : KalturaLockFileSyncsResponse  });
+        if (typeof this.maxSize === 'undefined') this.maxSize = 9223372036854775807;
     }
 
     protected _getMetadata() : KalturaObjectMetadata

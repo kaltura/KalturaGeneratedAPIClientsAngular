@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.2.0",
+    "apiVersion": "16.3.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -7716,7 +7716,7 @@
                             "typeClassName": "int",
                             "type": "Simple",
                             "optional": true,
-                            "default": "null"
+                            "default": "9223372036854775807"
                         }
                     ],
                     "description": "storage profile lockPendingFileSyncs action locks file syncs for export by the file sync periodic worker",
@@ -30680,6 +30680,17 @@
                 },
                 {
                     "name": "srcEncKey",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "storageClass",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -68118,6 +68129,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "distributedFileAssets",
+                    "description": "Key-value array where the keys are IDs of distributed fileassets in the source account and the values are the matching IDs in the target account",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "distributedAttachmentAssets",
                     "description": "Key-value array where the keys are IDs of distributed caption assets in the source account and the values are the matching IDs in the target account",
                     "typeClassName": "string",
@@ -75403,6 +75425,28 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "assetId",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "externalUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -77643,6 +77687,17 @@
                 },
                 {
                     "name": "endPoint",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "storageClass",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -90618,8 +90673,16 @@
                     "value": "23"
                 },
                 {
+                    "name": "STORAGE_PERIODIC_DELETE_LOCAL",
+                    "value": "55"
+                },
+                {
                     "name": "STORAGE_PERIODIC_EXPORT",
                     "value": "53"
+                },
+                {
+                    "name": "STORAGE_PERIODIC_PURGE",
+                    "value": "54"
                 },
                 {
                     "name": "STORAGE_UPDATE",
