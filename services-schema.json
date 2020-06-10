@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.3.0",
+    "apiVersion": "16.4.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -9600,6 +9600,22 @@
                         }
                     ],
                     "description": "Updates a user's login data: email, password, name.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "validateHashKey",
+                    "resultClassName": "KalturaAuthentication",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "hashKey",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Validate hash key",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -36421,6 +36437,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "excludedFreeTextGroups",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "isRoot",
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
@@ -45608,49 +45635,6 @@
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
-            "name": "KalturaAlignmentVendorTaskData",
-            "base": "KalturaVendorTaskData",
-            "plugin": "reach",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "textTranscriptAssetId",
-                    "description": "The id of the text transcript object the vendor should use while runing the alignment task",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "jsonTranscriptAssetId",
-                    "description": "Optional - The id of the json transcript object the vendor should update once alignment task processing is done",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": true,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "captionAssetId",
-                    "description": "Optional - The id of the caption asset object the vendor should update once alignment task processing is done",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": true,
                     "optional": true,
                     "default": "null"
                 }
@@ -64263,6 +64247,27 @@
             ]
         },
         {
+            "name": "KalturaVendorTaskDataCaptionAsset",
+            "base": "KalturaVendorTaskData",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "captionAssetId",
+                    "description": "Optional - The id of the caption asset object",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaViewHistoryUserEntry",
             "base": "KalturaUserEntry",
             "plugin": "viewHistory",
@@ -65811,6 +65816,38 @@
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaAlignmentVendorTaskData",
+            "base": "KalturaVendorTaskDataCaptionAsset",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "textTranscriptAssetId",
+                    "description": "The id of the text transcript object the vendor should use while runing the alignment task",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "jsonTranscriptAssetId",
+                    "description": "Optional - The id of the json transcript object the vendor should update once alignment task processing is done",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
                     "optional": true,
                     "default": "null"
                 }
@@ -68046,6 +68083,17 @@
                     "name": "engineMessage",
                     "description": "",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "userCpu",
+                    "description": "",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -75553,6 +75601,15 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaTranslationVendorTaskData",
+            "base": "KalturaVendorTaskDataCaptionAsset",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaUiConfFilter",

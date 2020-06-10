@@ -13,6 +13,7 @@ export interface KalturaConvertJobDataArgs  extends KalturaConvartableJobDataArg
 	customData? : string;
 	extraDestFileSyncs? : KalturaDestFileSyncDescriptor[];
 	engineMessage? : string;
+	userCpu? : number;
 }
 
 
@@ -27,6 +28,7 @@ export class KalturaConvertJobData extends KalturaConvartableJobData {
 	customData : string;
 	extraDestFileSyncs : KalturaDestFileSyncDescriptor[];
 	engineMessage : string;
+	userCpu : number;
 
     constructor(data? : KalturaConvertJobDataArgs)
     {
@@ -49,7 +51,8 @@ export class KalturaConvertJobData extends KalturaConvartableJobData {
 				remoteMediaId : { type : 's' },
 				customData : { type : 's' },
 				extraDestFileSyncs : { type : 'a', subTypeConstructor : KalturaDestFileSyncDescriptor, subType : 'KalturaDestFileSyncDescriptor' },
-				engineMessage : { type : 's' }
+				engineMessage : { type : 's' },
+				userCpu : { type : 'n' }
             }
         );
         return result;
