@@ -6,6 +6,7 @@ import { KalturaBaseEntryBaseFilter, KalturaBaseEntryBaseFilterArgs } from './Ka
 export interface KalturaBaseEntryFilterArgs  extends KalturaBaseEntryBaseFilterArgs {
     freeText? : string;
 	excludedFreeTextGroups? : string;
+	descriptionLike? : string;
 	isRoot? : KalturaNullableBoolean;
 	categoriesFullNameIn? : string;
 	categoryAncestorIdIn? : string;
@@ -17,6 +18,7 @@ export class KalturaBaseEntryFilter extends KalturaBaseEntryBaseFilter {
 
     freeText : string;
 	excludedFreeTextGroups : string;
+	descriptionLike : string;
 	isRoot : KalturaNullableBoolean;
 	categoriesFullNameIn : string;
 	categoryAncestorIdIn : string;
@@ -36,6 +38,7 @@ export class KalturaBaseEntryFilter extends KalturaBaseEntryBaseFilter {
                 objectType : { type : 'c', default : 'KalturaBaseEntryFilter' },
 				freeText : { type : 's' },
 				excludedFreeTextGroups : { type : 's' },
+				descriptionLike : { type : 's' },
 				isRoot : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				categoriesFullNameIn : { type : 's' },
 				categoryAncestorIdIn : { type : 's' },
