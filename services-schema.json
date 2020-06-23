@@ -13853,6 +13853,13 @@
                             "type": "Simple",
                             "optional": false,
                             "default": ""
+                        },
+                        {
+                            "name": "dataFilter",
+                            "typeClassName": "KalturaInteractivityDataFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "Retrieve a interactivity object by entry id",
@@ -32806,6 +32813,97 @@
             "properties": []
         },
         {
+            "name": "KalturaInteractivityDataFieldsFilter",
+            "base": "",
+            "plugin": "interactivity",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "fields",
+                    "description": "A string containing CSV list of fields to include",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaInteractivityRootFilter",
+            "base": "KalturaInteractivityDataFieldsFilter",
+            "plugin": "interactivity",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaInteractivityNodeFilter",
+            "base": "KalturaInteractivityDataFieldsFilter",
+            "plugin": "interactivity",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaInteractivityInteractionFilter",
+            "base": "KalturaInteractivityDataFieldsFilter",
+            "plugin": "interactivity",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaInteractivityDataFilter",
+            "base": "",
+            "plugin": "interactivity",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "rootFilter",
+                    "description": "",
+                    "typeClassName": "KalturaInteractivityRootFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "nodeFilter",
+                    "description": "",
+                    "typeClassName": "KalturaInteractivityNodeFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "interactionFilter",
+                    "description": "",
+                    "typeClassName": "KalturaInteractivityInteractionFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaFileSyncListResponse",
             "base": "KalturaListResponse",
             "plugin": "fileSync",
@@ -39496,6 +39594,17 @@
                 {
                     "name": "categoriesAncestorIdIn",
                     "description": "filter by categories ancestor",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "hotspotIdIn",
+                    "description": "filter by hotspot id",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -103651,6 +103760,14 @@
                     "value": "27"
                 },
                 {
+                    "name": "INTERACTIVE_VIDEO_HOTSPOT_CLICKED_PERCENTILES",
+                    "value": "56"
+                },
+                {
+                    "name": "INTERACTIVE_VIDEO_NODE_SWITCH_HOTSPOT_CLICKED_PERCENTILES",
+                    "value": "57"
+                },
+                {
                     "name": "INTERACTIVE_VIDEO_NODE_TOP_HOTSPOTS",
                     "value": "54"
                 },
@@ -104097,6 +104214,14 @@
                 {
                     "name": "TOP_CUSTOM_VAR1",
                     "value": "29"
+                },
+                {
+                    "name": "TOP_ENDED_BROADCAST_ENTRIES",
+                    "value": "10014"
+                },
+                {
+                    "name": "TOP_LIVE_NOW_ENTRIES",
+                    "value": "10015"
                 },
                 {
                     "name": "TOP_PLAYBACK_CONTEXT",
