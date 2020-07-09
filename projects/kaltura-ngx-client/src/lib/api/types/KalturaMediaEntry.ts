@@ -11,6 +11,7 @@ export interface KalturaMediaEntryArgs  extends KalturaPlayableEntryArgs {
     mediaType? : KalturaMediaType;
 	conversionQuality? : string;
 	sourceType? : KalturaSourceType;
+	sourceVersion? : string;
 	searchProviderType? : KalturaSearchProviderType;
 	searchProviderId? : string;
 	creditUserName? : string;
@@ -24,6 +25,7 @@ export class KalturaMediaEntry extends KalturaPlayableEntry {
     mediaType : KalturaMediaType;
 	conversionQuality : string;
 	sourceType : KalturaSourceType;
+	sourceVersion : string;
 	searchProviderType : KalturaSearchProviderType;
 	searchProviderId : string;
 	creditUserName : string;
@@ -50,6 +52,7 @@ export class KalturaMediaEntry extends KalturaPlayableEntry {
 				mediaType : { type : 'en', subTypeConstructor : KalturaMediaType, subType : 'KalturaMediaType' },
 				conversionQuality : { type : 's' },
 				sourceType : { type : 'es', subTypeConstructor : KalturaSourceType, subType : 'KalturaSourceType' },
+				sourceVersion : { type : 's' },
 				searchProviderType : { type : 'en', subTypeConstructor : KalturaSearchProviderType, subType : 'KalturaSearchProviderType' },
 				searchProviderId : { type : 's' },
 				creditUserName : { type : 's' },

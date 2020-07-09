@@ -134,6 +134,8 @@ export enum KalturaReportType {
 	topContributors = '5',
 	topCreators = '20',
 	topCustomVar1 = '29',
+	topCustomVar2 = '58',
+	topCustomVar3 = '59',
 	topEndedBroadcastEntries = '10014',
 	topLiveNowEntries = '10015',
 	topPlaybackContext = '25',
