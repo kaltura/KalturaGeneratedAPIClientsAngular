@@ -13,16 +13,16 @@ export interface PexipHandleIncomingCallActionArgs  extends KalturaRequestArgs {
  *
  * 
  *
- * Server response type:         boolean
+ * Server response type:         void
  * Server failure response type: KalturaAPIException
  */
-export class PexipHandleIncomingCallAction extends KalturaRequest<boolean> {
+export class PexipHandleIncomingCallAction extends KalturaRequest<void> {
 
     
 
     constructor(data? : PexipHandleIncomingCallActionArgs)
     {
-        super(data, {responseType : 'b', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

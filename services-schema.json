@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.6.0",
+    "apiVersion": "16.7.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -16602,6 +16602,13 @@
                             "type": "Simple",
                             "optional": true,
                             "default": "false"
+                        },
+                        {
+                            "name": "sourceType",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "1"
                         }
                     ],
                     "description": "",
@@ -16609,8 +16616,8 @@
                 },
                 {
                     "name": "handleIncomingCall",
-                    "resultClassName": "bool",
-                    "resultType": "Simple",
+                    "resultClassName": null,
+                    "resultType": "Void",
                     "params": [],
                     "description": "",
                     "enableInMultiRequest": 1
@@ -18041,7 +18048,7 @@
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
-                    "readOnly": true,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -71785,6 +71792,17 @@
                     "description": "Request method.",
                     "typeClassName": "KalturaHttpNotificationMethod",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "contentType",
+                    "description": "The type of the data to send.",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,

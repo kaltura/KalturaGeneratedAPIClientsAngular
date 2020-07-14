@@ -11,6 +11,7 @@ import { KalturaEventNotificationDispatchJobData, KalturaEventNotificationDispat
 export interface KalturaHttpNotificationDispatchJobDataArgs  extends KalturaEventNotificationDispatchJobDataArgs {
     url? : string;
 	method? : KalturaHttpNotificationMethod;
+	contentType? : string;
 	data? : string;
 	timeout? : number;
 	connectTimeout? : number;
@@ -35,6 +36,7 @@ export class KalturaHttpNotificationDispatchJobData extends KalturaEventNotifica
 
     url : string;
 	method : KalturaHttpNotificationMethod;
+	contentType : string;
 	data : string;
 	timeout : number;
 	connectTimeout : number;
@@ -68,6 +70,7 @@ export class KalturaHttpNotificationDispatchJobData extends KalturaEventNotifica
                 objectType : { type : 'c', default : 'KalturaHttpNotificationDispatchJobData' },
 				url : { type : 's' },
 				method : { type : 'en', subTypeConstructor : KalturaHttpNotificationMethod, subType : 'KalturaHttpNotificationMethod' },
+				contentType : { type : 's' },
 				data : { type : 's' },
 				timeout : { type : 'n' },
 				connectTimeout : { type : 'n' },

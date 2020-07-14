@@ -7,6 +7,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 export interface PexipGenerateSipUrlActionArgs  extends KalturaRequestArgs {
     entryId : string;
 	regenerate? : boolean;
+	sourceType? : number;
 }
 
 /**
@@ -21,11 +22,13 @@ export class PexipGenerateSipUrlAction extends KalturaRequest<string> {
 
     entryId : string;
 	regenerate : boolean;
+	sourceType : number;
 
     constructor(data : PexipGenerateSipUrlActionArgs)
     {
         super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
         if (typeof this.regenerate === 'undefined') this.regenerate = false;
+		if (typeof this.sourceType === 'undefined') this.sourceType = 1;
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -37,7 +40,8 @@ export class PexipGenerateSipUrlAction extends KalturaRequest<string> {
                 service : { type : 'c', default : 'sip_pexip' },
 				action : { type : 'c', default : 'generateSipUrl' },
 				entryId : { type : 's' },
-				regenerate : { type : 'b' }
+				regenerate : { type : 'b' },
+				sourceType : { type : 'n' }
             }
         );
         return result;

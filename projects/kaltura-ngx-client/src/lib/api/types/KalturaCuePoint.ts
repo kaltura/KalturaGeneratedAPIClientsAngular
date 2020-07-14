@@ -10,6 +10,7 @@ export interface KalturaCuePointArgs  extends KalturaObjectBaseArgs {
 	triggeredAt? : Date;
 	tags? : string;
 	startTime? : number;
+	userId? : string;
 	partnerData? : string;
 	partnerSortValue? : number;
 	forceStop? : KalturaNullableBoolean;
@@ -31,7 +32,7 @@ export class KalturaCuePoint extends KalturaObjectBase {
 	triggeredAt : Date;
 	tags : string;
 	startTime : number;
-	readonly userId : string;
+	userId : string;
 	partnerData : string;
 	partnerSortValue : number;
 	forceStop : KalturaNullableBoolean;
@@ -63,7 +64,7 @@ export class KalturaCuePoint extends KalturaObjectBase {
 				triggeredAt : { type : 'd' },
 				tags : { type : 's' },
 				startTime : { type : 'n' },
-				userId : { type : 's', readOnly : true },
+				userId : { type : 's' },
 				partnerData : { type : 's' },
 				partnerSortValue : { type : 'n' },
 				forceStop : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
