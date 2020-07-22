@@ -14,6 +14,7 @@ export interface KalturaWidgetArgs  extends KalturaObjectBaseArgs {
 	privacyContext? : string;
 	addEmbedHtml5Support? : boolean;
 	roles? : string;
+	privileges? : string;
 }
 
 
@@ -35,6 +36,7 @@ export class KalturaWidget extends KalturaObjectBase {
 	privacyContext : string;
 	addEmbedHtml5Support : boolean;
 	roles : string;
+	privileges : string;
 
     constructor(data? : KalturaWidgetArgs)
     {
@@ -63,7 +65,8 @@ export class KalturaWidget extends KalturaObjectBase {
 				enforceEntitlement : { type : 'b' },
 				privacyContext : { type : 's' },
 				addEmbedHtml5Support : { type : 'b' },
-				roles : { type : 's' }
+				roles : { type : 's' },
+				privileges : { type : 's' }
             }
         );
         return result;
