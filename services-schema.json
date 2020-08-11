@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.7.0",
+    "apiVersion": "16.8.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -9477,6 +9477,13 @@
                             "type": "Simple",
                             "optional": false,
                             "default": ""
+                        },
+                        {
+                            "name": "linkType",
+                            "typeClassName": "KalturaResetPassLinkType",
+                            "type": "EnumOfString",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "Reset user's password and send the user an email to generate a new one.",
@@ -12985,6 +12992,52 @@
                         }
                     ],
                     "description": "Update an existing KalturaDropFolder object",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateBasicFields",
+                    "resultClassName": "KalturaDropFolder",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "dropFolderId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "dropFolder",
+                            "typeClassName": "KalturaBasicFieldsDropFolder",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateStatus",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "dropFolderId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "status",
+                            "typeClassName": "KalturaDropFolderStatus",
+                            "type": "EnumOfInt",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -16605,8 +16658,8 @@
                         },
                         {
                             "name": "sourceType",
-                            "typeClassName": "int",
-                            "type": "Simple",
+                            "typeClassName": "KalturaSipSourceType",
+                            "type": "EnumOfInt",
                             "optional": true,
                             "default": "1"
                         }
@@ -20463,6 +20516,27 @@
             "abstract": true,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaBasicFieldsDropFolder",
+            "base": "",
+            "plugin": "dropFolder",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "description",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaJobData",
@@ -35557,6 +35631,17 @@
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sipSourceType",
+                    "description": "",
+                    "typeClassName": "KalturaSipSourceType",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -88068,6 +88153,24 @@
             ]
         },
         {
+            "name": "KalturaSipSourceType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "PICTURE_IN_PICTURE",
+                    "value": "1"
+                },
+                {
+                    "name": "SCREEN_SHARE",
+                    "value": "3"
+                },
+                {
+                    "name": "TALKING_HEADS",
+                    "value": "2"
+                }
+            ]
+        },
+        {
             "name": "KalturaSiteRestrictionType",
             "type": "int",
             "values": [
@@ -90967,6 +91070,10 @@
                 {
                     "name": "PROVISION_PROVIDE",
                     "value": "21"
+                },
+                {
+                    "name": "REACH_JOB_CLEANER",
+                    "value": "56"
                 },
                 {
                     "name": "RECALCULATE_CACHE",
@@ -104511,6 +104618,20 @@
                 {
                     "name": "VPAAS_USAGE_MULTI",
                     "value": "42"
+                }
+            ]
+        },
+        {
+            "name": "KalturaResetPassLinkType",
+            "type": "string",
+            "values": [
+                {
+                    "name": "KMC",
+                    "value": "1"
+                },
+                {
+                    "name": "KMS",
+                    "value": "2"
                 }
             ]
         },

@@ -56,6 +56,7 @@ export enum KalturaBatchJobType {
 	postconvert = '11',
 	provisionDelete = '24',
 	provisionProvide = '21',
+	reachJobCleaner = '56',
 	recalculateCache = '41',
 	reportExport = '50',
 	scheduledTask = 'scheduledTask.ScheduledTask',

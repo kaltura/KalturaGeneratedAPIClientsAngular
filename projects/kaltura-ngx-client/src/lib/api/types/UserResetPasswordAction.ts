@@ -2,10 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 
 
+import { KalturaResetPassLinkType } from './KalturaResetPassLinkType';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface UserResetPasswordActionArgs  extends KalturaRequestArgs {
     email : string;
+	linkType? : KalturaResetPassLinkType;
 }
 
 /**
@@ -19,6 +21,7 @@ export interface UserResetPasswordActionArgs  extends KalturaRequestArgs {
 export class UserResetPasswordAction extends KalturaRequest<void> {
 
     email : string;
+	linkType : KalturaResetPassLinkType;
 
     constructor(data : UserResetPasswordActionArgs)
     {
@@ -33,7 +36,8 @@ export class UserResetPasswordAction extends KalturaRequest<void> {
             {
                 service : { type : 'c', default : 'user' },
 				action : { type : 'c', default : 'resetPassword' },
-				email : { type : 's' }
+				email : { type : 's' },
+				linkType : { type : 'es', subTypeConstructor : KalturaResetPassLinkType, subType : 'KalturaResetPassLinkType' }
             }
         );
         return result;
