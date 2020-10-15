@@ -13,6 +13,7 @@ export interface KalturaConvertJobDataArgs  extends KalturaConvartableJobDataArg
 	customData? : string;
 	extraDestFileSyncs? : KalturaDestFileSyncDescriptor[];
 	engineMessage? : string;
+	destFileSyncSharedPath? : string;
 	userCpu? : number;
 }
 
@@ -28,6 +29,7 @@ export class KalturaConvertJobData extends KalturaConvartableJobData {
 	customData : string;
 	extraDestFileSyncs : KalturaDestFileSyncDescriptor[];
 	engineMessage : string;
+	destFileSyncSharedPath : string;
 	userCpu : number;
 
     constructor(data? : KalturaConvertJobDataArgs)
@@ -52,6 +54,7 @@ export class KalturaConvertJobData extends KalturaConvartableJobData {
 				customData : { type : 's' },
 				extraDestFileSyncs : { type : 'a', subTypeConstructor : KalturaDestFileSyncDescriptor, subType : 'KalturaDestFileSyncDescriptor' },
 				engineMessage : { type : 's' },
+				destFileSyncSharedPath : { type : 's' },
 				userCpu : { type : 'n' }
             }
         );

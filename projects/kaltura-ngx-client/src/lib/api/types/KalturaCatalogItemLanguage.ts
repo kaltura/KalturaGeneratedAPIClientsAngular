@@ -3,6 +3,7 @@
 export enum KalturaCatalogItemLanguage {
     ar = 'Arabic',
 	cmn = 'Mandarin Chinese',
+	cy = 'Welsh',
 	da = 'Danish',
 	de = 'German',
 	el = 'Greek',
@@ -12,6 +13,8 @@ export enum KalturaCatalogItemLanguage {
 	es = 'Spanish',
 	fi = 'Finnish',
 	fr = 'French',
+	frCa = 'French (Canada)',
+	ga = 'Irish',
 	he = 'Hebrew',
 	hi = 'Hindi',
 	hu = 'Hungarian',
@@ -20,6 +23,7 @@ export enum KalturaCatalogItemLanguage {
 	it = 'Italian',
 	ja = 'Japanese',
 	ko = 'Korean',
+	ml = 'Malayalam',
 	nl = 'Dutch',
 	no = 'Norwegian',
 	pl = 'Polish',
@@ -27,8 +31,14 @@ export enum KalturaCatalogItemLanguage {
 	ro = 'Romanian',
 	ru = 'Russian',
 	sv = 'Swedish',
+	ta = 'Tamil',
 	th = 'Thai',
 	tr = 'Turkish',
+	uk = 'Ukrainian',
+	ur = 'Urdu',
+	vi = 'Vietnamese',
 	yue = 'Cantonese',
-	zh = 'Chinese'
+	zh = 'Chinese',
+	zhTw = 'Taiwanese Mandarin',
+	zu = 'Zulu'
 }

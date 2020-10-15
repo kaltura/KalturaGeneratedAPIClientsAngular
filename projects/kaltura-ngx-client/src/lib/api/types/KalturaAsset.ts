@@ -27,6 +27,7 @@ export class KalturaAsset extends KalturaObjectBase {
 	partnerData : string;
 	partnerDescription : string;
 	actualSourceAssetParamsIds : string;
+	readonly sizeInBytes : number;
 
     constructor(data? : KalturaAssetArgs)
     {
@@ -53,7 +54,8 @@ export class KalturaAsset extends KalturaObjectBase {
 				description : { type : 's', readOnly : true },
 				partnerData : { type : 's' },
 				partnerDescription : { type : 's' },
-				actualSourceAssetParamsIds : { type : 's' }
+				actualSourceAssetParamsIds : { type : 's' },
+				sizeInBytes : { type : 'n', readOnly : true }
             }
         );
         return result;

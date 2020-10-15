@@ -96,6 +96,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly embedCodeTypes : KalturaPlayerEmbedCodeType[];
 	readonly templatePartnerId : number;
 	readonly ignoreSeoLinks : boolean;
+	readonly blockDirectLogin : boolean;
 	readonly host : string;
 	readonly cdnHost : string;
 	readonly isFirstLogin : boolean;
@@ -180,6 +181,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				embedCodeTypes : { type : 'a', readOnly : true, subTypeConstructor : KalturaPlayerEmbedCodeType, subType : 'KalturaPlayerEmbedCodeType' },
 				templatePartnerId : { type : 'n', readOnly : true },
 				ignoreSeoLinks : { type : 'b', readOnly : true },
+				blockDirectLogin : { type : 'b', readOnly : true },
 				host : { type : 's', readOnly : true },
 				cdnHost : { type : 's', readOnly : true },
 				isFirstLogin : { type : 'b', readOnly : true },

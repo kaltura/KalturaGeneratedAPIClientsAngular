@@ -170,6 +170,7 @@ export enum KalturaLanguage {
 	frk = 'Frankish',
 	frp = 'Franco-Prove',
 	frr = 'Frisian Northern',
+	frCa = 'French (Canada)',
 	fuc = 'Pulaar',
 	fur = 'Friulian',
 	fvr = 'Fur',
@@ -562,6 +563,7 @@ export enum KalturaLanguage {
 	yue = 'Cantonese',
 	zai = 'Zapotec Isthmus',
 	zh = 'Chinese',
+	zhTw = 'Taiwanese Mandarin',
 	zu = 'Zulu',
 	zxx = 'No linguistic content'
 }

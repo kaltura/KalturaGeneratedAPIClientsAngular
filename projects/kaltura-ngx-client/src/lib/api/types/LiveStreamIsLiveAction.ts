@@ -7,7 +7,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface LiveStreamIsLiveActionArgs  extends KalturaRequestArgs {
     id : string;
-	protocol : KalturaPlaybackProtocol;
+	protocol? : KalturaPlaybackProtocol;
 }
 
 /**

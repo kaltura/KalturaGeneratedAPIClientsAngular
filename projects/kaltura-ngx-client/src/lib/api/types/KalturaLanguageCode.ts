@@ -42,6 +42,7 @@ export enum KalturaLanguageCode {
 	fj = 'fj',
 	fo = 'fo',
 	fr = 'fr',
+	frCa = 'fr_ca',
 	fy = 'fy',
 	ga = 'ga',
 	gd = 'gd',
@@ -164,6 +165,7 @@ export enum KalturaLanguageCode {
 	yi = 'yi',
 	yo = 'yo',
 	zh = 'zh',
+	zhTw = 'zh_tw',
 	zu = 'zu',
 	zxx = 'zxx'
 }

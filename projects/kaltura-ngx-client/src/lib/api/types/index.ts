@@ -264,6 +264,7 @@ export { KalturaUrlResource, KalturaUrlResourceArgs } from './KalturaUrlResource
 export { KalturaRemoteStorageResource, KalturaRemoteStorageResourceArgs } from './KalturaRemoteStorageResource'
 export { KalturaReport, KalturaReportArgs } from './KalturaReport'
 export { KalturaReportBaseTotal, KalturaReportBaseTotalArgs } from './KalturaReportBaseTotal'
+export { KalturaReportExportFile, KalturaReportExportFileArgs } from './KalturaReportExportFile'
 export { KalturaReportInputBaseFilter, KalturaReportInputBaseFilterArgs } from './KalturaReportInputBaseFilter'
 export { KalturaESearchEntryOperator, KalturaESearchEntryOperatorArgs } from './KalturaESearchEntryOperator'
 export { KalturaReportInputFilter, KalturaReportInputFilterArgs } from './KalturaReportInputFilter'
