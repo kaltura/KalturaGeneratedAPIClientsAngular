@@ -6,6 +6,7 @@ export enum KalturaPlaybackProtocol {
 	appleHttp = 'applehttp',
 	appleHttpToMc = 'applehttp_to_mc',
 	auto = 'auto',
+	download = 'download',
 	hds = 'hds',
 	hls = 'hls',
 	http = 'http',

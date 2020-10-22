@@ -1,13 +1,13 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
-import { KalturaDeliveryProfile, KalturaDeliveryProfileArgs } from './KalturaDeliveryProfile';
+import { KalturaDeliveryProfileHttp, KalturaDeliveryProfileHttpArgs } from './KalturaDeliveryProfileHttp';
 
-export interface KalturaDeliveryProfileAkamaiHttpArgs  extends KalturaDeliveryProfileArgs {
+export interface KalturaDeliveryProfileAkamaiHttpArgs  extends KalturaDeliveryProfileHttpArgs {
     useIntelliseek? : boolean;
 }
 
 
-export class KalturaDeliveryProfileAkamaiHttp extends KalturaDeliveryProfile {
+export class KalturaDeliveryProfileAkamaiHttp extends KalturaDeliveryProfileHttp {
 
     useIntelliseek : boolean;
 

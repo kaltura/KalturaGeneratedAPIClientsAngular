@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.9.0",
+    "apiVersion": "16.10.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -51323,27 +51323,6 @@
             ]
         },
         {
-            "name": "KalturaDeliveryProfileAkamaiHttp",
-            "base": "KalturaDeliveryProfile",
-            "plugin": "",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "useIntelliseek",
-                    "description": "Should we use intelliseek",
-                    "typeClassName": "bool",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaDeliveryProfileBaseFilter",
             "base": "KalturaFilter",
             "plugin": "",
@@ -51593,7 +51572,7 @@
             ]
         },
         {
-            "name": "KalturaDeliveryProfileGenericHttp",
+            "name": "KalturaDeliveryProfileGenericSilverLight",
             "base": "KalturaDeliveryProfile",
             "plugin": "",
             "description": "",
@@ -51614,7 +51593,7 @@
             ]
         },
         {
-            "name": "KalturaDeliveryProfileGenericSilverLight",
+            "name": "KalturaDeliveryProfileHttp",
             "base": "KalturaDeliveryProfile",
             "plugin": "",
             "description": "",
@@ -51622,9 +51601,9 @@
             "deprecated": false,
             "properties": [
                 {
-                    "name": "pattern",
+                    "name": "maxSize",
                     "description": "",
-                    "typeClassName": "string",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -63816,6 +63795,27 @@
             ]
         },
         {
+            "name": "KalturaUrlRecognizerKaltura",
+            "base": "KalturaUrlRecognizer",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaUrlTokenizerAkamaiHttp",
             "base": "KalturaUrlTokenizer",
             "plugin": "",
@@ -64091,6 +64091,15 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaUrlTokenizerKaltura",
+            "base": "KalturaUrlTokenizer",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaUrlTokenizerKs",
@@ -69384,6 +69393,27 @@
             ]
         },
         {
+            "name": "KalturaDeliveryProfileAkamaiHttp",
+            "base": "KalturaDeliveryProfileHttp",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "useIntelliseek",
+                    "description": "Should we use intelliseek",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaDeliveryProfileFilter",
             "base": "KalturaDeliveryProfileBaseFilter",
             "plugin": "",
@@ -69396,6 +69426,27 @@
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaDeliveryProfileGenericHttp",
+            "base": "KalturaDeliveryProfileHttp",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "pattern",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -72963,6 +73014,17 @@
                 {
                     "name": "preStartTime",
                     "description": "The time relative time before the startTime considered as preStart time",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "postEndTime",
+                    "description": "The time relative time before the endTime considered as postEnd time",
                     "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
@@ -103586,6 +103648,10 @@
                 {
                     "name": "AUTO",
                     "value": "auto"
+                },
+                {
+                    "name": "DOWNLOAD",
+                    "value": "download"
                 },
                 {
                     "name": "HDS",
