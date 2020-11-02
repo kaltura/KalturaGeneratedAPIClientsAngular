@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.10.0",
+    "apiVersion": "16.11.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -91929,6 +91929,10 @@
                     "value": "Spanish"
                 },
                 {
+                    "name": "ES_XL",
+                    "value": "Spanish (Latin America)"
+                },
+                {
                     "name": "FI",
                     "value": "Finnish"
                 },
@@ -91943,6 +91947,10 @@
                 {
                     "name": "GA",
                     "value": "Irish"
+                },
+                {
+                    "name": "GD",
+                    "value": "Gaelic (Scottish)"
                 },
                 {
                     "name": "HE",
@@ -91995,6 +92003,10 @@
                 {
                     "name": "PT",
                     "value": "Portuguese"
+                },
+                {
+                    "name": "PT_BR",
+                    "value": "Portuguese (Brazil)"
                 },
                 {
                     "name": "RO",
@@ -98162,6 +98174,10 @@
                     "value": "Spanish"
                 },
                 {
+                    "name": "ES_XL",
+                    "value": "Spanish (Latin America)"
+                },
+                {
                     "name": "ET",
                     "value": "Estonian"
                 },
@@ -99186,6 +99202,10 @@
                     "value": "Portuguese"
                 },
                 {
+                    "name": "PT_BR",
+                    "value": "Portuguese (Brazil)"
+                },
+                {
                     "name": "QTZ",
                     "value": "Reserved for local use."
                 },
@@ -99956,6 +99976,10 @@
                     "value": "es"
                 },
                 {
+                    "name": "ES_XL",
+                    "value": "es_xl"
+                },
+                {
                     "name": "ET",
                     "value": "et"
                 },
@@ -100270,6 +100294,10 @@
                 {
                     "name": "PT",
                     "value": "pt"
+                },
+                {
+                    "name": "PT_BR",
+                    "value": "pt_br"
                 },
                 {
                     "name": "QU",
