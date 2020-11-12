@@ -29244,7 +29244,19 @@
             "description": "",
             "abstract": true,
             "deprecated": false,
-            "properties": []
+            "properties": [
+                {
+                    "name": "entryDuration",
+                    "description": "The duration of the entry for which the task was created for in milliseconds",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaEntryVendorTask",
