@@ -251,6 +251,7 @@ export { KalturaPlayReadyPolicy, KalturaPlayReadyPolicyArgs } from './KalturaPla
 export { KalturaPlayReadyLicenseDetails, KalturaPlayReadyLicenseDetailsArgs } from './KalturaPlayReadyLicenseDetails'
 export { KalturaPlayReadyPlayEnablerHolder, KalturaPlayReadyPlayEnablerHolderArgs } from './KalturaPlayReadyPlayEnablerHolder'
 export { KalturaPlaybackSource, KalturaPlaybackSourceArgs } from './KalturaPlaybackSource'
+export { KalturaTypedArray, KalturaTypedArrayArgs } from './KalturaTypedArray'
 export { KalturaPlaybackContext, KalturaPlaybackContextArgs } from './KalturaPlaybackContext'
 export { KalturaPlaylist, KalturaPlaylistArgs } from './KalturaPlaylist'
 export { KalturaPushEventNotificationParameter, KalturaPushEventNotificationParameterArgs } from './KalturaPushEventNotificationParameter'

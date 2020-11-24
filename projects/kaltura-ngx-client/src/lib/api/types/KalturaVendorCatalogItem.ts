@@ -14,6 +14,7 @@ export interface KalturaVendorCatalogItemArgs  extends KalturaObjectBaseArgs {
 	serviceType? : KalturaVendorServiceType;
 	turnAroundTime? : KalturaVendorServiceTurnAroundTime;
 	pricing? : KalturaVendorCatalogItemPricing;
+	allowResubmission? : boolean;
 }
 
 
@@ -30,6 +31,7 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 	readonly serviceFeature : KalturaVendorServiceFeature;
 	turnAroundTime : KalturaVendorServiceTurnAroundTime;
 	pricing : KalturaVendorCatalogItemPricing;
+	allowResubmission : boolean;
 
     constructor(data? : KalturaVendorCatalogItemArgs)
     {
@@ -53,7 +55,8 @@ export class KalturaVendorCatalogItem extends KalturaObjectBase {
 				serviceType : { type : 'en', subTypeConstructor : KalturaVendorServiceType, subType : 'KalturaVendorServiceType' },
 				serviceFeature : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceFeature, subType : 'KalturaVendorServiceFeature' },
 				turnAroundTime : { type : 'en', subTypeConstructor : KalturaVendorServiceTurnAroundTime, subType : 'KalturaVendorServiceTurnAroundTime' },
-				pricing : { type : 'o', subTypeConstructor : KalturaVendorCatalogItemPricing, subType : 'KalturaVendorCatalogItemPricing' }
+				pricing : { type : 'o', subTypeConstructor : KalturaVendorCatalogItemPricing, subType : 'KalturaVendorCatalogItemPricing' },
+				allowResubmission : { type : 'b' }
             }
         );
         return result;

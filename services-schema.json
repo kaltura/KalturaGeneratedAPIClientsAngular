@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.11.0",
+    "apiVersion": "16.12.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -38490,6 +38490,27 @@
             ]
         },
         {
+            "name": "KalturaTypedArray",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "count",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaPlaybackContext",
             "base": "",
             "plugin": "",
@@ -38546,6 +38567,17 @@
                     "description": "Array of actions as received from the rules that invalidated",
                     "typeClassName": "KalturaAccessControlMessage",
                     "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "bumperData",
+                    "description": "",
+                    "typeClassName": "KalturaTypedArray",
+                    "type": "Object",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -44653,6 +44685,17 @@
                     "description": "",
                     "typeClassName": "KalturaVendorCatalogItemPricing",
                     "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "allowResubmission",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
