@@ -2624,6 +2624,7 @@ export { VarConsoleGetPartnerUsageAction, VarConsoleGetPartnerUsageActionArgs } 
 export { VarConsoleUpdateStatusAction, VarConsoleUpdateStatusActionArgs } from './VarConsoleUpdateStatusAction'
 export { ZoomVendorDeAuthorizationAction, ZoomVendorDeAuthorizationActionArgs } from './ZoomVendorDeAuthorizationAction'
 export { ZoomVendorFetchRegistrationPageAction, ZoomVendorFetchRegistrationPageActionArgs } from './ZoomVendorFetchRegistrationPageAction'
+export { ZoomVendorGetAction, ZoomVendorGetActionArgs } from './ZoomVendorGetAction'
 export { ZoomVendorOauthValidationAction, ZoomVendorOauthValidationActionArgs } from './ZoomVendorOauthValidationAction'
 export { ZoomVendorRecordingCompleteAction, ZoomVendorRecordingCompleteActionArgs } from './ZoomVendorRecordingCompleteAction'
 export { ZoomVendorSubmitRegistrationAction, ZoomVendorSubmitRegistrationActionArgs } from './ZoomVendorSubmitRegistrationAction'

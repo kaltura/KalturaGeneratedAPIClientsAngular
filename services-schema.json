@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.12.0",
+    "apiVersion": "16.13.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -17046,6 +17046,22 @@
                         }
                     ],
                     "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "get",
+                    "resultClassName": "KalturaZoomIntegrationSetting",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "partnerId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Retrieve zoom integration setting object by partner id",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -45647,7 +45663,7 @@
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
-                    "readOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -45675,7 +45691,7 @@
                     "default": "null"
                 },
                 {
-                    "name": "handleParticipantMode",
+                    "name": "handleParticipantsMode",
                     "description": "",
                     "typeClassName": "KalturaHandleParticipantsMode",
                     "type": "EnumOfInt",
@@ -45723,6 +45739,17 @@
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "conversionProfileId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
