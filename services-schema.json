@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.14.0",
+    "apiVersion": "16.15.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -39144,6 +39144,28 @@
                     "default": "null"
                 },
                 {
+                    "name": "labelAdditionForMachineServiceType",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "labelAdditionForHumanServiceType",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "contentDeletionPolicy",
                     "description": "",
                     "typeClassName": "KalturaReachProfileContentDeletionPolicy",
@@ -39940,6 +39962,17 @@
                 {
                     "name": "hotspotIdIn",
                     "description": "filter by hotspot id",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "crmIdIn",
+                    "description": "filter by crm id",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -56505,6 +56538,17 @@
                 {
                     "name": "outputPath",
                     "description": "The file location",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "sharedOutputPath",
+                    "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -89716,6 +89760,10 @@
                 {
                     "name": "ADD_POSTFIX",
                     "value": "1"
+                },
+                {
+                    "name": "CMS_MATCHING",
+                    "value": "3"
                 },
                 {
                     "name": "DO_NOT_MODIFY",

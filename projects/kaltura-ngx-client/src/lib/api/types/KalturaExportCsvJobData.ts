@@ -6,6 +6,7 @@ export interface KalturaExportCsvJobDataArgs  extends KalturaJobDataArgs {
     userName? : string;
 	userMail? : string;
 	outputPath? : string;
+	sharedOutputPath? : string;
 }
 
 
@@ -14,6 +15,7 @@ export class KalturaExportCsvJobData extends KalturaJobData {
     userName : string;
 	userMail : string;
 	outputPath : string;
+	sharedOutputPath : string;
 
     constructor(data? : KalturaExportCsvJobDataArgs)
     {
@@ -29,7 +31,8 @@ export class KalturaExportCsvJobData extends KalturaJobData {
                 objectType : { type : 'c', default : 'KalturaExportCsvJobData' },
 				userName : { type : 's' },
 				userMail : { type : 's' },
-				outputPath : { type : 's' }
+				outputPath : { type : 's' },
+				sharedOutputPath : { type : 's' }
             }
         );
         return result;
