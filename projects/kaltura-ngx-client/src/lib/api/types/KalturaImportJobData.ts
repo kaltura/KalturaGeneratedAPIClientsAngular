@@ -7,6 +7,7 @@ export interface KalturaImportJobDataArgs  extends KalturaJobDataArgs {
 	destFileLocalPath? : string;
 	flavorAssetId? : string;
 	fileSize? : number;
+	destFileSharedPath? : string;
 }
 
 
@@ -16,6 +17,7 @@ export class KalturaImportJobData extends KalturaJobData {
 	destFileLocalPath : string;
 	flavorAssetId : string;
 	fileSize : number;
+	destFileSharedPath : string;
 
     constructor(data? : KalturaImportJobDataArgs)
     {
@@ -32,7 +34,8 @@ export class KalturaImportJobData extends KalturaJobData {
 				srcFileUrl : { type : 's' },
 				destFileLocalPath : { type : 's' },
 				flavorAssetId : { type : 's' },
-				fileSize : { type : 'n' }
+				fileSize : { type : 'n' },
+				destFileSharedPath : { type : 's' }
             }
         );
         return result;
