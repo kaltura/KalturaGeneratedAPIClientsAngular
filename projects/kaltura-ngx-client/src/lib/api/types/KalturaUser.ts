@@ -17,6 +17,9 @@ export interface KalturaUserArgs  extends KalturaBaseUserArgs {
 	loginEnabled? : boolean;
 	registrationInfo? : string;
 	attendanceInfo? : string;
+	title? : string;
+	company? : string;
+	ksPrivileges? : string;
 }
 
 
@@ -35,6 +38,9 @@ export class KalturaUser extends KalturaBaseUser {
 	loginEnabled : boolean;
 	registrationInfo : string;
 	attendanceInfo : string;
+	title : string;
+	company : string;
+	ksPrivileges : string;
 
     constructor(data? : KalturaUserArgs)
     {
@@ -60,7 +66,10 @@ export class KalturaUser extends KalturaBaseUser {
 				lastName : { type : 's' },
 				loginEnabled : { type : 'b' },
 				registrationInfo : { type : 's' },
-				attendanceInfo : { type : 's' }
+				attendanceInfo : { type : 's' },
+				title : { type : 's' },
+				company : { type : 's' },
+				ksPrivileges : { type : 's' }
             }
         );
         return result;

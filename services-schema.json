@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.16.0",
+    "apiVersion": "16.18.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -3389,8 +3389,8 @@
                             "name": "groupIds",
                             "typeClassName": "string",
                             "type": "Simple",
-                            "optional": false,
-                            "default": ""
+                            "optional": true,
+                            "default": "null"
                         },
                         {
                             "name": "removeFromExistingGroups",
@@ -23751,6 +23751,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "adminTags",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -24159,6 +24170,17 @@
                     "description": "map status",
                     "typeClassName": "KalturaConfMapsStatus",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "changeDescription",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -28504,6 +28526,39 @@
                 },
                 {
                     "name": "attendanceInfo",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "title",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "company",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "ksPrivileges",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -39984,6 +40039,28 @@
                 {
                     "name": "playlistIdIn",
                     "description": "filter by playlist id",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "domainIn",
+                    "description": "filter by domain",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "canonicalUrlIn",
+                    "description": "filter by canonical url",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -58703,6 +58780,17 @@
                     "description": "",
                     "typeClassName": "bool",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "viewMode",
+                    "description": "",
+                    "typeClassName": "KalturaViewMode",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,

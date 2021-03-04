@@ -6,7 +6,7 @@ import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface GroupUserSyncActionArgs  extends KalturaRequestArgs {
     userId : string;
-	groupIds : string;
+	groupIds? : string;
 	removeFromExistingGroups? : boolean;
 	createNewGroups? : boolean;
 }

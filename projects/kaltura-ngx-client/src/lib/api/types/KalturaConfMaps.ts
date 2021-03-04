@@ -13,6 +13,7 @@ export interface KalturaConfMapsArgs  extends KalturaObjectBaseArgs {
 	sourceLocation? : KalturaConfMapsSourceLocation;
 	remarks? : string;
 	status? : KalturaConfMapsStatus;
+	changeDescription? : string;
 }
 
 
@@ -29,6 +30,7 @@ export class KalturaConfMaps extends KalturaObjectBase {
 	sourceLocation : KalturaConfMapsSourceLocation;
 	remarks : string;
 	status : KalturaConfMapsStatus;
+	changeDescription : string;
 
     constructor(data? : KalturaConfMapsArgs)
     {
@@ -52,7 +54,8 @@ export class KalturaConfMaps extends KalturaObjectBase {
 				version : { type : 'n', readOnly : true },
 				sourceLocation : { type : 'es', subTypeConstructor : KalturaConfMapsSourceLocation, subType : 'KalturaConfMapsSourceLocation' },
 				remarks : { type : 's' },
-				status : { type : 'en', subTypeConstructor : KalturaConfMapsStatus, subType : 'KalturaConfMapsStatus' }
+				status : { type : 'en', subTypeConstructor : KalturaConfMapsStatus, subType : 'KalturaConfMapsStatus' },
+				changeDescription : { type : 's' }
             }
         );
         return result;
