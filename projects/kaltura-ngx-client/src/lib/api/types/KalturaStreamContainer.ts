@@ -3,7 +3,8 @@ import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-ba
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaStreamContainerArgs  extends KalturaObjectBaseArgs {
-    type? : string;
+    id? : string;
+	type? : string;
 	trackIndex? : number;
 	language? : string;
 	channelIndex? : number;
@@ -14,7 +15,8 @@ export interface KalturaStreamContainerArgs  extends KalturaObjectBaseArgs {
 
 export class KalturaStreamContainer extends KalturaObjectBase {
 
-    type : string;
+    id : string;
+	type : string;
 	trackIndex : number;
 	language : string;
 	channelIndex : number;
@@ -33,6 +35,7 @@ export class KalturaStreamContainer extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaStreamContainer' },
+				id : { type : 's' },
 				type : { type : 's' },
 				trackIndex : { type : 'n' },
 				language : { type : 's' },

@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.18.0",
+    "apiVersion": "16.19.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -9237,6 +9237,13 @@
                         {
                             "name": "additionalFields",
                             "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                            "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "mappedFields",
+                            "typeClassName": "KalturaKeyValue",
                             "type": "ArrayOfObjects",
                             "optional": true,
                             "default": "null"
@@ -30078,6 +30085,17 @@
             "abstract": false,
             "deprecated": false,
             "properties": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
                 {
                     "name": "type",
                     "description": "",
@@ -73408,6 +73426,27 @@
             ]
         },
         {
+            "name": "KalturaMeetingScheduleEvent",
+            "base": "KalturaEntryScheduleEvent",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "preStartTime",
+                    "description": "The time relative time before the startTime considered as preStart time",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaMetadataBaseFilter",
             "base": "KalturaRelatedFilter",
             "plugin": "metadata",
@@ -77066,6 +77105,17 @@
                     "name": "additionalFields",
                     "description": "The xpath to look in the metadataProfileId  and the wanted csv field name",
                     "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "mappedFields",
+                    "description": "Array of header names and their mapped user fields",
+                    "typeClassName": "KalturaKeyValue",
                     "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
@@ -84658,6 +84708,15 @@
             "properties": []
         },
         {
+            "name": "KalturaMeetingScheduleEventBaseFilter",
+            "base": "KalturaEntryScheduleEventFilter",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaMetroPcsDistributionProfileFilter",
             "base": "KalturaMetroPcsDistributionProfileBaseFilter",
             "plugin": "metroPcsDistribution",
@@ -84972,6 +85031,15 @@
             "name": "KalturaMediaFlavorParamsFilter",
             "base": "KalturaMediaFlavorParamsBaseFilter",
             "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaMeetingScheduleEventFilter",
+            "base": "KalturaMeetingScheduleEventBaseFilter",
+            "plugin": "schedule",
             "description": "",
             "abstract": false,
             "deprecated": false,
@@ -88328,6 +88396,10 @@
                 {
                     "name": "LIVE_STREAM",
                     "value": "2"
+                },
+                {
+                    "name": "MEETING",
+                    "value": "4"
                 },
                 {
                     "name": "RECORD",
