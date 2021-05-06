@@ -4,6 +4,7 @@ import { KalturaLanguage } from './KalturaLanguage';
 import { KalturaLanguageCode } from './KalturaLanguageCode';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaCaptionType } from './KalturaCaptionType';
+import { KalturaCaptionSource } from './KalturaCaptionSource';
 import { KalturaCaptionAssetStatus } from './KalturaCaptionAssetStatus';
 import { KalturaAsset, KalturaAssetArgs } from './KalturaAsset';
 
@@ -13,6 +14,7 @@ export interface KalturaCaptionAssetArgs  extends KalturaAssetArgs {
 	isDefault? : KalturaNullableBoolean;
 	label? : string;
 	format? : KalturaCaptionType;
+	source? : KalturaCaptionSource;
 	parentId? : string;
 	accuracy? : number;
 	displayOnPlayer? : boolean;
@@ -28,6 +30,7 @@ export class KalturaCaptionAsset extends KalturaAsset {
 	isDefault : KalturaNullableBoolean;
 	label : string;
 	format : KalturaCaptionType;
+	source : KalturaCaptionSource;
 	readonly status : KalturaCaptionAssetStatus;
 	parentId : string;
 	accuracy : number;
@@ -52,6 +55,7 @@ export class KalturaCaptionAsset extends KalturaAsset {
 				isDefault : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				label : { type : 's' },
 				format : { type : 'es', subTypeConstructor : KalturaCaptionType, subType : 'KalturaCaptionType' },
+				source : { type : 'es', subTypeConstructor : KalturaCaptionSource, subType : 'KalturaCaptionSource' },
 				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaCaptionAssetStatus, subType : 'KalturaCaptionAssetStatus' },
 				parentId : { type : 's' },
 				accuracy : { type : 'n' },

@@ -16,6 +16,10 @@ export interface KalturaZoomIntegrationSettingArgs  extends KalturaObjectBaseArg
 	zoomWebinarCategory? : string;
 	enableWebinarUploads? : KalturaNullableBoolean;
 	conversionProfileId? : number;
+	jwtToken? : string;
+	deletionPolicy? : KalturaNullableBoolean;
+	enableZoomTranscription? : KalturaNullableBoolean;
+	zoomAccountDescription? : string;
 }
 
 
@@ -32,6 +36,10 @@ export class KalturaZoomIntegrationSetting extends KalturaObjectBase {
 	zoomWebinarCategory : string;
 	enableWebinarUploads : KalturaNullableBoolean;
 	conversionProfileId : number;
+	jwtToken : string;
+	deletionPolicy : KalturaNullableBoolean;
+	enableZoomTranscription : KalturaNullableBoolean;
+	zoomAccountDescription : string;
 
     constructor(data? : KalturaZoomIntegrationSettingArgs)
     {
@@ -55,7 +63,11 @@ export class KalturaZoomIntegrationSetting extends KalturaObjectBase {
 				zoomUserPostfix : { type : 's' },
 				zoomWebinarCategory : { type : 's' },
 				enableWebinarUploads : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				conversionProfileId : { type : 'n' }
+				conversionProfileId : { type : 'n' },
+				jwtToken : { type : 's' },
+				deletionPolicy : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				enableZoomTranscription : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				zoomAccountDescription : { type : 's' }
             }
         );
         return result;

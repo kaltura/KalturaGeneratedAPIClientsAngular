@@ -39,6 +39,7 @@ export interface KalturaBaseEntryArgs  extends KalturaObjectBaseArgs {
 	displayInSearch? : KalturaEntryDisplayInSearchType;
 	application? : KalturaEntryApplication;
 	applicationVersion? : string;
+	blockAutoTranscript? : boolean;
 }
 
 
@@ -91,6 +92,7 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 	displayInSearch : KalturaEntryDisplayInSearchType;
 	application : KalturaEntryApplication;
 	applicationVersion : string;
+	blockAutoTranscript : boolean;
 
     constructor(data? : KalturaBaseEntryArgs)
     {
@@ -151,7 +153,8 @@ export class KalturaBaseEntry extends KalturaObjectBase {
 				templateEntryId : { type : 's' },
 				displayInSearch : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' },
 				application : { type : 'es', subTypeConstructor : KalturaEntryApplication, subType : 'KalturaEntryApplication' },
-				applicationVersion : { type : 's' }
+				applicationVersion : { type : 's' },
+				blockAutoTranscript : { type : 'b' }
             }
         );
         return result;

@@ -5,7 +5,7 @@ import { KalturaCaptionPlaybackPluginData } from './KalturaCaptionPlaybackPlugin
 import { KalturaFlavorAsset } from './KalturaFlavorAsset';
 import { KalturaRuleAction } from './KalturaRuleAction';
 import { KalturaAccessControlMessage } from './KalturaAccessControlMessage';
-import { KalturaTypedArray } from './KalturaTypedArray';
+import { KalturaObject } from './KalturaObject';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaPlaybackContextArgs  extends KalturaObjectBaseArgs {
@@ -14,7 +14,7 @@ export interface KalturaPlaybackContextArgs  extends KalturaObjectBaseArgs {
 	flavorAssets? : KalturaFlavorAsset[];
 	actions? : KalturaRuleAction[];
 	messages? : KalturaAccessControlMessage[];
-	bumperData? : KalturaTypedArray;
+	bumperData? : KalturaObject[];
 }
 
 
@@ -25,7 +25,7 @@ export class KalturaPlaybackContext extends KalturaObjectBase {
 	flavorAssets : KalturaFlavorAsset[];
 	actions : KalturaRuleAction[];
 	messages : KalturaAccessControlMessage[];
-	bumperData : KalturaTypedArray;
+	bumperData : KalturaObject[];
 
     constructor(data? : KalturaPlaybackContextArgs)
     {
@@ -35,6 +35,7 @@ export class KalturaPlaybackContext extends KalturaObjectBase {
 		if (typeof this.flavorAssets === 'undefined') this.flavorAssets = [];
 		if (typeof this.actions === 'undefined') this.actions = [];
 		if (typeof this.messages === 'undefined') this.messages = [];
+		if (typeof this.bumperData === 'undefined') this.bumperData = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -49,7 +50,7 @@ export class KalturaPlaybackContext extends KalturaObjectBase {
 				flavorAssets : { type : 'a', subTypeConstructor : KalturaFlavorAsset, subType : 'KalturaFlavorAsset' },
 				actions : { type : 'a', subTypeConstructor : KalturaRuleAction, subType : 'KalturaRuleAction' },
 				messages : { type : 'a', subTypeConstructor : KalturaAccessControlMessage, subType : 'KalturaAccessControlMessage' },
-				bumperData : { type : 'o', subTypeConstructor : KalturaTypedArray, subType : 'KalturaTypedArray' }
+				bumperData : { type : 'a', subTypeConstructor : KalturaObject, subType : 'KalturaObject' }
             }
         );
         return result;

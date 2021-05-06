@@ -1,5 +1,5 @@
 {
-    "apiVersion": "16.19.0",
+    "apiVersion": "17.1.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -701,6 +701,43 @@
                         }
                     ],
                     "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "exportToCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaBaseEntryFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "metadataProfileId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "additionalFields",
+                            "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                            "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "mappedFields",
+                            "typeClassName": "KalturaKeyValue",
+                            "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "add batch job that sends an email with a link to download an updated CSV that contains list of entries",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -17072,11 +17109,51 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "list",
+                    "resultClassName": "KalturaZoomIntegrationSettingResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "List KalturaZoomIntegrationSetting objects",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "localRegistrationPage",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "jwt",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "oauthValidation",
                     "resultClassName": "string",
                     "resultType": "Simple",
                     "params": [],
                     "description": "",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "preOauthValidation",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [],
+                    "description": "load html page the that will ask the user for its KMC URL, derive the region of the user from it,\n\t and redirect to the registration page in the correct region, while forwarding the necessary code for registration",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -19906,6 +19983,17 @@
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "blockAutoTranscript",
+                    "description": "Block auto transcript on Entry",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
                     "optional": true,
                     "default": "null"
                 }
@@ -23085,6 +23173,17 @@
                     "name": "format",
                     "description": "The caption format",
                     "typeClassName": "KalturaCaptionType",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "source",
+                    "description": "The source of the asset",
+                    "typeClassName": "KalturaCaptionSource",
                     "type": "EnumOfString",
                     "writeOnly": false,
                     "readOnly": false,
@@ -38579,27 +38678,6 @@
             ]
         },
         {
-            "name": "KalturaTypedArray",
-            "base": "",
-            "plugin": "",
-            "description": "",
-            "abstract": true,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "count",
-                    "description": "",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaPlaybackContext",
             "base": "",
             "plugin": "",
@@ -38665,8 +38743,8 @@
                 {
                     "name": "bumperData",
                     "description": "",
-                    "typeClassName": "KalturaTypedArray",
-                    "type": "Object",
+                    "typeClassName": "KalturaObject",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -45888,6 +45966,50 @@
                     "name": "conversionProfileId",
                     "description": "",
                     "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "jwtToken",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "deletionPolicy",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableZoomTranscription",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "zoomAccountDescription",
+                    "description": "",
+                    "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -66167,6 +66289,27 @@
             "properties": []
         },
         {
+            "name": "KalturaZoomIntegrationSettingResponse",
+            "base": "KalturaListResponse",
+            "plugin": "vendor",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaZoomIntegrationSetting",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaAccessControlBaseFilter",
             "base": "KalturaRelatedFilter",
             "plugin": "",
@@ -67152,6 +67295,15 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaBaseLiveScheduleEvent",
+            "base": "KalturaEntryScheduleEvent",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaBaseSyndicationFeedFilter",
@@ -73236,16 +73388,16 @@
             ]
         },
         {
-            "name": "KalturaLiveStreamScheduleEvent",
-            "base": "KalturaEntryScheduleEvent",
-            "plugin": "schedule",
+            "name": "KalturaMappedObjectsCsvJobData",
+            "base": "KalturaExportCsvJobData",
+            "plugin": "",
             "description": "",
-            "abstract": false,
+            "abstract": true,
             "deprecated": false,
             "properties": [
                 {
-                    "name": "projectedAudience",
-                    "description": "Defines the expected audience.",
+                    "name": "metadataProfileId",
+                    "description": "The metadata profile we should look the xpath in",
                     "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
@@ -73255,10 +73407,10 @@
                     "default": "null"
                 },
                 {
-                    "name": "sourceEntryId",
-                    "description": "The entry ID of the source entry (for simulive)",
-                    "typeClassName": "string",
-                    "type": "Simple",
+                    "name": "additionalFields",
+                    "description": "The xpath to look in the metadataProfileId  and the wanted csv field name",
+                    "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -73266,21 +73418,10 @@
                     "default": "null"
                 },
                 {
-                    "name": "preStartTime",
-                    "description": "The time relative time before the startTime considered as preStart time",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "postEndTime",
-                    "description": "The time relative time before the endTime considered as postEnd time",
-                    "typeClassName": "int",
-                    "type": "Simple",
+                    "name": "mappedFields",
+                    "description": "Array of header names and their mapped user fields",
+                    "typeClassName": "KalturaKeyValue",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -77072,60 +77213,6 @@
             ]
         },
         {
-            "name": "KalturaUsersCsvJobData",
-            "base": "KalturaExportCsvJobData",
-            "plugin": "",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": [
-                {
-                    "name": "filter",
-                    "description": "The filter should return the list of users that need to be specified in the csv.",
-                    "typeClassName": "KalturaUserFilter",
-                    "type": "Object",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "metadataProfileId",
-                    "description": "The metadata profile we should look the xpath in",
-                    "typeClassName": "int",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "additionalFields",
-                    "description": "The xpath to look in the metadataProfileId  and the wanted csv field name",
-                    "typeClassName": "KalturaCsvAdditionalFieldInfo",
-                    "type": "ArrayOfObjects",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "mappedFields",
-                    "description": "Array of header names and their mapped user fields",
-                    "typeClassName": "KalturaKeyValue",
-                    "type": "ArrayOfObjects",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                }
-            ]
-        },
-        {
             "name": "KalturaVelocixProvisionJobData",
             "base": "KalturaProvisionJobData",
             "plugin": "velocix",
@@ -79718,6 +79805,27 @@
             "properties": []
         },
         {
+            "name": "KalturaEntriesCsvJobData",
+            "base": "KalturaMappedObjectsCsvJobData",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "filter",
+                    "description": "The filter should return the list of entries that need to be specified in the csv.",
+                    "typeClassName": "KalturaBaseEntryFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaEntryDistributionFilter",
             "base": "KalturaEntryDistributionBaseFilter",
             "plugin": "contentDistribution",
@@ -80387,6 +80495,27 @@
             "properties": []
         },
         {
+            "name": "KalturaLiveRedirectScheduleEvent",
+            "base": "KalturaBaseLiveScheduleEvent",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "redirectEntryId",
+                    "description": "The vod entry to redirect",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaLiveStreamAdminEntryCompareAttributeCondition",
             "base": "KalturaSearchComparableAttributeCondition",
             "plugin": "",
@@ -80462,6 +80591,60 @@
                     "description": "",
                     "typeClassName": "KalturaLiveStreamEntryMatchAttribute",
                     "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaLiveStreamScheduleEvent",
+            "base": "KalturaBaseLiveScheduleEvent",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "sourceEntryId",
+                    "description": "The entry ID of the source entry (for simulive)",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "projectedAudience",
+                    "description": "Defines the expected audience.",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "preStartTime",
+                    "description": "The time relative time before the startTime considered as preStart time",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "postEndTime",
+                    "description": "The time relative time before the endTime considered as postEnd time",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -81377,6 +81560,27 @@
             "abstract": false,
             "deprecated": false,
             "properties": []
+        },
+        {
+            "name": "KalturaUsersCsvJobData",
+            "base": "KalturaMappedObjectsCsvJobData",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "filter",
+                    "description": "The filter should return the list of users that need to be specified in the csv.",
+                    "typeClassName": "KalturaUserFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
         },
         {
             "name": "KalturaVendorCatalogItemFilter",
@@ -84677,6 +84881,15 @@
             "plugin": "",
             "description": "",
             "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaLiveRedirectScheduleEventFilter",
+            "base": "KalturaEntryScheduleEventFilter",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
             "deprecated": false,
             "properties": []
         },
@@ -88392,6 +88605,10 @@
                 {
                     "name": "BLACKOUT",
                     "value": "3"
+                },
+                {
+                    "name": "LIVE_REDIRECT",
+                    "value": "5"
                 },
                 {
                     "name": "LIVE_STREAM",
@@ -92169,6 +92386,20 @@
             "name": "KalturaCaptionParamsOrderBy",
             "type": "string",
             "values": []
+        },
+        {
+            "name": "KalturaCaptionSource",
+            "type": "string",
+            "values": [
+                {
+                    "name": "UNKNOWN",
+                    "value": "0"
+                },
+                {
+                    "name": "ZOOM",
+                    "value": "1"
+                }
+            ]
         },
         {
             "name": "KalturaCaptionType",
@@ -104659,6 +104890,10 @@
                     "value": "40010"
                 },
                 {
+                    "name": "ENGAGEMENT_TOOLS_WEBCAST",
+                    "value": "40012"
+                },
+                {
                     "name": "ENGAGEMENT_WEBCAST",
                     "value": "40002"
                 },
@@ -105113,6 +105348,10 @@
                 {
                     "name": "REACH_USAGE",
                     "value": "28"
+                },
+                {
+                    "name": "REACTIONS_BREAKDOWN_WEBCAST",
+                    "value": "40013"
                 },
                 {
                     "name": "SPECIFIC_USER_ENGAGEMENT",
