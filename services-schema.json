@@ -1,5 +1,5 @@
 {
-    "apiVersion": "17.1.0",
+    "apiVersion": "17.2.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -17142,18 +17142,18 @@
                 },
                 {
                     "name": "oauthValidation",
-                    "resultClassName": "string",
-                    "resultType": "Simple",
-                    "params": [],
-                    "description": "",
-                    "enableInMultiRequest": 1
-                },
-                {
-                    "name": "preOauthValidation",
                     "resultClassName": null,
                     "resultType": "Void",
                     "params": [],
                     "description": "load html page the that will ask the user for its KMC URL, derive the region of the user from it,\n\t and redirect to the registration page in the correct region, while forwarding the necessary code for registration",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "preOauthValidation",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [],
+                    "description": "",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -46016,6 +46016,39 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "createdAt",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAt",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableMeetingUpload",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -60004,6 +60037,17 @@
                 {
                     "name": "inputEntitledUsersPublish",
                     "description": "The input entitled users publish to set on the entry",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "inputEntitledUsersView",
+                    "description": "The input entitled users view to set on the entry",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,

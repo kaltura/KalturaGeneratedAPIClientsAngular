@@ -11,19 +11,18 @@ export interface ZoomVendorPreOauthValidationActionArgs  extends KalturaRequestA
 /**
  * Build request payload for service 'zoomVendor' action 'preOauthValidation'.
  *
- * Usage: load html page the that will ask the user for its KMC URL, derive the region of the user from it,
- * and redirect to the registration page in the correct region, while forwarding the necessary code for registration
+ * 
  *
- * Server response type:         void
+ * Server response type:         string
  * Server failure response type: KalturaAPIException
  */
-export class ZoomVendorPreOauthValidationAction extends KalturaRequest<void> {
+export class ZoomVendorPreOauthValidationAction extends KalturaRequest<string> {
 
     
 
     constructor(data? : ZoomVendorPreOauthValidationActionArgs)
     {
-        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 's', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

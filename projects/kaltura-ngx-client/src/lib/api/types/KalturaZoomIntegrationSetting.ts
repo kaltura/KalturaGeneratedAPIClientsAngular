@@ -20,6 +20,9 @@ export interface KalturaZoomIntegrationSettingArgs  extends KalturaObjectBaseArg
 	deletionPolicy? : KalturaNullableBoolean;
 	enableZoomTranscription? : KalturaNullableBoolean;
 	zoomAccountDescription? : string;
+	createdAt? : string;
+	updatedAt? : string;
+	enableMeetingUpload? : KalturaNullableBoolean;
 }
 
 
@@ -40,6 +43,9 @@ export class KalturaZoomIntegrationSetting extends KalturaObjectBase {
 	deletionPolicy : KalturaNullableBoolean;
 	enableZoomTranscription : KalturaNullableBoolean;
 	zoomAccountDescription : string;
+	createdAt : string;
+	updatedAt : string;
+	enableMeetingUpload : KalturaNullableBoolean;
 
     constructor(data? : KalturaZoomIntegrationSettingArgs)
     {
@@ -67,7 +73,10 @@ export class KalturaZoomIntegrationSetting extends KalturaObjectBase {
 				jwtToken : { type : 's' },
 				deletionPolicy : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				enableZoomTranscription : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				zoomAccountDescription : { type : 's' }
+				zoomAccountDescription : { type : 's' },
+				createdAt : { type : 's' },
+				updatedAt : { type : 's' },
+				enableMeetingUpload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;
