@@ -5,5 +5,6 @@ export enum KalturaVendorServiceFeature {
 	audioDescription=4,
 	captions=1,
 	chaptering=5,
+	intelligentTagging=6,
 	translation=2
 }
