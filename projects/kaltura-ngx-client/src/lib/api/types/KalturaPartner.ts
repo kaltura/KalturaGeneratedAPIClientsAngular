@@ -45,6 +45,12 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	partnerParentId? : number;
 	referenceId? : string;
 	eSearchLanguages? : KalturaESearchLanguageItem[];
+	passwordStructureValidations? : string;
+	passwordStructureValidationsDescription? : string;
+	passReplaceFreq? : number;
+	maxLoginAttempts? : number;
+	loginBlockPeriod? : number;
+	numPrevPassToKeep? : number;
 }
 
 
@@ -118,6 +124,12 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly usageLimitWarning : number;
 	readonly lastFreeTrialNotificationDay : number;
 	readonly monitorUsage : number;
+	passwordStructureValidations : string;
+	passwordStructureValidationsDescription : string;
+	passReplaceFreq : number;
+	maxLoginAttempts : number;
+	loginBlockPeriod : number;
+	numPrevPassToKeep : number;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -202,7 +214,13 @@ export class KalturaPartner extends KalturaObjectBase {
 				eightyPercentWarning : { type : 'n', readOnly : true },
 				usageLimitWarning : { type : 'n', readOnly : true },
 				lastFreeTrialNotificationDay : { type : 'n', readOnly : true },
-				monitorUsage : { type : 'n', readOnly : true }
+				monitorUsage : { type : 'n', readOnly : true },
+				passwordStructureValidations : { type : 's' },
+				passwordStructureValidationsDescription : { type : 's' },
+				passReplaceFreq : { type : 'n' },
+				maxLoginAttempts : { type : 'n' },
+				loginBlockPeriod : { type : 'n' },
+				numPrevPassToKeep : { type : 'n' }
             }
         );
         return result;

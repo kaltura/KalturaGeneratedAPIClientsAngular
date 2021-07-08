@@ -5,6 +5,7 @@ export enum KalturaVideoCodec {
 	apcn = 'apcn',
 	apco = 'apco',
 	apcs = 'apcs',
+	av1 = 'AV1',
 	copy = 'copy',
 	dnxhd = 'dnxhd',
 	dv = 'dv',

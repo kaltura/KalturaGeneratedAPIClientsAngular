@@ -1,5 +1,5 @@
 {
-    "apiVersion": "17.3.0",
+    "apiVersion": "17.5.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -22149,6 +22149,72 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "passwordStructureValidations",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "passwordStructureValidationsDescription",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "passReplaceFreq",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "maxLoginAttempts",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "loginBlockPeriod",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "numPrevPassToKeep",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -27473,6 +27539,17 @@
                     "description": "",
                     "typeClassName": "KalturaDropFolderFileDeletePolicy",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "fileDeleteRegex",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -107106,6 +107183,10 @@
                 {
                     "name": "APCS",
                     "value": "apcs"
+                },
+                {
+                    "name": "AV1",
+                    "value": "AV1"
                 },
                 {
                     "name": "COPY",
