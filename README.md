@@ -1,6 +1,7 @@
 # Kaltura Angular X Client
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![Gitter chat](https://badges.gitter.im/kaltura-ng/kaltura-ng.png)](https://gitter.im/kaltura-ng/kaltura-ng) [![Build Status](https://travis-ci.org/kaltura/KalturaGeneratedAPIClientsAngular.svg?branch=master)](https://travis-ci.org/kaltura/KalturaGeneratedAPIClientsAngular)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkaltura%2FKalturaGeneratedAPIClientsAngular.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkaltura%2FKalturaGeneratedAPIClientsAngular?ref=badge_shield)
 
 > An easy-to-use facade to Kaltura server with Angular X support for action requests, classes and enums.
 
@@ -51,3 +52,6 @@ An example of a vaild command will be: `npm install file:libs/kaltura-ngx-client
 All code in this project is released under the [AGPLv3 license](http://www.gnu.org/licenses/agpl-3.0.html) unless a different license for a particular library is specified in the applicable library path.
 
 Copyright © Kaltura Inc. All rights reserved.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkaltura%2FKalturaGeneratedAPIClientsAngular.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkaltura%2FKalturaGeneratedAPIClientsAngular?ref=badge_large)
