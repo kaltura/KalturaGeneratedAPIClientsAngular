@@ -8,6 +8,7 @@ export interface KalturaReportExportParamsArgs  extends KalturaObjectBaseArgs {
 	timeZoneOffset? : number;
 	reportItems? : KalturaReportExportItem[];
 	reportsItemsGroup? : string;
+	baseUrl? : string;
 }
 
 
@@ -17,6 +18,7 @@ export class KalturaReportExportParams extends KalturaObjectBase {
 	timeZoneOffset : number;
 	reportItems : KalturaReportExportItem[];
 	reportsItemsGroup : string;
+	baseUrl : string;
 
     constructor(data? : KalturaReportExportParamsArgs)
     {
@@ -34,7 +36,8 @@ export class KalturaReportExportParams extends KalturaObjectBase {
 				recipientEmail : { type : 's' },
 				timeZoneOffset : { type : 'n' },
 				reportItems : { type : 'a', subTypeConstructor : KalturaReportExportItem, subType : 'KalturaReportExportItem' },
-				reportsItemsGroup : { type : 's' }
+				reportsItemsGroup : { type : 's' },
+				baseUrl : { type : 's' }
             }
         );
         return result;

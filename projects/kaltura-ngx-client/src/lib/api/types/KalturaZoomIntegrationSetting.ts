@@ -1,50 +1,34 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
 import { KalturaNullableBoolean } from './KalturaNullableBoolean';
-import { KalturaHandleParticipantsMode } from './KalturaHandleParticipantsMode';
 import { KalturaZoomUsersMatching } from './KalturaZoomUsersMatching';
-import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
+import { KalturaIntegrationSetting, KalturaIntegrationSettingArgs } from './KalturaIntegrationSetting';
 
-export interface KalturaZoomIntegrationSettingArgs  extends KalturaObjectBaseArgs {
-    defaultUserId? : string;
-	zoomCategory? : string;
+export interface KalturaZoomIntegrationSettingArgs  extends KalturaIntegrationSettingArgs {
+    zoomCategory? : string;
 	enableRecordingUpload? : KalturaNullableBoolean;
-	createUserIfNotExist? : KalturaNullableBoolean;
-	handleParticipantsMode? : KalturaHandleParticipantsMode;
 	zoomUserMatchingMode? : KalturaZoomUsersMatching;
 	zoomUserPostfix? : string;
 	zoomWebinarCategory? : string;
 	enableWebinarUploads? : KalturaNullableBoolean;
-	conversionProfileId? : number;
 	jwtToken? : string;
-	deletionPolicy? : KalturaNullableBoolean;
 	enableZoomTranscription? : KalturaNullableBoolean;
 	zoomAccountDescription? : string;
-	createdAt? : string;
-	updatedAt? : string;
 	enableMeetingUpload? : KalturaNullableBoolean;
 }
 
 
-export class KalturaZoomIntegrationSetting extends KalturaObjectBase {
+export class KalturaZoomIntegrationSetting extends KalturaIntegrationSetting {
 
-    defaultUserId : string;
-	zoomCategory : string;
-	readonly accountId : string;
+    zoomCategory : string;
 	enableRecordingUpload : KalturaNullableBoolean;
-	createUserIfNotExist : KalturaNullableBoolean;
-	handleParticipantsMode : KalturaHandleParticipantsMode;
 	zoomUserMatchingMode : KalturaZoomUsersMatching;
 	zoomUserPostfix : string;
 	zoomWebinarCategory : string;
 	enableWebinarUploads : KalturaNullableBoolean;
-	conversionProfileId : number;
 	jwtToken : string;
-	deletionPolicy : KalturaNullableBoolean;
 	enableZoomTranscription : KalturaNullableBoolean;
 	zoomAccountDescription : string;
-	createdAt : string;
-	updatedAt : string;
 	enableMeetingUpload : KalturaNullableBoolean;
 
     constructor(data? : KalturaZoomIntegrationSettingArgs)
@@ -59,23 +43,15 @@ export class KalturaZoomIntegrationSetting extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaZoomIntegrationSetting' },
-				defaultUserId : { type : 's' },
 				zoomCategory : { type : 's' },
-				accountId : { type : 's', readOnly : true },
 				enableRecordingUpload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				createUserIfNotExist : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				handleParticipantsMode : { type : 'en', subTypeConstructor : KalturaHandleParticipantsMode, subType : 'KalturaHandleParticipantsMode' },
 				zoomUserMatchingMode : { type : 'en', subTypeConstructor : KalturaZoomUsersMatching, subType : 'KalturaZoomUsersMatching' },
 				zoomUserPostfix : { type : 's' },
 				zoomWebinarCategory : { type : 's' },
 				enableWebinarUploads : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
-				conversionProfileId : { type : 'n' },
 				jwtToken : { type : 's' },
-				deletionPolicy : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				enableZoomTranscription : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				zoomAccountDescription : { type : 's' },
-				createdAt : { type : 's' },
-				updatedAt : { type : 's' },
 				enableMeetingUpload : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );

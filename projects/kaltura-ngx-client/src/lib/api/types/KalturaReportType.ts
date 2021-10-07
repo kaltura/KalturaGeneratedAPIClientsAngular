@@ -134,6 +134,8 @@ export enum KalturaReportType {
 	quizUserPercentage = 'quiz.QUIZ_USER_PERCENTAGE',
 	reachUsage = '28',
 	reactionsBreakdownWebcast = '40013',
+	selfServeUsage = '60',
+	selfServeUsageVpaas = '20023',
 	specificUserEngagement = '12',
 	specificUserUsage = '18',
 	subCategories = '53',

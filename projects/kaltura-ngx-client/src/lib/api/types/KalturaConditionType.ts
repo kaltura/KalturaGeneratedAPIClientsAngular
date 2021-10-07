@@ -9,6 +9,7 @@ export enum KalturaConditionType {
 	boolean = '17',
 	country = '2',
 	deliveryProfile = '13',
+	entryScheduled = '19',
 	eventCategoryEntry = 'reach.CategoryEntry',
 	eventNotificationField = 'eventNotification.BooleanField',
 	eventNotificationObjectChanged = 'eventNotification.ObjectChanged',

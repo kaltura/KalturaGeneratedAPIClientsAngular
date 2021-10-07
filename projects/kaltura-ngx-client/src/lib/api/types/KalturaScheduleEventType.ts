@@ -5,5 +5,6 @@ export enum KalturaScheduleEventType {
 	liveRedirect=5,
 	liveStream=2,
 	meeting=4,
-	record=1
+	record=1,
+	vod=6
 }

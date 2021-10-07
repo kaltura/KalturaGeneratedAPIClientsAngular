@@ -11,7 +11,7 @@ export interface ReachProfileSyncCreditActionArgs  extends KalturaRequestArgs {
 /**
  * Build request payload for service 'reachProfile' action 'syncCredit'.
  *
- * Usage: sync vednor profile credit
+ * Usage: sync vendor profile credit
  *
  * Server response type:         KalturaReachProfile
  * Server failure response type: KalturaAPIException

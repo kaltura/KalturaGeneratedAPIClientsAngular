@@ -1,7 +1,8 @@
 
 
 export enum KalturaDrmLicenseScenario {
-    protection = 'playReady.PROTECTION',
+    none = '0',
+	protection = 'playReady.PROTECTION',
 	purchase = 'playReady.PURCHASE',
 	rental = 'playReady.RENTAL',
 	subscription = 'playReady.SUBSCRIPTION'

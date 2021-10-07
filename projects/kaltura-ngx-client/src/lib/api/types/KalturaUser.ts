@@ -41,6 +41,7 @@ export class KalturaUser extends KalturaBaseUser {
 	title : string;
 	company : string;
 	ksPrivileges : string;
+	readonly encryptedSeed : string;
 
     constructor(data? : KalturaUserArgs)
     {
@@ -69,7 +70,8 @@ export class KalturaUser extends KalturaBaseUser {
 				attendanceInfo : { type : 's' },
 				title : { type : 's' },
 				company : { type : 's' },
-				ksPrivileges : { type : 's' }
+				ksPrivileges : { type : 's' },
+				encryptedSeed : { type : 's', readOnly : true }
             }
         );
         return result;

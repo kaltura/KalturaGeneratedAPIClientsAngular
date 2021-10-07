@@ -2,6 +2,7 @@
 
 export enum KalturaCatalogItemLanguage {
     ar = 'Arabic',
+	ca = 'Catalan',
 	cmn = 'Mandarin Chinese',
 	cy = 'Welsh',
 	da = 'Danish',

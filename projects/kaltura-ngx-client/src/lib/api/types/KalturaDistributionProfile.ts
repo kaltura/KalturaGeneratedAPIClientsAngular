@@ -60,6 +60,7 @@ export class KalturaDistributionProfile extends KalturaObjectBase {
 	recommendedDcForDownload : number;
 	recommendedDcForExecute : number;
 	distributeTrigger : KalturaDistributeTrigger;
+	readonly supportImageEntry : boolean;
 
     constructor(data? : KalturaDistributionProfileArgs)
     {
@@ -101,7 +102,8 @@ export class KalturaDistributionProfile extends KalturaObjectBase {
 				recommendedStorageProfileForDownload : { type : 'n' },
 				recommendedDcForDownload : { type : 'n' },
 				recommendedDcForExecute : { type : 'n' },
-				distributeTrigger : { type : 'en', subTypeConstructor : KalturaDistributeTrigger, subType : 'KalturaDistributeTrigger' }
+				distributeTrigger : { type : 'en', subTypeConstructor : KalturaDistributeTrigger, subType : 'KalturaDistributeTrigger' },
+				supportImageEntry : { type : 'b', readOnly : true }
             }
         );
         return result;
