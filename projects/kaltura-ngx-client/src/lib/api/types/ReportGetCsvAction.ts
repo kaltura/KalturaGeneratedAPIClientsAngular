@@ -8,6 +8,7 @@ import { KalturaFileRequest, KalturaFileRequestArgs } from '../kaltura-file-requ
 export interface ReportGetCsvActionArgs  extends KalturaFileRequestArgs {
     id : number;
 	params? : KalturaKeyValue[];
+	excludedFields? : string;
 }
 
 /**
@@ -22,6 +23,7 @@ export class ReportGetCsvAction extends KalturaFileRequest {
 
     id : number;
 	params : KalturaKeyValue[];
+	excludedFields : string;
 
     constructor(data : ReportGetCsvActionArgs)
     {
@@ -38,7 +40,8 @@ export class ReportGetCsvAction extends KalturaFileRequest {
                 service : { type : 'c', default : 'report' },
 				action : { type : 'c', default : 'getCsv' },
 				id : { type : 'n' },
-				params : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				params : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				excludedFields : { type : 's' }
             }
         );
         return result;

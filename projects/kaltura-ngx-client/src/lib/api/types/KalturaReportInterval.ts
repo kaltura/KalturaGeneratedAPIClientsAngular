@@ -6,5 +6,6 @@ export enum KalturaReportInterval {
 	minutes = 'minutes',
 	months = 'months',
 	tenMinutes = 'ten_minutes',
-	tenSeconds = 'ten_seconds'
+	tenSeconds = 'ten_seconds',
+	years = 'years'
 }

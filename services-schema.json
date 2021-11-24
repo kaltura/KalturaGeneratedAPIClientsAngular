@@ -1,5 +1,5 @@
 {
-    "apiVersion": "17.12.0",
+    "apiVersion": "17.14.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -6686,6 +6686,13 @@
                             "type": "ArrayOfObjects",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "excludedFields",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
                     "description": "",
@@ -6709,9 +6716,16 @@
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
+                        },
+                        {
+                            "name": "excludedFields",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
                         }
                     ],
-                    "description": "Returns report CSV file executed by string params with the following convention: param1=value1;param2=value2",
+                    "description": "Returns report CSV file executed by string params with the following convention: param1=value1;param2=value2\n\t excludedFields can be supplied comma separated",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -21549,6 +21563,27 @@
             ]
         },
         {
+            "name": "KalturaRegexItem",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "regex",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaPartner",
             "base": "",
             "plugin": "",
@@ -22307,8 +22342,8 @@
                 {
                     "name": "passwordStructureValidations",
                     "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
+                    "typeClassName": "KalturaRegexItem",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -22377,6 +22412,17 @@
                     "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "isSelfServe",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -64644,6 +64690,15 @@
             ]
         },
         {
+            "name": "KalturaUrlAuthenticationParamsCondition",
+            "base": "KalturaCondition",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaUrlRecognizerAkamaiG2O",
             "base": "KalturaUrlRecognizer",
             "plugin": "",
@@ -79133,6 +79188,15 @@
             "properties": []
         },
         {
+            "name": "KalturaActionNameCondition",
+            "base": "KalturaRegexCondition",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaActivitiBusinessProcessServerBaseFilter",
             "base": "KalturaBusinessProcessServerFilter",
             "plugin": "activitiBusinessProcessNotification",
@@ -93542,6 +93606,10 @@
             "type": "string",
             "values": [
                 {
+                    "name": "ACTION_NAME",
+                    "value": "20"
+                },
+                {
                     "name": "ACTIVE_EDGE_VALIDATE",
                     "value": "14"
                 },
@@ -93632,6 +93700,10 @@
                 {
                     "name": "SITE",
                     "value": "4"
+                },
+                {
+                    "name": "URL_AUTH_PARAMS",
+                    "value": "21"
                 },
                 {
                     "name": "USER_AGENT",
@@ -95286,6 +95358,10 @@
                 {
                     "name": "ERROR_GET_PHISICAL_FILE_LIST",
                     "value": "3"
+                },
+                {
+                    "name": "MISSING_CONFIG",
+                    "value": "7"
                 }
             ]
         },
@@ -105456,6 +105532,10 @@
                 {
                     "name": "TEN_SECONDS",
                     "value": "ten_seconds"
+                },
+                {
+                    "name": "YEARS",
+                    "value": "years"
                 }
             ]
         },

@@ -9,6 +9,7 @@ import { KalturaPlayerDeliveryType } from './KalturaPlayerDeliveryType';
 import { KalturaPlayerEmbedCodeType } from './KalturaPlayerEmbedCodeType';
 import { KalturaESearchLanguageItem } from './KalturaESearchLanguageItem';
 import { KalturaPartnerAuthenticationType } from './KalturaPartnerAuthenticationType';
+import { KalturaRegexItem } from './KalturaRegexItem';
 import { KalturaTwoFactorAuthenticationMode } from './KalturaTwoFactorAuthenticationMode';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
@@ -46,12 +47,13 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	partnerParentId? : number;
 	referenceId? : string;
 	eSearchLanguages? : KalturaESearchLanguageItem[];
-	passwordStructureValidations? : string;
+	passwordStructureValidations? : KalturaRegexItem[];
 	passwordStructureValidationsDescription? : string;
 	passReplaceFreq? : number;
 	maxLoginAttempts? : number;
 	loginBlockPeriod? : number;
 	numPrevPassToKeep? : number;
+	isSelfServe? : boolean;
 }
 
 
@@ -125,13 +127,14 @@ export class KalturaPartner extends KalturaObjectBase {
 	readonly usageLimitWarning : number;
 	readonly lastFreeTrialNotificationDay : number;
 	readonly monitorUsage : number;
-	passwordStructureValidations : string;
+	passwordStructureValidations : KalturaRegexItem[];
 	passwordStructureValidationsDescription : string;
 	passReplaceFreq : number;
 	maxLoginAttempts : number;
 	loginBlockPeriod : number;
 	numPrevPassToKeep : number;
 	readonly twoFactorAuthenticationMode : KalturaTwoFactorAuthenticationMode;
+	isSelfServe : boolean;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -140,6 +143,7 @@ export class KalturaPartner extends KalturaObjectBase {
 		if (typeof this.deliveryTypes === 'undefined') this.deliveryTypes = [];
 		if (typeof this.embedCodeTypes === 'undefined') this.embedCodeTypes = [];
 		if (typeof this.eSearchLanguages === 'undefined') this.eSearchLanguages = [];
+		if (typeof this.passwordStructureValidations === 'undefined') this.passwordStructureValidations = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -217,13 +221,14 @@ export class KalturaPartner extends KalturaObjectBase {
 				usageLimitWarning : { type : 'n', readOnly : true },
 				lastFreeTrialNotificationDay : { type : 'n', readOnly : true },
 				monitorUsage : { type : 'n', readOnly : true },
-				passwordStructureValidations : { type : 's' },
+				passwordStructureValidations : { type : 'a', subTypeConstructor : KalturaRegexItem, subType : 'KalturaRegexItem' },
 				passwordStructureValidationsDescription : { type : 's' },
 				passReplaceFreq : { type : 'n' },
 				maxLoginAttempts : { type : 'n' },
 				loginBlockPeriod : { type : 'n' },
 				numPrevPassToKeep : { type : 'n' },
-				twoFactorAuthenticationMode : { type : 'en', readOnly : true, subTypeConstructor : KalturaTwoFactorAuthenticationMode, subType : 'KalturaTwoFactorAuthenticationMode' }
+				twoFactorAuthenticationMode : { type : 'en', readOnly : true, subTypeConstructor : KalturaTwoFactorAuthenticationMode, subType : 'KalturaTwoFactorAuthenticationMode' },
+				isSelfServe : { type : 'b' }
             }
         );
         return result;

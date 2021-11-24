@@ -1,7 +1,8 @@
 
 
 export enum KalturaConditionType {
-    activeEdgeValidate = '14',
+    actionName = '20',
+	activeEdgeValidate = '14',
 	anonymousIp = '15',
 	assetPropertiesCompare = '8',
 	assetType = '16',
@@ -24,6 +25,7 @@ export enum KalturaConditionType {
 	metadataFieldMatch = 'metadata.FieldMatch',
 	orOperator = '11',
 	site = '4',
+	urlAuthParams = '21',
 	userAgent = '5',
 	userRole = '9'
 }

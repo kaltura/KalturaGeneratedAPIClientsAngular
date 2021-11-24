@@ -6,5 +6,6 @@ export enum KalturaDropFolderErrorCode {
 	errorAutenticate = '2',
 	errorConnect = '1',
 	errorGetDbFileList = '4',
-	errorGetPhisicalFileList = '3'
+	errorGetPhisicalFileList = '3',
+	missingConfig = '7'
 }
