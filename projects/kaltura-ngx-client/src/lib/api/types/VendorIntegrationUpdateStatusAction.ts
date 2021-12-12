@@ -2,11 +2,12 @@
 import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaIntegrationSetting } from './KalturaIntegrationSetting';
 
+import { KalturaVendorIntegrationStatus } from './KalturaVendorIntegrationStatus';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface VendorIntegrationUpdateStatusActionArgs  extends KalturaRequestArgs {
     id : number;
-	status : KalturaIntegrationSetting;
+	status : KalturaVendorIntegrationStatus;
 }
 
 /**
@@ -20,7 +21,7 @@ export interface VendorIntegrationUpdateStatusActionArgs  extends KalturaRequest
 export class VendorIntegrationUpdateStatusAction extends KalturaRequest<KalturaIntegrationSetting> {
 
     id : number;
-	status : KalturaIntegrationSetting;
+	status : KalturaVendorIntegrationStatus;
 
     constructor(data : VendorIntegrationUpdateStatusActionArgs)
     {
@@ -36,7 +37,7 @@ export class VendorIntegrationUpdateStatusAction extends KalturaRequest<KalturaI
                 service : { type : 'c', default : 'vendor_vendorintegration' },
 				action : { type : 'c', default : 'updateStatus' },
 				id : { type : 'n' },
-				status : { type : 'o', subTypeConstructor : KalturaIntegrationSetting, subType : 'KalturaIntegrationSetting' }
+				status : { type : 'en', subTypeConstructor : KalturaVendorIntegrationStatus, subType : 'KalturaVendorIntegrationStatus' }
             }
         );
         return result;

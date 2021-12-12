@@ -37,6 +37,7 @@ export interface KalturaStorageProfileArgs  extends KalturaObjectBaseArgs {
 	privateKey? : string;
 	publicKey? : string;
 	passPhrase? : string;
+	port? : number;
 	shouldExportThumbs? : boolean;
 	packagerUrl? : string;
 	exportPeriodically? : boolean;
@@ -80,6 +81,7 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 	privateKey : string;
 	publicKey : string;
 	passPhrase : string;
+	port : number;
 	shouldExportThumbs : boolean;
 	packagerUrl : string;
 	exportPeriodically : boolean;
@@ -134,6 +136,7 @@ export class KalturaStorageProfile extends KalturaObjectBase {
 				privateKey : { type : 's' },
 				publicKey : { type : 's' },
 				passPhrase : { type : 's' },
+				port : { type : 'n' },
 				shouldExportThumbs : { type : 'b' },
 				packagerUrl : { type : 's' },
 				exportPeriodically : { type : 'b' },

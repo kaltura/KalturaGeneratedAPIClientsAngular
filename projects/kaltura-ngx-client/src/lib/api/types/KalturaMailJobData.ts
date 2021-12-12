@@ -2,6 +2,7 @@
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
 import { KalturaMailType } from './KalturaMailType';
 import { KalturaMailJobStatus } from './KalturaMailJobStatus';
+import { KalturaDynamicEmailContents } from './KalturaDynamicEmailContents';
 import { KalturaLanguageCode } from './KalturaLanguageCode';
 import { KalturaJobData, KalturaJobDataArgs } from './KalturaJobData';
 
@@ -16,6 +17,7 @@ export interface KalturaMailJobDataArgs  extends KalturaJobDataArgs {
 	fromEmail? : string;
 	bodyParams? : string;
 	subjectParams? : string;
+	dynamicEmailContents? : KalturaDynamicEmailContents;
 	templatePath? : string;
 	language? : KalturaLanguageCode;
 	campaignId? : number;
@@ -37,6 +39,7 @@ export class KalturaMailJobData extends KalturaJobData {
 	fromEmail : string;
 	bodyParams : string;
 	subjectParams : string;
+	dynamicEmailContents : KalturaDynamicEmailContents;
 	templatePath : string;
 	language : KalturaLanguageCode;
 	campaignId : number;
@@ -66,6 +69,7 @@ export class KalturaMailJobData extends KalturaJobData {
 				fromEmail : { type : 's' },
 				bodyParams : { type : 's' },
 				subjectParams : { type : 's' },
+				dynamicEmailContents : { type : 'o', subTypeConstructor : KalturaDynamicEmailContents, subType : 'KalturaDynamicEmailContents' },
 				templatePath : { type : 's' },
 				language : { type : 'es', subTypeConstructor : KalturaLanguageCode, subType : 'KalturaLanguageCode' },
 				campaignId : { type : 'n' },

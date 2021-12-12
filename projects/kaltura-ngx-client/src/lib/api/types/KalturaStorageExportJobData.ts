@@ -7,6 +7,7 @@ export interface KalturaStorageExportJobDataArgs  extends KalturaStorageJobDataA
 	createLink? : boolean;
 	assetId? : string;
 	externalUrl? : string;
+	port? : number;
 }
 
 
@@ -16,6 +17,7 @@ export class KalturaStorageExportJobData extends KalturaStorageJobData {
 	createLink : boolean;
 	assetId : string;
 	externalUrl : string;
+	port : number;
 
     constructor(data? : KalturaStorageExportJobDataArgs)
     {
@@ -32,7 +34,8 @@ export class KalturaStorageExportJobData extends KalturaStorageJobData {
 				force : { type : 'b' },
 				createLink : { type : 'b' },
 				assetId : { type : 's' },
-				externalUrl : { type : 's' }
+				externalUrl : { type : 's' },
+				port : { type : 'n' }
             }
         );
         return result;

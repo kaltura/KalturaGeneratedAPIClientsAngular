@@ -1,5 +1,5 @@
 {
-    "apiVersion": "17.14.0",
+    "apiVersion": "17.16.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -17383,8 +17383,8 @@
                         },
                         {
                             "name": "status",
-                            "typeClassName": "KalturaIntegrationSetting",
-                            "type": "Object",
+                            "typeClassName": "KalturaVendorIntegrationStatus",
+                            "type": "EnumOfInt",
                             "optional": false,
                             "default": ""
                         }
@@ -28235,6 +28235,38 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaDynamicEmailContents",
+            "base": "",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "emailSubject",
+                    "description": "The subject of the customized email",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "emailBody",
+                    "description": "The body of the customized email",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -43770,6 +43802,17 @@
                     "name": "passPhrase",
                     "description": "",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "port",
+                    "description": "",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -59859,6 +59902,17 @@
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "dynamicEmailContents",
+                    "description": "",
+                    "typeClassName": "KalturaDynamicEmailContents",
+                    "type": "Object",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -77040,6 +77094,17 @@
                     "name": "externalUrl",
                     "description": "",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "port",
+                    "description": "",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
