@@ -2671,6 +2671,3 @@ export { VirusScanProfileListAction, VirusScanProfileListActionArgs } from './Vi
 export { VirusScanProfileScanAction, VirusScanProfileScanActionArgs } from './VirusScanProfileScanAction'
 export { VirusScanProfileUpdateAction, VirusScanProfileUpdateActionArgs } from './VirusScanProfileUpdateAction'
 export { WidevineDrmGetLicenseAction, WidevineDrmGetLicenseActionArgs } from './WidevineDrmGetLicenseAction'
-
-
-console.warn('Notice! Your application bundle the whole package of kaltura-xxx-client (either rxjs/ngx/typescript), please refer to the library `readme.md` to reduce app bundle size.')
