@@ -2,7 +2,6 @@
 
 export enum KalturaEventNotificationEventType {
     batchJobStatus = '1',
-	integrationJobClosed = 'integrationEventNotifications.INTEGRATION_JOB_CLOSED',
 	objectAdded = '2',
 	objectChanged = '3',
 	objectCopied = '4',
