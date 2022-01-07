@@ -97322,6 +97322,10 @@
                     "value": "1"
                 },
                 {
+                    "name": "INTEGRATION_JOB_CLOSED",
+                    "value": "integrationEventNotifications.INTEGRATION_JOB_CLOSED"
+                },
+                {
                     "name": "OBJECT_ADDED",
                     "value": "2"
                 },
