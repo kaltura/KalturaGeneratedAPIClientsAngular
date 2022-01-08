@@ -92502,6 +92502,10 @@
                     "value": "26"
                 },
                 {
+                    "name": "ENTRY_VENDOR_TASK_CSV",
+                    "value": "reach.EntryVendorTasksCsv"
+                },
+                {
                     "name": "EVENT_NOTIFICATION_HANDLER",
                     "value": "eventNotification.EventNotificationHandler"
                 },
@@ -92646,6 +92650,10 @@
                     "value": "39"
                 },
                 {
+                    "name": "SYNC_REACH_CREDIT_TASK",
+                    "value": "reach.SyncReachCreditTask"
+                },
+                {
                     "name": "TAG_RESOLVE",
                     "value": "tagSearch.TagResolve"
                 },
@@ -92660,6 +92668,10 @@
                 {
                     "name": "VIRUS_SCAN",
                     "value": "virusScan.VirusScan"
+                },
+                {
+                    "name": "WIDEVINE_REPOSITORY_SYNC",
+                    "value": "widevine.WidevineRepositorySync"
                 }
             ]
         },
