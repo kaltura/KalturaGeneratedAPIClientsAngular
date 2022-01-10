@@ -1,5 +1,5 @@
 {
-    "apiVersion": "17.17.0",
+    "apiVersion": "17.18.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -9589,6 +9589,29 @@
                         }
                     ],
                     "description": "Logs a user into a partner account with a user login ID and a user password.",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "loginDataResetPassword",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "loginDataId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "newPassword",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Resets user login password",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -52596,6 +52619,17 @@
                     "name": "livePackagerSigningDomain",
                     "description": "Domain used to sign the live url",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "shouldRedirect",
+                    "description": "",
+                    "typeClassName": "bool",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
