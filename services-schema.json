@@ -1,5 +1,5 @@
 {
-    "apiVersion": "17.18.0",
+    "apiVersion": "17.19.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -106373,6 +106373,26 @@
                 {
                     "name": "VAR_USAGE",
                     "value": "19"
+                },
+                {
+                    "name": "VE_HIGHLIGHTS",
+                    "value": "50000"
+                },
+                {
+                    "name": "VE_REGISTERED_COUNTRIES",
+                    "value": "50004"
+                },
+                {
+                    "name": "VE_REGISTERED_INDUSTRY",
+                    "value": "50002"
+                },
+                {
+                    "name": "VE_REGISTERED_PLATFORMS",
+                    "value": "50001"
+                },
+                {
+                    "name": "VE_REGISTERED_ROLES",
+                    "value": "50003"
                 },
                 {
                     "name": "VPAAS_USAGE",

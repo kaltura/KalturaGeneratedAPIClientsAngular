@@ -175,6 +175,11 @@ export enum KalturaReportType {
 	userUsage = '17',
 	userUsageVpaas = '20004',
 	varUsage = '19',
+	veHighlights = '50000',
+	veRegisteredCountries = '50004',
+	veRegisteredIndustry = '50002',
+	veRegisteredPlatforms = '50001',
+	veRegisteredRoles = '50003',
 	vpaasUsage = '26',
 	vpaasUsageMulti = '42'
 }
