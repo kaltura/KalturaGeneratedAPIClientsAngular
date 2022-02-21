@@ -180,6 +180,7 @@ export enum KalturaReportType {
 	veRegisteredIndustry = '50002',
 	veRegisteredPlatforms = '50001',
 	veRegisteredRoles = '50003',
+	veRegisteredWorldRegions = '50005',
 	vpaasUsage = '26',
 	vpaasUsageMulti = '42'
 }

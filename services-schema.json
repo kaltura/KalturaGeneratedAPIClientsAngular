@@ -1,5 +1,5 @@
 {
-    "apiVersion": "17.19.0",
+    "apiVersion": "18.0.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -18316,7 +18316,7 @@
                 {
                     "name": "intId",
                     "description": "",
-                    "typeClassName": "int",
+                    "typeClassName": "bigint",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
@@ -40751,6 +40751,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "originIn",
+                    "description": "filter by origin",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -44892,7 +44903,7 @@
                 {
                     "name": "id",
                     "description": "unique auto-generated identifier",
-                    "typeClassName": "int",
+                    "typeClassName": "bigint",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
@@ -65729,6 +65740,49 @@
             ]
         },
         {
+            "name": "KalturaVendorDubbingCatalogItem",
+            "base": "KalturaVendorCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "flavorParamsId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "clearAudioFlavorParamsId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "targetLanguage",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaVendorIntelligentTaggingCatalogItem",
             "base": "KalturaVendorCatalogItem",
             "plugin": "reach",
@@ -81400,6 +81454,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "isContentInterruptible",
+                    "description": "Detect whether \"real\" live can interrupt to the \"main\" content",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -84431,6 +84496,38 @@
             ]
         },
         {
+            "name": "KalturaVendorDubbingCatalogItemBaseFilter",
+            "base": "KalturaVendorCatalogItemFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "targetLanguageEqual",
+                    "description": "",
+                    "typeClassName": "KalturaCatalogItemLanguage",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "targetLanguageIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaViewHistoryUserEntryFilter",
             "base": "KalturaUserEntryFilter",
             "plugin": "viewHistory",
@@ -85167,6 +85264,15 @@
         {
             "name": "KalturaVendorChapteringCatalogItemFilter",
             "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaVendorDubbingCatalogItemFilter",
+            "base": "KalturaVendorDubbingCatalogItemBaseFilter",
             "plugin": "reach",
             "description": "",
             "abstract": false,
@@ -90711,6 +90817,10 @@
                 {
                     "name": "CHAPTERING",
                     "value": "5"
+                },
+                {
+                    "name": "DUBBING",
+                    "value": "7"
                 },
                 {
                     "name": "INTELLIGENT_TAGGING",
@@ -106393,6 +106503,10 @@
                 {
                     "name": "VE_REGISTERED_ROLES",
                     "value": "50003"
+                },
+                {
+                    "name": "VE_REGISTERED_WORLD_REGIONS",
+                    "value": "50005"
                 },
                 {
                     "name": "VPAAS_USAGE",
