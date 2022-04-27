@@ -24,6 +24,7 @@ export enum KalturaReportType {
 	entryLevelUsersDiscoveryRealtime = '10008',
 	entryLevelUsersStatusRealtime = '10009',
 	entryUsage = '27',
+	flavorParamsTranscodingUsage = '61',
 	highlightsWebcast = '40001',
 	interactiveVideoHotspotClickedPercentiles = '56',
 	interactiveVideoNodeSwitchHotspotClickedPercentiles = '57',

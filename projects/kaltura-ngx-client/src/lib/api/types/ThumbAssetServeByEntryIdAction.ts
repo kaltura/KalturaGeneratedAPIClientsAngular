@@ -12,7 +12,7 @@ export interface ThumbAssetServeByEntryIdActionArgs  extends KalturaFileRequestA
 /**
  * Build request payload for service 'thumbAsset' action 'serveByEntryId'.
  *
- * Usage: Serves thumbnail by entry id and thumnail params id
+ * Usage: Serves thumbnail by entry id and thumbnail params id
  *
  * Server response type:         { url: string }
  * Server failure response type: KalturaAPIException

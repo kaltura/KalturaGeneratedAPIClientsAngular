@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.2.0",
+    "apiVersion": "18.3.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -1673,7 +1673,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Move categories that belong to the same parent category to a target categroy - enabled only for ks with disable entitlement",
+                    "description": "Move categories that belong to the same parent category to a target category - enabled only for ks with disable entitlement",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -7676,7 +7676,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Will write to the event log a single line representing the event\n\t client version - will help interprete the line structure. different client versions might have slightly different data/data formats in the line\nevent_id - number is the row number in yuval's excel\ndatetime - same format as MySql's datetime - can change and should reflect the time zone\nsession id - can be some big random number or guid\npartner id\nentry id\nunique viewer\nwidget id\nui_conf id\nuid - the puser id as set by the ppartner\ncurrent point - in milliseconds\nduration - milliseconds\nuser ip\nprocess duration - in milliseconds\ncontrol id\nseek\nnew point\nreferrer\n\t\n\t\n\t KalturaStatsEvent $event",
+                    "description": "Will write to the event log a single line representing the event\n\t client version - will help interpret the line structure. Different client versions might have slightly different data/data formats in the line\nevent_id - number is the row number in yuval's excel\ndatetime - same format as MySql's datetime - can change and should reflect the time zone\nsession id - can be some big random number or guid\npartner id\nentry id\nunique viewer\nwidget id\nui_conf id\nuid - the puser id as set by the ppartner\ncurrent point - in milliseconds\nduration - milliseconds\nuser ip\nprocess duration - in milliseconds\ncontrol id\nseek\nnew point\nreferrer\n\t\n\t\n\t KalturaStatsEvent $event",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -7692,7 +7692,7 @@
                             "default": ""
                         }
                     ],
-                    "description": "Will collect the kmcEvent sent form the KMC client\n\t // this will actually be an empty function because all events will be sent using GET and will anyway be logged in the apache log",
+                    "description": "Will collect the kmcEvent sent form the KMC client\n\t // this will actually be an empty function because all events will be sent using GET and will anyway be logged in the Apache log",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -8424,7 +8424,7 @@
                             "default": "null"
                         }
                     ],
-                    "description": "Serves thumbnail by entry id and thumnail params id",
+                    "description": "Serves thumbnail by entry id and thumbnail params id",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -105967,6 +105967,10 @@
                 {
                     "name": "ENTRY_USAGE",
                     "value": "27"
+                },
+                {
+                    "name": "FLAVOR_PARAMS_TRANSCODING_USAGE",
+                    "value": "61"
                 },
                 {
                     "name": "HIGHLIGHTS_WEBCAST",

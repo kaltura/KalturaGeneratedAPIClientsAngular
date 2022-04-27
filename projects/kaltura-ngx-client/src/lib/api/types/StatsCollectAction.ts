@@ -13,7 +13,7 @@ export interface StatsCollectActionArgs  extends KalturaRequestArgs {
  * Build request payload for service 'stats' action 'collect'.
  *
  * Usage: Will write to the event log a single line representing the event
- * client version - will help interprete the line structure. different client versions might have slightly different data/data formats in the line
+ * client version - will help interpret the line structure. Different client versions might have slightly different data/data formats in the line
  * event_id - number is the row number in yuval's excel
  * datetime - same format as MySql's datetime - can change and should reflect the time zone
  * session id - can be some big random number or guid

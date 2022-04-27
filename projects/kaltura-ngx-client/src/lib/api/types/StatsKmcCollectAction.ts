@@ -13,7 +13,7 @@ export interface StatsKmcCollectActionArgs  extends KalturaRequestArgs {
  * Build request payload for service 'stats' action 'kmcCollect'.
  *
  * Usage: Will collect the kmcEvent sent form the KMC client
- * // this will actually be an empty function because all events will be sent using GET and will anyway be logged in the apache log
+ * // this will actually be an empty function because all events will be sent using GET and will anyway be logged in the Apache log
  *
  * Server response type:         void
  * Server failure response type: KalturaAPIException
