@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.3.0",
+    "apiVersion": "18.4.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -96495,6 +96495,10 @@
             "type": "string",
             "values": [
                 {
+                    "name": "COMPANY",
+                    "value": "company"
+                },
+                {
                     "name": "CREATED_AT",
                     "value": "created_at"
                 },
@@ -96529,6 +96533,10 @@
                 {
                     "name": "TAGS",
                     "value": "tags"
+                },
+                {
+                    "name": "TITLE",
+                    "value": "title"
                 },
                 {
                     "name": "UPDATED_AT",
@@ -96728,6 +96736,10 @@
             "type": "string",
             "values": [
                 {
+                    "name": "COMPANY",
+                    "value": "company"
+                },
+                {
                     "name": "CREATED_AT",
                     "value": "created_at"
                 },
@@ -96762,6 +96774,10 @@
                 {
                     "name": "TAGS",
                     "value": "tags"
+                },
+                {
+                    "name": "TITLE",
+                    "value": "title"
                 },
                 {
                     "name": "TYPE",
