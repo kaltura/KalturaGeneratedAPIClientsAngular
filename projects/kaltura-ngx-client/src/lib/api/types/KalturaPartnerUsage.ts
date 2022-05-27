@@ -13,7 +13,7 @@ export class KalturaPartnerUsage extends KalturaObjectBase {
 	readonly Percent : number;
 	readonly packageBW : number;
 	readonly usageGB : number;
-	readonly reachedLimitDate : number;
+	readonly reachedLimitDate : Date;
 	readonly usageGraph : string;
 
     constructor(data? : KalturaPartnerUsageArgs)
@@ -32,7 +32,7 @@ export class KalturaPartnerUsage extends KalturaObjectBase {
 				Percent : { type : 'n', readOnly : true },
 				packageBW : { type : 'n', readOnly : true },
 				usageGB : { type : 'n', readOnly : true },
-				reachedLimitDate : { type : 'n', readOnly : true },
+				reachedLimitDate : { type : 'd', readOnly : true },
 				usageGraph : { type : 's', readOnly : true }
             }
         );

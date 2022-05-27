@@ -13,16 +13,16 @@ export interface SystemGetTimeActionArgs  extends KalturaRequestArgs {
  *
  * 
  *
- * Server response type:         number
+ * Server response type:         Date
  * Server failure response type: KalturaAPIException
  */
-export class SystemGetTimeAction extends KalturaRequest<number> {
+export class SystemGetTimeAction extends KalturaRequest<Date> {
 
     
 
     constructor(data? : SystemGetTimeActionArgs)
     {
-        super(data, {responseType : 'n', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'd', responseSubType : '', responseConstructor : null });
     }
 
     protected _getMetadata() : KalturaObjectMetadata

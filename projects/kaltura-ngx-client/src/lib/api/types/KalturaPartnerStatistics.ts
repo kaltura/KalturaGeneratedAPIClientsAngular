@@ -14,7 +14,7 @@ export class KalturaPartnerStatistics extends KalturaObjectBase {
 	readonly bandwidth : number;
 	readonly usage : number;
 	readonly usagePercent : number;
-	readonly reachedLimitDate : number;
+	readonly reachedLimitDate : Date;
 
     constructor(data? : KalturaPartnerStatisticsArgs)
     {
@@ -33,7 +33,7 @@ export class KalturaPartnerStatistics extends KalturaObjectBase {
 				bandwidth : { type : 'n', readOnly : true },
 				usage : { type : 'n', readOnly : true },
 				usagePercent : { type : 'n', readOnly : true },
-				reachedLimitDate : { type : 'n', readOnly : true }
+				reachedLimitDate : { type : 'd', readOnly : true }
             }
         );
         return result;

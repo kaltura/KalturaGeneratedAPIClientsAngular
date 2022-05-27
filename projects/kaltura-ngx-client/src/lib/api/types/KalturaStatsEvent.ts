@@ -7,7 +7,7 @@ import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base
 export interface KalturaStatsEventArgs  extends KalturaObjectBaseArgs {
     clientVer? : string;
 	eventType? : KalturaStatsEventType;
-	eventTimestamp? : number;
+	eventTimestamp? : Date;
 	sessionId? : string;
 	partnerId? : number;
 	entryId? : string;
@@ -15,12 +15,12 @@ export interface KalturaStatsEventArgs  extends KalturaObjectBaseArgs {
 	widgetId? : string;
 	uiconfId? : number;
 	userId? : string;
-	currentPoint? : number;
+	currentPoint? : Date;
 	duration? : number;
 	processDuration? : number;
 	controlId? : string;
 	seek? : boolean;
-	newPoint? : number;
+	newPoint? : Date;
 	referrer? : string;
 	isFirstInSession? : boolean;
 	applicationId? : string;
@@ -33,7 +33,7 @@ export class KalturaStatsEvent extends KalturaObjectBase {
 
     clientVer : string;
 	eventType : KalturaStatsEventType;
-	eventTimestamp : number;
+	eventTimestamp : Date;
 	sessionId : string;
 	partnerId : number;
 	entryId : string;
@@ -41,13 +41,13 @@ export class KalturaStatsEvent extends KalturaObjectBase {
 	widgetId : string;
 	uiconfId : number;
 	userId : string;
-	currentPoint : number;
+	currentPoint : Date;
 	duration : number;
 	readonly userIp : string;
 	processDuration : number;
 	controlId : string;
 	seek : boolean;
-	newPoint : number;
+	newPoint : Date;
 	referrer : string;
 	isFirstInSession : boolean;
 	applicationId : string;
@@ -68,7 +68,7 @@ export class KalturaStatsEvent extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaStatsEvent' },
 				clientVer : { type : 's' },
 				eventType : { type : 'en', subTypeConstructor : KalturaStatsEventType, subType : 'KalturaStatsEventType' },
-				eventTimestamp : { type : 'n' },
+				eventTimestamp : { type : 'd' },
 				sessionId : { type : 's' },
 				partnerId : { type : 'n' },
 				entryId : { type : 's' },
@@ -76,13 +76,13 @@ export class KalturaStatsEvent extends KalturaObjectBase {
 				widgetId : { type : 's' },
 				uiconfId : { type : 'n' },
 				userId : { type : 's' },
-				currentPoint : { type : 'n' },
+				currentPoint : { type : 'd' },
 				duration : { type : 'n' },
 				userIp : { type : 's', readOnly : true },
 				processDuration : { type : 'n' },
 				controlId : { type : 's' },
 				seek : { type : 'b' },
-				newPoint : { type : 'n' },
+				newPoint : { type : 'd' },
 				referrer : { type : 's' },
 				isFirstInSession : { type : 'b' },
 				applicationId : { type : 's' },
