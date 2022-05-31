@@ -1576,6 +1576,7 @@ export { KalturaWidevineRepositorySyncMode } from './KalturaWidevineRepositorySy
 export { KalturaWidgetSecurityType } from './KalturaWidgetSecurityType'
 export { KalturaYahooDistributionProcessFeedActionStatus } from './KalturaYahooDistributionProcessFeedActionStatus'
 export { KalturaYouTubeApiDistributionCaptionAction } from './KalturaYouTubeApiDistributionCaptionAction'
+export { KalturaZoomGroupParticipationType } from './KalturaZoomGroupParticipationType'
 export { KalturaZoomUsersMatching } from './KalturaZoomUsersMatching'
 export { KalturaAccessControlOrderBy } from './KalturaAccessControlOrderBy'
 export { KalturaAccessControlProfileOrderBy } from './KalturaAccessControlProfileOrderBy'

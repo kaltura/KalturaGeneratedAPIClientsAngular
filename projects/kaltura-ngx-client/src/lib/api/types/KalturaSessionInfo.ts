@@ -14,7 +14,7 @@ export class KalturaSessionInfo extends KalturaObjectBase {
 	readonly sessionType : KalturaSessionType;
 	readonly partnerId : number;
 	readonly userId : string;
-	readonly expiry : Date;
+	readonly expiry : number;
 	readonly privileges : string;
 
     constructor(data? : KalturaSessionInfoArgs)
@@ -33,7 +33,7 @@ export class KalturaSessionInfo extends KalturaObjectBase {
 				sessionType : { type : 'en', readOnly : true, subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
 				partnerId : { type : 'n', readOnly : true },
 				userId : { type : 's', readOnly : true },
-				expiry : { type : 'd', readOnly : true },
+				expiry : { type : 'n', readOnly : true },
 				privileges : { type : 's', readOnly : true }
             }
         );

@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.4.0",
+    "apiVersion": "18.6.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -29,7 +29,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -45,7 +45,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -84,7 +84,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -130,7 +130,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -146,7 +146,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -185,7 +185,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -1575,7 +1575,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -1598,7 +1598,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -1614,7 +1614,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -1691,7 +1691,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2048,7 +2048,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2064,7 +2064,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2119,7 +2119,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2135,7 +2135,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2487,7 +2487,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2503,7 +2503,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2535,7 +2535,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2604,7 +2604,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -2650,7 +2650,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -3238,7 +3238,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -3300,7 +3300,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -3316,7 +3316,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -3371,7 +3371,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -5830,7 +5830,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
@@ -5854,7 +5854,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": true,
                             "default": "null"
@@ -6599,7 +6599,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -6675,7 +6675,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -6705,7 +6705,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8052,8 +8052,8 @@
                 },
                 {
                     "name": "getTime",
-                    "resultClassName": "",
-                    "resultType": "Date",
+                    "resultClassName": "int",
+                    "resultType": "Simple",
                     "params": [],
                     "description": "",
                     "enableInMultiRequest": 1
@@ -8503,7 +8503,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8565,7 +8565,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8581,7 +8581,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8636,7 +8636,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8682,7 +8682,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8698,7 +8698,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8714,7 +8714,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -8784,7 +8784,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -9007,7 +9007,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -9078,7 +9078,7 @@
                     "params": [
                         {
                             "name": "id",
-                            "typeClassName": "bigint",
+                            "typeClassName": "int",
                             "type": "Simple",
                             "optional": false,
                             "default": ""
@@ -18143,8 +18143,8 @@
                 {
                     "name": "time",
                     "description": "Unix timestamp (In seconds) to be used to test entry scheduling, keep null to use now.",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -18731,8 +18731,8 @@
                 {
                     "name": "expiry",
                     "description": "Expiry time of current token (unix timestamp in seconds)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -22288,8 +22288,8 @@
                 {
                     "name": "extendedFreeTrailExpiryDate",
                     "description": "Unix timestamp (In seconds)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -35415,8 +35415,8 @@
                 {
                     "name": "currentBroadcastStartTime",
                     "description": "The time (unix timestamp in milliseconds) in which the entry broadcast started or 0 when the entry is off the air",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "float",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -35578,8 +35578,8 @@
                 {
                     "name": "createdAt",
                     "description": "Segment creation date as Unix timestamp (In seconds)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -35589,8 +35589,8 @@
                 {
                     "name": "updatedAt",
                     "description": "Segment update date as Unix timestamp (In seconds)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -38706,8 +38706,8 @@
                 {
                     "name": "reachedLimitDate",
                     "description": "date when partner reached the limit of his package (timestamp)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -38771,8 +38771,8 @@
                 {
                     "name": "reachedLimitDate",
                     "description": "date when partner reached the limit of his package (timestamp)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -40317,8 +40317,8 @@
                 {
                     "name": "fromDate",
                     "description": "Start date as Unix timestamp (In seconds)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -40328,8 +40328,8 @@
                 {
                     "name": "toDate",
                     "description": "End date as Unix timestamp (In seconds)",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -42863,8 +42863,8 @@
                 {
                     "name": "expiry",
                     "description": "",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
                     "insertOnly": false,
@@ -43232,8 +43232,8 @@
                 {
                     "name": "eventTimestamp",
                     "description": "the client's timestamp of this event",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "float",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -43320,8 +43320,8 @@
                 {
                     "name": "currentPoint",
                     "description": "the timestamp along the video when the event happend",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -43386,8 +43386,8 @@
                 {
                     "name": "newPoint",
                     "description": "timestamp of the new point on the timeline of the video after the user seeks",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -43495,8 +43495,8 @@
                 {
                     "name": "eventTimestamp",
                     "description": "the client's timestamp of this event",
-                    "typeClassName": "",
-                    "type": "Date",
+                    "typeClassName": "float",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -46707,6 +46707,39 @@
                     "name": "enableMeetingUpload",
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "optOutGroupNames",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "optInGroupNames",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "groupParticipationType",
+                    "description": "",
+                    "typeClassName": "KalturaZoomGroupParticipationType",
                     "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
@@ -91163,6 +91196,24 @@
                 {
                     "name": "UPDATE_ACTION",
                     "value": "1"
+                }
+            ]
+        },
+        {
+            "name": "KalturaZoomGroupParticipationType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "NO_CLASSIFICATION",
+                    "value": "0"
+                },
+                {
+                    "name": "OPT_IN",
+                    "value": "1"
+                },
+                {
+                    "name": "OPT_OUT",
+                    "value": "2"
                 }
             ]
         },

@@ -120,7 +120,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	eSearchLanguages : KalturaESearchLanguageItem[];
 	readonly authenticationType : KalturaPartnerAuthenticationType;
 	readonly extendedFreeTrailExpiryReason : string;
-	readonly extendedFreeTrailExpiryDate : Date;
+	readonly extendedFreeTrailExpiryDate : number;
 	readonly extendedFreeTrail : number;
 	readonly extendedFreeTrailEndsWarning : boolean;
 	readonly eightyPercentWarning : number;
@@ -216,7 +216,7 @@ export class KalturaPartner extends KalturaObjectBase {
 				eSearchLanguages : { type : 'a', subTypeConstructor : KalturaESearchLanguageItem, subType : 'KalturaESearchLanguageItem' },
 				authenticationType : { type : 'en', readOnly : true, subTypeConstructor : KalturaPartnerAuthenticationType, subType : 'KalturaPartnerAuthenticationType' },
 				extendedFreeTrailExpiryReason : { type : 's', readOnly : true },
-				extendedFreeTrailExpiryDate : { type : 'd', readOnly : true },
+				extendedFreeTrailExpiryDate : { type : 'n', readOnly : true },
 				extendedFreeTrail : { type : 'n', readOnly : true },
 				extendedFreeTrailEndsWarning : { type : 'b', readOnly : true },
 				eightyPercentWarning : { type : 'n', readOnly : true },

@@ -6,7 +6,7 @@ import { KalturaAppTokenHashType } from './KalturaAppTokenHashType';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaAppTokenArgs  extends KalturaObjectBaseArgs {
-    expiry? : Date;
+    expiry? : number;
 	sessionType? : KalturaSessionType;
 	sessionUserId? : string;
 	sessionDuration? : number;
@@ -24,7 +24,7 @@ export class KalturaAppToken extends KalturaObjectBase {
 	readonly createdAt : Date;
 	readonly updatedAt : Date;
 	readonly status : KalturaAppTokenStatus;
-	expiry : Date;
+	expiry : number;
 	sessionType : KalturaSessionType;
 	sessionUserId : string;
 	sessionDuration : number;
@@ -50,7 +50,7 @@ export class KalturaAppToken extends KalturaObjectBase {
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
 				status : { type : 'en', readOnly : true, subTypeConstructor : KalturaAppTokenStatus, subType : 'KalturaAppTokenStatus' },
-				expiry : { type : 'd' },
+				expiry : { type : 'n' },
 				sessionType : { type : 'en', subTypeConstructor : KalturaSessionType, subType : 'KalturaSessionType' },
 				sessionUserId : { type : 's' },
 				sessionDuration : { type : 'n' },
