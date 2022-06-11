@@ -2,6 +2,7 @@
 
 export enum KalturaESearchUserFieldName {
     company = 'company',
+	country = 'country',
 	createdAt = 'created_at',
 	email = 'email',
 	firstName = 'first_name',

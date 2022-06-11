@@ -23,8 +23,8 @@ export class KalturaLiveChannelSegment extends KalturaObjectBase {
 
     readonly id : number;
 	readonly partnerId : number;
-	readonly createdAt : number;
-	readonly updatedAt : number;
+	readonly createdAt : Date;
+	readonly updatedAt : Date;
 	name : string;
 	description : string;
 	tags : string;
@@ -51,8 +51,8 @@ export class KalturaLiveChannelSegment extends KalturaObjectBase {
                 objectType : { type : 'c', default : 'KalturaLiveChannelSegment' },
 				id : { type : 'n', readOnly : true },
 				partnerId : { type : 'n', readOnly : true },
-				createdAt : { type : 'n', readOnly : true },
-				updatedAt : { type : 'n', readOnly : true },
+				createdAt : { type : 'd', readOnly : true },
+				updatedAt : { type : 'd', readOnly : true },
 				name : { type : 's' },
 				description : { type : 's' },
 				tags : { type : 's' },

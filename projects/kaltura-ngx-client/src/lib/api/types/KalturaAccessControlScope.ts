@@ -9,7 +9,7 @@ export interface KalturaAccessControlScopeArgs  extends KalturaObjectBaseArgs {
 	ip? : string;
 	ks? : string;
 	userAgent? : string;
-	time? : number;
+	time? : Date;
 	contexts? : KalturaAccessControlContextTypeHolder[];
 	hashes? : KalturaKeyValue[];
 }
@@ -21,7 +21,7 @@ export class KalturaAccessControlScope extends KalturaObjectBase {
 	ip : string;
 	ks : string;
 	userAgent : string;
-	time : number;
+	time : Date;
 	contexts : KalturaAccessControlContextTypeHolder[];
 	hashes : KalturaKeyValue[];
 
@@ -43,7 +43,7 @@ export class KalturaAccessControlScope extends KalturaObjectBase {
 				ip : { type : 's' },
 				ks : { type : 's' },
 				userAgent : { type : 's' },
-				time : { type : 'n' },
+				time : { type : 'd' },
 				contexts : { type : 'a', subTypeConstructor : KalturaAccessControlContextTypeHolder, subType : 'KalturaAccessControlContextTypeHolder' },
 				hashes : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
             }
