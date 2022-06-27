@@ -24,6 +24,8 @@ export class KalturaUploadToken extends KalturaObjectBase {
 	readonly updatedAt : Date;
 	readonly uploadUrl : string;
 	autoFinalize : KalturaNullableBoolean;
+	readonly attachedObjectType : string;
+	readonly attachedObjectId : string;
 
     constructor(data? : KalturaUploadTokenArgs)
     {
@@ -47,7 +49,9 @@ export class KalturaUploadToken extends KalturaObjectBase {
 				createdAt : { type : 'd', readOnly : true },
 				updatedAt : { type : 'd', readOnly : true },
 				uploadUrl : { type : 's', readOnly : true },
-				autoFinalize : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
+				autoFinalize : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
+				attachedObjectType : { type : 's', readOnly : true },
+				attachedObjectId : { type : 's', readOnly : true }
             }
         );
         return result;

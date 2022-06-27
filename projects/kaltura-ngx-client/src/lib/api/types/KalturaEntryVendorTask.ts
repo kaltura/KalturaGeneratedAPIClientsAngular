@@ -20,6 +20,7 @@ export interface KalturaEntryVendorTaskArgs  extends KalturaObjectBaseArgs {
 	outputObjectId? : string;
 	partnerData? : string;
 	taskJobData? : KalturaVendorTaskData;
+	externalTaskId? : string;
 }
 
 
@@ -54,6 +55,7 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 	readonly serviceType : KalturaVendorServiceType;
 	readonly serviceFeature : KalturaVendorServiceFeature;
 	readonly turnAroundTime : KalturaVendorServiceTurnAroundTime;
+	externalTaskId : string;
 
     constructor(data? : KalturaEntryVendorTaskArgs)
     {
@@ -95,7 +97,8 @@ export class KalturaEntryVendorTask extends KalturaObjectBase {
 				expectedFinishTime : { type : 'd', readOnly : true },
 				serviceType : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceType, subType : 'KalturaVendorServiceType' },
 				serviceFeature : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceFeature, subType : 'KalturaVendorServiceFeature' },
-				turnAroundTime : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceTurnAroundTime, subType : 'KalturaVendorServiceTurnAroundTime' }
+				turnAroundTime : { type : 'en', readOnly : true, subTypeConstructor : KalturaVendorServiceTurnAroundTime, subType : 'KalturaVendorServiceTurnAroundTime' },
+				externalTaskId : { type : 's' }
             }
         );
         return result;

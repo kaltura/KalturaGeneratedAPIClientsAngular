@@ -5,6 +5,7 @@ import { KalturaObjectMetadata } from '../kaltura-object-base';
 import { KalturaUserFilter } from './KalturaUserFilter';
 import { KalturaCsvAdditionalFieldInfo } from './KalturaCsvAdditionalFieldInfo';
 import { KalturaKeyValue } from './KalturaKeyValue';
+import { KalturaExportToCsvOptions } from './KalturaExportToCsvOptions';
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
 export interface UserExportToCsvActionArgs  extends KalturaRequestArgs {
@@ -12,6 +13,7 @@ export interface UserExportToCsvActionArgs  extends KalturaRequestArgs {
 	metadataProfileId? : number;
 	additionalFields? : KalturaCsvAdditionalFieldInfo[];
 	mappedFields? : KalturaKeyValue[];
+	options? : KalturaExportToCsvOptions;
 }
 
 /**
@@ -28,6 +30,7 @@ export class UserExportToCsvAction extends KalturaRequest<string> {
 	metadataProfileId : number;
 	additionalFields : KalturaCsvAdditionalFieldInfo[];
 	mappedFields : KalturaKeyValue[];
+	options : KalturaExportToCsvOptions;
 
     constructor(data? : UserExportToCsvActionArgs)
     {
@@ -47,7 +50,8 @@ export class UserExportToCsvAction extends KalturaRequest<string> {
 				filter : { type : 'o', subTypeConstructor : KalturaUserFilter, subType : 'KalturaUserFilter' },
 				metadataProfileId : { type : 'n' },
 				additionalFields : { type : 'a', subTypeConstructor : KalturaCsvAdditionalFieldInfo, subType : 'KalturaCsvAdditionalFieldInfo' },
-				mappedFields : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' }
+				mappedFields : { type : 'a', subTypeConstructor : KalturaKeyValue, subType : 'KalturaKeyValue' },
+				options : { type : 'o', subTypeConstructor : KalturaExportToCsvOptions, subType : 'KalturaExportToCsvOptions' }
             }
         );
         return result;

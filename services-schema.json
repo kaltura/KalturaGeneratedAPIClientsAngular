@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.7.0",
+    "apiVersion": "18.8.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -733,6 +733,13 @@
                             "name": "mappedFields",
                             "typeClassName": "KalturaKeyValue",
                             "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "options",
+                            "typeClassName": "KalturaExportToCsvOptions",
+                            "type": "Object",
                             "optional": true,
                             "default": "null"
                         }
@@ -9379,6 +9386,13 @@
                             "name": "mappedFields",
                             "typeClassName": "KalturaKeyValue",
                             "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "options",
+                            "typeClassName": "KalturaExportToCsvOptions",
+                            "type": "Object",
                             "optional": true,
                             "default": "null"
                         }
@@ -30196,6 +30210,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "externalTaskId",
+                    "description": "The vendor's task internal Id",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -30438,9 +30463,31 @@
             "properties": [
                 {
                     "name": "format",
-                    "description": "Setting this property will cause additional columns to be added to the final report. The columns will be related to the specific object type passed (currently only MEDIA_CLIP is supported).\n\t Please note that this property will NOT change the result filter in any way (i.e passing MEDIA_CLIP here will not force the report to return only media items).\n\t /",
+                    "description": "The format of the outputted date string. There are also several predefined date constants that may be used instead, so for example DATE_RSS contains the format string 'D, d M Y H:i:s'.\n\t https://www.php.net/manual/en/function.date.php",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "typeEqual",
+                    "description": "Setting this property will cause additional columns to be added to the final report. The columns will be related to the specific object type passed (currently only MEDIA_CLIP is supported).\n\t Please note that this property will NOT change the result filter in any way (i.e passing MEDIA_CLIP here will not force the report to return only media items).",
+                    "typeClassName": "KalturaEntryType",
+                    "type": "EnumOfString",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "defaultHeader",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -35755,6 +35802,49 @@
                     "description": "",
                     "typeClassName": "KalturaEntryServerNodeRecordingStatus",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaLiveFeature",
+            "base": "",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "systemName",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "preStartTime",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "postEndTime",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -44975,6 +45065,28 @@
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "attachedObjectType",
+                    "description": "The value for the object_type field.",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "attachedObjectId",
+                    "description": "The value for the object_id field.",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
                     "optional": true,
                     "default": "null"
                 }
@@ -59488,6 +59600,27 @@
             ]
         },
         {
+            "name": "KalturaKeyValueExtended",
+            "base": "KalturaKeyValue",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "predefinedFormat",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaKontikiStorageProfile",
             "base": "KalturaStorageProfile",
             "plugin": "kontiki",
@@ -59551,6 +59684,60 @@
                 {
                     "name": "flavorParamsIds",
                     "description": "Comma separated list of flavor params ids to allow to deny",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaLiveCaptionFeature",
+            "base": "KalturaLiveFeature",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "mediaUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "mediaKey",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "captionUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "captionToken",
+                    "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -74280,6 +74467,17 @@
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "typeClassName": "KalturaExportToCsvOptions",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
                 }
             ]
         },
@@ -81581,6 +81779,17 @@
                     "description": "Detect whether \"real\" live can interrupt to the \"main\" content",
                     "typeClassName": "bool",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "liveFeatures",
+                    "description": "list of live features that apply to the event",
+                    "typeClassName": "KalturaLiveFeature",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,

@@ -1,15 +1,21 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
+import { KalturaEntryType } from './KalturaEntryType';
+import { KalturaNullableBoolean } from './KalturaNullableBoolean';
 import { KalturaObjectBase, KalturaObjectBaseArgs } from '../kaltura-object-base';
 
 export interface KalturaExportToCsvOptionsArgs  extends KalturaObjectBaseArgs {
     format? : string;
+	typeEqual? : KalturaEntryType;
+	defaultHeader? : KalturaNullableBoolean;
 }
 
 
 export class KalturaExportToCsvOptions extends KalturaObjectBase {
 
     format : string;
+	typeEqual : KalturaEntryType;
+	defaultHeader : KalturaNullableBoolean;
 
     constructor(data? : KalturaExportToCsvOptionsArgs)
     {
@@ -23,7 +29,9 @@ export class KalturaExportToCsvOptions extends KalturaObjectBase {
             result.properties,
             {
                 objectType : { type : 'c', default : 'KalturaExportToCsvOptions' },
-				format : { type : 's' }
+				format : { type : 's' },
+				typeEqual : { type : 'es', subTypeConstructor : KalturaEntryType, subType : 'KalturaEntryType' },
+				defaultHeader : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' }
             }
         );
         return result;
