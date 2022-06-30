@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.8.0",
+    "apiVersion": "18.9.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -1596,6 +1596,50 @@
                         }
                     ],
                     "description": "Delete a Category",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "exportToCsv",
+                    "resultClassName": "string",
+                    "resultType": "Simple",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaCategoryFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "metadataProfileId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "additionalFields",
+                            "typeClassName": "KalturaCsvAdditionalFieldInfo",
+                            "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "mappedFields",
+                            "typeClassName": "KalturaKeyValue",
+                            "type": "ArrayOfObjects",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "options",
+                            "typeClassName": "KalturaExportToCsvOptions",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "Creates a batch job that sends an email with a link to download a CSV containing a list of categories",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -45048,7 +45092,7 @@
                 },
                 {
                     "name": "uploadUrl",
-                    "description": "Upload url - to explicitly determine to which domain to adress the uploadToken->upload call",
+                    "description": "Upload url - to explicitly determine to which domain to address the uploadToken->upload call",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -45059,7 +45103,7 @@
                 },
                 {
                     "name": "autoFinalize",
-                    "description": "autoFinalize - Should the upload be finalized once the file size on disk matches the file size reproted when adding the upload token.",
+                    "description": "autoFinalize - Should the upload be finalized once the file size on disk matches the file size reported when adding the upload token.",
                     "typeClassName": "KalturaNullableBoolean",
                     "type": "EnumOfInt",
                     "writeOnly": false,
@@ -45070,7 +45114,7 @@
                 },
                 {
                     "name": "attachedObjectType",
-                    "description": "The value for the object_type field.",
+                    "description": "The type of the object this token is attached to.",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -45081,7 +45125,7 @@
                 },
                 {
                     "name": "attachedObjectId",
-                    "description": "The value for the object_id field.",
+                    "description": "The id of the object this token is attached to.",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -79990,15 +80034,6 @@
             "properties": []
         },
         {
-            "name": "KalturaCategoryEntryFilter",
-            "base": "KalturaCategoryEntryBaseFilter",
-            "plugin": "",
-            "description": "",
-            "abstract": false,
-            "deprecated": false,
-            "properties": []
-        },
-        {
             "name": "KalturaCategoryFilter",
             "base": "KalturaCategoryBaseFilter",
             "plugin": "",
@@ -80095,6 +80130,36 @@
                     "default": "null"
                 }
             ]
+        },
+        {
+            "name": "KalturaCategoriesCsvJobData",
+            "base": "KalturaMappedObjectsCsvJobData",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "filter",
+                    "description": "The filter should return the list of categories that need to be specified in the csv.",
+                    "typeClassName": "KalturaCategoryFilter",
+                    "type": "Object",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaCategoryEntryFilter",
+            "base": "KalturaCategoryEntryBaseFilter",
+            "plugin": "",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
         },
         {
             "name": "KalturaComcastMrssDistributionProviderBaseFilter",
