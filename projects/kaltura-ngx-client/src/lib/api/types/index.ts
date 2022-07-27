@@ -2375,6 +2375,7 @@ export { CaptionAssetGetRemotePathsAction, CaptionAssetGetRemotePathsActionArgs 
 export { CaptionAssetGetUrlAction, CaptionAssetGetUrlActionArgs } from './CaptionAssetGetUrlAction'
 export { CaptionAssetListAction, CaptionAssetListActionArgs } from './CaptionAssetListAction'
 export { CaptionAssetServeAction, CaptionAssetServeActionArgs } from './CaptionAssetServeAction'
+export { CaptionAssetServeAsJsonAction, CaptionAssetServeAsJsonActionArgs } from './CaptionAssetServeAsJsonAction'
 export { CaptionAssetServeByEntryIdAction, CaptionAssetServeByEntryIdActionArgs } from './CaptionAssetServeByEntryIdAction'
 export { CaptionAssetServeWebVTTAction, CaptionAssetServeWebVTTActionArgs } from './CaptionAssetServeWebVTTAction'
 export { CaptionAssetSetAsDefaultAction, CaptionAssetSetAsDefaultActionArgs } from './CaptionAssetSetAsDefaultAction'

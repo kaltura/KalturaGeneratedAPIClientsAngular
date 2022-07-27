@@ -61,6 +61,7 @@ export enum KalturaReportType {
 	playbackRate = '46',
 	playbackRateVpaas = '20020',
 	playbackTypeRealtime = '10011',
+	playerHighlights = '62',
 	playerRelatedInteractions = '45',
 	playerRelatedInteractionsVpaas = '20019',
 	qoeEngagement = '30014',
