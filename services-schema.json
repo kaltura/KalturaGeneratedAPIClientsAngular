@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.10.0",
+    "apiVersion": "18.11.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -16294,6 +16294,36 @@
                         }
                     ],
                     "description": "Update an existing KalturaScheduleEvent object",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "updateLiveFeature",
+                    "resultClassName": "KalturaLiveStreamScheduleEvent",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "scheduledEventId",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "featureName",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "liveFeature",
+                            "typeClassName": "KalturaLiveFeature",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Add feature to live event",
                     "enableInMultiRequest": 1
                 }
             ]
@@ -63150,6 +63180,49 @@
             ]
         },
         {
+            "name": "KalturaScheduledVendorTaskData",
+            "base": "KalturaVendorTaskData",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "startDate",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "endDate",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "scheduledEventId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaSchedulerListResponse",
             "base": "KalturaListResponse",
             "plugin": "",
@@ -78586,6 +78659,49 @@
             ]
         },
         {
+            "name": "KalturaVendorLiveCaptionCatalogItem",
+            "base": "KalturaVendorCaptionsCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "minimalRefundTime",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "minimalOrderTime",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "durationLimit",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaVendorTranslationCatalogItem",
             "base": "KalturaVendorCaptionsCatalogItem",
             "plugin": "reach",
@@ -85702,6 +85818,15 @@
             "properties": []
         },
         {
+            "name": "KalturaVendorLiveCaptionCatalogItemFilter",
+            "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaYahooDistributionProfileBaseFilter",
             "base": "KalturaConfigurableDistributionProfileFilter",
             "plugin": "yahooDistribution",
@@ -88461,6 +88586,10 @@
                 {
                     "name": "REJECTED",
                     "value": "5"
+                },
+                {
+                    "name": "SCHEDULED",
+                    "value": "9"
                 }
             ]
         },
@@ -91247,6 +91376,10 @@
                 {
                     "name": "INTELLIGENT_TAGGING",
                     "value": "6"
+                },
+                {
+                    "name": "LIVE_CAPTION",
+                    "value": "8"
                 },
                 {
                     "name": "TRANSLATION",

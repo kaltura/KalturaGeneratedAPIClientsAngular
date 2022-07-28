@@ -8,5 +8,6 @@ export enum KalturaEntryVendorTaskStatus {
 	pendingModeration=4,
 	processing=3,
 	ready=2,
-	rejected=5
+	rejected=5,
+	scheduled=9
 }

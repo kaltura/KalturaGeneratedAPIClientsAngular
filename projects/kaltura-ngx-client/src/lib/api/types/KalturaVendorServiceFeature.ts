@@ -7,5 +7,6 @@ export enum KalturaVendorServiceFeature {
 	chaptering=5,
 	dubbing=7,
 	intelligentTagging=6,
+	liveCaption=8,
 	translation=2
 }
