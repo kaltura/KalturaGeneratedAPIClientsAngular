@@ -9651,8 +9651,8 @@
                 },
                 {
                     "name": "loginDataResetPassword",
-                    "resultClassName": null,
-                    "resultType": "Void",
+                    "resultClassName": "KalturaUser",
+                    "resultType": "Object",
                     "params": [
                         {
                             "name": "loginDataId",
@@ -106414,6 +106414,10 @@
                     "value": "52"
                 },
                 {
+                    "name": "CDN_BANDWIDTH_USAGE",
+                    "value": "64"
+                },
+                {
                     "name": "CONTENT_CONTRIBUTIONS",
                     "value": "7"
                 },
@@ -106584,6 +106588,10 @@
                 {
                     "name": "PARTNER_USAGE",
                     "value": "201"
+                },
+                {
+                    "name": "PARTNER_USAGE_HIGHLIGHTS",
+                    "value": "63"
                 },
                 {
                     "name": "PARTNER_USAGE_VPAAS",
@@ -106916,6 +106924,14 @@
                 {
                     "name": "QUIZ_USER_PERCENTAGE",
                     "value": "quiz.QUIZ_USER_PERCENTAGE"
+                },
+                {
+                    "name": "REACH_CATALOG_USAGE",
+                    "value": "65"
+                },
+                {
+                    "name": "REACH_PROFILE_USAGE",
+                    "value": "66"
                 },
                 {
                     "name": "REACH_USAGE",

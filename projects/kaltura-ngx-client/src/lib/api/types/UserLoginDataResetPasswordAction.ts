@@ -1,6 +1,6 @@
 
 import { KalturaObjectMetadata } from '../kaltura-object-base';
-
+import { KalturaUser } from './KalturaUser';
 
 import { KalturaRequest, KalturaRequestArgs } from '../kaltura-request';
 
@@ -14,17 +14,17 @@ export interface UserLoginDataResetPasswordActionArgs  extends KalturaRequestArg
  *
  * Usage: Resets user login password
  *
- * Server response type:         void
+ * Server response type:         KalturaUser
  * Server failure response type: KalturaAPIException
  */
-export class UserLoginDataResetPasswordAction extends KalturaRequest<void> {
+export class UserLoginDataResetPasswordAction extends KalturaRequest<KalturaUser> {
 
     loginDataId : string;
 	newPassword : string;
 
     constructor(data : UserLoginDataResetPasswordActionArgs)
     {
-        super(data, {responseType : 'v', responseSubType : '', responseConstructor : null });
+        super(data, {responseType : 'o', responseSubType : 'KalturaUser', responseConstructor : KalturaUser  });
     }
 
     protected _getMetadata() : KalturaObjectMetadata
