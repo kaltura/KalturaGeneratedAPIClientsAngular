@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.12.0",
+    "apiVersion": "18.13.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -108218,6 +108218,22 @@
                     "value": "-createdAt"
                 },
                 {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
+                },
+                {
+                    "name": "NAME_ASC",
+                    "value": "+name"
+                },
+                {
+                    "name": "NAME_DESC",
+                    "value": "-name"
+                },
+                {
                     "name": "UPDATED_AT_ASC",
                     "value": "+updatedAt"
                 },
@@ -108238,6 +108254,22 @@
                 {
                     "name": "CREATED_AT_DESC",
                     "value": "-createdAt"
+                },
+                {
+                    "name": "ID_ASC",
+                    "value": "+id"
+                },
+                {
+                    "name": "ID_DESC",
+                    "value": "-id"
+                },
+                {
+                    "name": "NAME_ASC",
+                    "value": "+name"
+                },
+                {
+                    "name": "NAME_DESC",
+                    "value": "-name"
                 },
                 {
                     "name": "UPDATED_AT_ASC",
