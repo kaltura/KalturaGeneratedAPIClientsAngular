@@ -60064,6 +60064,49 @@
             ]
         },
         {
+            "name": "KalturaLiveRestreamFeature",
+            "base": "KalturaLiveFeature",
+            "plugin": "schedule",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "primaryUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "secondaryUrl",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "streamKey",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaLiveStatsListResponse",
             "base": "KalturaListResponse",
             "plugin": "",
@@ -91044,6 +91087,10 @@
                 {
                     "name": "ADVANCED",
                     "value": "3"
+                },
+                {
+                    "name": "SYSTEM",
+                    "value": "4"
                 },
                 {
                     "name": "WIZARD",

@@ -612,6 +612,7 @@ export { KalturaLiveEntryArchiveJobData, KalturaLiveEntryArchiveJobDataArgs } fr
 export { KalturaLiveEntryScheduleResource, KalturaLiveEntryScheduleResourceArgs } from './KalturaLiveEntryScheduleResource'
 export { KalturaLiveEntryServerNode, KalturaLiveEntryServerNodeArgs } from './KalturaLiveEntryServerNode'
 export { KalturaLiveReportExportJobData, KalturaLiveReportExportJobDataArgs } from './KalturaLiveReportExportJobData'
+export { KalturaLiveRestreamFeature, KalturaLiveRestreamFeatureArgs } from './KalturaLiveRestreamFeature'
 export { KalturaLiveStatsListResponse, KalturaLiveStatsListResponseArgs } from './KalturaLiveStatsListResponse'
 export { KalturaLiveStreamListResponse, KalturaLiveStreamListResponseArgs } from './KalturaLiveStreamListResponse'
 export { KalturaLiveStreamPushPublishRTMPConfiguration, KalturaLiveStreamPushPublishRTMPConfigurationArgs } from './KalturaLiveStreamPushPublishRTMPConfiguration'
