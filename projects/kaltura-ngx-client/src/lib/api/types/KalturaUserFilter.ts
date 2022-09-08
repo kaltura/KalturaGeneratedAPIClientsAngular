@@ -5,8 +5,6 @@ import { KalturaUserBaseFilter, KalturaUserBaseFilterArgs } from './KalturaUserB
 
 export interface KalturaUserFilterArgs  extends KalturaUserBaseFilterArgs {
     idOrScreenNameStartsWith? : string;
-	idEqual? : string;
-	idIn? : string;
 	loginEnabledEqual? : KalturaNullableBoolean;
 	roleIdEqual? : string;
 	roleIdsEqual? : string;
@@ -20,8 +18,6 @@ export interface KalturaUserFilterArgs  extends KalturaUserBaseFilterArgs {
 export class KalturaUserFilter extends KalturaUserBaseFilter {
 
     idOrScreenNameStartsWith : string;
-	idEqual : string;
-	idIn : string;
 	loginEnabledEqual : KalturaNullableBoolean;
 	roleIdEqual : string;
 	roleIdsEqual : string;
@@ -43,8 +39,6 @@ export class KalturaUserFilter extends KalturaUserBaseFilter {
             {
                 objectType : { type : 'c', default : 'KalturaUserFilter' },
 				idOrScreenNameStartsWith : { type : 's' },
-				idEqual : { type : 's' },
-				idIn : { type : 's' },
 				loginEnabledEqual : { type : 'en', subTypeConstructor : KalturaNullableBoolean, subType : 'KalturaNullableBoolean' },
 				roleIdEqual : { type : 's' },
 				roleIdsEqual : { type : 's' },

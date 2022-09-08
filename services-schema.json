@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.13.0",
+    "apiVersion": "18.14.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -56306,6 +56306,28 @@
             "deprecated": false,
             "properties": [
                 {
+                    "name": "idEqual",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "typeEqual",
                     "description": "",
                     "typeClassName": "KalturaUserType",
@@ -56372,28 +56394,6 @@
             "properties": [
                 {
                     "name": "idOrScreenNameStartsWith",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "idEqual",
-                    "description": "",
-                    "typeClassName": "string",
-                    "type": "Simple",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
-                    "name": "idIn",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
