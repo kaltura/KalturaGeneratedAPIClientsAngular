@@ -6,6 +6,7 @@ export interface KalturaAccessControlModifyRequestHostRegexActionArgs  extends K
     pattern? : string;
 	replacement? : string;
 	replacmenServerNodeId? : number;
+	checkAliveTimeoutMs? : number;
 }
 
 
@@ -14,6 +15,7 @@ export class KalturaAccessControlModifyRequestHostRegexAction extends KalturaRul
     pattern : string;
 	replacement : string;
 	replacmenServerNodeId : number;
+	checkAliveTimeoutMs : number;
 
     constructor(data? : KalturaAccessControlModifyRequestHostRegexActionArgs)
     {
@@ -29,7 +31,8 @@ export class KalturaAccessControlModifyRequestHostRegexAction extends KalturaRul
                 objectType : { type : 'c', default : 'KalturaAccessControlModifyRequestHostRegexAction' },
 				pattern : { type : 's' },
 				replacement : { type : 's' },
-				replacmenServerNodeId : { type : 'n' }
+				replacmenServerNodeId : { type : 'n' },
+				checkAliveTimeoutMs : { type : 'n' }
             }
         );
         return result;

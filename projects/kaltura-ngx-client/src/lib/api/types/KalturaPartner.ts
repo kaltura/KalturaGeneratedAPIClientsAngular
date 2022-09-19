@@ -54,6 +54,7 @@ export interface KalturaPartnerArgs  extends KalturaObjectBaseArgs {
 	loginBlockPeriod? : number;
 	numPrevPassToKeep? : number;
 	isSelfServe? : boolean;
+	eventPlatformAllowedTemplates? : string;
 }
 
 
@@ -137,6 +138,7 @@ export class KalturaPartner extends KalturaObjectBase {
 	isSelfServe : boolean;
 	readonly allowedDomains : string;
 	readonly excludedAdminRoleName : string;
+	eventPlatformAllowedTemplates : string;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -232,7 +234,8 @@ export class KalturaPartner extends KalturaObjectBase {
 				twoFactorAuthenticationMode : { type : 'en', readOnly : true, subTypeConstructor : KalturaTwoFactorAuthenticationMode, subType : 'KalturaTwoFactorAuthenticationMode' },
 				isSelfServe : { type : 'b' },
 				allowedDomains : { type : 's', readOnly : true },
-				excludedAdminRoleName : { type : 's', readOnly : true }
+				excludedAdminRoleName : { type : 's', readOnly : true },
+				eventPlatformAllowedTemplates : { type : 's' }
             }
         );
         return result;
