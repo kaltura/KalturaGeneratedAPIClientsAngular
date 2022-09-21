@@ -30,6 +30,7 @@ export { KalturaAuditTrailInfo, KalturaAuditTrailInfoArgs } from './KalturaAudit
 export { KalturaAuditTrail, KalturaAuditTrailArgs } from './KalturaAuditTrail'
 export { KalturaAuditTrailChangeItem, KalturaAuditTrailChangeItemArgs } from './KalturaAuditTrailChangeItem'
 export { KalturaAuthentication, KalturaAuthenticationArgs } from './KalturaAuthentication'
+export { KalturaMultiLingualString, KalturaMultiLingualStringArgs } from './KalturaMultiLingualString'
 export { KalturaOperationAttributes, KalturaOperationAttributesArgs } from './KalturaOperationAttributes'
 export { KalturaBaseEntry, KalturaBaseEntryArgs } from './KalturaBaseEntry'
 export { KalturaBaseEntryCloneOptionItem, KalturaBaseEntryCloneOptionItemArgs } from './KalturaBaseEntryCloneOptionItem'

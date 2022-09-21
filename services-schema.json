@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.14.0",
+    "apiVersion": "18.15.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -19785,6 +19785,38 @@
             ]
         },
         {
+            "name": "KalturaMultiLingualString",
+            "base": "",
+            "plugin": "",
+            "description": "A Multi Lingual String",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "language",
+                    "description": "The language of the value",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "value",
+                    "description": "Value",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaOperationAttributes",
             "base": "",
             "plugin": "",
@@ -19824,10 +19856,32 @@
                     "default": "null"
                 },
                 {
+                    "name": "multiLingual_name",
+                    "description": "Entry name (Min 1 chars)",
+                    "typeClassName": "KalturaMultiLingualString",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "description",
                     "description": "Entry description",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "multiLingual_description",
+                    "description": "Entry description",
+                    "typeClassName": "KalturaMultiLingualString",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -19872,6 +19926,17 @@
                     "description": "Entry tags",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "multiLingual_tags",
+                    "description": "Entry tags",
+                    "typeClassName": "KalturaMultiLingualString",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -41432,6 +41497,17 @@
                 {
                     "name": "ks",
                     "description": "Kaltura API session",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "language",
+                    "description": "language",
                     "typeClassName": "string",
                     "type": "Simple",
                     "writeOnly": false,
@@ -109304,6 +109380,15 @@
             "readOnly": false,
             "default": "",
             "description": "Kaltura API session",
+            "type": "Simple",
+            "typeClassName": "string"
+        },
+        "language": {
+            "name": "language",
+            "optional": true,
+            "readOnly": false,
+            "default": "",
+            "description": "language",
             "type": "Simple",
             "typeClassName": "string"
         },
