@@ -108480,6 +108480,14 @@
                     "value": "viewHistory.PLAYBACK_STARTED"
                 },
                 {
+                    "name": "SYNC_STATUS_ERROR",
+                    "value": "quiz.SYNC_STATUS_ERROR"
+                },
+                {
+                    "name": "SYNC_STATUS_SUCCESS",
+                    "value": "quiz.SYNC_STATUS_SUCCESS"
+                },
+                {
                     "name": "VIEWED",
                     "value": "viewHistory.VIEWED"
                 }
