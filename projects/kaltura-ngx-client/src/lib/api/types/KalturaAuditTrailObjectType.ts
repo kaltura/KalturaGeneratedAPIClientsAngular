@@ -4,6 +4,7 @@ export enum KalturaAuditTrailObjectType {
     accessControl = 'accessControl',
 	batchJob = 'BatchJob',
 	category = 'category',
+	categoryEntry = 'categoryEntry',
 	conversionProfile2 = 'conversionProfile2',
 	emailIngestionProfile = 'EmailIngestionProfile',
 	entry = 'entry',

@@ -134,11 +134,13 @@ export class KalturaPartner extends KalturaObjectBase {
 	maxLoginAttempts : number;
 	loginBlockPeriod : number;
 	numPrevPassToKeep : number;
+	readonly allowDefaultPasswordRestrictions : boolean;
 	readonly twoFactorAuthenticationMode : KalturaTwoFactorAuthenticationMode;
 	isSelfServe : boolean;
 	readonly allowedDomains : string;
 	readonly excludedAdminRoleName : string;
 	eventPlatformAllowedTemplates : string;
+	readonly verticalClassificationId : number;
 
     constructor(data? : KalturaPartnerArgs)
     {
@@ -231,11 +233,13 @@ export class KalturaPartner extends KalturaObjectBase {
 				maxLoginAttempts : { type : 'n' },
 				loginBlockPeriod : { type : 'n' },
 				numPrevPassToKeep : { type : 'n' },
+				allowDefaultPasswordRestrictions : { type : 'b', readOnly : true },
 				twoFactorAuthenticationMode : { type : 'en', readOnly : true, subTypeConstructor : KalturaTwoFactorAuthenticationMode, subType : 'KalturaTwoFactorAuthenticationMode' },
 				isSelfServe : { type : 'b' },
 				allowedDomains : { type : 's', readOnly : true },
 				excludedAdminRoleName : { type : 's', readOnly : true },
-				eventPlatformAllowedTemplates : { type : 's' }
+				eventPlatformAllowedTemplates : { type : 's' },
+				verticalClassificationId : { type : 'n', readOnly : true }
             }
         );
         return result;

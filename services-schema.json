@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.16.0",
+    "apiVersion": "18.17.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -22598,6 +22598,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "allowDefaultPasswordRestrictions",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "twoFactorAuthenticationMode",
                     "description": "",
                     "typeClassName": "KalturaTwoFactorAuthenticationMode",
@@ -22648,6 +22659,17 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "verticalClassificationId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -27972,7 +27994,7 @@
                 },
                 {
                     "name": "fileSizeCheckInterval",
-                    "description": "The ammount of time, in seconds, that should pass so that a file with no change in size we'll be treated as \"finished uploading to folder\"",
+                    "description": "The amount of time, in seconds, that should pass so that a file with no change in size will be treated as \"finished uploading to folder\"",
                     "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
@@ -60088,6 +60110,17 @@
                     "description": "",
                     "typeClassName": "KalturaViewMode",
                     "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "featuresUpdatedAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -92611,6 +92644,10 @@
                 {
                     "name": "CATEGORY",
                     "value": "category"
+                },
+                {
+                    "name": "CATEGORY_ENTRY",
+                    "value": "categoryEntry"
                 },
                 {
                     "name": "CONVERSION_PROFILE_2",
