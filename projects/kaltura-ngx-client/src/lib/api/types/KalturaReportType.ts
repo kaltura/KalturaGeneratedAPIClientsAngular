@@ -140,6 +140,7 @@ export enum KalturaReportType {
 	reachProfileUsage = '66',
 	reachUsage = '28',
 	reactionsBreakdownWebcast = '40013',
+	selfServeBandwidth = '67',
 	selfServeUsage = '60',
 	selfServeUsageVpaas = '20023',
 	specificUserEngagement = '12',

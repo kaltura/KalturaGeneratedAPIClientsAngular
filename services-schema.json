@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.17.0",
+    "apiVersion": "18.20.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -29158,6 +29158,17 @@
                     "default": "null"
                 },
                 {
+                    "name": "isGuest",
+                    "description": "",
+                    "typeClassName": "bool",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
                     "name": "roleIds",
                     "description": "",
                     "typeClassName": "string",
@@ -29308,6 +29319,17 @@
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "externalId",
+                    "description": "This field should be sent instead of the id field whenever you want to work with hashed user ids",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
                     "optional": true,
                     "default": "null"
                 }
@@ -34039,6 +34061,17 @@
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableMeetingUpload",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
                     "insertOnly": false,
                     "optional": true,
                     "default": "null"
@@ -47026,17 +47059,6 @@
                     "default": "null"
                 },
                 {
-                    "name": "enableMeetingUpload",
-                    "description": "",
-                    "typeClassName": "KalturaNullableBoolean",
-                    "type": "EnumOfInt",
-                    "writeOnly": false,
-                    "readOnly": false,
-                    "insertOnly": false,
-                    "optional": true,
-                    "default": "null"
-                },
-                {
                     "name": "optOutGroupNames",
                     "description": "",
                     "typeClassName": "string",
@@ -50034,6 +50056,17 @@
                 },
                 {
                     "name": "group",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "externalId",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
@@ -59960,6 +59993,17 @@
                     "name": "captionToken",
                     "description": "",
                     "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "inputDelay",
+                    "description": "",
+                    "typeClassName": "int",
                     "type": "Simple",
                     "writeOnly": false,
                     "readOnly": false,
@@ -97178,6 +97222,10 @@
                     "value": "email"
                 },
                 {
+                    "name": "EXTERNAL_ID",
+                    "value": "external_id"
+                },
+                {
                     "name": "FIRST_NAME",
                     "value": "first_name"
                 },
@@ -97186,8 +97234,20 @@
                     "value": "group_ids"
                 },
                 {
+                    "name": "IS_ADMIN",
+                    "value": "is_admin"
+                },
+                {
+                    "name": "IS_HASHED",
+                    "value": "is_hashed"
+                },
+                {
                     "name": "LAST_NAME",
                     "value": "last_name"
+                },
+                {
+                    "name": "LOGIN_ENABLED",
+                    "value": "login_enabled"
                 },
                 {
                     "name": "PERMISSION_NAMES",
@@ -97423,6 +97483,10 @@
                     "value": "email"
                 },
                 {
+                    "name": "EXTERNAL_ID",
+                    "value": "external_id"
+                },
+                {
                     "name": "FIRST_NAME",
                     "value": "first_name"
                 },
@@ -97431,8 +97495,20 @@
                     "value": "group_ids"
                 },
                 {
+                    "name": "IS_ADMIN",
+                    "value": "is_admin"
+                },
+                {
+                    "name": "IS_HASHED",
+                    "value": "is_hashed"
+                },
+                {
                     "name": "LAST_NAME",
                     "value": "last_name"
+                },
+                {
+                    "name": "LOGIN_ENABLED",
+                    "value": "login_enabled"
                 },
                 {
                     "name": "PERMISSION_NAMES",
@@ -107124,6 +107200,10 @@
                     "value": "40013"
                 },
                 {
+                    "name": "SELF_SERVE_BANDWIDTH",
+                    "value": "67"
+                },
+                {
                     "name": "SELF_SERVE_USAGE",
                     "value": "60"
                 },
@@ -107328,6 +107408,10 @@
                 {
                     "name": "KMC",
                     "value": "1"
+                },
+                {
+                    "name": "KME",
+                    "value": "3"
                 },
                 {
                     "name": "KMS",
