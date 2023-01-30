@@ -1,10 +1,12 @@
 
 import { KalturaObjectMetadata, typesMappingStorage } from '../kaltura-object-base';
+import { KalturaString } from './KalturaString';
 import { KalturaContentResource, KalturaContentResourceArgs } from './KalturaContentResource';
 
 export interface KalturaUrlResourceArgs  extends KalturaContentResourceArgs {
     url? : string;
 	forceAsyncDownload? : boolean;
+	urlHeaders? : KalturaString[];
 }
 
 
@@ -12,10 +14,12 @@ export class KalturaUrlResource extends KalturaContentResource {
 
     url : string;
 	forceAsyncDownload : boolean;
+	urlHeaders : KalturaString[];
 
     constructor(data? : KalturaUrlResourceArgs)
     {
         super(data);
+        if (typeof this.urlHeaders === 'undefined') this.urlHeaders = [];
     }
 
     protected _getMetadata() : KalturaObjectMetadata
@@ -26,7 +30,8 @@ export class KalturaUrlResource extends KalturaContentResource {
             {
                 objectType : { type : 'c', default : 'KalturaUrlResource' },
 				url : { type : 's' },
-				forceAsyncDownload : { type : 'b' }
+				forceAsyncDownload : { type : 'b' },
+				urlHeaders : { type : 'a', subTypeConstructor : KalturaString, subType : 'KalturaString' }
             }
         );
         return result;

@@ -5,6 +5,7 @@ import { KalturaPartnerFilter, KalturaPartnerFilterArgs } from './KalturaPartner
 export interface KalturaSystemPartnerFilterArgs  extends KalturaPartnerFilterArgs {
     partnerParentIdEqual? : number;
 	partnerParentIdIn? : string;
+	adminEmailEqual? : string;
 }
 
 
@@ -12,6 +13,7 @@ export class KalturaSystemPartnerFilter extends KalturaPartnerFilter {
 
     partnerParentIdEqual : number;
 	partnerParentIdIn : string;
+	adminEmailEqual : string;
 
     constructor(data? : KalturaSystemPartnerFilterArgs)
     {
@@ -26,7 +28,8 @@ export class KalturaSystemPartnerFilter extends KalturaPartnerFilter {
             {
                 objectType : { type : 'c', default : 'KalturaSystemPartnerFilter' },
 				partnerParentIdEqual : { type : 'n' },
-				partnerParentIdIn : { type : 's' }
+				partnerParentIdIn : { type : 's' },
+				adminEmailEqual : { type : 's' }
             }
         );
         return result;

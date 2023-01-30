@@ -1,5 +1,5 @@
 {
-    "apiVersion": "19.0.0",
+    "apiVersion": "19.1.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -40437,6 +40437,17 @@
                     "description": "Force Import Job",
                     "typeClassName": "bool",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "urlHeaders",
+                    "description": "",
+                    "typeClassName": "KalturaString",
+                    "type": "ArrayOfObjects",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -82974,6 +82985,17 @@
                 },
                 {
                     "name": "partnerParentIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "adminEmailEqual",
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
