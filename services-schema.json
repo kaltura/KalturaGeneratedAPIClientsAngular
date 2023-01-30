@@ -1,5 +1,5 @@
 {
-    "apiVersion": "18.20.0",
+    "apiVersion": "19.0.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -34067,6 +34067,17 @@
                 },
                 {
                     "name": "enableMeetingUpload",
+                    "description": "",
+                    "typeClassName": "KalturaNullableBoolean",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "enableMeetingChat",
                     "description": "",
                     "typeClassName": "KalturaNullableBoolean",
                     "type": "EnumOfInt",
@@ -94119,6 +94130,10 @@
                 {
                     "name": "UNKNOWN",
                     "value": "0"
+                },
+                {
+                    "name": "WEBEX",
+                    "value": "2"
                 },
                 {
                     "name": "ZOOM",
