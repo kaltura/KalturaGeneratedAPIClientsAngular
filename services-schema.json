@@ -1,5 +1,5 @@
 {
-    "apiVersion": "19.1.0",
+    "apiVersion": "19.3.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -66475,6 +66475,49 @@
             ]
         },
         {
+            "name": "KalturaVendorExtendedAudioDescriptionCatalogItem",
+            "base": "KalturaVendorCatalogItem",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "flavorParamsId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "clearAudioFlavorParamsId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "outputFormat",
+                    "description": "",
+                    "typeClassName": "KalturaVendorCatalogItemOutputFormat",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaVendorIntelligentTaggingCatalogItem",
             "base": "KalturaVendorCatalogItem",
             "plugin": "reach",
@@ -86069,6 +86112,15 @@
             "properties": []
         },
         {
+            "name": "KalturaVendorExtendedAudioDescriptionCatalogItemFilter",
+            "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
+            "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaVendorLiveCaptionCatalogItemFilter",
             "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
             "plugin": "reach",
@@ -91565,6 +91617,10 @@
                 {
                     "name": "SRT",
                     "value": "1"
+                },
+                {
+                    "name": "VTT",
+                    "value": "3"
                 }
             ]
         },
@@ -91627,6 +91683,10 @@
                 {
                     "name": "DUBBING",
                     "value": "7"
+                },
+                {
+                    "name": "EXTENDED_AUDIO_DESCRIPTION",
+                    "value": "9"
                 },
                 {
                     "name": "INTELLIGENT_TAGGING",
@@ -94204,6 +94264,10 @@
                 {
                     "name": "CMN",
                     "value": "Mandarin Chinese"
+                },
+                {
+                    "name": "CS",
+                    "value": "Czech"
                 },
                 {
                     "name": "CY",
