@@ -1,7 +1,8 @@
 
 
 export enum KalturaEntryApplication {
-    kaf = '2',
+    ep = '8',
+	kaf = '2',
 	kalturaMeeting = '7',
 	kmc = '0',
 	kms = '1',

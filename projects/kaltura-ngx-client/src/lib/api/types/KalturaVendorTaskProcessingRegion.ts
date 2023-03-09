@@ -1,6 +1,7 @@
 
 
 export enum KalturaVendorTaskProcessingRegion {
-    eu=2,
+    ca=3,
+	eu=2,
 	us=1
 }

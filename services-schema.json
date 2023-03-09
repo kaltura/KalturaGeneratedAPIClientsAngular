@@ -1,5 +1,5 @@
 {
-    "apiVersion": "19.3.0",
+    "apiVersion": "19.4.0",
     "services": [
         {
             "id": "accesscontrolprofile",
@@ -957,6 +957,22 @@
                     "enableInMultiRequest": 1
                 },
                 {
+                    "name": "recycle",
+                    "resultClassName": "KalturaBaseEntry",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Move the entry to the recycle bin",
+                    "enableInMultiRequest": 1
+                },
+                {
                     "name": "reject",
                     "resultClassName": null,
                     "resultType": "Void",
@@ -970,6 +986,22 @@
                         }
                     ],
                     "description": "Reject the entry and mark the pending flags (if any) as moderated (this will make the entry non-playable).",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "restoreRecycled",
+                    "resultClassName": "KalturaBaseEntry",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "entryId",
+                            "typeClassName": "string",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Restore the entry from the recycle bin",
                     "enableInMultiRequest": 1
                 },
                 {
@@ -37925,6 +37957,17 @@
                     "description": "",
                     "typeClassName": "string",
                     "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "displayInSearchEqual",
+                    "description": "",
+                    "typeClassName": "KalturaEntryDisplayInSearchType",
+                    "type": "EnumOfInt",
                     "writeOnly": false,
                     "readOnly": false,
                     "insertOnly": false,
@@ -88627,6 +88670,10 @@
                     "value": "1"
                 },
                 {
+                    "name": "RECYCLED",
+                    "value": "-2"
+                },
+                {
                     "name": "SYSTEM",
                     "value": "-1"
                 }
@@ -91806,6 +91853,10 @@
             "name": "KalturaVendorTaskProcessingRegion",
             "type": "int",
             "values": [
+                {
+                    "name": "CA",
+                    "value": "3"
+                },
                 {
                     "name": "EU",
                     "value": "2"
@@ -97103,6 +97154,10 @@
                     "value": "description"
                 },
                 {
+                    "name": "DISPLAY_IN_SEARCH",
+                    "value": "display_in_search"
+                },
+                {
                     "name": "END_DATE",
                     "value": "end_date"
                 },
@@ -97767,6 +97822,10 @@
             "name": "KalturaEntryApplication",
             "type": "string",
             "values": [
+                {
+                    "name": "EP",
+                    "value": "8"
+                },
                 {
                     "name": "KAF",
                     "value": "2"

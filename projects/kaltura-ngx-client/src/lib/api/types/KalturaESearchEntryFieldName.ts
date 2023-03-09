@@ -9,6 +9,7 @@ export enum KalturaESearchEntryFieldName {
 	creatorId = 'creator_kuser_id',
 	credit = 'credit',
 	description = 'description',
+	displayInSearch = 'display_in_search',
 	endDate = 'end_date',
 	entitledUserEdit = 'entitled_kusers_edit',
 	entitledUserPublish = 'entitled_kusers_publish',

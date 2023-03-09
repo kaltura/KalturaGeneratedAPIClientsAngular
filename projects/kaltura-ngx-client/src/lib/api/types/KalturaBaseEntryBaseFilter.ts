@@ -5,6 +5,7 @@ import { KalturaEntryStatus } from './KalturaEntryStatus';
 import { KalturaEntryModerationStatus } from './KalturaEntryModerationStatus';
 import { KalturaEntryType } from './KalturaEntryType';
 import { KalturaEntryReplacementStatus } from './KalturaEntryReplacementStatus';
+import { KalturaEntryDisplayInSearchType } from './KalturaEntryDisplayInSearchType';
 import { KalturaRelatedFilter, KalturaRelatedFilterArgs } from './KalturaRelatedFilter';
 
 export interface KalturaBaseEntryBaseFilterArgs  extends KalturaRelatedFilterArgs {
@@ -90,6 +91,7 @@ export interface KalturaBaseEntryBaseFilterArgs  extends KalturaRelatedFilterArg
 	tagsNameMultiLikeAnd? : string;
 	tagsAdminTagsMultiLikeAnd? : string;
 	tagsAdminTagsNameMultiLikeAnd? : string;
+	displayInSearchEqual? : KalturaEntryDisplayInSearchType;
 }
 
 
@@ -177,6 +179,7 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 	tagsNameMultiLikeAnd : string;
 	tagsAdminTagsMultiLikeAnd : string;
 	tagsAdminTagsNameMultiLikeAnd : string;
+	displayInSearchEqual : KalturaEntryDisplayInSearchType;
 
     constructor(data? : KalturaBaseEntryBaseFilterArgs)
     {
@@ -271,7 +274,8 @@ export class KalturaBaseEntryBaseFilter extends KalturaRelatedFilter {
 				tagsAdminTagsNameMultiLikeOr : { type : 's' },
 				tagsNameMultiLikeAnd : { type : 's' },
 				tagsAdminTagsMultiLikeAnd : { type : 's' },
-				tagsAdminTagsNameMultiLikeAnd : { type : 's' }
+				tagsAdminTagsNameMultiLikeAnd : { type : 's' },
+				displayInSearchEqual : { type : 'en', subTypeConstructor : KalturaEntryDisplayInSearchType, subType : 'KalturaEntryDisplayInSearchType' }
             }
         );
         return result;
