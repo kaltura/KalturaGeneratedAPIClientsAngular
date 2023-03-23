@@ -17678,6 +17678,107 @@
             ]
         },
         {
+            "id": "virtualevent_virtualevent",
+            "name": "virtualEvent",
+            "description": "",
+            "actions": [
+                {
+                    "name": "add",
+                    "resultClassName": "KalturaVirtualEvent",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "virtualEvent",
+                            "typeClassName": "KalturaVirtualEvent",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Add a new virtual event",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "delete",
+                    "resultClassName": null,
+                    "resultType": "Void",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Delete a virtual event",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "get",
+                    "resultClassName": "KalturaVirtualEvent",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Retrieve a virtual event by id",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "list",
+                    "resultClassName": "KalturaVirtualEventListResponse",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "typeClassName": "KalturaVirtualEventFilter",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        },
+                        {
+                            "name": "pager",
+                            "typeClassName": "KalturaFilterPager",
+                            "type": "Object",
+                            "optional": true,
+                            "default": "null"
+                        }
+                    ],
+                    "description": "List virtual events",
+                    "enableInMultiRequest": 1
+                },
+                {
+                    "name": "update",
+                    "resultClassName": "KalturaVirtualEvent",
+                    "resultType": "Object",
+                    "params": [
+                        {
+                            "name": "id",
+                            "typeClassName": "int",
+                            "type": "Simple",
+                            "optional": false,
+                            "default": ""
+                        },
+                        {
+                            "name": "virtualEvent",
+                            "typeClassName": "KalturaVirtualEvent",
+                            "type": "Object",
+                            "optional": false,
+                            "default": ""
+                        }
+                    ],
+                    "description": "Update an existing virtual event",
+                    "enableInMultiRequest": 1
+                }
+            ]
+        },
+        {
             "id": "widevine_widevinedrm",
             "name": "widevineDrm",
             "description": "WidevineDrmService serves as a license proxy to a Widevine license server",
@@ -46110,6 +46211,181 @@
             ]
         },
         {
+            "name": "KalturaVirtualEvent",
+            "base": "",
+            "plugin": "virtualEvent",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "name",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "description",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "status",
+                    "description": "",
+                    "typeClassName": "KalturaVirtualEventStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "tags",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "attendeesGroupIds",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "adminsGroupIds",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "registrationScheduleEventId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "agendaScheduleEventId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "mainEventScheduleEventId",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAt",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": true,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "deletionDueDate",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "registrationFormSchema",
+                    "description": "JSON-Schema of the Registration Form",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaVirusScanProfile",
             "base": "",
             "plugin": "virusScan",
@@ -66743,6 +67019,190 @@
             ]
         },
         {
+            "name": "KalturaVirtualEventBaseFilter",
+            "base": "KalturaFilter",
+            "plugin": "virtualEvent",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "idEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "idNotIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerIdEqual",
+                    "description": "",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "partnerIdIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusEqual",
+                    "description": "",
+                    "typeClassName": "KalturaVirtualEventStatus",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "statusIn",
+                    "description": "",
+                    "typeClassName": "string",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "createdAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtGreaterThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "updatedAtLessThanOrEqual",
+                    "description": "",
+                    "typeClassName": "",
+                    "type": "Date",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVirtualEventListResponse",
+            "base": "KalturaListResponse",
+            "plugin": "virtualEvent",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "objects",
+                    "description": "",
+                    "typeClassName": "KalturaVirtualEvent",
+                    "type": "ArrayOfObjects",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVirtualScheduleEvent",
+            "base": "KalturaScheduleEvent",
+            "plugin": "virtualEvent",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": [
+                {
+                    "name": "virtualEventId",
+                    "description": "The ID of the virtual event connected to this Schedule Event",
+                    "typeClassName": "int",
+                    "type": "Simple",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": false,
+                    "optional": true,
+                    "default": "null"
+                },
+                {
+                    "name": "virtualScheduleEventSubType",
+                    "description": "The type of the Virtual Schedule Event",
+                    "typeClassName": "KalturaVirtualScheduleEventSubType",
+                    "type": "EnumOfInt",
+                    "writeOnly": false,
+                    "readOnly": false,
+                    "insertOnly": true,
+                    "optional": true,
+                    "default": "null"
+                }
+            ]
+        },
+        {
             "name": "KalturaVirusScanJobData",
             "base": "KalturaJobData",
             "plugin": "virusScan",
@@ -79049,6 +79509,15 @@
             ]
         },
         {
+            "name": "KalturaVirtualEventFilter",
+            "base": "KalturaVirtualEventBaseFilter",
+            "plugin": "virtualEvent",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaVirusScanProfileFilter",
             "base": "KalturaVirusScanProfileBaseFilter",
             "plugin": "virusScan",
@@ -85412,6 +85881,15 @@
             "properties": []
         },
         {
+            "name": "KalturaVirtualScheduleEventBaseFilter",
+            "base": "KalturaScheduleEventFilter",
+            "plugin": "virtualEvent",
+            "description": "",
+            "abstract": true,
+            "deprecated": false,
+            "properties": []
+        },
+        {
             "name": "KalturaWatchLaterUserEntryFilter",
             "base": "KalturaUserEntryFilter",
             "plugin": "watchLater",
@@ -86167,6 +86645,15 @@
             "name": "KalturaVendorLiveCaptionCatalogItemFilter",
             "base": "KalturaVendorCaptionsCatalogItemBaseFilter",
             "plugin": "reach",
+            "description": "",
+            "abstract": false,
+            "deprecated": false,
+            "properties": []
+        },
+        {
+            "name": "KalturaVirtualScheduleEventFilter",
+            "base": "KalturaVirtualScheduleEventBaseFilter",
+            "plugin": "virtualEvent",
             "description": "",
             "abstract": false,
             "deprecated": false,
@@ -91878,6 +92365,38 @@
                 {
                     "name": "PREVIEW",
                     "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVirtualEventStatus",
+            "type": "int",
+            "values": [
+                {
+                    "name": "ACTIVE",
+                    "value": "2"
+                },
+                {
+                    "name": "DELETED",
+                    "value": "3"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVirtualScheduleEventSubType",
+            "type": "int",
+            "values": [
+                {
+                    "name": "AGENDA",
+                    "value": "1"
+                },
+                {
+                    "name": "MAIN_EVENT",
+                    "value": "3"
+                },
+                {
+                    "name": "REGISTRATION",
+                    "value": "2"
                 }
             ]
         },
@@ -109138,6 +109657,28 @@
                 {
                     "name": "WVC1A",
                     "value": "wvc1a"
+                }
+            ]
+        },
+        {
+            "name": "KalturaVirtualEventOrderBy",
+            "type": "string",
+            "values": [
+                {
+                    "name": "CREATED_AT_ASC",
+                    "value": "+createdAt"
+                },
+                {
+                    "name": "CREATED_AT_DESC",
+                    "value": "-createdAt"
+                },
+                {
+                    "name": "UPDATED_AT_ASC",
+                    "value": "+updatedAt"
+                },
+                {
+                    "name": "UPDATED_AT_DESC",
+                    "value": "-updatedAt"
                 }
             ]
         },
