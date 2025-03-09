@@ -1437,6 +1437,7 @@ KalturaVendorServiceFeature.LIVE_TRANSLATION = 11;
 KalturaVendorServiceFeature.QUIZ = 12;
 KalturaVendorServiceFeature.SUMMARY = 13;
 KalturaVendorServiceFeature.VIDEO_ANALYSIS = 14;
+KalturaVendorServiceFeature.MODERATION = 15;
 
 function KalturaVendorServiceTurnAroundTime(){
 }
@@ -3493,6 +3494,9 @@ KalturaEventNotificationEventObjectType.CUE_POINT = "cuePointEventNotifications.
 KalturaEventNotificationEventObjectType.DROP_FOLDER = "dropFolderEventNotifications.DropFolder";
 KalturaEventNotificationEventObjectType.DROP_FOLDER_FILE = "dropFolderEventNotifications.DropFolderFile";
 KalturaEventNotificationEventObjectType.METADATA = "metadataEventNotifications.Metadata";
+KalturaEventNotificationEventObjectType.SCHEDULE_EVENT = "scheduleEventNotifications.ScheduleEvent";
+KalturaEventNotificationEventObjectType.SCHEDULE_EVENT_RESOURCE = "scheduleEventNotifications.ScheduleEventResource";
+KalturaEventNotificationEventObjectType.SCHEDULE_RESOURCE = "scheduleEventNotifications.ScheduleResource";
 KalturaEventNotificationEventObjectType.TRANSCRIPT_ASSET = "transcriptAssetEventNotifications.TranscriptAsset";
 KalturaEventNotificationEventObjectType.VIRTUAL_EVENT = "virtualEventEventNotifications.VirtualEvent";
 KalturaEventNotificationEventObjectType.ENTRY = "1";
@@ -6113,6 +6117,13 @@ KalturaRoomEntryOrderBy.TOTAL_RANK_DESC = "-totalRank";
 KalturaRoomEntryOrderBy.UPDATED_AT_DESC = "-updatedAt";
 KalturaRoomEntryOrderBy.WEIGHT_DESC = "-weight";
 
+function KalturaRsvpUserEntryOrderBy(){
+}
+KalturaRsvpUserEntryOrderBy.CREATED_AT_ASC = "+createdAt";
+KalturaRsvpUserEntryOrderBy.UPDATED_AT_ASC = "+updatedAt";
+KalturaRsvpUserEntryOrderBy.CREATED_AT_DESC = "-createdAt";
+KalturaRsvpUserEntryOrderBy.UPDATED_AT_DESC = "-updatedAt";
+
 function KalturaRuleActionType(){
 }
 KalturaRuleActionType.DRM_POLICY = "drm.DRM_POLICY";
@@ -6547,6 +6558,7 @@ function KalturaUserEntryType(){
 KalturaUserEntryType.PERMISSION_LEVEL = "entryPermissionLevel.PERMISSION_LEVEL";
 KalturaUserEntryType.QUIZ = "quiz.QUIZ";
 KalturaUserEntryType.REGISTRATION = "registration.REGISTRATION";
+KalturaUserEntryType.RSVP = "rsvp.RSVP";
 KalturaUserEntryType.VIEW_HISTORY = "viewHistory.VIEW_HISTORY";
 KalturaUserEntryType.WATCH_LATER = "watchLater.WATCH_LATER";
 

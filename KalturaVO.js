@@ -5823,6 +5823,7 @@ KalturaReportExportItem.inheritsFrom (KalturaObjectBase);
 
 /**
  * @param	recipientEmail	string		.
+ * @param	recipientName	string		.
  * @param	timeZoneOffset	int		Time zone offset in minutes (between client to UTC).
  * @param	reportItems	array		.
  * @param	reportsItemsGroup	string		.
@@ -5830,6 +5831,7 @@ KalturaReportExportItem.inheritsFrom (KalturaObjectBase);
  */
 function KalturaReportExportParams(){
 	this.recipientEmail = null;
+	this.recipientName = null;
 	this.timeZoneOffset = null;
 	this.reportItems = null;
 	this.reportsItemsGroup = null;
@@ -9720,6 +9722,7 @@ KalturaDropFolderContentProcessorJobData.inheritsFrom (KalturaJobData);
 /**
  * @param	idEqual	int		.
  * @param	idIn	string		.
+ * @param	idGreaterThanOrEqual	int		.
  * @param	partnerIdEqual	int		.
  * @param	partnerIdIn	string		.
  * @param	dropFolderIdEqual	int		.
@@ -9749,6 +9752,7 @@ KalturaDropFolderContentProcessorJobData.inheritsFrom (KalturaJobData);
 function KalturaDropFolderFileBaseFilter(){
 	this.idEqual = null;
 	this.idIn = null;
+	this.idGreaterThanOrEqual = null;
 	this.partnerIdEqual = null;
 	this.partnerIdIn = null;
 	this.dropFolderIdEqual = null;
@@ -11832,6 +11836,19 @@ KalturaModerationFlagListResponse.inheritsFrom (KalturaListResponse);
 
 
 /**
+ * @param	ruleIds	string		A comma seperated string of rule IDs..
+ * @param	policyIds	string		A comma seperated string of policy IDs..
+ * @param	moderationOutputJson	string		JSON string containing the moderation output..
+ */
+function KalturaModerationVendorTaskData(){
+	this.ruleIds = null;
+	this.policyIds = null;
+	this.moderationOutputJson = null;
+}
+KalturaModerationVendorTaskData.inheritsFrom (KalturaVendorTaskData);
+
+
+/**
  * @param	addRemoveType	int		Should the object task add or remove categories?.
  * @param	categoryIds	array		The list of category ids to add or remove.
  */
@@ -12397,6 +12414,7 @@ KalturaRenderCaptionAttributes.inheritsFrom (KalturaCaptionAttributes);
 
 /**
  * @param	recipientEmail	string		.
+ * @param	recipientName	string		.
  * @param	reportItems	array		.
  * @param	filePaths	string		.
  * @param	reportsGroup	string		.
@@ -12405,6 +12423,7 @@ KalturaRenderCaptionAttributes.inheritsFrom (KalturaCaptionAttributes);
  */
 function KalturaReportExportJobData(){
 	this.recipientEmail = null;
+	this.recipientName = null;
 	this.reportItems = null;
 	this.filePaths = null;
 	this.reportsGroup = null;
@@ -12480,16 +12499,27 @@ KalturaRoomEntryListResponse.inheritsFrom (KalturaListResponse);
 
 
 /**
+ */
+function KalturaRsvpUserEntry(){
+}
+KalturaRsvpUserEntry.inheritsFrom (KalturaUserEntry);
+
+
+/**
  * @param	s3Host	string		.
  * @param	s3Region	string		.
  * @param	s3UserId	string		.
  * @param	s3Password	string		.
+ * @param	useS3Arn	bool		.
+ * @param	s3Arn	string		 (readOnly).
  */
 function KalturaS3DropFolder(){
 	this.s3Host = null;
 	this.s3Region = null;
 	this.s3UserId = null;
 	this.s3Password = null;
+	this.useS3Arn = null;
+	this.s3Arn = null;
 }
 KalturaS3DropFolder.inheritsFrom (KalturaDropFolder);
 
@@ -13669,6 +13699,13 @@ KalturaVendorExtendedAudioDescriptionCatalogItem.inheritsFrom (KalturaVendorCata
 function KalturaVendorIntelligentTaggingCatalogItem(){
 }
 KalturaVendorIntelligentTaggingCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorModerationCatalogItem(){
+}
+KalturaVendorModerationCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
@@ -20160,6 +20197,13 @@ KalturaRoomEntryBaseFilter.inheritsFrom (KalturaBaseEntryFilter);
 
 
 /**
+ */
+function KalturaRsvpUserEntryBaseFilter(){
+}
+KalturaRsvpUserEntryBaseFilter.inheritsFrom (KalturaUserEntryFilter);
+
+
+/**
  * @param	localFilePath	string		Full path to the local file.
  * @param	keepOriginalFile	bool		Should keep original file (false = mv, true = cp).
  */
@@ -20369,6 +20413,13 @@ KalturaVendorDubbingCatalogItemBaseFilter.inheritsFrom (KalturaVendorCatalogItem
 function KalturaVendorIntelligentTaggingCatalogItemFilter(){
 }
 KalturaVendorIntelligentTaggingCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorModerationCatalogItemFilter(){
+}
+KalturaVendorModerationCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
 
 
 /**
@@ -20870,6 +20921,13 @@ KalturaQuizUserEntryFilter.inheritsFrom (KalturaQuizUserEntryBaseFilter);
 function KalturaRoomEntryFilter(){
 }
 KalturaRoomEntryFilter.inheritsFrom (KalturaRoomEntryBaseFilter);
+
+
+/**
+ */
+function KalturaRsvpUserEntryFilter(){
+}
+KalturaRsvpUserEntryFilter.inheritsFrom (KalturaRsvpUserEntryBaseFilter);
 
 
 /**
