@@ -11687,6 +11687,20 @@ KalturaMediaListResponse.inheritsFrom (KalturaListResponse);
 
 
 /**
+ * @param	detailLevel	string		The level of detail for the metadata enrichment process. (insertOnly).
+ * @param	instruction	string		Instructions describing what should be taken into account during the metadata enrichment process. (insertOnly).
+ * @param	outputJson	string		Metadata enrichment result as JSON string.
+ *		 For example: {"titles": ["The first title", "The second title"], "descriptions": ["The first description"], "tags": ["Tag1", "Tag2"]}.
+ */
+function KalturaMetadataEnrichmentVendorTaskData(){
+	this.detailLevel = null;
+	this.instruction = null;
+	this.outputJson = null;
+}
+KalturaMetadataEnrichmentVendorTaskData.inheritsFrom (KalturaVendorTaskData);
+
+
+/**
  * @param	objects	array		 (readOnly).
  */
 function KalturaMetadataListResponse(){
@@ -12297,12 +12311,14 @@ KalturaQuizListResponse.inheritsFrom (KalturaListResponse);
  * @param	calculatedScore	float		 (readOnly).
  * @param	feedback	string		.
  * @param	version	int		 (readOnly).
+ * @param	extendedStatus	string		.
  */
 function KalturaQuizUserEntry(){
 	this.score = null;
 	this.calculatedScore = null;
 	this.feedback = null;
 	this.version = null;
+	this.extendedStatus = null;
 }
 KalturaQuizUserEntry.inheritsFrom (KalturaUserEntry);
 
@@ -13699,6 +13715,13 @@ KalturaVendorExtendedAudioDescriptionCatalogItem.inheritsFrom (KalturaVendorCata
 function KalturaVendorIntelligentTaggingCatalogItem(){
 }
 KalturaVendorIntelligentTaggingCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorMetadataEnrichmentCatalogItem(){
+}
+KalturaVendorMetadataEnrichmentCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
@@ -20417,6 +20440,13 @@ KalturaVendorIntelligentTaggingCatalogItemFilter.inheritsFrom (KalturaVendorCata
 
 /**
  */
+function KalturaVendorMetadataEnrichmentCatalogItemFilter(){
+}
+KalturaVendorMetadataEnrichmentCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
 function KalturaVendorModerationCatalogItemFilter(){
 }
 KalturaVendorModerationCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
@@ -20910,8 +20940,14 @@ KalturaQuickPlayDistributionProfileBaseFilter.inheritsFrom (KalturaConfigurableD
 
 
 /**
+ * @param	extendedStatusEqual	string		.
+ * @param	extendedStatusIn	string		.
+ * @param	extendedStatusNotIn	string		.
  */
 function KalturaQuizUserEntryFilter(){
+	this.extendedStatusEqual = null;
+	this.extendedStatusIn = null;
+	this.extendedStatusNotIn = null;
 }
 KalturaQuizUserEntryFilter.inheritsFrom (KalturaQuizUserEntryBaseFilter);
 

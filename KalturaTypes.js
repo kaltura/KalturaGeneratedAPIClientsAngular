@@ -1438,6 +1438,7 @@ KalturaVendorServiceFeature.QUIZ = 12;
 KalturaVendorServiceFeature.SUMMARY = 13;
 KalturaVendorServiceFeature.VIDEO_ANALYSIS = 14;
 KalturaVendorServiceFeature.MODERATION = 15;
+KalturaVendorServiceFeature.METADATA_ENRICHMENT = 16;
 
 function KalturaVendorServiceTurnAroundTime(){
 }

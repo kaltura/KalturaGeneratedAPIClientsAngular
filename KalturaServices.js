@@ -7562,6 +7562,7 @@ KalturaUserRoleService.prototype.update = function(callback, userRoleId, userRol
  * @action	addFromBulkUpload	.
  * @action	checkLoginDataExists	Action which checks whther user login.
  * @action	delete	Deletes a user from a partner account..
+ * @action	demoteAdmin	.
  * @action	disableLogin	Disables a user's ability to log into a partner account using an email address and a password.
  *		 You may use either a userId or a loginId parameter for this action..
  * @action	enableLogin	Enables a user to log into a partner account using an email address and a password.
@@ -7659,6 +7660,18 @@ KalturaUserService.prototype.deleteAction = function(callback, userId){
 	var kparams = new Object();
 	this.client.addParam(kparams, "userId", userId);
 	this.client.queueServiceActionCall("user", "delete", kparams);
+	if (!this.client.isMultiRequest())
+		this.client.doQueue(callback);
+}
+/**
+ * .
+ * @param	userId	string		 (optional).
+ * @return	KalturaUser.
+ */
+KalturaUserService.prototype.demoteAdmin = function(callback, userId){
+	var kparams = new Object();
+	this.client.addParam(kparams, "userId", userId);
+	this.client.queueServiceActionCall("user", "demoteAdmin", kparams);
 	if (!this.client.isMultiRequest())
 		this.client.doQueue(callback);
 }
