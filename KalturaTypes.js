@@ -604,6 +604,11 @@ function KalturaGroupProcessStatus(){
 KalturaGroupProcessStatus.NONE = 0;
 KalturaGroupProcessStatus.PROCESSING = 1;
 
+function KalturaGroupType(){
+}
+KalturaGroupType.GROUP = 1;
+KalturaGroupType.APPLICATIVE_GROUP = 2;
+
 function KalturaGroupUserCreationMode(){
 }
 KalturaGroupUserCreationMode.MANUAL = 1;
@@ -1397,6 +1402,7 @@ function KalturaUserType(){
 }
 KalturaUserType.USER = 0;
 KalturaUserType.GROUP = 1;
+KalturaUserType.APPLICATIVE_GROUP = 2;
 
 function KalturaVendorCatalogItemOutputFormat(){
 }

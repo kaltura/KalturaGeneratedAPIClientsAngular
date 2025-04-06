@@ -2956,10 +2956,12 @@ KalturaESearchGroupBaseItem.inheritsFrom (KalturaESearchBaseItem);
 /**
  * @param	membersCount	int		 (readOnly).
  * @param	processStatus	int		.
+ * @param	groupType	int		.
  */
 function KalturaGroup(){
 	this.membersCount = null;
 	this.processStatus = null;
+	this.groupType = null;
 }
 KalturaGroup.inheritsFrom (KalturaBaseUser);
 
@@ -4113,6 +4115,7 @@ KalturaGenericDistributionProvider.inheritsFrom (KalturaDistributionProvider);
  * @param	updatedAt	int		Last update date as Unix timestamp (In seconds) (readOnly).
  * @param	creationMode	int		 (insertOnly).
  * @param	userRole	int		.
+ * @param	groupType	int		 (readOnly).
  */
 function KalturaGroupUser(){
 	this.id = null;
@@ -4124,6 +4127,7 @@ function KalturaGroupUser(){
 	this.updatedAt = null;
 	this.creationMode = null;
 	this.userRole = null;
+	this.groupType = null;
 }
 KalturaGroupUser.inheritsFrom (KalturaObjectBase);
 
@@ -18615,8 +18619,10 @@ KalturaGoogleVideoSyndicationFeedBaseFilter.inheritsFrom (KalturaBaseSyndication
 
 
 /**
+ * @param	groupType	int		.
  */
 function KalturaGroupUserFilter(){
+	this.groupType = null;
 }
 KalturaGroupUserFilter.inheritsFrom (KalturaGroupUserBaseFilter);
 
@@ -21325,8 +21331,10 @@ KalturaGenericXsltSyndicationFeedFilter.inheritsFrom (KalturaGenericXsltSyndicat
 
 
 /**
+ * @param	groupType	int		.
  */
 function KalturaGroupFilter(){
+	this.groupType = null;
 }
 KalturaGroupFilter.inheritsFrom (KalturaUserFilter);
 
