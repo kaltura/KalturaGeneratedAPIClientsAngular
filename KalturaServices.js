@@ -13542,13 +13542,18 @@ KalturaPartnerCatalogItemService.inheritsFrom (KalturaServiceBase);
 /**
  * Assign existing catalogItem to specific account.
  * @param	id	int		source catalog item to assign to partner (optional).
+ * @param	defaultReachProfileId	int		 (optional, default: null).
  * @return	KalturaVendorCatalogItem.
  * @return	.
  * @return	.
+ * @return	.
  */
-KalturaPartnerCatalogItemService.prototype.add = function(callback, id){
+KalturaPartnerCatalogItemService.prototype.add = function(callback, id, defaultReachProfileId){
+	if(!defaultReachProfileId)
+		defaultReachProfileId = null;
 	var kparams = new Object();
 	this.client.addParam(kparams, "id", id);
+	this.client.addParam(kparams, "defaultReachProfileId", defaultReachProfileId);
 	this.client.queueServiceActionCall("reach_partnercatalogitem", "add", kparams);
 	if (!this.client.isMultiRequest())
 		this.client.doQueue(callback);

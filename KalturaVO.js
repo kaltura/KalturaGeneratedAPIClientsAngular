@@ -5796,10 +5796,12 @@ KalturaReportInputFilter.inheritsFrom (KalturaReportInputBaseFilter);
 /**
  * @param	delimiter	string		.
  * @param	skipEmptyDates	bool		.
+ * @param	useFriendlyHeadersNames	bool		.
  */
 function KalturaReportResponseOptions(){
 	this.delimiter = null;
 	this.skipEmptyDates = null;
+	this.useFriendlyHeadersNames = null;
 }
 KalturaReportResponseOptions.inheritsFrom (KalturaObjectBase);
 
@@ -7065,6 +7067,7 @@ KalturaVendorCatalogItemPricing.inheritsFrom (KalturaObjectBase);
  * @param	createdBy	string		.
  * @param	notes	string		.
  * @param	partnerId	int		.
+ * @param	defaultReachProfileId	int		.
  * @param	adminTagsToExclude	string		.
  */
 function KalturaVendorCatalogItem(){
@@ -7089,6 +7092,7 @@ function KalturaVendorCatalogItem(){
 	this.createdBy = null;
 	this.notes = null;
 	this.partnerId = null;
+	this.defaultReachProfileId = null;
 	this.adminTagsToExclude = null;
 }
 KalturaVendorCatalogItem.inheritsFrom (KalturaObjectBase);
@@ -12797,6 +12801,15 @@ KalturaSessionResponse.inheritsFrom (KalturaStartWidgetSessionResponse);
 function KalturaSessionRestriction(){
 }
 KalturaSessionRestriction.inheritsFrom (KalturaBaseRestriction);
+
+
+/**
+ * @param	sessionType	int		The privelege needed to remove the restriction.
+ */
+function KalturaSessionTypeCondition(){
+	this.sessionType = null;
+}
+KalturaSessionTypeCondition.inheritsFrom (KalturaCondition);
 
 
 /**
@@ -19388,8 +19401,12 @@ KalturaVendorCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemBaseFilter)
 
 
 /**
+ * @param	startTimeBuffer	int		How long before the live stream start should service activate? (in secs) (insertOnly).
+ * @param	endTimeBuffer	int		How long after the live stream end should service de-activate? (in secs) (insertOnly).
  */
 function KalturaVendorLiveCaptionCatalogItem(){
+	this.startTimeBuffer = null;
+	this.endTimeBuffer = null;
 }
 KalturaVendorLiveCaptionCatalogItem.inheritsFrom (KalturaVendorLiveCatalogItem);
 

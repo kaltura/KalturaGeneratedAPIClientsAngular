@@ -2459,6 +2459,7 @@ KalturaConditionType.HTTP_HEADER = "18";
 KalturaConditionType.ENTRY_SCHEDULED = "19";
 KalturaConditionType.ACTION_NAME = "20";
 KalturaConditionType.URL_AUTH_PARAMS = "21";
+KalturaConditionType.SESSION_TYPE = "22";
 
 function KalturaConfMapsSourceLocation(){
 }
