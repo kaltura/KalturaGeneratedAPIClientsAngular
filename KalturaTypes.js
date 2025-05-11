@@ -489,6 +489,10 @@ KalturaEntryModerationStatus.DELETED = 4;
 KalturaEntryModerationStatus.FLAGGED_FOR_REVIEW = 5;
 KalturaEntryModerationStatus.AUTO_APPROVED = 6;
 
+function KalturaEntryObjectType(){
+}
+KalturaEntryObjectType.ENTRY = 1;
+
 function KalturaEntryServerNodeRecordingStatus(){
 }
 KalturaEntryServerNodeRecordingStatus.STOPPED = 0;
@@ -3366,6 +3370,7 @@ KalturaEntryApplication.WEBCAST_APP = "5";
 KalturaEntryApplication.PERSONAL_CAPTURE = "6";
 KalturaEntryApplication.KALTURA_MEETING = "7";
 KalturaEntryApplication.EP = "8";
+KalturaEntryApplication.CONTENT_LAB = "9";
 
 function KalturaEntryDistributionOrderBy(){
 }
