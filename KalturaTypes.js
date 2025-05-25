@@ -1449,6 +1449,7 @@ KalturaVendorServiceFeature.SUMMARY = 13;
 KalturaVendorServiceFeature.VIDEO_ANALYSIS = 14;
 KalturaVendorServiceFeature.MODERATION = 15;
 KalturaVendorServiceFeature.METADATA_ENRICHMENT = 16;
+KalturaVendorServiceFeature.SENTIMENT_ANALYSIS = 17;
 
 function KalturaVendorServiceTurnAroundTime(){
 }
@@ -1744,6 +1745,9 @@ function KalturaAssetParamsOutputOrderBy(){
 
 function KalturaAssetType(){
 }
+KalturaAssetType.FLAVOR = "1";
+KalturaAssetType.THUMBNAIL = "2";
+KalturaAssetType.LIVE = "3";
 KalturaAssetType.ATTACHMENT = "attachment.Attachment";
 KalturaAssetType.CAPTION = "caption.Caption";
 KalturaAssetType.DOCUMENT = "document.Document";
@@ -1753,9 +1757,6 @@ KalturaAssetType.SWF = "document.SWF";
 KalturaAssetType.TIMED_THUMB_ASSET = "thumbCuePoint.timedThumb";
 KalturaAssetType.TRANSCRIPT = "transcript.Transcript";
 KalturaAssetType.WIDEVINE_FLAVOR = "widevine.WidevineFlavor";
-KalturaAssetType.FLAVOR = "1";
-KalturaAssetType.THUMBNAIL = "2";
-KalturaAssetType.LIVE = "3";
 
 function KalturaAttUverseDistributionProfileOrderBy(){
 }
@@ -1867,11 +1868,6 @@ function KalturaAvnDistributionProviderOrderBy(){
 
 function KalturaBaseEntryCloneOptions(){
 }
-KalturaBaseEntryCloneOptions.AD_CUE_POINTS = "adCuePoint.AD_CUE_POINTS";
-KalturaBaseEntryCloneOptions.ANNOTATION_CUE_POINTS = "annotation.ANNOTATION_CUE_POINTS";
-KalturaBaseEntryCloneOptions.CODE_CUE_POINTS = "codeCuePoint.CODE_CUE_POINTS";
-KalturaBaseEntryCloneOptions.SESSION_CUE_POINTS = "sessionCuePoint.SESSION_CUE_POINTS";
-KalturaBaseEntryCloneOptions.THUMB_CUE_POINTS = "thumbCuePoint.THUMB_CUE_POINTS";
 KalturaBaseEntryCloneOptions.USERS = "1";
 KalturaBaseEntryCloneOptions.CATEGORIES = "2";
 KalturaBaseEntryCloneOptions.CHILD_ENTRIES = "3";
@@ -1879,6 +1875,11 @@ KalturaBaseEntryCloneOptions.ACCESS_CONTROL = "4";
 KalturaBaseEntryCloneOptions.METADATA = "5";
 KalturaBaseEntryCloneOptions.FLAVORS = "6";
 KalturaBaseEntryCloneOptions.CAPTIONS = "7";
+KalturaBaseEntryCloneOptions.AD_CUE_POINTS = "adCuePoint.AD_CUE_POINTS";
+KalturaBaseEntryCloneOptions.ANNOTATION_CUE_POINTS = "annotation.ANNOTATION_CUE_POINTS";
+KalturaBaseEntryCloneOptions.CODE_CUE_POINTS = "codeCuePoint.CODE_CUE_POINTS";
+KalturaBaseEntryCloneOptions.SESSION_CUE_POINTS = "sessionCuePoint.SESSION_CUE_POINTS";
+KalturaBaseEntryCloneOptions.THUMB_CUE_POINTS = "thumbCuePoint.THUMB_CUE_POINTS";
 
 function KalturaBaseEntryCompareAttribute(){
 }
@@ -1962,16 +1963,16 @@ KalturaBaseUserOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaBatchJobObjectType(){
 }
-KalturaBatchJobObjectType.ENTRY_DISTRIBUTION = "contentDistribution.EntryDistribution";
-KalturaBatchJobObjectType.DROP_FOLDER_FILE = "dropFolderXmlBulkUpload.DropFolderFile";
-KalturaBatchJobObjectType.METADATA = "metadata.Metadata";
-KalturaBatchJobObjectType.METADATA_PROFILE = "metadata.MetadataProfile";
-KalturaBatchJobObjectType.SCHEDULED_TASK_PROFILE = "scheduledTask.ScheduledTaskProfile";
 KalturaBatchJobObjectType.ENTRY = "1";
 KalturaBatchJobObjectType.CATEGORY = "2";
 KalturaBatchJobObjectType.FILE_SYNC = "3";
 KalturaBatchJobObjectType.ASSET = "4";
 KalturaBatchJobObjectType.USER = "5";
+KalturaBatchJobObjectType.ENTRY_DISTRIBUTION = "contentDistribution.EntryDistribution";
+KalturaBatchJobObjectType.DROP_FOLDER_FILE = "dropFolderXmlBulkUpload.DropFolderFile";
+KalturaBatchJobObjectType.METADATA = "metadata.Metadata";
+KalturaBatchJobObjectType.METADATA_PROFILE = "metadata.MetadataProfile";
+KalturaBatchJobObjectType.SCHEDULED_TASK_PROFILE = "scheduledTask.ScheduledTaskProfile";
 
 function KalturaBatchJobOrderBy(){
 }
@@ -1997,29 +1998,6 @@ KalturaBatchJobOrderBy.UPDATED_AT_DESC = "-updatedAt";
 function KalturaBatchJobType(){
 }
 KalturaBatchJobType.CONVERT = "0";
-KalturaBatchJobType.REACH_INTERNAL_QUEUE_HANDLER = "ReachInternal.ReachInternalQueueHandler";
-KalturaBatchJobType.CONVERT_CAPTION_ASSET = "caption.convertcaptionasset";
-KalturaBatchJobType.PARSE_MULTI_LANGUAGE_CAPTION_ASSET = "caption.parsemultilanguagecaptionasset";
-KalturaBatchJobType.PARSE_CAPTION_ASSET = "captionSearch.parseCaptionAsset";
-KalturaBatchJobType.DISTRIBUTION_DELETE = "contentDistribution.DistributionDelete";
-KalturaBatchJobType.DISTRIBUTION_DISABLE = "contentDistribution.DistributionDisable";
-KalturaBatchJobType.DISTRIBUTION_ENABLE = "contentDistribution.DistributionEnable";
-KalturaBatchJobType.DISTRIBUTION_FETCH_REPORT = "contentDistribution.DistributionFetchReport";
-KalturaBatchJobType.DISTRIBUTION_SUBMIT = "contentDistribution.DistributionSubmit";
-KalturaBatchJobType.DISTRIBUTION_SYNC = "contentDistribution.DistributionSync";
-KalturaBatchJobType.DISTRIBUTION_UPDATE = "contentDistribution.DistributionUpdate";
-KalturaBatchJobType.DROP_FOLDER_CONTENT_PROCESSOR = "dropFolder.DropFolderContentProcessor";
-KalturaBatchJobType.DROP_FOLDER_WATCHER = "dropFolder.DropFolderWatcher";
-KalturaBatchJobType.EVENT_NOTIFICATION_HANDLER = "eventNotification.EventNotificationHandler";
-KalturaBatchJobType.INTEGRATION = "integration.Integration";
-KalturaBatchJobType.ENTRY_VENDOR_TASK_CSV = "reach.EntryVendorTasksCsv";
-KalturaBatchJobType.SYNC_REACH_CREDIT_TASK = "reach.SyncReachCreditTask";
-KalturaBatchJobType.SCHEDULED_TASK = "scheduledTask.ScheduledTask";
-KalturaBatchJobType.SEARCH_TERM_CSV = "searchHistory.searchTermsCsv";
-KalturaBatchJobType.INDEX_TAGS = "tagSearch.IndexTagsByPrivacyContext";
-KalturaBatchJobType.TAG_RESOLVE = "tagSearch.TagResolve";
-KalturaBatchJobType.VIRUS_SCAN = "virusScan.VirusScan";
-KalturaBatchJobType.WIDEVINE_REPOSITORY_SYNC = "widevine.WidevineRepositorySync";
 KalturaBatchJobType.IMPORT = "1";
 KalturaBatchJobType.DELETE = "2";
 KalturaBatchJobType.FLATTEN = "3";
@@ -2073,6 +2051,29 @@ KalturaBatchJobType.STORAGE_PERIODIC_PURGE = "54";
 KalturaBatchJobType.STORAGE_PERIODIC_DELETE_LOCAL = "55";
 KalturaBatchJobType.REACH_JOB_CLEANER = "56";
 KalturaBatchJobType.MULTI_CLIP_CONCAT = "57";
+KalturaBatchJobType.REACH_INTERNAL_QUEUE_HANDLER = "ReachInternal.ReachInternalQueueHandler";
+KalturaBatchJobType.CONVERT_CAPTION_ASSET = "caption.convertcaptionasset";
+KalturaBatchJobType.PARSE_MULTI_LANGUAGE_CAPTION_ASSET = "caption.parsemultilanguagecaptionasset";
+KalturaBatchJobType.PARSE_CAPTION_ASSET = "captionSearch.parseCaptionAsset";
+KalturaBatchJobType.DISTRIBUTION_DELETE = "contentDistribution.DistributionDelete";
+KalturaBatchJobType.DISTRIBUTION_DISABLE = "contentDistribution.DistributionDisable";
+KalturaBatchJobType.DISTRIBUTION_ENABLE = "contentDistribution.DistributionEnable";
+KalturaBatchJobType.DISTRIBUTION_FETCH_REPORT = "contentDistribution.DistributionFetchReport";
+KalturaBatchJobType.DISTRIBUTION_SUBMIT = "contentDistribution.DistributionSubmit";
+KalturaBatchJobType.DISTRIBUTION_SYNC = "contentDistribution.DistributionSync";
+KalturaBatchJobType.DISTRIBUTION_UPDATE = "contentDistribution.DistributionUpdate";
+KalturaBatchJobType.DROP_FOLDER_CONTENT_PROCESSOR = "dropFolder.DropFolderContentProcessor";
+KalturaBatchJobType.DROP_FOLDER_WATCHER = "dropFolder.DropFolderWatcher";
+KalturaBatchJobType.EVENT_NOTIFICATION_HANDLER = "eventNotification.EventNotificationHandler";
+KalturaBatchJobType.INTEGRATION = "integration.Integration";
+KalturaBatchJobType.ENTRY_VENDOR_TASK_CSV = "reach.EntryVendorTasksCsv";
+KalturaBatchJobType.SYNC_REACH_CREDIT_TASK = "reach.SyncReachCreditTask";
+KalturaBatchJobType.SCHEDULED_TASK = "scheduledTask.ScheduledTask";
+KalturaBatchJobType.SEARCH_TERM_CSV = "searchHistory.searchTermsCsv";
+KalturaBatchJobType.INDEX_TAGS = "tagSearch.IndexTagsByPrivacyContext";
+KalturaBatchJobType.TAG_RESOLVE = "tagSearch.TagResolve";
+KalturaBatchJobType.VIRUS_SCAN = "virusScan.VirusScan";
+KalturaBatchJobType.WIDEVINE_REPOSITORY_SYNC = "widevine.WidevineRepositorySync";
 
 function KalturaBeaconIndexType(){
 }
@@ -2112,7 +2113,6 @@ KalturaBeaconScheduledResourceOrderByFieldName.UPDATED_AT = "updated_at";
 
 function KalturaBulkUploadAction(){
 }
-KalturaBulkUploadAction.CANCEL = "scheduleBulkUpload.CANCEL";
 KalturaBulkUploadAction.ADD = "1";
 KalturaBulkUploadAction.UPDATE = "2";
 KalturaBulkUploadAction.DELETE = "3";
@@ -2122,12 +2122,10 @@ KalturaBulkUploadAction.ADD_OR_UPDATE = "6";
 KalturaBulkUploadAction.ACTIVATE = "7";
 KalturaBulkUploadAction.REJECT = "8";
 KalturaBulkUploadAction.UPDATE_STATUS = "9";
+KalturaBulkUploadAction.CANCEL = "scheduleBulkUpload.CANCEL";
 
 function KalturaBulkUploadObjectType(){
 }
-KalturaBulkUploadObjectType.JOB = "bulkUploadFilter.JOB";
-KalturaBulkUploadObjectType.SCHEDULE_EVENT = "scheduleBulkUpload.SCHEDULE_EVENT";
-KalturaBulkUploadObjectType.SCHEDULE_RESOURCE = "scheduleBulkUpload.SCHEDULE_RESOURCE";
 KalturaBulkUploadObjectType.ENTRY = "1";
 KalturaBulkUploadObjectType.CATEGORY = "2";
 KalturaBulkUploadObjectType.USER = "3";
@@ -2135,6 +2133,9 @@ KalturaBulkUploadObjectType.CATEGORY_USER = "4";
 KalturaBulkUploadObjectType.CATEGORY_ENTRY = "5";
 KalturaBulkUploadObjectType.USER_ENTRY = "6";
 KalturaBulkUploadObjectType.VENDOR_CATALOG_ITEM = "7";
+KalturaBulkUploadObjectType.JOB = "bulkUploadFilter.JOB";
+KalturaBulkUploadObjectType.SCHEDULE_EVENT = "scheduleBulkUpload.SCHEDULE_EVENT";
+KalturaBulkUploadObjectType.SCHEDULE_RESOURCE = "scheduleBulkUpload.SCHEDULE_RESOURCE";
 
 function KalturaBulkUploadOrderBy(){
 }
@@ -2435,13 +2436,6 @@ function KalturaComcastMrssDistributionProviderOrderBy(){
 
 function KalturaConditionType(){
 }
-KalturaConditionType.ABC_WATERMARK = "abcScreenersWatermarkAccessControl.abcWatermark";
-KalturaConditionType.EVENT_NOTIFICATION_FIELD = "eventNotification.BooleanField";
-KalturaConditionType.EVENT_NOTIFICATION_OBJECT_CHANGED = "eventNotification.ObjectChanged";
-KalturaConditionType.METADATA_FIELD_CHANGED = "metadata.FieldChanged";
-KalturaConditionType.METADATA_FIELD_COMPARE = "metadata.FieldCompare";
-KalturaConditionType.METADATA_FIELD_MATCH = "metadata.FieldMatch";
-KalturaConditionType.EVENT_CATEGORY_ENTRY = "reach.CategoryEntry";
 KalturaConditionType.AUTHENTICATED = "1";
 KalturaConditionType.COUNTRY = "2";
 KalturaConditionType.IP_ADDRESS = "3";
@@ -2464,6 +2458,13 @@ KalturaConditionType.ENTRY_SCHEDULED = "19";
 KalturaConditionType.ACTION_NAME = "20";
 KalturaConditionType.URL_AUTH_PARAMS = "21";
 KalturaConditionType.SESSION_TYPE = "22";
+KalturaConditionType.ABC_WATERMARK = "abcScreenersWatermarkAccessControl.abcWatermark";
+KalturaConditionType.EVENT_NOTIFICATION_FIELD = "eventNotification.BooleanField";
+KalturaConditionType.EVENT_NOTIFICATION_OBJECT_CHANGED = "eventNotification.ObjectChanged";
+KalturaConditionType.METADATA_FIELD_CHANGED = "metadata.FieldChanged";
+KalturaConditionType.METADATA_FIELD_COMPARE = "metadata.FieldCompare";
+KalturaConditionType.METADATA_FIELD_MATCH = "metadata.FieldMatch";
+KalturaConditionType.EVENT_CATEGORY_ENTRY = "reach.CategoryEntry";
 
 function KalturaConfMapsSourceLocation(){
 }
@@ -2747,13 +2748,6 @@ KalturaDeliveryProfileRtmpOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaDeliveryProfileType(){
 }
-KalturaDeliveryProfileType.EDGE_CAST_HTTP = "edgeCast.EDGE_CAST_HTTP";
-KalturaDeliveryProfileType.EDGE_CAST_RTMP = "edgeCast.EDGE_CAST_RTMP";
-KalturaDeliveryProfileType.KONTIKI_HTTP = "kontiki.KONTIKI_HTTP";
-KalturaDeliveryProfileType.UPLYNK_HTTP = "uplynk.UPLYNK_HTTP";
-KalturaDeliveryProfileType.UPLYNK_RTMP = "uplynk.UPLYNK_RTMP";
-KalturaDeliveryProfileType.VELOCIX_HDS = "velocix.VELOCIX_HDS";
-KalturaDeliveryProfileType.VELOCIX_HLS = "velocix.VELOCIX_HLS";
 KalturaDeliveryProfileType.APPLE_HTTP = "1";
 KalturaDeliveryProfileType.HDS = "3";
 KalturaDeliveryProfileType.HTTP = "4";
@@ -2799,6 +2793,13 @@ KalturaDeliveryProfileType.LIVE_PACKAGER_HDS = "1008";
 KalturaDeliveryProfileType.LIVE_PACKAGER_DASH = "1009";
 KalturaDeliveryProfileType.LIVE_PACKAGER_MSS = "1010";
 KalturaDeliveryProfileType.LIVE_AKAMAI_HDS = "1013";
+KalturaDeliveryProfileType.EDGE_CAST_HTTP = "edgeCast.EDGE_CAST_HTTP";
+KalturaDeliveryProfileType.EDGE_CAST_RTMP = "edgeCast.EDGE_CAST_RTMP";
+KalturaDeliveryProfileType.KONTIKI_HTTP = "kontiki.KONTIKI_HTTP";
+KalturaDeliveryProfileType.UPLYNK_HTTP = "uplynk.UPLYNK_HTTP";
+KalturaDeliveryProfileType.UPLYNK_RTMP = "uplynk.UPLYNK_RTMP";
+KalturaDeliveryProfileType.VELOCIX_HDS = "velocix.VELOCIX_HDS";
+KalturaDeliveryProfileType.VELOCIX_HLS = "velocix.VELOCIX_HLS";
 
 function KalturaDeliveryServerNodeOrderBy(){
 }
@@ -2821,6 +2822,8 @@ function KalturaDistributionProviderOrderBy(){
 
 function KalturaDistributionProviderType(){
 }
+KalturaDistributionProviderType.GENERIC = "1";
+KalturaDistributionProviderType.SYNDICATION = "2";
 KalturaDistributionProviderType.ATT_UVERSE = "attUverseDistribution.ATT_UVERSE";
 KalturaDistributionProviderType.AVN = "avnDistribution.AVN";
 KalturaDistributionProviderType.COMCAST_MRSS = "comcastMrssDistribution.COMCAST_MRSS";
@@ -2852,8 +2855,6 @@ KalturaDistributionProviderType.VERIZON_VCAST = "verizonVcastDistribution.VERIZO
 KalturaDistributionProviderType.YAHOO = "yahooDistribution.YAHOO";
 KalturaDistributionProviderType.YOUTUBE = "youTubeDistribution.YOUTUBE";
 KalturaDistributionProviderType.YOUTUBE_API = "youtubeApiDistribution.YOUTUBE_API";
-KalturaDistributionProviderType.GENERIC = "1";
-KalturaDistributionProviderType.SYNDICATION = "2";
 
 function KalturaDocumentEntryCompareAttribute(){
 }
@@ -2954,10 +2955,10 @@ KalturaDrmProfileOrderBy.NAME_DESC = "-name";
 
 function KalturaDrmProviderType(){
 }
+KalturaDrmProviderType.CENC = "1";
 KalturaDrmProviderType.FAIRPLAY = "fairplay.FAIRPLAY";
 KalturaDrmProviderType.PLAY_READY = "playReady.PLAY_READY";
 KalturaDrmProviderType.WIDEVINE = "widevine.WIDEVINE";
-KalturaDrmProviderType.CENC = "1";
 
 function KalturaDrmSchemeName(){
 }
@@ -2979,14 +2980,6 @@ KalturaDropFolderErrorCode.MISSING_CONFIG = "7";
 
 function KalturaDropFolderFileErrorCode(){
 }
-KalturaDropFolderFileErrorCode.ERROR_ADDING_BULK_UPLOAD = "dropFolderXmlBulkUpload.ERROR_ADDING_BULK_UPLOAD";
-KalturaDropFolderFileErrorCode.ERROR_ADD_CONTENT_RESOURCE = "dropFolderXmlBulkUpload.ERROR_ADD_CONTENT_RESOURCE";
-KalturaDropFolderFileErrorCode.ERROR_IN_BULK_UPLOAD = "dropFolderXmlBulkUpload.ERROR_IN_BULK_UPLOAD";
-KalturaDropFolderFileErrorCode.ERROR_WRITING_TEMP_FILE = "dropFolderXmlBulkUpload.ERROR_WRITING_TEMP_FILE";
-KalturaDropFolderFileErrorCode.LOCAL_FILE_WRONG_CHECKSUM = "dropFolderXmlBulkUpload.LOCAL_FILE_WRONG_CHECKSUM";
-KalturaDropFolderFileErrorCode.LOCAL_FILE_WRONG_SIZE = "dropFolderXmlBulkUpload.LOCAL_FILE_WRONG_SIZE";
-KalturaDropFolderFileErrorCode.MALFORMED_XML_FILE = "dropFolderXmlBulkUpload.MALFORMED_XML_FILE";
-KalturaDropFolderFileErrorCode.XML_FILE_SIZE_EXCEED_LIMIT = "dropFolderXmlBulkUpload.XML_FILE_SIZE_EXCEED_LIMIT";
 KalturaDropFolderFileErrorCode.ERROR_UPDATE_ENTRY = "1";
 KalturaDropFolderFileErrorCode.ERROR_ADD_ENTRY = "2";
 KalturaDropFolderFileErrorCode.FLAVOR_NOT_FOUND = "3";
@@ -2999,13 +2992,21 @@ KalturaDropFolderFileErrorCode.ERROR_ADDING_CONTENT_PROCESSOR = "10";
 KalturaDropFolderFileErrorCode.ERROR_IN_CONTENT_PROCESSOR = "11";
 KalturaDropFolderFileErrorCode.ERROR_DELETING_FILE = "12";
 KalturaDropFolderFileErrorCode.FILE_NO_MATCH = "13";
+KalturaDropFolderFileErrorCode.ERROR_ADDING_BULK_UPLOAD = "dropFolderXmlBulkUpload.ERROR_ADDING_BULK_UPLOAD";
+KalturaDropFolderFileErrorCode.ERROR_ADD_CONTENT_RESOURCE = "dropFolderXmlBulkUpload.ERROR_ADD_CONTENT_RESOURCE";
+KalturaDropFolderFileErrorCode.ERROR_IN_BULK_UPLOAD = "dropFolderXmlBulkUpload.ERROR_IN_BULK_UPLOAD";
+KalturaDropFolderFileErrorCode.ERROR_WRITING_TEMP_FILE = "dropFolderXmlBulkUpload.ERROR_WRITING_TEMP_FILE";
+KalturaDropFolderFileErrorCode.LOCAL_FILE_WRONG_CHECKSUM = "dropFolderXmlBulkUpload.LOCAL_FILE_WRONG_CHECKSUM";
+KalturaDropFolderFileErrorCode.LOCAL_FILE_WRONG_SIZE = "dropFolderXmlBulkUpload.LOCAL_FILE_WRONG_SIZE";
+KalturaDropFolderFileErrorCode.MALFORMED_XML_FILE = "dropFolderXmlBulkUpload.MALFORMED_XML_FILE";
+KalturaDropFolderFileErrorCode.XML_FILE_SIZE_EXCEED_LIMIT = "dropFolderXmlBulkUpload.XML_FILE_SIZE_EXCEED_LIMIT";
 
 function KalturaDropFolderFileHandlerType(){
 }
+KalturaDropFolderFileHandlerType.CONTENT = "1";
 KalturaDropFolderFileHandlerType.TR_RDS = "TrRdsSyncDropFolder.TR_RDS";
 KalturaDropFolderFileHandlerType.XML = "dropFolderXmlBulkUpload.XML";
 KalturaDropFolderFileHandlerType.ICAL = "scheduleDropFolder.ICAL";
-KalturaDropFolderFileHandlerType.CONTENT = "1";
 
 function KalturaDropFolderFileOrderBy(){
 }
@@ -3039,6 +3040,11 @@ KalturaDropFolderOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaDropFolderType(){
 }
+KalturaDropFolderType.LOCAL = "1";
+KalturaDropFolderType.FTP = "2";
+KalturaDropFolderType.SCP = "3";
+KalturaDropFolderType.SFTP = "4";
+KalturaDropFolderType.S3 = "6";
 KalturaDropFolderType.AP_FEED = "ApFeedDropFolder.AP_FEED";
 KalturaDropFolderType.FEED = "FeedDropFolder.FEED";
 KalturaDropFolderType.MS_TEAMS = "MicrosoftTeamsDropFolder.MS_TEAMS";
@@ -3048,11 +3054,6 @@ KalturaDropFolderType.TR_RDS_TMCTERM = "TrRdsSyncDropFolder.TR_RDS_TMCTERM";
 KalturaDropFolderType.WEBEX_API = "WebexAPIDropFolder.WEBEX_API";
 KalturaDropFolderType.WEBEX = "WebexDropFolder.WEBEX";
 KalturaDropFolderType.ZOOM = "ZoomDropFolder.ZOOM";
-KalturaDropFolderType.LOCAL = "1";
-KalturaDropFolderType.FTP = "2";
-KalturaDropFolderType.SCP = "3";
-KalturaDropFolderType.SFTP = "4";
-KalturaDropFolderType.S3 = "6";
 
 function KalturaDurationType(){
 }
@@ -3431,8 +3432,6 @@ function KalturaEntryStatus(){
 KalturaEntryStatus.ERROR_IMPORTING = "-2";
 KalturaEntryStatus.ERROR_CONVERTING = "-1";
 KalturaEntryStatus.IMPORT = "0";
-KalturaEntryStatus.INFECTED = "virusScan.Infected";
-KalturaEntryStatus.SCAN_FAILURE = "virusScan.ScanFailure";
 KalturaEntryStatus.PRECONVERT = "1";
 KalturaEntryStatus.READY = "2";
 KalturaEntryStatus.DELETED = "3";
@@ -3440,14 +3439,12 @@ KalturaEntryStatus.PENDING = "4";
 KalturaEntryStatus.MODERATE = "5";
 KalturaEntryStatus.BLOCKED = "6";
 KalturaEntryStatus.NO_CONTENT = "7";
+KalturaEntryStatus.INFECTED = "virusScan.Infected";
+KalturaEntryStatus.SCAN_FAILURE = "virusScan.ScanFailure";
 
 function KalturaEntryType(){
 }
 KalturaEntryType.AUTOMATIC = "-1";
-KalturaEntryType.CONFERENCE_ENTRY_SERVER = "conference.CONFERENCE_ENTRY_SERVER";
-KalturaEntryType.EXTERNAL_MEDIA = "externalMedia.externalMedia";
-KalturaEntryType.ROOM = "room.room";
-KalturaEntryType.SIP_ENTRY_SERVER = "sip.SIP_ENTRY_SERVER";
 KalturaEntryType.MEDIA_CLIP = "1";
 KalturaEntryType.MIX = "2";
 KalturaEntryType.PLAYLIST = "5";
@@ -3455,6 +3452,10 @@ KalturaEntryType.DATA = "6";
 KalturaEntryType.LIVE_STREAM = "7";
 KalturaEntryType.LIVE_CHANNEL = "8";
 KalturaEntryType.DOCUMENT = "10";
+KalturaEntryType.CONFERENCE_ENTRY_SERVER = "conference.CONFERENCE_ENTRY_SERVER";
+KalturaEntryType.EXTERNAL_MEDIA = "externalMedia.externalMedia";
+KalturaEntryType.ROOM = "room.room";
+KalturaEntryType.SIP_ENTRY_SERVER = "sip.SIP_ENTRY_SERVER";
 
 function KalturaEntryVendorTaskOrderBy(){
 }
@@ -3496,22 +3497,6 @@ KalturaEventCuePointOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaEventNotificationEventObjectType(){
 }
-KalturaEventNotificationEventObjectType.AD_CUE_POINT = "adCuePointEventNotifications.AdCuePoint";
-KalturaEventNotificationEventObjectType.ANNOTATION = "annotationEventNotifications.Annotation";
-KalturaEventNotificationEventObjectType.ATTACHMENT_ASSET = "attachmentAssetEventNotifications.AttachmentAsset";
-KalturaEventNotificationEventObjectType.CAPTION_ASSET = "captionAssetEventNotifications.CaptionAsset";
-KalturaEventNotificationEventObjectType.CODE_CUE_POINT = "codeCuePointEventNotifications.CodeCuePoint";
-KalturaEventNotificationEventObjectType.DISTRIBUTION_PROFILE = "contentDistributionEventNotifications.DistributionProfile";
-KalturaEventNotificationEventObjectType.ENTRY_DISTRIBUTION = "contentDistributionEventNotifications.EntryDistribution";
-KalturaEventNotificationEventObjectType.CUE_POINT = "cuePointEventNotifications.CuePoint";
-KalturaEventNotificationEventObjectType.DROP_FOLDER = "dropFolderEventNotifications.DropFolder";
-KalturaEventNotificationEventObjectType.DROP_FOLDER_FILE = "dropFolderEventNotifications.DropFolderFile";
-KalturaEventNotificationEventObjectType.METADATA = "metadataEventNotifications.Metadata";
-KalturaEventNotificationEventObjectType.SCHEDULE_EVENT = "scheduleEventNotifications.ScheduleEvent";
-KalturaEventNotificationEventObjectType.SCHEDULE_EVENT_RESOURCE = "scheduleEventNotifications.ScheduleEventResource";
-KalturaEventNotificationEventObjectType.SCHEDULE_RESOURCE = "scheduleEventNotifications.ScheduleResource";
-KalturaEventNotificationEventObjectType.TRANSCRIPT_ASSET = "transcriptAssetEventNotifications.TranscriptAsset";
-KalturaEventNotificationEventObjectType.VIRTUAL_EVENT = "virtualEventEventNotifications.VirtualEvent";
 KalturaEventNotificationEventObjectType.ENTRY = "1";
 KalturaEventNotificationEventObjectType.CATEGORY = "2";
 KalturaEventNotificationEventObjectType.ASSET = "3";
@@ -3550,10 +3535,26 @@ KalturaEventNotificationEventObjectType.SERVER_NODE = "39";
 KalturaEventNotificationEventObjectType.ENTRY_SERVER_NODE = "40";
 KalturaEventNotificationEventObjectType.REACH_PROFILE = "41";
 KalturaEventNotificationEventObjectType.ENTRY_VENDOR_TASK = "42";
+KalturaEventNotificationEventObjectType.GROUPUSER = "43";
+KalturaEventNotificationEventObjectType.AD_CUE_POINT = "adCuePointEventNotifications.AdCuePoint";
+KalturaEventNotificationEventObjectType.ANNOTATION = "annotationEventNotifications.Annotation";
+KalturaEventNotificationEventObjectType.ATTACHMENT_ASSET = "attachmentAssetEventNotifications.AttachmentAsset";
+KalturaEventNotificationEventObjectType.CAPTION_ASSET = "captionAssetEventNotifications.CaptionAsset";
+KalturaEventNotificationEventObjectType.CODE_CUE_POINT = "codeCuePointEventNotifications.CodeCuePoint";
+KalturaEventNotificationEventObjectType.DISTRIBUTION_PROFILE = "contentDistributionEventNotifications.DistributionProfile";
+KalturaEventNotificationEventObjectType.ENTRY_DISTRIBUTION = "contentDistributionEventNotifications.EntryDistribution";
+KalturaEventNotificationEventObjectType.CUE_POINT = "cuePointEventNotifications.CuePoint";
+KalturaEventNotificationEventObjectType.DROP_FOLDER = "dropFolderEventNotifications.DropFolder";
+KalturaEventNotificationEventObjectType.DROP_FOLDER_FILE = "dropFolderEventNotifications.DropFolderFile";
+KalturaEventNotificationEventObjectType.METADATA = "metadataEventNotifications.Metadata";
+KalturaEventNotificationEventObjectType.SCHEDULE_EVENT = "scheduleEventNotifications.ScheduleEvent";
+KalturaEventNotificationEventObjectType.SCHEDULE_EVENT_RESOURCE = "scheduleEventNotifications.ScheduleEventResource";
+KalturaEventNotificationEventObjectType.SCHEDULE_RESOURCE = "scheduleEventNotifications.ScheduleResource";
+KalturaEventNotificationEventObjectType.TRANSCRIPT_ASSET = "transcriptAssetEventNotifications.TranscriptAsset";
+KalturaEventNotificationEventObjectType.VIRTUAL_EVENT = "virtualEventEventNotifications.VirtualEvent";
 
 function KalturaEventNotificationEventType(){
 }
-KalturaEventNotificationEventType.INTEGRATION_JOB_CLOSED = "integrationEventNotifications.INTEGRATION_JOB_CLOSED";
 KalturaEventNotificationEventType.BATCH_JOB_STATUS = "1";
 KalturaEventNotificationEventType.OBJECT_ADDED = "2";
 KalturaEventNotificationEventType.OBJECT_CHANGED = "3";
@@ -3567,6 +3568,7 @@ KalturaEventNotificationEventType.OBJECT_SAVED = "10";
 KalturaEventNotificationEventType.OBJECT_UPDATED = "11";
 KalturaEventNotificationEventType.OBJECT_REPLACED = "12";
 KalturaEventNotificationEventType.OBJECT_READY_FOR_INDEX = "13";
+KalturaEventNotificationEventType.INTEGRATION_JOB_CLOSED = "integrationEventNotifications.INTEGRATION_JOB_CLOSED";
 
 function KalturaEventNotificationTemplateOrderBy(){
 }
@@ -3706,11 +3708,6 @@ KalturaFileAssetStatus.ERROR = "4";
 
 function KalturaFileSyncObjectType(){
 }
-KalturaFileSyncObjectType.DISTRIBUTION_PROFILE = "contentDistribution.DistributionProfile";
-KalturaFileSyncObjectType.ENTRY_DISTRIBUTION = "contentDistribution.EntryDistribution";
-KalturaFileSyncObjectType.GENERIC_DISTRIBUTION_ACTION = "contentDistribution.GenericDistributionAction";
-KalturaFileSyncObjectType.EMAIL_NOTIFICATION_TEMPLATE = "emailNotification.EmailNotificationTemplate";
-KalturaFileSyncObjectType.HTTP_NOTIFICATION_TEMPLATE = "httpNotification.HttpNotificationTemplate";
 KalturaFileSyncObjectType.ENTRY = "1";
 KalturaFileSyncObjectType.UICONF = "2";
 KalturaFileSyncObjectType.BATCHJOB = "3";
@@ -3721,6 +3718,11 @@ KalturaFileSyncObjectType.METADATA_PROFILE = "6";
 KalturaFileSyncObjectType.SYNDICATION_FEED = "7";
 KalturaFileSyncObjectType.CONVERSION_PROFILE = "8";
 KalturaFileSyncObjectType.FILE_ASSET = "9";
+KalturaFileSyncObjectType.DISTRIBUTION_PROFILE = "contentDistribution.DistributionProfile";
+KalturaFileSyncObjectType.ENTRY_DISTRIBUTION = "contentDistribution.EntryDistribution";
+KalturaFileSyncObjectType.GENERIC_DISTRIBUTION_ACTION = "contentDistribution.GenericDistributionAction";
+KalturaFileSyncObjectType.EMAIL_NOTIFICATION_TEMPLATE = "emailNotification.EmailNotificationTemplate";
+KalturaFileSyncObjectType.HTTP_NOTIFICATION_TEMPLATE = "httpNotification.HttpNotificationTemplate";
 
 function KalturaFileSyncOrderBy(){
 }
@@ -4025,8 +4027,8 @@ KalturaIntegrationProviderType.VOICEBASE = "voicebase.Voicebase";
 
 function KalturaIntegrationTriggerType(){
 }
-KalturaIntegrationTriggerType.BPM_EVENT_NOTIFICATION = "bpmEventNotificationIntegration.BpmEventNotification";
 KalturaIntegrationTriggerType.MANUAL = "1";
+KalturaIntegrationTriggerType.BPM_EVENT_NOTIFICATION = "bpmEventNotificationIntegration.BpmEventNotification";
 
 function KalturaKafkaNotificationTemplateOrderBy(){
 }
@@ -4258,8 +4260,8 @@ KalturaLanguage.IS = "Icelandic";
 KalturaLanguage.KPO = "Ikposo";
 KalturaLanguage.ILO = "Iloko";
 KalturaLanguage.SMN = "Inari Sami";
-KalturaLanguage.IN = "Indonesian";
 KalturaLanguage.ID = "Indonesian";
+KalturaLanguage.IN = "Indonesian";
 KalturaLanguage.IZH = "Ingrian";
 KalturaLanguage.INH = "Ingush";
 KalturaLanguage.IA = "Interlingua";
@@ -5343,8 +5345,8 @@ function KalturaMediaInfoOrderBy(){
 function KalturaMediaParserType(){
 }
 KalturaMediaParserType.MEDIAINFO = "0";
-KalturaMediaParserType.REMOTE_MEDIAINFO = "remoteMediaInfo.RemoteMediaInfo";
 KalturaMediaParserType.FFMPEG = "1";
+KalturaMediaParserType.REMOTE_MEDIAINFO = "remoteMediaInfo.RemoteMediaInfo";
 
 function KalturaMediaServerNodeOrderBy(){
 }
@@ -5357,18 +5359,18 @@ KalturaMediaServerNodeOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaMetadataObjectType(){
 }
-KalturaMetadataObjectType.AD_CUE_POINT = "adCuePointMetadata.AdCuePoint";
-KalturaMetadataObjectType.ANNOTATION = "annotationMetadata.Annotation";
-KalturaMetadataObjectType.CODE_CUE_POINT = "codeCuePointMetadata.CodeCuePoint";
-KalturaMetadataObjectType.ANSWER_CUE_POINT = "quiz.AnswerCuePoint";
-KalturaMetadataObjectType.QUESTION_CUE_POINT = "quiz.QuestionCuePoint";
-KalturaMetadataObjectType.THUMB_CUE_POINT = "thumbCuePointMetadata.thumbCuePoint";
 KalturaMetadataObjectType.ENTRY = "1";
 KalturaMetadataObjectType.CATEGORY = "2";
 KalturaMetadataObjectType.USER = "3";
 KalturaMetadataObjectType.PARTNER = "4";
 KalturaMetadataObjectType.DYNAMIC_OBJECT = "5";
 KalturaMetadataObjectType.USER_ENTRY = "6";
+KalturaMetadataObjectType.AD_CUE_POINT = "adCuePointMetadata.AdCuePoint";
+KalturaMetadataObjectType.ANNOTATION = "annotationMetadata.Annotation";
+KalturaMetadataObjectType.CODE_CUE_POINT = "codeCuePointMetadata.CodeCuePoint";
+KalturaMetadataObjectType.ANSWER_CUE_POINT = "quiz.AnswerCuePoint";
+KalturaMetadataObjectType.QUESTION_CUE_POINT = "quiz.QuestionCuePoint";
+KalturaMetadataObjectType.THUMB_CUE_POINT = "thumbCuePointMetadata.thumbCuePoint";
 
 function KalturaMetadataOrderBy(){
 }
@@ -5507,9 +5509,6 @@ KalturaObjectFilterEngineType.RECYCLE_BIN_CLEANUP = "3";
 
 function KalturaObjectTaskType(){
 }
-KalturaObjectTaskType.DISTRIBUTE = "scheduledTaskContentDistribution.Distribute";
-KalturaObjectTaskType.DISPATCH_EVENT_NOTIFICATION = "scheduledTaskEventNotification.DispatchEventNotification";
-KalturaObjectTaskType.EXECUTE_METADATA_XSLT = "scheduledTaskMetadata.ExecuteMetadataXslt";
 KalturaObjectTaskType.DELETE_ENTRY = "1";
 KalturaObjectTaskType.MODIFY_CATEGORIES = "2";
 KalturaObjectTaskType.DELETE_ENTRY_FLAVORS = "3";
@@ -5519,6 +5518,9 @@ KalturaObjectTaskType.STORAGE_EXPORT = "6";
 KalturaObjectTaskType.MODIFY_ENTRY = "7";
 KalturaObjectTaskType.MAIL_NOTIFICATION = "8";
 KalturaObjectTaskType.RECYCLE_BIN_CLEANUP = "9";
+KalturaObjectTaskType.DISTRIBUTE = "scheduledTaskContentDistribution.Distribute";
+KalturaObjectTaskType.DISPATCH_EVENT_NOTIFICATION = "scheduledTaskEventNotification.DispatchEventNotification";
+KalturaObjectTaskType.EXECUTE_METADATA_XSLT = "scheduledTaskMetadata.ExecuteMetadataXslt";
 
 function KalturaPartnerOrderBy(){
 }
@@ -5877,10 +5879,6 @@ KalturaReportOrderBy.CREATED_AT_DESC = "-createdAt";
 
 function KalturaReportType(){
 }
-KalturaReportType.QUIZ = "quiz.QUIZ";
-KalturaReportType.QUIZ_AGGREGATE_BY_QUESTION = "quiz.QUIZ_AGGREGATE_BY_QUESTION";
-KalturaReportType.QUIZ_USER_AGGREGATE_BY_QUESTION = "quiz.QUIZ_USER_AGGREGATE_BY_QUESTION";
-KalturaReportType.QUIZ_USER_PERCENTAGE = "quiz.QUIZ_USER_PERCENTAGE";
 KalturaReportType.TOP_CONTENT = "1";
 KalturaReportType.CONTENT_DROPOFF = "2";
 KalturaReportType.CONTENT_INTERACTIONS = "3";
@@ -5944,6 +5942,7 @@ KalturaReportType.CDN_BANDWIDTH_USAGE = "64";
 KalturaReportType.REACH_CATALOG_USAGE = "65";
 KalturaReportType.REACH_PROFILE_USAGE = "66";
 KalturaReportType.SELF_SERVE_BANDWIDTH = "67";
+KalturaReportType.PARTNER_USAGE_SF = "68";
 KalturaReportType.PARTNER_USAGE = "201";
 KalturaReportType.MAP_OVERLAY_COUNTRY_REALTIME = "10001";
 KalturaReportType.MAP_OVERLAY_REGION_REALTIME = "10002";
@@ -6089,6 +6088,10 @@ KalturaReportType.EP_TOP_MOMENTS = "60016";
 KalturaReportType.EP_TOP_SESSIONS = "60017";
 KalturaReportType.EP_WEBCAST_ENGAGEMENT_OVER_TIME = "60018";
 KalturaReportType.CNC_PARTICIPATION = "70001";
+KalturaReportType.QUIZ = "quiz.QUIZ";
+KalturaReportType.QUIZ_AGGREGATE_BY_QUESTION = "quiz.QUIZ_AGGREGATE_BY_QUESTION";
+KalturaReportType.QUIZ_USER_AGGREGATE_BY_QUESTION = "quiz.QUIZ_USER_AGGREGATE_BY_QUESTION";
+KalturaReportType.QUIZ_USER_PERCENTAGE = "quiz.QUIZ_USER_PERCENTAGE";
 
 function KalturaResetPassLinkType(){
 }
@@ -6139,8 +6142,6 @@ KalturaRsvpUserEntryOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaRuleActionType(){
 }
-KalturaRuleActionType.DRM_POLICY = "drm.DRM_POLICY";
-KalturaRuleActionType.ADD_ENTRY_VENDOR_TASK = "reach.ADD_ENTRY_VENDOR_TASK";
 KalturaRuleActionType.BLOCK = "1";
 KalturaRuleActionType.PREVIEW = "2";
 KalturaRuleActionType.LIMIT_FLAVORS = "3";
@@ -6149,6 +6150,8 @@ KalturaRuleActionType.LIMIT_DELIVERY_PROFILES = "5";
 KalturaRuleActionType.SERVE_FROM_REMOTE_SERVER = "6";
 KalturaRuleActionType.REQUEST_HOST_REGEX = "7";
 KalturaRuleActionType.LIMIT_THUMBNAIL_CAPTURE = "8";
+KalturaRuleActionType.DRM_POLICY = "drm.DRM_POLICY";
+KalturaRuleActionType.ADD_ENTRY_VENDOR_TASK = "reach.ADD_ENTRY_VENDOR_TASK";
 
 function KalturaScheduleEventOrderBy(){
 }
@@ -6250,11 +6253,11 @@ KalturaServerNodeOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaServerNodeType(){
 }
+KalturaServerNodeType.EDGE = "1";
 KalturaServerNodeType.CONFERENCE_SERVER = "conference.CONFERENCE_SERVER";
 KalturaServerNodeType.LIVE_CLUSTER_MEDIA_SERVER = "liveCluster.LIVE_CLUSTER_MEDIA_SERVER";
 KalturaServerNodeType.SIP_SERVER = "sip.SIP_SERVER";
 KalturaServerNodeType.WOWZA_MEDIA_SERVER = "wowza.WOWZA_MEDIA_SERVER";
-KalturaServerNodeType.EDGE = "1";
 
 function KalturaSessionCuePointOrderBy(){
 }
@@ -6304,8 +6307,6 @@ KalturaSipServerNodeOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaSourceType(){
 }
-KalturaSourceType.LIMELIGHT_LIVE = "limeLight.LIVE_STREAM";
-KalturaSourceType.VELOCIX_LIVE = "velocix.VELOCIX_LIVE";
 KalturaSourceType.FILE = "1";
 KalturaSourceType.WEBCAM = "2";
 KalturaSourceType.URL = "5";
@@ -6320,6 +6321,8 @@ KalturaSourceType.CLIP = "35";
 KalturaSourceType.KALTURA_RECORDED_LIVE = "36";
 KalturaSourceType.LECTURE_CAPTURE = "37";
 KalturaSourceType.LIVE_STREAM_ONTEXTDATA_CAPTIONS = "42";
+KalturaSourceType.LIMELIGHT_LIVE = "limeLight.LIVE_STREAM";
+KalturaSourceType.VELOCIX_LIVE = "velocix.VELOCIX_LIVE";
 
 function KalturaSshDropFolderOrderBy(){
 }
@@ -6341,13 +6344,13 @@ KalturaStorageProfileOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaStorageProfileProtocol(){
 }
-KalturaStorageProfileProtocol.KONTIKI = "kontiki.KONTIKI";
 KalturaStorageProfileProtocol.KALTURA_DC = "0";
 KalturaStorageProfileProtocol.FTP = "1";
 KalturaStorageProfileProtocol.SCP = "2";
 KalturaStorageProfileProtocol.SFTP = "3";
 KalturaStorageProfileProtocol.S3 = "6";
 KalturaStorageProfileProtocol.LOCAL = "7";
+KalturaStorageProfileProtocol.KONTIKI = "kontiki.KONTIKI";
 
 function KalturaSummaryWritingStyleTaskData(){
 }
@@ -6561,10 +6564,10 @@ KalturaUserEntryOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
 function KalturaUserEntryStatus(){
 }
-KalturaUserEntryStatus.QUIZ_SUBMITTED = "quiz.3";
 KalturaUserEntryStatus.ACTIVE = "1";
 KalturaUserEntryStatus.DELETED = "2";
 KalturaUserEntryStatus.RECYCLED = "3";
+KalturaUserEntryStatus.QUIZ_SUBMITTED = "quiz.3";
 
 function KalturaUserEntryType(){
 }
@@ -6641,6 +6644,7 @@ function KalturaVendorCatalogItemPriceFunction(){
 KalturaVendorCatalogItemPriceFunction.PRICE_PER_HOUR = "kReachUtils::calcPricePerHour";
 KalturaVendorCatalogItemPriceFunction.PRICE_PER_MINUTE = "kReachUtils::calcPricePerMinute";
 KalturaVendorCatalogItemPriceFunction.PRICE_PER_SECOND = "kReachUtils::calcPricePerSecond";
+KalturaVendorCatalogItemPriceFunction.PRICE_PER_TOKEN = "kReachUtils::calcPricePerToken";
 
 function KalturaVendorCreditRecurrenceFrequency(){
 }

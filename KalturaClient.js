@@ -33,7 +33,7 @@ function KalturaClient(config){
 	this.init(config);
 }
 KalturaClient.inheritsFrom (KalturaClientBase);
-KalturaClient.prototype.apiVersion = "21.15.0";
+KalturaClient.prototype.apiVersion = "21.16.0";
 /**
  * Manage access control profiles
  * @param KalturaAccessControlProfileService

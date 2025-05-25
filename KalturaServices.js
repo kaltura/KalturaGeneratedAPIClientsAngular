@@ -13504,6 +13504,7 @@ KalturaEntryVendorTaskService.prototype.serveCsv = function(callback, id){
  * @param	entryVendorTask	KalturaEntryVendorTask		evntry vendor task to update (optional).
  * @return	KalturaEntryVendorTask.
  * @return	.
+ * @return	.
  */
 KalturaEntryVendorTaskService.prototype.update = function(callback, id, entryVendorTask){
 	var kparams = new Object();
