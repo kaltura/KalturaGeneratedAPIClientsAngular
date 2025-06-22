@@ -13306,6 +13306,7 @@ KalturaReachProfileService.prototype.updateStatus = function(callback, id, statu
  * @action	getServeUrl	.
  * @action	list	List KalturaEntryVendorTask objects.
  * @action	reject	Reject entry vendor task for execution..
+ * @action	replaceOutput	.
  * @action	serveCsv	Will serve a requested csv.
  * @action	update	Update entry vendor task. Only the properties that were set will be updated..
  * @action	updateJob	Update entry vendor task. Only the properties that were set will be updated..
@@ -13483,6 +13484,20 @@ KalturaEntryVendorTaskService.prototype.reject = function(callback, id, rejectRe
 	this.client.addParam(kparams, "id", id);
 	this.client.addParam(kparams, "rejectReason", rejectReason);
 	this.client.queueServiceActionCall("reach_entryvendortask", "reject", kparams);
+	if (!this.client.isMultiRequest())
+		this.client.doQueue(callback);
+}
+/**
+ * .
+ * @param	id	int		vendor task id (optional).
+ * @param	newOutput	string		 (optional).
+ * @return	KalturaEntryVendorTask.
+ */
+KalturaEntryVendorTaskService.prototype.replaceOutput = function(callback, id, newOutput){
+	var kparams = new Object();
+	this.client.addParam(kparams, "id", id);
+	this.client.addParam(kparams, "newOutput", newOutput);
+	this.client.queueServiceActionCall("reach_entryvendortask", "replaceOutput", kparams);
 	if (!this.client.isMultiRequest())
 		this.client.doQueue(callback);
 }

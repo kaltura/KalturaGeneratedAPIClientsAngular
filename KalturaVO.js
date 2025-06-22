@@ -8747,22 +8747,6 @@ KalturaClipConcatJobData.inheritsFrom (KalturaJobData);
 
 
 /**
- * @param	clipsDuration	int		Estimated duration of the clips, in seconds. (insertOnly).
- * @param	eventSessionContextId	string		Event session context ID used to enhance clip results. (insertOnly).
- * @param	instruction	string		Instruction describing the moments to capture or the objectives to achieve with the clips. (insertOnly).
- * @param	clipsOutputJson	string		List of clips as JSON string.
- *		 For example: [{"title": "Title of the first clip", "description": "Description of the first clip", "tags": "Tagged-Example", "start": 127, "duration": 30}].
- */
-function KalturaClipsVendorTaskData(){
-	this.clipsDuration = null;
-	this.eventSessionContextId = null;
-	this.instruction = null;
-	this.clipsOutputJson = null;
-}
-KalturaClipsVendorTaskData.inheritsFrom (KalturaVendorTaskData);
-
-
-/**
  * @param	code	string		.
  * @param	description	string		.
  * @param	endTime	int		.
@@ -11583,6 +11567,17 @@ KalturaLiveToVodJobData.inheritsFrom (KalturaJobData);
 
 
 /**
+ * @param	outputLanguage	string		Language code.
+ * @param	outputJson	string		result as JSON string..
+ */
+function KalturaLocalizedVendorTaskData(){
+	this.outputLanguage = null;
+	this.outputJson = null;
+}
+KalturaLocalizedVendorTaskData.inheritsFrom (KalturaVendorTaskData);
+
+
+/**
  */
 function KalturaLocationScheduleResource(){
 }
@@ -11687,20 +11682,6 @@ function KalturaMediaListResponse(){
 	this.objects = null;
 }
 KalturaMediaListResponse.inheritsFrom (KalturaListResponse);
-
-
-/**
- * @param	detailLevel	string		The level of detail for the metadata enrichment process. (insertOnly).
- * @param	instruction	string		Instructions describing what should be taken into account during the metadata enrichment process. (insertOnly).
- * @param	outputJson	string		Metadata enrichment result as JSON string.
- *		 For example: {"titles": ["The first title", "The second title"], "descriptions": ["The first description"], "tags": ["Tag1", "Tag2"]}.
- */
-function KalturaMetadataEnrichmentVendorTaskData(){
-	this.detailLevel = null;
-	this.instruction = null;
-	this.outputJson = null;
-}
-KalturaMetadataEnrichmentVendorTaskData.inheritsFrom (KalturaVendorTaskData);
 
 
 /**
@@ -12326,25 +12307,6 @@ function KalturaQuizUserEntry(){
 	this.extendedStatus = null;
 }
 KalturaQuizUserEntry.inheritsFrom (KalturaUserEntry);
-
-
-/**
- * @param	numberOfQuestions	int		Number Of Questions..
- * @param	questionsType	string		Questions Type..
- * @param	context	string		Quiz Context..
- * @param	formalStyle	string		Formal Style..
- * @param	createQuiz	bool		Create quiz flag..
- * @param	quizOutput	string		Quiz entry Id.
- */
-function KalturaQuizVendorTaskData(){
-	this.numberOfQuestions = null;
-	this.questionsType = null;
-	this.context = null;
-	this.formalStyle = null;
-	this.createQuiz = null;
-	this.quizOutput = null;
-}
-KalturaQuizVendorTaskData.inheritsFrom (KalturaVendorTaskData);
 
 
 /**
@@ -13012,21 +12974,6 @@ function KalturaStorageProfileListResponse(){
 	this.objects = null;
 }
 KalturaStorageProfileListResponse.inheritsFrom (KalturaListResponse);
-
-
-/**
- * @param	typeOfSummary	string		Type of summary..
- * @param	writingStyle	string		Writing style of the summary..
- * @param	language	string		Language code.
- * @param	summaryOutputJson	string		JSON string containing the summary output..
- */
-function KalturaSummaryVendorTaskData(){
-	this.typeOfSummary = null;
-	this.writingStyle = null;
-	this.language = null;
-	this.summaryOutputJson = null;
-}
-KalturaSummaryVendorTaskData.inheritsFrom (KalturaVendorTaskData);
 
 
 /**
@@ -13727,6 +13674,15 @@ KalturaVendorCredit.inheritsFrom (KalturaBaseVendorCredit);
 
 
 /**
+ * @param	documentEnrichmentType	int		.
+ */
+function KalturaVendorDocumentEnrichmentCatalogItem(){
+	this.documentEnrichmentType = null;
+}
+KalturaVendorDocumentEnrichmentCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
  * @param	flavorParamsId	int		.
  * @param	clearAudioFlavorParamsId	int		.
  * @param	targetLanguage	string		.
@@ -13785,6 +13741,17 @@ KalturaVendorQuizCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 function KalturaVendorSentimentAnalysisCatalogItem(){
 }
 KalturaVendorSentimentAnalysisCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ * @param	targetLanguage	string		.
+ * @param	outputFormat	int		.
+ */
+function KalturaVendorSignLanguageCatalogItem(){
+	this.targetLanguage = null;
+	this.outputFormat = null;
+}
+KalturaVendorSignLanguageCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
@@ -14828,6 +14795,22 @@ function KalturaClippingTaskEntryServerNode(){
 	this.liveEntryId = null;
 }
 KalturaClippingTaskEntryServerNode.inheritsFrom (KalturaTaskEntryServerNode);
+
+
+/**
+ * @param	clipsDuration	int		Estimated duration of the clips, in seconds. (insertOnly).
+ * @param	eventSessionContextId	string		Event session context ID used to enhance clip results. (insertOnly).
+ * @param	instruction	string		Instruction describing the moments to capture or the objectives to achieve with the clips. (insertOnly).
+ * @param	clipsOutputJson	string		List of clips as JSON string.
+ *		 For example: [{"title": "Title of the first clip", "description": "Description of the first clip", "tags": "Tagged-Example", "start": 127, "duration": 30}].
+ */
+function KalturaClipsVendorTaskData(){
+	this.clipsDuration = null;
+	this.eventSessionContextId = null;
+	this.instruction = null;
+	this.clipsOutputJson = null;
+}
+KalturaClipsVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
 
 
 /**
@@ -16359,6 +16342,17 @@ KalturaMetadataBaseFilter.inheritsFrom (KalturaRelatedFilter);
 
 
 /**
+ * @param	detailLevel	string		The level of detail for the metadata enrichment process. (insertOnly).
+ * @param	instruction	string		Instructions describing what should be taken into account during the metadata enrichment process. (insertOnly).
+ */
+function KalturaMetadataEnrichmentVendorTaskData(){
+	this.detailLevel = null;
+	this.instruction = null;
+}
+KalturaMetadataEnrichmentVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
+
+
+/**
  * @param	xPath	string		May contain the full xpath to the field in three formats
  *		 1. Slashed xPath, e.g. /metadata/myElementName
  *		 2. Using local-name function, e.g. /[local-name()='metadata']/[local-name()='myElementName']
@@ -16774,6 +16768,25 @@ KalturaQuizFilter.inheritsFrom (KalturaRelatedFilter);
 
 
 /**
+ * @param	numberOfQuestions	int		Number Of Questions..
+ * @param	questionsType	string		Questions Type..
+ * @param	context	string		Quiz Context..
+ * @param	formalStyle	string		Formal Style..
+ * @param	createQuiz	bool		Create quiz flag..
+ * @param	quizOutput	string		Quiz entry Id.
+ */
+function KalturaQuizVendorTaskData(){
+	this.numberOfQuestions = null;
+	this.questionsType = null;
+	this.context = null;
+	this.formalStyle = null;
+	this.createQuiz = null;
+	this.quizOutput = null;
+}
+KalturaQuizVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
+
+
+/**
  * @param	entryIdEqual	string		.
  * @param	rankIn	string		.
  */
@@ -17176,6 +17189,19 @@ function KalturaStringResource(){
 	this.content = null;
 }
 KalturaStringResource.inheritsFrom (KalturaContentResource);
+
+
+/**
+ * @param	typeOfSummary	string		Type of summary..
+ * @param	writingStyle	string		Writing style of the summary..
+ * @param	summaryOutputJson	string		JSON string containing the summary output..
+ */
+function KalturaSummaryVendorTaskData(){
+	this.typeOfSummary = null;
+	this.writingStyle = null;
+	this.summaryOutputJson = null;
+}
+KalturaSummaryVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
 
 
 /**
@@ -20482,6 +20508,13 @@ KalturaVendorClipsCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter
 
 
 /**
+ */
+function KalturaVendorDocumentEnrichmentCatalogItemFilter(){
+}
+KalturaVendorDocumentEnrichmentCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
  * @param	targetLanguageEqual	string		.
  * @param	targetLanguageIn	string		.
  */
@@ -21165,6 +21198,13 @@ KalturaVendorExtendedAudioDescriptionCatalogItemFilter.inheritsFrom (KalturaVend
 function KalturaVendorLiveCaptionCatalogItemFilter(){
 }
 KalturaVendorLiveCaptionCatalogItemFilter.inheritsFrom (KalturaVendorCaptionsCatalogItemBaseFilter);
+
+
+/**
+ */
+function KalturaVendorSignLanguageCatalogItemFilter(){
+}
+KalturaVendorSignLanguageCatalogItemFilter.inheritsFrom (KalturaVendorDubbingCatalogItemBaseFilter);
 
 
 /**

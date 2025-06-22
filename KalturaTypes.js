@@ -1414,6 +1414,11 @@ KalturaVendorCatalogItemOutputFormat.SRT = 1;
 KalturaVendorCatalogItemOutputFormat.DFXP = 2;
 KalturaVendorCatalogItemOutputFormat.VTT = 3;
 
+function KalturaVendorCatalogItemSignLanguageOutputFormat(){
+}
+KalturaVendorCatalogItemSignLanguageOutputFormat.ASPECT_RATIO_16_9 = 1;
+KalturaVendorCatalogItemSignLanguageOutputFormat.ASPECT_RATIO_4_3 = 2;
+
 function KalturaVendorCatalogItemStage(){
 }
 KalturaVendorCatalogItemStage.PRODUCTION = 1;
@@ -1424,6 +1429,10 @@ function KalturaVendorCatalogItemStatus(){
 KalturaVendorCatalogItemStatus.DEPRECATED = 1;
 KalturaVendorCatalogItemStatus.ACTIVE = 2;
 KalturaVendorCatalogItemStatus.DELETED = 3;
+
+function KalturaVendorDocumentEnrichmentType(){
+}
+KalturaVendorDocumentEnrichmentType.MD_CONVERSION = 1;
 
 function KalturaVendorIntegrationStatus(){
 }
@@ -1450,6 +1459,8 @@ KalturaVendorServiceFeature.VIDEO_ANALYSIS = 14;
 KalturaVendorServiceFeature.MODERATION = 15;
 KalturaVendorServiceFeature.METADATA_ENRICHMENT = 16;
 KalturaVendorServiceFeature.SENTIMENT_ANALYSIS = 17;
+KalturaVendorServiceFeature.DOCUMENT_ENRICHMENT = 18;
+KalturaVendorServiceFeature.SIGN_LANGUAGE = 19;
 
 function KalturaVendorServiceTurnAroundTime(){
 }
@@ -1785,6 +1796,7 @@ KalturaAttachmentType.TEXT = "1";
 KalturaAttachmentType.MEDIA = "2";
 KalturaAttachmentType.DOCUMENT = "3";
 KalturaAttachmentType.JSON = "4";
+KalturaAttachmentType.MARKDOWN = "5";
 
 function KalturaAudioCodec(){
 }
@@ -2342,6 +2354,11 @@ KalturaCatalogItemLanguage.VI = "Vietnamese";
 KalturaCatalogItemLanguage.CY = "Welsh";
 KalturaCatalogItemLanguage.XH = "Xhosa";
 KalturaCatalogItemLanguage.ZU = "Zulu";
+
+function KalturaCatalogItemSignLanguage(){
+}
+KalturaCatalogItemSignLanguage.ENGLISH_ASL = "English (ASL)";
+KalturaCatalogItemSignLanguage.ENGLISH_BSL = "English (BSL)";
 
 function KalturaCategoryEntryAdvancedOrderBy(){
 }
