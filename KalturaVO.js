@@ -7366,6 +7366,7 @@ KalturaYouTubeApiCaptionDistributionInfo.inheritsFrom (KalturaObjectBase);
  * @param	groupParticipationType	int		.
  * @param	handleCohostsMode	int		.
  * @param	handleAlternativeHostsMode	int		.
+ * @param	userSearchMethod	int		.
  */
 function KalturaZoomIntegrationSetting(){
 	this.zoomCategory = null;
@@ -7381,6 +7382,7 @@ function KalturaZoomIntegrationSetting(){
 	this.groupParticipationType = null;
 	this.handleCohostsMode = null;
 	this.handleAlternativeHostsMode = null;
+	this.userSearchMethod = null;
 }
 KalturaZoomIntegrationSetting.inheritsFrom (KalturaIntegrationSetting);
 
@@ -16344,10 +16346,18 @@ KalturaMetadataBaseFilter.inheritsFrom (KalturaRelatedFilter);
 /**
  * @param	detailLevel	string		The level of detail for the metadata enrichment process. (insertOnly).
  * @param	instruction	string		Instructions describing what should be taken into account during the metadata enrichment process. (insertOnly).
+ * @param	shouldApply	bool		Indicates whether the metadata enrichment results should be automatically applied on the task entry.
+ *		 Default is false..
+ * @param	applyMode	string		Specifies how metadata fields should be applied during enrichment.
+ *		 If 'FILL_EMPTY_AND_OVERRIDE_LIST', use overrideFields to specify which fields to override..
+ * @param	overrideFields	array		List of entry fields to override when applyMode is set to 'FILL_EMPTY_AND_OVERRIDE_LIST'..
  */
 function KalturaMetadataEnrichmentVendorTaskData(){
 	this.detailLevel = null;
 	this.instruction = null;
+	this.shouldApply = null;
+	this.applyMode = null;
+	this.overrideFields = null;
 }
 KalturaMetadataEnrichmentVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
 

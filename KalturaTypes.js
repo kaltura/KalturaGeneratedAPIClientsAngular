@@ -1581,6 +1581,12 @@ KalturaZoomUsersMatching.ADD_POSTFIX = 1;
 KalturaZoomUsersMatching.REMOVE_POSTFIX = 2;
 KalturaZoomUsersMatching.CMS_MATCHING = 3;
 
+function KalturaZoomUsersSearchMethod(){
+}
+KalturaZoomUsersSearchMethod.ID = 0;
+KalturaZoomUsersSearchMethod.EMAIL = 1;
+KalturaZoomUsersSearchMethod.ALL = 2;
+
 function KalturaAccessControlOrderBy(){
 }
 KalturaAccessControlOrderBy.CREATED_AT_ASC = "+createdAt";
@@ -5373,6 +5379,12 @@ KalturaMediaServerNodeOrderBy.UPDATED_AT_ASC = "+updatedAt";
 KalturaMediaServerNodeOrderBy.CREATED_AT_DESC = "-createdAt";
 KalturaMediaServerNodeOrderBy.HEARTBEAT_TIME_DESC = "-heartbeatTime";
 KalturaMediaServerNodeOrderBy.UPDATED_AT_DESC = "-updatedAt";
+
+function KalturaMetadataEnrichmentApplyMode(){
+}
+KalturaMetadataEnrichmentApplyMode.FILL_EMPTY = "FILL_EMPTY";
+KalturaMetadataEnrichmentApplyMode.FILL_EMPTY_AND_OVERRIDE_LIST = "FILL_EMPTY_AND_OVERRIDE_LIST";
+KalturaMetadataEnrichmentApplyMode.OVERRIDE_ALL = "OVERRIDE_ALL";
 
 function KalturaMetadataObjectType(){
 }
