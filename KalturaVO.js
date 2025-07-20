@@ -4674,6 +4674,17 @@ KalturaLiveStreamStats.inheritsFrom (KalturaObjectBase);
 
 
 /**
+ * @param	accuracy	int		The percentage accuracy of the markdown - values between 0 and 100.
+ * @param	providerType	string		The provider of the markdown.
+ */
+function KalturaMarkdownAsset(){
+	this.accuracy = null;
+	this.providerType = null;
+}
+KalturaMarkdownAsset.inheritsFrom (KalturaAttachmentAsset);
+
+
+/**
  * @param	idEqual	string		This filter should be in use for retrieving only a specific entry (identified by its entryId)..
  * @param	idIn	string		This filter should be in use for retrieving few specific entries (string should include comma separated list of entryId strings)..
  * @param	idNotIn	string		.
@@ -6652,6 +6663,17 @@ KalturaTag.inheritsFrom (KalturaObjectBase);
 
 
 /**
+ * @param	language	string		The language of the transcript.
+ * @param	humanVerified	int		Was verified by human or machine.
+ */
+function KalturaTextualAttachmentAsset(){
+	this.language = null;
+	this.humanVerified = null;
+}
+KalturaTextualAttachmentAsset.inheritsFrom (KalturaAttachmentAsset);
+
+
+/**
  * @param	thumbParamsId	int		The Flavor Params used to create this Flavor Asset (insertOnly).
  * @param	width	int		The width of the Flavor Asset (readOnly).
  * @param	height	int		The height of the Flavor Asset (readOnly).
@@ -6728,17 +6750,13 @@ KalturaThumbParamsOutput.inheritsFrom (KalturaThumbParams);
 
 /**
  * @param	accuracy	float		The accuracy of the transcript - values between 0 and 1.
- * @param	humanVerified	int		Was verified by human or machine.
- * @param	language	string		The language of the transcript.
  * @param	providerType	string		The provider of the transcript.
  */
 function KalturaTranscriptAsset(){
 	this.accuracy = null;
-	this.humanVerified = null;
-	this.language = null;
 	this.providerType = null;
 }
-KalturaTranscriptAsset.inheritsFrom (KalturaAttachmentAsset);
+KalturaTranscriptAsset.inheritsFrom (KalturaTextualAttachmentAsset);
 
 
 /**
@@ -11649,6 +11667,15 @@ KalturaMailNotificationObjectTask.inheritsFrom (KalturaObjectTask);
 
 
 /**
+ * @param	objects	array		 (readOnly).
+ */
+function KalturaMarkdownAssetListResponse(){
+	this.objects = null;
+}
+KalturaMarkdownAssetListResponse.inheritsFrom (KalturaListResponse);
+
+
+/**
  * @param	values	array		.
  * @param	matchType	string		.
  */
@@ -13085,6 +13112,15 @@ KalturaTaskEntryServerNode.inheritsFrom (KalturaEntryServerNode);
 /**
  * @param	objects	array		 (readOnly).
  */
+function KalturaTextualAttachmentAssetListResponse(){
+	this.objects = null;
+}
+KalturaTextualAttachmentAssetListResponse.inheritsFrom (KalturaListResponse);
+
+
+/**
+ * @param	objects	array		 (readOnly).
+ */
 function KalturaThumbAssetListResponse(){
 	this.objects = null;
 }
@@ -13747,11 +13783,9 @@ KalturaVendorSentimentAnalysisCatalogItem.inheritsFrom (KalturaVendorCatalogItem
 
 /**
  * @param	targetLanguage	string		.
- * @param	outputFormat	int		.
  */
 function KalturaVendorSignLanguageCatalogItem(){
 	this.targetLanguage = null;
-	this.outputFormat = null;
 }
 KalturaVendorSignLanguageCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
@@ -21599,6 +21633,13 @@ KalturaTVComDistributionProfileFilter.inheritsFrom (KalturaTVComDistributionProf
 
 
 /**
+ */
+function KalturaTextualAttachmentAssetBaseFilter(){
+}
+KalturaTextualAttachmentAssetBaseFilter.inheritsFrom (KalturaAttachmentAssetFilter);
+
+
+/**
  * @param	thumbParamsIdEqual	int		.
  * @param	thumbParamsVersionEqual	string		.
  * @param	thumbAssetIdEqual	string		.
@@ -21625,13 +21666,6 @@ KalturaTimeWarnerDistributionProfileFilter.inheritsFrom (KalturaTimeWarnerDistri
 function KalturaTimedThumbAssetBaseFilter(){
 }
 KalturaTimedThumbAssetBaseFilter.inheritsFrom (KalturaThumbAssetFilter);
-
-
-/**
- */
-function KalturaTranscriptAssetBaseFilter(){
-}
-KalturaTranscriptAssetBaseFilter.inheritsFrom (KalturaAttachmentAssetFilter);
 
 
 /**
@@ -21845,6 +21879,13 @@ KalturaSwfFlavorParamsFilter.inheritsFrom (KalturaSwfFlavorParamsBaseFilter);
 
 /**
  */
+function KalturaTextualAttachmentAssetFilter(){
+}
+KalturaTextualAttachmentAssetFilter.inheritsFrom (KalturaTextualAttachmentAssetBaseFilter);
+
+
+/**
+ */
 function KalturaThumbParamsOutputFilter(){
 }
 KalturaThumbParamsOutputFilter.inheritsFrom (KalturaThumbParamsOutputBaseFilter);
@@ -21855,13 +21896,6 @@ KalturaThumbParamsOutputFilter.inheritsFrom (KalturaThumbParamsOutputBaseFilter)
 function KalturaTimedThumbAssetFilter(){
 }
 KalturaTimedThumbAssetFilter.inheritsFrom (KalturaTimedThumbAssetBaseFilter);
-
-
-/**
- */
-function KalturaTranscriptAssetFilter(){
-}
-KalturaTranscriptAssetFilter.inheritsFrom (KalturaTranscriptAssetBaseFilter);
 
 
 /**
@@ -21951,6 +21985,13 @@ KalturaLiveEntryBaseFilter.inheritsFrom (KalturaMediaEntryFilter);
 
 /**
  */
+function KalturaMarkdownAssetBaseFilter(){
+}
+KalturaMarkdownAssetBaseFilter.inheritsFrom (KalturaTextualAttachmentAssetFilter);
+
+
+/**
+ */
 function KalturaMediaFlavorParamsOutputBaseFilter(){
 }
 KalturaMediaFlavorParamsOutputBaseFilter.inheritsFrom (KalturaFlavorParamsOutputFilter);
@@ -21982,6 +22023,13 @@ KalturaSftpDropFolderFilter.inheritsFrom (KalturaSftpDropFolderBaseFilter);
 function KalturaSwfFlavorParamsOutputBaseFilter(){
 }
 KalturaSwfFlavorParamsOutputBaseFilter.inheritsFrom (KalturaFlavorParamsOutputFilter);
+
+
+/**
+ */
+function KalturaTranscriptAssetBaseFilter(){
+}
+KalturaTranscriptAssetBaseFilter.inheritsFrom (KalturaTextualAttachmentAssetFilter);
 
 
 /**
@@ -22034,6 +22082,13 @@ KalturaLiveEntryFilter.inheritsFrom (KalturaLiveEntryBaseFilter);
 
 /**
  */
+function KalturaMarkdownAssetFilter(){
+}
+KalturaMarkdownAssetFilter.inheritsFrom (KalturaMarkdownAssetBaseFilter);
+
+
+/**
+ */
 function KalturaMediaFlavorParamsOutputFilter(){
 }
 KalturaMediaFlavorParamsOutputFilter.inheritsFrom (KalturaMediaFlavorParamsOutputBaseFilter);
@@ -22051,6 +22106,13 @@ KalturaPdfFlavorParamsOutputFilter.inheritsFrom (KalturaPdfFlavorParamsOutputBas
 function KalturaSwfFlavorParamsOutputFilter(){
 }
 KalturaSwfFlavorParamsOutputFilter.inheritsFrom (KalturaSwfFlavorParamsOutputBaseFilter);
+
+
+/**
+ */
+function KalturaTranscriptAssetFilter(){
+}
+KalturaTranscriptAssetFilter.inheritsFrom (KalturaTranscriptAssetBaseFilter);
 
 
 /**

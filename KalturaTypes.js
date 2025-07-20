@@ -492,6 +492,7 @@ KalturaEntryModerationStatus.AUTO_APPROVED = 6;
 function KalturaEntryObjectType(){
 }
 KalturaEntryObjectType.ENTRY = 1;
+KalturaEntryObjectType.ASSET = 2;
 
 function KalturaEntryServerNodeRecordingStatus(){
 }
@@ -1414,11 +1415,6 @@ KalturaVendorCatalogItemOutputFormat.SRT = 1;
 KalturaVendorCatalogItemOutputFormat.DFXP = 2;
 KalturaVendorCatalogItemOutputFormat.VTT = 3;
 
-function KalturaVendorCatalogItemSignLanguageOutputFormat(){
-}
-KalturaVendorCatalogItemSignLanguageOutputFormat.ASPECT_RATIO_16_9 = 1;
-KalturaVendorCatalogItemSignLanguageOutputFormat.ASPECT_RATIO_4_3 = 2;
-
 function KalturaVendorCatalogItemStage(){
 }
 KalturaVendorCatalogItemStage.PRODUCTION = 1;
@@ -1583,9 +1579,8 @@ KalturaZoomUsersMatching.CMS_MATCHING = 3;
 
 function KalturaZoomUsersSearchMethod(){
 }
-KalturaZoomUsersSearchMethod.ID = 0;
-KalturaZoomUsersSearchMethod.EMAIL = 1;
-KalturaZoomUsersSearchMethod.ALL = 2;
+KalturaZoomUsersSearchMethod.EMAIL = 0;
+KalturaZoomUsersSearchMethod.EXTERNAL = 1;
 
 function KalturaAccessControlOrderBy(){
 }
@@ -1771,6 +1766,7 @@ KalturaAssetType.DOCUMENT = "document.Document";
 KalturaAssetType.IMAGE = "document.Image";
 KalturaAssetType.PDF = "document.PDF";
 KalturaAssetType.SWF = "document.SWF";
+KalturaAssetType.MARKDOWN = "markdown.Markdown";
 KalturaAssetType.TIMED_THUMB_ASSET = "thumbCuePoint.timedThumb";
 KalturaAssetType.TRANSCRIPT = "transcript.Transcript";
 KalturaAssetType.WIDEVINE_FLAVOR = "widevine.WidevineFlavor";
@@ -5275,6 +5271,21 @@ KalturaMailType.MAIL_TYPE_REPORT_EXPORT_FAILURE = "137";
 KalturaMailType.MAIL_TYPE_REPORT_EXPORT_ABORT = "138";
 KalturaMailType.MAIL_TYPE_SIP_FAILURE = "139";
 
+function KalturaMarkdownAssetOrderBy(){
+}
+KalturaMarkdownAssetOrderBy.CREATED_AT_ASC = "+createdAt";
+KalturaMarkdownAssetOrderBy.DELETED_AT_ASC = "+deletedAt";
+KalturaMarkdownAssetOrderBy.SIZE_ASC = "+size";
+KalturaMarkdownAssetOrderBy.UPDATED_AT_ASC = "+updatedAt";
+KalturaMarkdownAssetOrderBy.CREATED_AT_DESC = "-createdAt";
+KalturaMarkdownAssetOrderBy.DELETED_AT_DESC = "-deletedAt";
+KalturaMarkdownAssetOrderBy.SIZE_DESC = "-size";
+KalturaMarkdownAssetOrderBy.UPDATED_AT_DESC = "-updatedAt";
+
+function KalturaMarkdownProviderType(){
+}
+KalturaMarkdownProviderType.KAI = "0";
+
 function KalturaMatchConditionType(){
 }
 KalturaMatchConditionType.MATCH_ANY = "1";
@@ -6116,6 +6127,7 @@ KalturaReportType.EP_VIEWTIME = "60015";
 KalturaReportType.EP_TOP_MOMENTS = "60016";
 KalturaReportType.EP_TOP_SESSIONS = "60017";
 KalturaReportType.EP_WEBCAST_ENGAGEMENT_OVER_TIME = "60018";
+KalturaReportType.EP_LATEST_DOWNLOADED_ATTACHMENTS = "60019";
 KalturaReportType.CNC_PARTICIPATION = "70001";
 KalturaReportType.QUIZ = "quiz.QUIZ";
 KalturaReportType.QUIZ_AGGREGATE_BY_QUESTION = "quiz.QUIZ_AGGREGATE_BY_QUESTION";
