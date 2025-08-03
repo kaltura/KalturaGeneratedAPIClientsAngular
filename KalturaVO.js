@@ -198,6 +198,17 @@ KalturaAccessControlScope.inheritsFrom (KalturaObjectBase);
 
 
 /**
+ * @param	startTime	int		The start time of the live stream (unix timestamp in seconds).
+ * @param	endTime	int		The end time of the live stream (unix timestamp in seconds).
+ */
+function KalturaActiveLiveStreamTime(){
+	this.startTime = null;
+	this.endTime = null;
+}
+KalturaActiveLiveStreamTime.inheritsFrom (KalturaObjectBase);
+
+
+/**
  * @param	dimension	string		The dimension whose values should be filtered.
  * @param	values	string		The (comma separated) values to include in the filter.
  */
@@ -5418,6 +5429,7 @@ KalturaPlayReadyPlayEnablerHolder.inheritsFrom (KalturaObjectBase);
  * @param	actions	array		Array of actions as received from the rules that invalidated.
  * @param	messages	array		Array of actions as received from the rules that invalidated.
  * @param	bumperData	array		.
+ * @param	activeLiveStreamTime	KalturaActiveLiveStreamTime		.
  */
 function KalturaPlaybackContext(){
 	this.sources = null;
@@ -5426,6 +5438,7 @@ function KalturaPlaybackContext(){
 	this.actions = null;
 	this.messages = null;
 	this.bumperData = null;
+	this.activeLiveStreamTime = null;
 }
 KalturaPlaybackContext.inheritsFrom (KalturaObjectBase);
 
@@ -16818,6 +16831,7 @@ KalturaQuizFilter.inheritsFrom (KalturaRelatedFilter);
  * @param	formalStyle	string		Formal Style..
  * @param	createQuiz	bool		Create quiz flag..
  * @param	quizOutput	string		Quiz entry Id.
+ * @param	instruction	string		Instructions describing what should be taken into account during the quiz creation process. (insertOnly).
  */
 function KalturaQuizVendorTaskData(){
 	this.numberOfQuestions = null;
@@ -16826,6 +16840,7 @@ function KalturaQuizVendorTaskData(){
 	this.formalStyle = null;
 	this.createQuiz = null;
 	this.quizOutput = null;
+	this.instruction = null;
 }
 KalturaQuizVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
 
