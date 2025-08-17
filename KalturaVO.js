@@ -5755,6 +5755,7 @@ KalturaESearchEntryOperator.inheritsFrom (KalturaESearchEntryBaseItem);
  * @param	playbackModeIn	string		filter by playback mode.
  * @param	companyIn	string		filter by company.
  * @param	eventSessionContextIdIn	string		filter by event session context id.
+ * @param	videoCodecIn	string		filter by event video codec.
  */
 function KalturaReportInputFilter(){
 	this.keywords = null;
@@ -5806,6 +5807,7 @@ function KalturaReportInputFilter(){
 	this.playbackModeIn = null;
 	this.companyIn = null;
 	this.eventSessionContextIdIn = null;
+	this.videoCodecIn = null;
 }
 KalturaReportInputFilter.inheritsFrom (KalturaReportInputBaseFilter);
 
@@ -17254,11 +17256,13 @@ KalturaStringResource.inheritsFrom (KalturaContentResource);
  * @param	typeOfSummary	string		Type of summary..
  * @param	writingStyle	string		Writing style of the summary..
  * @param	summaryOutputJson	string		JSON string containing the summary output..
+ * @param	instruction	string		Additional instruction for the summary. (insertOnly).
  */
 function KalturaSummaryVendorTaskData(){
 	this.typeOfSummary = null;
 	this.writingStyle = null;
 	this.summaryOutputJson = null;
+	this.instruction = null;
 }
 KalturaSummaryVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
 
