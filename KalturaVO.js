@@ -7603,9 +7603,11 @@ KalturaAdCuePoint.inheritsFrom (KalturaCuePoint);
 
 /**
  * @param	catalogItemIds	string		Catalog Item Id.
+ * @param	entryObjectType	int		Entry Object Type.
  */
 function KalturaAddEntryVendorTaskAction(){
 	this.catalogItemIds = null;
+	this.entryObjectType = null;
 }
 KalturaAddEntryVendorTaskAction.inheritsFrom (KalturaRuleAction);
 
