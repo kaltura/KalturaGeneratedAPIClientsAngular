@@ -11143,17 +11143,21 @@ KalturaHashCondition.inheritsFrom (KalturaCondition);
 
 
 /**
+ * @param	contentType	string		.
  */
 function KalturaHttpNotificationDataFields(){
+	this.contentType = null;
 }
 KalturaHttpNotificationDataFields.inheritsFrom (KalturaHttpNotificationData);
 
 
 /**
  * @param	content	KalturaStringValue		.
+ * @param	contentType	string		.
  */
 function KalturaHttpNotificationDataText(){
 	this.content = null;
+	this.contentType = null;
 }
 KalturaHttpNotificationDataText.inheritsFrom (KalturaHttpNotificationData);
 

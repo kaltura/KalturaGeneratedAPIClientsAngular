@@ -2284,8 +2284,10 @@ KalturaCatalogItemLanguage.CS = "Czech";
 KalturaCatalogItemLanguage.DA = "Danish";
 KalturaCatalogItemLanguage.NL = "Dutch";
 KalturaCatalogItemLanguage.EN = "English";
+KalturaCatalogItemLanguage.EN_ASL = "English (ASL)";
 KalturaCatalogItemLanguage.EN_US = "English (American)";
 KalturaCatalogItemLanguage.EN_AU = "English (Australian)";
+KalturaCatalogItemLanguage.EN_BSL = "English (BSL)";
 KalturaCatalogItemLanguage.EN_GB = "English (British)";
 KalturaCatalogItemLanguage.EO = "Esperanto";
 KalturaCatalogItemLanguage.ET = "Estonian";
@@ -2356,11 +2358,6 @@ KalturaCatalogItemLanguage.VI = "Vietnamese";
 KalturaCatalogItemLanguage.CY = "Welsh";
 KalturaCatalogItemLanguage.XH = "Xhosa";
 KalturaCatalogItemLanguage.ZU = "Zulu";
-
-function KalturaCatalogItemSignLanguage(){
-}
-KalturaCatalogItemSignLanguage.ENGLISH_ASL = "English (ASL)";
-KalturaCatalogItemSignLanguage.ENGLISH_BSL = "English (BSL)";
 
 function KalturaCategoryEntryAdvancedOrderBy(){
 }
