@@ -11168,6 +11168,7 @@ KalturaHttpNotificationDataText.inheritsFrom (KalturaHttpNotificationData);
  * @param	ignoreNull	bool		Ignore null attributes during serialization.
  * @param	code	string		PHP code.
  * @param	dataStringReplacements	array		An array of pattern-replacement pairs used for data string regex replacements.
+ * @param	responseProfileId	int		.
  */
 function KalturaHttpNotificationObjectData(){
 	this.apiObjectType = null;
@@ -11175,6 +11176,7 @@ function KalturaHttpNotificationObjectData(){
 	this.ignoreNull = null;
 	this.code = null;
 	this.dataStringReplacements = null;
+	this.responseProfileId = null;
 }
 KalturaHttpNotificationObjectData.inheritsFrom (KalturaHttpNotificationData);
 
