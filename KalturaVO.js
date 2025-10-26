@@ -6011,11 +6011,13 @@ KalturaRoomDetails.inheritsFrom (KalturaObjectBase);
  * @param	roomType	int		.
  * @param	broadcastEntryId	string		The entryId of the broadcast that the room streaming to.
  * @param	templateRoomEntryId	string		The entryId of the room where settings will be taken from.
+ * @param	recordedEntryId	string		The entryId of the recording.
  */
 function KalturaRoomEntry(){
 	this.roomType = null;
 	this.broadcastEntryId = null;
 	this.templateRoomEntryId = null;
+	this.recordedEntryId = null;
 }
 KalturaRoomEntry.inheritsFrom (KalturaBaseEntry);
 
