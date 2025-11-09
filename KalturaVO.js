@@ -10413,9 +10413,11 @@ KalturaEmailNotificationUserRecipientProvider.inheritsFrom (KalturaEmailNotifica
 
 /**
  * @param	hasCaption	int		.
+ * @param	language	string		.
  */
 function KalturaEntryCaptionAdvancedFilter(){
 	this.hasCaption = null;
+	this.language = null;
 }
 KalturaEntryCaptionAdvancedFilter.inheritsFrom (KalturaSearchItem);
 
@@ -15938,6 +15940,7 @@ KalturaFtpDistributionJobProviderData.inheritsFrom (KalturaConfigurableDistribut
  * @param	flavorAssetFilenameXslt	string		.
  * @param	thumbnailAssetFilenameXslt	string		.
  * @param	assetFilenameXslt	string		.
+ * @param	dataContentFilenameXslt	string		.
  * @param	asperaPublicKey	string		.
  * @param	asperaPrivateKey	string		.
  * @param	sendMetadataAfterAssets	bool		.
@@ -15958,6 +15961,7 @@ function KalturaFtpDistributionProfile(){
 	this.flavorAssetFilenameXslt = null;
 	this.thumbnailAssetFilenameXslt = null;
 	this.assetFilenameXslt = null;
+	this.dataContentFilenameXslt = null;
 	this.asperaPublicKey = null;
 	this.asperaPrivateKey = null;
 	this.sendMetadataAfterAssets = null;

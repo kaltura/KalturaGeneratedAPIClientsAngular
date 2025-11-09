@@ -3552,6 +3552,7 @@ KalturaEventNotificationEventObjectType.ENTRY_SERVER_NODE = "40";
 KalturaEventNotificationEventObjectType.REACH_PROFILE = "41";
 KalturaEventNotificationEventObjectType.ENTRY_VENDOR_TASK = "42";
 KalturaEventNotificationEventObjectType.GROUPUSER = "43";
+KalturaEventNotificationEventObjectType.USER_ENTRY = "44";
 KalturaEventNotificationEventObjectType.AD_CUE_POINT = "adCuePointEventNotifications.AdCuePoint";
 KalturaEventNotificationEventObjectType.ANNOTATION = "annotationEventNotifications.Annotation";
 KalturaEventNotificationEventObjectType.ATTACHMENT_ASSET = "attachmentAssetEventNotifications.AttachmentAsset";
