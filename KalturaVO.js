@@ -8371,6 +8371,7 @@ KalturaBulkUploadResultScheduleResource.inheritsFrom (KalturaBulkUploadResult);
  * @param	group	string		.
  * @param	externalId	string		.
  * @param	capabilities	string		.
+ * @param	groupUserCreationMode	int		.
  */
 function KalturaBulkUploadResultUser(){
 	this.userId = null;
@@ -8389,6 +8390,7 @@ function KalturaBulkUploadResultUser(){
 	this.group = null;
 	this.externalId = null;
 	this.capabilities = null;
+	this.groupUserCreationMode = null;
 }
 KalturaBulkUploadResultUser.inheritsFrom (KalturaBulkUploadResult);
 
@@ -9860,6 +9862,8 @@ KalturaDropFolderXmlBulkUploadFileHandlerConfig.inheritsFrom (KalturaDropFolderF
  * @param	language	string		.
  * @param	captionAssetId	string		.
  * @param	label	string		.
+ * @param	accuracy	int		.
+ * @param	usage	int		.
  */
 function KalturaESearchCaptionItemData(){
 	this.line = null;
@@ -9868,6 +9872,8 @@ function KalturaESearchCaptionItemData(){
 	this.language = null;
 	this.captionAssetId = null;
 	this.label = null;
+	this.accuracy = null;
+	this.usage = null;
 }
 KalturaESearchCaptionItemData.inheritsFrom (KalturaESearchItemData);
 
@@ -10414,10 +10420,20 @@ KalturaEmailNotificationUserRecipientProvider.inheritsFrom (KalturaEmailNotifica
 /**
  * @param	hasCaption	int		.
  * @param	language	string		.
+ * @param	accuracyGreaterThanOrEqual	int		.
+ * @param	accuracyLessThanOrEqual	int		.
+ * @param	accuracyGreaterThan	int		.
+ * @param	accuracyLessThan	int		.
+ * @param	usage	string		.
  */
 function KalturaEntryCaptionAdvancedFilter(){
 	this.hasCaption = null;
 	this.language = null;
+	this.accuracyGreaterThanOrEqual = null;
+	this.accuracyLessThanOrEqual = null;
+	this.accuracyGreaterThan = null;
+	this.accuracyLessThan = null;
+	this.usage = null;
 }
 KalturaEntryCaptionAdvancedFilter.inheritsFrom (KalturaSearchItem);
 

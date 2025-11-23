@@ -13307,6 +13307,7 @@ KalturaReachProfileService.prototype.updateStatus = function(callback, id, statu
  * @action	list	List KalturaEntryVendorTask objects.
  * @action	reject	Reject entry vendor task for execution..
  * @action	replaceOutput	.
+ * @action	reset	Reset entry vendor task. change status back to pending with a new catalog item.
  * @action	serveCsv	Will serve a requested csv.
  * @action	update	Update entry vendor task. Only the properties that were set will be updated..
  * @action	updateJob	Update entry vendor task. Only the properties that were set will be updated..
@@ -13498,6 +13499,25 @@ KalturaEntryVendorTaskService.prototype.replaceOutput = function(callback, id, n
 	this.client.addParam(kparams, "id", id);
 	this.client.addParam(kparams, "newOutput", newOutput);
 	this.client.queueServiceActionCall("reach_entryvendortask", "replaceOutput", kparams);
+	if (!this.client.isMultiRequest())
+		this.client.doQueue(callback);
+}
+/**
+ * Reset entry vendor task. change status back to pending with a new catalog item.
+ * @param	id	int		vendor task id to reset (optional).
+ * @param	catalogItemId	int		new catalog item (optional).
+ * @return	KalturaEntryVendorTask.
+ * @return	.
+ * @return	.
+ * @return	.
+ * @return	.
+ * @return	.
+ */
+KalturaEntryVendorTaskService.prototype.reset = function(callback, id, catalogItemId){
+	var kparams = new Object();
+	this.client.addParam(kparams, "id", id);
+	this.client.addParam(kparams, "catalogItemId", catalogItemId);
+	this.client.queueServiceActionCall("reach_entryvendortask", "reset", kparams);
 	if (!this.client.isMultiRequest())
 		this.client.doQueue(callback);
 }
