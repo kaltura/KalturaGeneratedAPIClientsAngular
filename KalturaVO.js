@@ -295,6 +295,7 @@ KalturaCuePoint.inheritsFrom (KalturaObjectBase);
  * @param	directChildrenCount	int		Number of children, first generation only. (readOnly).
  * @param	isPublic	int		Is the annotation public..
  * @param	searchableOnEntry	int		Should the cue point get indexed on the entry..
+ * @param	originalCuePointCreateAt	int		In case of cloned annotation it will hold source cuepoint createdAt..
  */
 function KalturaAnnotation(){
 	this.parentId = null;
@@ -306,6 +307,7 @@ function KalturaAnnotation(){
 	this.directChildrenCount = null;
 	this.isPublic = null;
 	this.searchableOnEntry = null;
+	this.originalCuePointCreateAt = null;
 }
 KalturaAnnotation.inheritsFrom (KalturaCuePoint);
 
@@ -3787,6 +3789,7 @@ KalturaFlavorAssetUrlOptions.inheritsFrom (KalturaObjectBase);
  * @param	chunkedEncodeMode	int		.
  * @param	clipOffset	int		.
  * @param	clipDuration	int		.
+ * @param	audioLanguages	array		Audio languages extracted from multiStream field (readOnly).
  */
 function KalturaFlavorParams(){
 	this.videoCodec = null;
@@ -3830,6 +3833,7 @@ function KalturaFlavorParams(){
 	this.chunkedEncodeMode = null;
 	this.clipOffset = null;
 	this.clipDuration = null;
+	this.audioLanguages = null;
 }
 KalturaFlavorParams.inheritsFrom (KalturaAssetParams);
 

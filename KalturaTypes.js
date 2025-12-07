@@ -3185,6 +3185,7 @@ KalturaESearchEntryFieldName.ENTITLED_USER_PUBLISH = "entitled_kusers_publish";
 KalturaESearchEntryFieldName.ENTITLED_USER_VIEW = "entitled_kusers_view";
 KalturaESearchEntryFieldName.ENTRY_TYPE = "entry_type";
 KalturaESearchEntryFieldName.EXTERNAL_SOURCE_TYPE = "external_source_type";
+KalturaESearchEntryFieldName.FLAVOR_PARAMS_IDS = "flavor_params_ids";
 KalturaESearchEntryFieldName.ID = "id";
 KalturaESearchEntryFieldName.IS_LIVE = "is_live";
 KalturaESearchEntryFieldName.IS_QUIZ = "is_quiz";
