@@ -3310,6 +3310,25 @@ KalturaESearchLanguage.TURKISH = "Turkish";
 function KalturaESearchMetadataAggregateByFieldName(){
 }
 
+function KalturaESearchScoreFunctionBoostMode(){
+}
+KalturaESearchScoreFunctionBoostMode.MULTIPLY = "multiply";
+KalturaESearchScoreFunctionBoostMode.SUM = "sum";
+
+function KalturaESearchScoreFunctionDecayAlgorithm(){
+}
+KalturaESearchScoreFunctionDecayAlgorithm.EXP = "exp";
+KalturaESearchScoreFunctionDecayAlgorithm.GAUSS = "gauss";
+KalturaESearchScoreFunctionDecayAlgorithm.LINEAR = "linear";
+
+function KalturaESearchScoreFunctionField(){
+}
+KalturaESearchScoreFunctionField.CREATED_AT = "created_at";
+
+function KalturaESearchScoreFunctionOrigin(){
+}
+KalturaESearchScoreFunctionOrigin.NOW = "now";
+
 function KalturaESearchSortOrder(){
 }
 KalturaESearchSortOrder.ORDER_BY_ASC = "asc";

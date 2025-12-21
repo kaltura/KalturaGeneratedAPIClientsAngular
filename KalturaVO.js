@@ -2996,12 +2996,34 @@ KalturaESearchOrderBy.inheritsFrom (KalturaObjectBase);
 
 
 /**
+ * @param	decayAlgorithm	string		.
+ * @param	functionField	string		.
+ * @param	boostMode	string		.
+ * @param	origin	string		.
+ * @param	weight	float		.
+ * @param	scale	string		.
+ * @param	decay	float		.
+ */
+function KalturaESearchScoreFunctionParams(){
+	this.decayAlgorithm = null;
+	this.functionField = null;
+	this.boostMode = null;
+	this.origin = null;
+	this.weight = null;
+	this.scale = null;
+	this.decay = null;
+}
+KalturaESearchScoreFunctionParams.inheritsFrom (KalturaObjectBase);
+
+
+/**
  * @param	objectStatuses	string		.
  * @param	objectId	string		.
  * @param	orderBy	KalturaESearchOrderBy		.
  * @param	ignoreSynonym	bool		.
  * @param	objectIds	string		.
  * @param	objectIdsNotIn	int		.
+ * @param	scoreFunctionParams	KalturaESearchScoreFunctionParams		.
  */
 function KalturaESearchParams(){
 	this.objectStatuses = null;
@@ -3010,6 +3032,7 @@ function KalturaESearchParams(){
 	this.ignoreSynonym = null;
 	this.objectIds = null;
 	this.objectIdsNotIn = null;
+	this.scoreFunctionParams = null;
 }
 KalturaESearchParams.inheritsFrom (KalturaObjectBase);
 
