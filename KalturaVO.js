@@ -7948,8 +7948,12 @@ KalturaBaseEntryListResponse.inheritsFrom (KalturaListResponse);
 
 
 /**
+ * @param	idEqual	string		.
+ * @param	idIn	string		.
  */
 function KalturaBaseSyndicationFeedBaseFilter(){
+	this.idEqual = null;
+	this.idIn = null;
 }
 KalturaBaseSyndicationFeedBaseFilter.inheritsFrom (KalturaFilter);
 
@@ -15102,11 +15106,13 @@ KalturaConvertJobData.inheritsFrom (KalturaConvartableJobData);
  * @param	videoAssetFilePath	string		.
  * @param	thumbAssetFilePath	string		.
  * @param	captionsInfo	array		.
+ * @param	mediaType	int		.
  */
 function KalturaCortexApiDistributionJobProviderData(){
 	this.videoAssetFilePath = null;
 	this.thumbAssetFilePath = null;
 	this.captionsInfo = null;
+	this.mediaType = null;
 }
 KalturaCortexApiDistributionJobProviderData.inheritsFrom (KalturaConfigurableDistributionJobProviderData);
 
