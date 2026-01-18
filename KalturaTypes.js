@@ -2065,6 +2065,7 @@ KalturaBatchJobType.STORAGE_PERIODIC_PURGE = "54";
 KalturaBatchJobType.STORAGE_PERIODIC_DELETE_LOCAL = "55";
 KalturaBatchJobType.REACH_JOB_CLEANER = "56";
 KalturaBatchJobType.MULTI_CLIP_CONCAT = "57";
+KalturaBatchJobType.UPDATE_USER_ENTRIES = "58";
 KalturaBatchJobType.REACH_INTERNAL_QUEUE_HANDLER = "ReachInternal.ReachInternalQueueHandler";
 KalturaBatchJobType.CONVERT_CAPTION_ASSET = "caption.convertcaptionasset";
 KalturaBatchJobType.PARSE_MULTI_LANGUAGE_CAPTION_ASSET = "caption.parsemultilanguagecaptionasset";

@@ -6969,7 +6969,7 @@ KalturaUserAppRole.inheritsFrom (KalturaAppRole);
  * @param	entryId	string		 (insertOnly).
  * @param	userId	string		 (insertOnly).
  * @param	partnerId	int		 (readOnly).
- * @param	status	string		 (readOnly).
+ * @param	status	string		.
  * @param	createdAt	int		 (readOnly).
  * @param	updatedAt	int		 (readOnly).
  * @param	type	string		 (readOnly).
@@ -13362,6 +13362,17 @@ function KalturaUnlimitedVendorCredit(){
 	this.fromDate = null;
 }
 KalturaUnlimitedVendorCredit.inheritsFrom (KalturaBaseVendorCredit);
+
+
+/**
+ * @param	oldStatus	string		.
+ * @param	newStatus	string		.
+ */
+function KalturaUpdateUserEntriesData(){
+	this.oldStatus = null;
+	this.newStatus = null;
+}
+KalturaUpdateUserEntriesData.inheritsFrom (KalturaJobData);
 
 
 /**
