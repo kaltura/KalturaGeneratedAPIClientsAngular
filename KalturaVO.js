@@ -3349,6 +3349,7 @@ KalturaVendorTaskData.inheritsFrom (KalturaObjectBase);
  * @param	serviceFeature	int		 (readOnly).
  * @param	turnAroundTime	int		 (readOnly).
  * @param	externalTaskId	string		The vendor's task internal Id.
+ * @param	isPayPerUse	bool		Indicates if the task is pay-per-use based on the catalog item (readOnly).
  */
 function KalturaEntryVendorTask(){
 	this.id = null;
@@ -3383,6 +3384,7 @@ function KalturaEntryVendorTask(){
 	this.serviceFeature = null;
 	this.turnAroundTime = null;
 	this.externalTaskId = null;
+	this.isPayPerUse = null;
 }
 KalturaEntryVendorTask.inheritsFrom (KalturaObjectBase);
 
@@ -12982,6 +12984,17 @@ KalturaSiteRestriction.inheritsFrom (KalturaBaseRestriction);
 
 
 /**
+ * @param	avatarId	string		The identifier of the avatar to be used for generating the video.
+ * @param	conversionProfileId	int		Optional. Conversion profile to be used for the generated video media entry.
+ */
+function KalturaSpeechToVideoVendorTaskData(){
+	this.avatarId = null;
+	this.conversionProfileId = null;
+}
+KalturaSpeechToVideoVendorTaskData.inheritsFrom (KalturaVendorTaskData);
+
+
+/**
  * @param	objects	array		 (readOnly).
  */
 function KalturaSsoListResponse(){
@@ -13873,6 +13886,13 @@ function KalturaVendorSignLanguageCatalogItem(){
 	this.targetLanguage = null;
 }
 KalturaVendorSignLanguageCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorSpeechToVideoCatalogItem(){
+}
+KalturaVendorSpeechToVideoCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
@@ -20695,6 +20715,13 @@ KalturaVendorQuizCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter)
 function KalturaVendorSentimentAnalysisCatalogItemFilter(){
 }
 KalturaVendorSentimentAnalysisCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorSpeechToVideoCatalogItemFilter(){
+}
+KalturaVendorSpeechToVideoCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
 
 
 /**

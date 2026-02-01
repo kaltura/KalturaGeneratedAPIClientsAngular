@@ -1457,6 +1457,7 @@ KalturaVendorServiceFeature.METADATA_ENRICHMENT = 16;
 KalturaVendorServiceFeature.SENTIMENT_ANALYSIS = 17;
 KalturaVendorServiceFeature.DOCUMENT_ENRICHMENT = 18;
 KalturaVendorServiceFeature.SIGN_LANGUAGE = 19;
+KalturaVendorServiceFeature.SPEECH_TO_VIDEO = 20;
 
 function KalturaVendorServiceTurnAroundTime(){
 }
