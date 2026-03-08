@@ -3349,7 +3349,6 @@ KalturaVendorTaskData.inheritsFrom (KalturaObjectBase);
  * @param	serviceFeature	int		 (readOnly).
  * @param	turnAroundTime	int		 (readOnly).
  * @param	externalTaskId	string		The vendor's task internal Id.
- * @param	isPayPerUse	bool		Indicates if the task is pay-per-use based on the catalog item (readOnly).
  */
 function KalturaEntryVendorTask(){
 	this.id = null;
@@ -3384,7 +3383,6 @@ function KalturaEntryVendorTask(){
 	this.serviceFeature = null;
 	this.turnAroundTime = null;
 	this.externalTaskId = null;
-	this.isPayPerUse = null;
 }
 KalturaEntryVendorTask.inheritsFrom (KalturaObjectBase);
 
@@ -4722,6 +4720,13 @@ function KalturaMarkdownAsset(){
 	this.providerType = null;
 }
 KalturaMarkdownAsset.inheritsFrom (KalturaAttachmentAsset);
+
+
+/**
+ */
+function KalturaMediaCompositionAttributes(){
+}
+KalturaMediaCompositionAttributes.inheritsFrom (KalturaObjectBase);
 
 
 /**
@@ -6390,6 +6395,7 @@ KalturaSessionInfo.inheritsFrom (KalturaObjectBase);
  * @param	name	string		.
  * @param	systemName	string		.
  * @param	fullUrl	string		.
+ * @param	uniqueId	string		 (insertOnly).
  * @param	status	int		.
  */
 function KalturaShortLink(){
@@ -6402,6 +6408,7 @@ function KalturaShortLink(){
 	this.name = null;
 	this.systemName = null;
 	this.fullUrl = null;
+	this.uniqueId = null;
 	this.status = null;
 }
 KalturaShortLink.inheritsFrom (KalturaObjectBase);
@@ -6623,6 +6630,15 @@ function KalturaStorageProfile(){
 	this.additionalInfo = null;
 }
 KalturaStorageProfile.inheritsFrom (KalturaObjectBase);
+
+
+/**
+ * @param	value	array		.
+ */
+function KalturaStringArrayObject(){
+	this.value = null;
+}
+KalturaStringArrayObject.inheritsFrom (KalturaObjectBase);
 
 
 /**
@@ -8783,6 +8799,7 @@ KalturaCielo24JobProviderData.inheritsFrom (KalturaIntegrationJobProviderData);
  * @param	effectArray	array		global Offset In Destination in milliseconds.
  * @param	cropAlignment	int		.
  * @param	captionAttributes	array		.
+ * @param	mediaCompositionAttributesArray	array		.
  */
 function KalturaClipAttributes(){
 	this.offset = null;
@@ -8791,6 +8808,7 @@ function KalturaClipAttributes(){
 	this.effectArray = null;
 	this.cropAlignment = null;
 	this.captionAttributes = null;
+	this.mediaCompositionAttributesArray = null;
 }
 KalturaClipAttributes.inheritsFrom (KalturaOperationAttributes);
 
@@ -8871,6 +8889,7 @@ KalturaConcatAttributes.inheritsFrom (KalturaOperationAttributes);
 
 /**
  * @param	srcFiles	array		Source files to be concatenated.
+ * @param	inputFiles	array		Additional input files to be used in conversion pre concatenation.
  * @param	destFilePath	string		Output file.
  * @param	flavorAssetId	string		Flavor asset to be ingested with the output.
  * @param	offset	float		Clipping offset in seconds.
@@ -8882,6 +8901,7 @@ KalturaConcatAttributes.inheritsFrom (KalturaOperationAttributes);
  */
 function KalturaConcatJobData(){
 	this.srcFiles = null;
+	this.inputFiles = null;
 	this.destFilePath = null;
 	this.flavorAssetId = null;
 	this.offset = null;
@@ -12092,6 +12112,17 @@ KalturaOrCondition.inheritsFrom (KalturaCondition);
 
 
 /**
+ * @param	resource	KalturaContentResource		Only KalturaEntryResource and KalturaAssetResource are supported.
+ * @param	resourceMediaCompositionAttributesArray	array		Only KalturaReplaceBackgroundAttributes is supported.
+ */
+function KalturaOverlayAttributes(){
+	this.resource = null;
+	this.resourceMediaCompositionAttributesArray = null;
+}
+KalturaOverlayAttributes.inheritsFrom (KalturaMediaCompositionAttributes);
+
+
+/**
  * @param	captionAssetId	string		.
  */
 function KalturaParseCaptionAssetJobData(){
@@ -12498,6 +12529,15 @@ function KalturaRenderCaptionAttributes(){
 	this.captionAssetId = null;
 }
 KalturaRenderCaptionAttributes.inheritsFrom (KalturaCaptionAttributes);
+
+
+/**
+ * @param	resource	KalturaContentResource		Only KalturaEntryResource and KalturaAssetResource are supported.
+ */
+function KalturaReplaceBackgroundAttributes(){
+	this.resource = null;
+}
+KalturaReplaceBackgroundAttributes.inheritsFrom (KalturaMediaCompositionAttributes);
 
 
 /**
@@ -12921,6 +12961,7 @@ KalturaSessionTypeCondition.inheritsFrom (KalturaCondition);
  * @param	systemNameIn	string		.
  * @param	statusEqual	int		.
  * @param	statusIn	string		.
+ * @param	uniqueIdEqual	string		.
  */
 function KalturaShortLinkBaseFilter(){
 	this.idEqual = null;
@@ -12939,6 +12980,7 @@ function KalturaShortLinkBaseFilter(){
 	this.systemNameIn = null;
 	this.statusEqual = null;
 	this.statusIn = null;
+	this.uniqueIdEqual = null;
 }
 KalturaShortLinkBaseFilter.inheritsFrom (KalturaFilter);
 
