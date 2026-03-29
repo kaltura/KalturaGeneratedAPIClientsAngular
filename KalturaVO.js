@@ -5504,6 +5504,17 @@ KalturaPlaylist.inheritsFrom (KalturaBaseEntry);
 
 
 /**
+ * @param	x	float		.
+ * @param	y	float		.
+ */
+function KalturaPosition(){
+	this.x = null;
+	this.y = null;
+}
+KalturaPosition.inheritsFrom (KalturaObjectBase);
+
+
+/**
  * @param	queueKeyToken	string		.
  */
 function KalturaPushEventNotificationParameter(){
@@ -11345,6 +11356,22 @@ KalturaIdeticDistributionProvider.inheritsFrom (KalturaDistributionProvider);
 
 
 /**
+ * @param	callId	string		The unique identifier for the immersive agent call.
+ */
+function KalturaImmersiveAgentCallVendorTaskData(){
+	this.callId = null;
+}
+KalturaImmersiveAgentCallVendorTaskData.inheritsFrom (KalturaVendorTaskData);
+
+
+/**
+ */
+function KalturaImmersiveAgentChatVendorTaskData(){
+}
+KalturaImmersiveAgentChatVendorTaskData.inheritsFrom (KalturaVendorTaskData);
+
+
+/**
  * @param	srcFileUrl	string		.
  * @param	destFileLocalPath	string		.
  * @param	flavorAssetId	string		.
@@ -12533,9 +12560,15 @@ KalturaRenderCaptionAttributes.inheritsFrom (KalturaCaptionAttributes);
 
 /**
  * @param	resource	KalturaContentResource		Only KalturaEntryResource and KalturaAssetResource are supported.
+ * @param	backgroundColorCode	string		.
+ * @param	foregroundScalePercentage	float		.
+ * @param	foregroundPositionPercentage	KalturaPosition		.
  */
 function KalturaReplaceBackgroundAttributes(){
 	this.resource = null;
+	this.backgroundColorCode = null;
+	this.foregroundScalePercentage = null;
+	this.foregroundPositionPercentage = null;
 }
 KalturaReplaceBackgroundAttributes.inheritsFrom (KalturaMediaCompositionAttributes);
 
@@ -12587,6 +12620,17 @@ function KalturaReportListResponse(){
 	this.objects = null;
 }
 KalturaReportListResponse.inheritsFrom (KalturaListResponse);
+
+
+/**
+ * @param	targetWidth	int		.
+ * @param	targetHeight	int		.
+ */
+function KalturaResolutionCropAttributes(){
+	this.targetWidth = null;
+	this.targetHeight = null;
+}
+KalturaResolutionCropAttributes.inheritsFrom (KalturaDimensionsAttributes);
 
 
 /**
@@ -13888,6 +13932,20 @@ KalturaVendorExtendedAudioDescriptionCatalogItem.inheritsFrom (KalturaVendorCata
 
 /**
  */
+function KalturaVendorImmersiveAgentCallCatalogItem(){
+}
+KalturaVendorImmersiveAgentCallCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorImmersiveAgentChatCatalogItem(){
+}
+KalturaVendorImmersiveAgentChatCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
 function KalturaVendorIntelligentTaggingCatalogItem(){
 }
 KalturaVendorIntelligentTaggingCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
@@ -14384,11 +14442,13 @@ KalturaYoutubeApiDistributionProvider.inheritsFrom (KalturaDistributionProvider)
  * @param	zoomVendorIntegrationId	int		 (readOnly).
  * @param	zoomVendorIntegration	KalturaZoomIntegrationSetting		 (readOnly).
  * @param	lastHandledMeetingTime	int		.
+ * @param	fileProcessingGracePeriod	int		The amount of time, in seconds, to wait before processing a drop folder file.
  */
 function KalturaZoomDropFolder(){
 	this.zoomVendorIntegrationId = null;
 	this.zoomVendorIntegration = null;
 	this.lastHandledMeetingTime = null;
+	this.fileProcessingGracePeriod = null;
 }
 KalturaZoomDropFolder.inheritsFrom (KalturaDropFolder);
 
@@ -20722,6 +20782,20 @@ function KalturaVendorDubbingCatalogItemBaseFilter(){
 	this.targetLanguageIn = null;
 }
 KalturaVendorDubbingCatalogItemBaseFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorImmersiveAgentCallCatalogItemFilter(){
+}
+KalturaVendorImmersiveAgentCallCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorImmersiveAgentChatCatalogItemFilter(){
+}
+KalturaVendorImmersiveAgentChatCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
 
 
 /**

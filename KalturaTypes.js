@@ -1458,6 +1458,8 @@ KalturaVendorServiceFeature.SENTIMENT_ANALYSIS = 17;
 KalturaVendorServiceFeature.DOCUMENT_ENRICHMENT = 18;
 KalturaVendorServiceFeature.SIGN_LANGUAGE = 19;
 KalturaVendorServiceFeature.SPEECH_TO_VIDEO = 20;
+KalturaVendorServiceFeature.IMMERSIVE_AGENT_CALL = 21;
+KalturaVendorServiceFeature.IMMERSIVE_AGENT_CHAT = 22;
 
 function KalturaVendorServiceTurnAroundTime(){
 }
