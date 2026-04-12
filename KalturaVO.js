@@ -535,6 +535,15 @@ KalturaAttachmentAsset.inheritsFrom (KalturaAsset);
 
 
 /**
+ * @param	volume	float		.
+ */
+function KalturaAudioAttributes(){
+	this.volume = null;
+}
+KalturaAudioAttributes.inheritsFrom (KalturaObjectBase);
+
+
+/**
  */
 function KalturaAuditTrailInfo(){
 }
@@ -3349,6 +3358,7 @@ KalturaVendorTaskData.inheritsFrom (KalturaObjectBase);
  * @param	serviceFeature	int		 (readOnly).
  * @param	turnAroundTime	int		 (readOnly).
  * @param	externalTaskId	string		The vendor's task internal Id.
+ * @param	externalObjectId	string		The identifier of the external object for EXTERNAL_OBJECT type tasks (insertOnly).
  */
 function KalturaEntryVendorTask(){
 	this.id = null;
@@ -3383,6 +3393,7 @@ function KalturaEntryVendorTask(){
 	this.serviceFeature = null;
 	this.turnAroundTime = null;
 	this.externalTaskId = null;
+	this.externalObjectId = null;
 }
 KalturaEntryVendorTask.inheritsFrom (KalturaObjectBase);
 
@@ -5801,6 +5812,9 @@ KalturaESearchEntryOperator.inheritsFrom (KalturaESearchEntryBaseItem);
  * @param	companyIn	string		filter by company.
  * @param	eventSessionContextIdIn	string		filter by event session context id.
  * @param	videoCodecIn	string		filter by event video codec.
+ * @param	agentIdIn	string		filter by agent id.
+ * @param	genieIdIn	string		filter by Genie id.
+ * @param	reachProfileIdIn	string		filter by reach profile id.
  */
 function KalturaReportInputFilter(){
 	this.keywords = null;
@@ -5853,6 +5867,9 @@ function KalturaReportInputFilter(){
 	this.companyIn = null;
 	this.eventSessionContextIdIn = null;
 	this.videoCodecIn = null;
+	this.agentIdIn = null;
+	this.genieIdIn = null;
+	this.reachProfileIdIn = null;
 }
 KalturaReportInputFilter.inheritsFrom (KalturaReportInputBaseFilter);
 
@@ -12141,10 +12158,20 @@ KalturaOrCondition.inheritsFrom (KalturaCondition);
 /**
  * @param	resource	KalturaContentResource		Only KalturaEntryResource and KalturaAssetResource are supported.
  * @param	resourceMediaCompositionAttributesArray	array		Only KalturaReplaceBackgroundAttributes is supported.
+ * @param	marginsPercentage	float		.
+ * @param	overlayScalePercentage	float		.
+ * @param	overlayPlacement	int		.
+ * @param	overlayShape	int		.
+ * @param	audioAttributes	KalturaAudioAttributes		.
  */
 function KalturaOverlayAttributes(){
 	this.resource = null;
 	this.resourceMediaCompositionAttributesArray = null;
+	this.marginsPercentage = null;
+	this.overlayScalePercentage = null;
+	this.overlayPlacement = null;
+	this.overlayShape = null;
+	this.audioAttributes = null;
 }
 KalturaOverlayAttributes.inheritsFrom (KalturaMediaCompositionAttributes);
 
@@ -12563,12 +12590,14 @@ KalturaRenderCaptionAttributes.inheritsFrom (KalturaCaptionAttributes);
  * @param	backgroundColorCode	string		.
  * @param	foregroundScalePercentage	float		.
  * @param	foregroundPositionPercentage	KalturaPosition		.
+ * @param	audioAttributes	KalturaAudioAttributes		.
  */
 function KalturaReplaceBackgroundAttributes(){
 	this.resource = null;
 	this.backgroundColorCode = null;
 	this.foregroundScalePercentage = null;
 	this.foregroundPositionPercentage = null;
+	this.audioAttributes = null;
 }
 KalturaReplaceBackgroundAttributes.inheritsFrom (KalturaMediaCompositionAttributes);
 
@@ -13842,6 +13871,13 @@ function KalturaVendorAudioDescriptionCatalogItem(){
 	this.clearAudioFlavorParamsId = null;
 }
 KalturaVendorAudioDescriptionCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorAvatarVodCatalogItem(){
+}
+KalturaVendorAvatarVodCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
@@ -20742,6 +20778,13 @@ KalturaUverseClickToOrderDistributionProviderFilter.inheritsFrom (KalturaUverseC
 function KalturaUverseDistributionProviderFilter(){
 }
 KalturaUverseDistributionProviderFilter.inheritsFrom (KalturaUverseDistributionProviderBaseFilter);
+
+
+/**
+ */
+function KalturaVendorAvatarVodCatalogItemFilter(){
+}
+KalturaVendorAvatarVodCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
 
 
 /**
