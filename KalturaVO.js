@@ -1178,6 +1178,7 @@ KalturaRegexItem.inheritsFrom (KalturaObjectBase);
  * @param	recycleBinRetentionPeriod	int		 (readOnly).
  * @param	customAnalyticsDomain	string		.
  * @param	allowedEmailDomainsForAdmins	string		.
+ * @param	externalIdentifier	string		.
  */
 function KalturaPartner(){
 	this.id = null;
@@ -1266,6 +1267,7 @@ function KalturaPartner(){
 	this.recycleBinRetentionPeriod = null;
 	this.customAnalyticsDomain = null;
 	this.allowedEmailDomainsForAdmins = null;
+	this.externalIdentifier = null;
 }
 KalturaPartner.inheritsFrom (KalturaObjectBase);
 
@@ -5619,7 +5621,7 @@ KalturaRatingCount.inheritsFrom (KalturaObjectBase);
  * @param	contentDeletionPolicy	int		.
  * @param	rules	array		.
  * @param	credit	KalturaBaseVendorCredit		.
- * @param	usedCredit	float		 (readOnly).
+ * @param	usedCredit	float		.
  * @param	dictionaries	array		.
  * @param	flavorParamsIds	string		Comma separated flavorParamsIds that the vendor should look for it matching asset when trying to download the asset.
  * @param	vendorTaskProcessingRegion	int		Indicates in which region the task processing should task place.
@@ -5815,6 +5817,7 @@ KalturaESearchEntryOperator.inheritsFrom (KalturaESearchEntryBaseItem);
  * @param	agentIdIn	string		filter by agent id.
  * @param	genieIdIn	string		filter by Genie id.
  * @param	reachProfileIdIn	string		filter by reach profile id.
+ * @param	isPreview	bool		filter by preview mode.
  */
 function KalturaReportInputFilter(){
 	this.keywords = null;
@@ -5870,6 +5873,7 @@ function KalturaReportInputFilter(){
 	this.agentIdIn = null;
 	this.genieIdIn = null;
 	this.reachProfileIdIn = null;
+	this.isPreview = null;
 }
 KalturaReportInputFilter.inheritsFrom (KalturaReportInputBaseFilter);
 
