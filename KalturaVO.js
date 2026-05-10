@@ -4652,6 +4652,7 @@ KalturaLiveStreamDetails.inheritsFrom (KalturaObjectBase);
  * @param	streamName	string		.
  * @param	streamUrl	string		The stream url.
  * @param	hlsStreamUrl	string		HLS URL - URL for live stream playback on mobile device.
+ * @param	readyForDeletion	bool		Indicates whether the live entry is ready to be deleted (readOnly).
  * @param	urlManager	string		URL Manager to handle the live stream URL (for instance, add token).
  * @param	encodingIP1	string		The broadcast primary ip.
  * @param	encodingIP2	string		The broadcast secondary ip.
@@ -4679,6 +4680,7 @@ function KalturaLiveStreamEntry(){
 	this.streamName = null;
 	this.streamUrl = null;
 	this.hlsStreamUrl = null;
+	this.readyForDeletion = null;
 	this.urlManager = null;
 	this.encodingIP1 = null;
 	this.encodingIP2 = null;

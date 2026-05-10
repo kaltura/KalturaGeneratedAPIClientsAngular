@@ -3285,6 +3285,7 @@ KalturaESearchGroupFieldName.TAGS = "tags";
 KalturaESearchGroupFieldName.TITLE = "title";
 KalturaESearchGroupFieldName.UPDATED_AT = "updated_at";
 KalturaESearchGroupFieldName.USER_ID = "user_id";
+KalturaESearchGroupFieldName.TYPE = "user_type";
 
 function KalturaESearchGroupOrderByFieldName(){
 }
