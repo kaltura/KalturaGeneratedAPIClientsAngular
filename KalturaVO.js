@@ -2432,6 +2432,17 @@ KalturaDimensionsAttributes.inheritsFrom (KalturaObjectBase);
 
 
 /**
+ * @param	heightPercentage	float		.
+ * @param	widthPercentage	float		.
+ */
+function KalturaDimensionsPercentage(){
+	this.heightPercentage = null;
+	this.widthPercentage = null;
+}
+KalturaDimensionsPercentage.inheritsFrom (KalturaObjectBase);
+
+
+/**
  * @param	fieldName	string		A value taken from a connector field enum which associates the current configuration to that connector field
  *	     Field enum class should be returned by the provider's getFieldEnumClass function..
  * @param	userFriendlyFieldName	string		A string that will be shown to the user as the field name in error messages related to the current field.
@@ -5269,6 +5280,17 @@ function KalturaOptionalAnswer(){
 	this.isCorrect = null;
 }
 KalturaOptionalAnswer.inheritsFrom (KalturaObjectBase);
+
+
+/**
+ * @param	scalePercentage	KalturaDimensionsPercentage		.
+ * @param	scaleBehavior	int		.
+ */
+function KalturaOverlayScaleAttribute(){
+	this.scalePercentage = null;
+	this.scaleBehavior = null;
+}
+KalturaOverlayScaleAttribute.inheritsFrom (KalturaObjectBase);
 
 
 /**
@@ -12164,8 +12186,8 @@ KalturaOrCondition.inheritsFrom (KalturaCondition);
 /**
  * @param	resource	KalturaContentResource		Only KalturaEntryResource and KalturaAssetResource are supported.
  * @param	resourceMediaCompositionAttributesArray	array		Only KalturaReplaceBackgroundAttributes is supported.
- * @param	marginsPercentage	float		.
- * @param	overlayScalePercentage	float		.
+ * @param	marginsPercentage	KalturaDimensionsPercentage		.
+ * @param	overlayScaleAttribute	KalturaOverlayScaleAttribute		.
  * @param	overlayPlacement	int		.
  * @param	overlayShape	int		.
  * @param	audioAttributes	KalturaAudioAttributes		.
@@ -12174,7 +12196,7 @@ function KalturaOverlayAttributes(){
 	this.resource = null;
 	this.resourceMediaCompositionAttributesArray = null;
 	this.marginsPercentage = null;
-	this.overlayScalePercentage = null;
+	this.overlayScaleAttribute = null;
 	this.overlayPlacement = null;
 	this.overlayShape = null;
 	this.audioAttributes = null;

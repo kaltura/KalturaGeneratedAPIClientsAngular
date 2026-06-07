@@ -822,6 +822,11 @@ KalturaNullableBoolean.NULL_VALUE = -1;
 KalturaNullableBoolean.FALSE_VALUE = 0;
 KalturaNullableBoolean.TRUE_VALUE = 1;
 
+function KalturaOverlayScaleBehavior(){
+}
+KalturaOverlayScaleBehavior.CROP = 1;
+KalturaOverlayScaleBehavior.SCALE = 2;
+
 function KalturaOverlayShape(){
 }
 KalturaOverlayShape.CIRCLE = 1;
@@ -6043,6 +6048,7 @@ KalturaReportType.DOCUMENT_ENTRY_MAP_OVERLAY_REGION = "72";
 KalturaReportType.DOCUMENT_ENTRY_MAP_OVERLAY_CITY = "73";
 KalturaReportType.DOCUMENT_ENTRY_PLATFORMS = "74";
 KalturaReportType.DOCUMENT_ENTRY_DOMAINS = "75";
+KalturaReportType.DOCUMENT_ENTRY_USER_ENGAGEMENT = "76";
 KalturaReportType.PARTNER_USAGE = "201";
 KalturaReportType.MAP_OVERLAY_COUNTRY_REALTIME = "10001";
 KalturaReportType.MAP_OVERLAY_REGION_REALTIME = "10002";
