@@ -5662,6 +5662,7 @@ KalturaRatingCount.inheritsFrom (KalturaObjectBase);
  * @param	dictionaries	array		.
  * @param	flavorParamsIds	string		Comma separated flavorParamsIds that the vendor should look for it matching asset when trying to download the asset.
  * @param	vendorTaskProcessingRegion	int		Indicates in which region the task processing should task place.
+ * @param	allowedCatalogItemIds	string		Comma separated catalogItemIds that are allowed for ordering using this reach profile.
  */
 function KalturaReachProfile(){
 	this.id = null;
@@ -5690,6 +5691,7 @@ function KalturaReachProfile(){
 	this.dictionaries = null;
 	this.flavorParamsIds = null;
 	this.vendorTaskProcessingRegion = null;
+	this.allowedCatalogItemIds = null;
 }
 KalturaReachProfile.inheritsFrom (KalturaObjectBase);
 
