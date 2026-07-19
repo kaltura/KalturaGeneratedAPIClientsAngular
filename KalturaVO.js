@@ -1179,6 +1179,10 @@ KalturaRegexItem.inheritsFrom (KalturaObjectBase);
  * @param	customAnalyticsDomain	string		.
  * @param	allowedEmailDomainsForAdmins	string		.
  * @param	externalIdentifier	string		.
+ * @param	htmlPurifierBehaviour	string		.
+ * @param	htmlPurifierBaseListUsage	bool		.
+ * @param	purifyImageContent	bool		.
+ * @param	fileTypeRestrictionEnabled	bool		.
  */
 function KalturaPartner(){
 	this.id = null;
@@ -1268,6 +1272,10 @@ function KalturaPartner(){
 	this.customAnalyticsDomain = null;
 	this.allowedEmailDomainsForAdmins = null;
 	this.externalIdentifier = null;
+	this.htmlPurifierBehaviour = null;
+	this.htmlPurifierBaseListUsage = null;
+	this.purifyImageContent = null;
+	this.fileTypeRestrictionEnabled = null;
 }
 KalturaPartner.inheritsFrom (KalturaObjectBase);
 
@@ -3342,9 +3350,11 @@ KalturaEntryVendorTaskUnit.inheritsFrom (KalturaObjectBase);
 
 /**
  * @param	entryDuration	int		The duration of the entry for which the task was created for in milliseconds (readOnly).
+ * @param	vendorComment	string		string containing the comment provided by vendor.
  */
 function KalturaVendorTaskData(){
 	this.entryDuration = null;
+	this.vendorComment = null;
 }
 KalturaVendorTaskData.inheritsFrom (KalturaObjectBase);
 
@@ -8551,6 +8561,7 @@ KalturaBulkUploadResultUserEntry.inheritsFrom (KalturaBulkUploadResult);
  * @param	enableSpeakerId	int		.
  * @param	fixedPriceAddons	int		.
  * @param	pricing	KalturaVendorCatalogItemPricing		.
+ * @param	pricingArray	array		.
  * @param	flavorParamsId	int		.
  * @param	clearAudioFlavorParamsId	int		.
  */
@@ -8568,6 +8579,7 @@ function KalturaBulkUploadResultVendorCatalogItem(){
 	this.enableSpeakerId = null;
 	this.fixedPriceAddons = null;
 	this.pricing = null;
+	this.pricingArray = null;
 	this.flavorParamsId = null;
 	this.clearAudioFlavorParamsId = null;
 }

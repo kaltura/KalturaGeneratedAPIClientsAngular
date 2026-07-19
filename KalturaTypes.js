@@ -3953,6 +3953,13 @@ KalturaGroupUserOrderBy.UPDATED_AT_ASC = "+updatedAt";
 KalturaGroupUserOrderBy.CREATED_AT_DESC = "-createdAt";
 KalturaGroupUserOrderBy.UPDATED_AT_DESC = "-updatedAt";
 
+function KalturaHTMLPurifierBehaviourType(){
+}
+KalturaHTMLPurifierBehaviourType.IGNORE = "0";
+KalturaHTMLPurifierBehaviourType.NOTIFY = "1";
+KalturaHTMLPurifierBehaviourType.SANITIZE = "2";
+KalturaHTMLPurifierBehaviourType.BLOCK = "3";
+
 function KalturaHttpNotificationCertificateType(){
 }
 KalturaHttpNotificationCertificateType.DER = "DER";
