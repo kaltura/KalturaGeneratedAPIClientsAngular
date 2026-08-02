@@ -3222,6 +3222,7 @@ KalturaESearchEntryFieldName.FLAVOR_PARAMS_IDS = "flavor_params_ids";
 KalturaESearchEntryFieldName.ID = "id";
 KalturaESearchEntryFieldName.IS_LIVE = "is_live";
 KalturaESearchEntryFieldName.IS_QUIZ = "is_quiz";
+KalturaESearchEntryFieldName.IS_SCHEDULED = "is_scheduled";
 KalturaESearchEntryFieldName.USER_ID = "kuser_id";
 KalturaESearchEntryFieldName.LAST_PLAYED_AT = "last_played_at";
 KalturaESearchEntryFieldName.LENGTH_IN_MSECS = "length_in_msecs";
@@ -3270,6 +3271,7 @@ KalturaESearchEntryOrderByFieldName.VOTES = "votes";
 
 function KalturaESearchGroupFieldName(){
 }
+KalturaESearchGroupFieldName.ADMIN_TAGS = "admin_tags";
 KalturaESearchGroupFieldName.CAPABILITIES = "capabilities";
 KalturaESearchGroupFieldName.COMPANY = "company";
 KalturaESearchGroupFieldName.COUNTRY = "country";
@@ -3370,6 +3372,7 @@ KalturaESearchSortOrder.ORDER_BY_DESC = "desc";
 
 function KalturaESearchUserFieldName(){
 }
+KalturaESearchUserFieldName.ADMIN_TAGS = "admin_tags";
 KalturaESearchUserFieldName.CAPABILITIES = "capabilities";
 KalturaESearchUserFieldName.COMPANY = "company";
 KalturaESearchUserFieldName.COUNTRY = "country";
