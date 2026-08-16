@@ -1498,6 +1498,7 @@ KalturaVendorServiceTurnAroundTime.FOUR_BUSINESS_DAYS = 4;
 KalturaVendorServiceTurnAroundTime.FIVE_BUSINESS_DAYS = 5;
 KalturaVendorServiceTurnAroundTime.SIX_BUSINESS_DAYS = 6;
 KalturaVendorServiceTurnAroundTime.SEVEN_BUSINESS_DAYS = 7;
+KalturaVendorServiceTurnAroundTime.TEN_BUSINESS_DAYS = 10;
 KalturaVendorServiceTurnAroundTime.THIRTY_MINUTES = 1800;
 KalturaVendorServiceTurnAroundTime.TWO_HOURS = 7200;
 KalturaVendorServiceTurnAroundTime.THREE_HOURS = 10800;
@@ -1514,6 +1515,7 @@ function KalturaVendorServiceType(){
 }
 KalturaVendorServiceType.HUMAN = 1;
 KalturaVendorServiceType.MACHINE = 2;
+KalturaVendorServiceType.HYBRID = 3;
 
 function KalturaVendorTaskProcessingRegion(){
 }

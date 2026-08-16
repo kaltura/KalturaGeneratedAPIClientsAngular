@@ -5656,8 +5656,10 @@ KalturaRatingCount.inheritsFrom (KalturaObjectBase);
  * @param	defaultOutputFormat	int		.
  * @param	enableMachineModeration	int		.
  * @param	enableHumanModeration	int		.
+ * @param	enableHybridModeration	int		.
  * @param	autoDisplayMachineCaptionsOnPlayer	int		.
  * @param	autoDisplayHumanCaptionsOnPlayer	int		.
+ * @param	autoDisplayHybridCaptionsOnPlayer	int		.
  * @param	enableMetadataExtraction	int		.
  * @param	enableSpeakerChangeIndication	int		.
  * @param	enableAudioTags	int		.
@@ -5665,6 +5667,7 @@ KalturaRatingCount.inheritsFrom (KalturaObjectBase);
  * @param	maxCharactersPerCaptionLine	int		.
  * @param	labelAdditionForMachineServiceType	string		.
  * @param	labelAdditionForHumanServiceType	string		.
+ * @param	labelAdditionForHybridServiceType	string		.
  * @param	contentDeletionPolicy	int		.
  * @param	rules	array		.
  * @param	credit	KalturaBaseVendorCredit		.
@@ -5685,8 +5688,10 @@ function KalturaReachProfile(){
 	this.defaultOutputFormat = null;
 	this.enableMachineModeration = null;
 	this.enableHumanModeration = null;
+	this.enableHybridModeration = null;
 	this.autoDisplayMachineCaptionsOnPlayer = null;
 	this.autoDisplayHumanCaptionsOnPlayer = null;
+	this.autoDisplayHybridCaptionsOnPlayer = null;
 	this.enableMetadataExtraction = null;
 	this.enableSpeakerChangeIndication = null;
 	this.enableAudioTags = null;
@@ -5694,6 +5699,7 @@ function KalturaReachProfile(){
 	this.maxCharactersPerCaptionLine = null;
 	this.labelAdditionForMachineServiceType = null;
 	this.labelAdditionForHumanServiceType = null;
+	this.labelAdditionForHybridServiceType = null;
 	this.contentDeletionPolicy = null;
 	this.rules = null;
 	this.credit = null;
@@ -5867,6 +5873,7 @@ KalturaESearchEntryOperator.inheritsFrom (KalturaESearchEntryBaseItem);
  * @param	genieIdIn	string		filter by Genie id.
  * @param	reachProfileIdIn	string		filter by reach profile id.
  * @param	isPreview	bool		filter by preview mode.
+ * @param	streamTypeIn	string		filter by stream type.
  */
 function KalturaReportInputFilter(){
 	this.keywords = null;
@@ -5923,6 +5930,7 @@ function KalturaReportInputFilter(){
 	this.genieIdIn = null;
 	this.reachProfileIdIn = null;
 	this.isPreview = null;
+	this.streamTypeIn = null;
 }
 KalturaReportInputFilter.inheritsFrom (KalturaReportInputBaseFilter);
 
@@ -7971,6 +7979,13 @@ KalturaAttributeCondition.inheritsFrom (KalturaSearchItem);
 
 
 /**
+ */
+function KalturaAudioDescriptionVendorTaskData(){
+}
+KalturaAudioDescriptionVendorTaskData.inheritsFrom (KalturaVendorTaskData);
+
+
+/**
  * @param	changedItems	array		.
  */
 function KalturaAuditTrailChangeInfo(){
@@ -8564,6 +8579,7 @@ KalturaBulkUploadResultUserEntry.inheritsFrom (KalturaBulkUploadResult);
  * @param	pricingArray	array		.
  * @param	flavorParamsId	int		.
  * @param	clearAudioFlavorParamsId	int		.
+ * @param	vendorData	string		.
  */
 function KalturaBulkUploadResultVendorCatalogItem(){
 	this.vendorCatalogItemId = null;
@@ -8582,6 +8598,7 @@ function KalturaBulkUploadResultVendorCatalogItem(){
 	this.pricingArray = null;
 	this.flavorParamsId = null;
 	this.clearAudioFlavorParamsId = null;
+	this.vendorData = null;
 }
 KalturaBulkUploadResultVendorCatalogItem.inheritsFrom (KalturaBulkUploadResult);
 
@@ -8697,6 +8714,13 @@ function KalturaCaptionParamsListResponse(){
 	this.objects = null;
 }
 KalturaCaptionParamsListResponse.inheritsFrom (KalturaListResponse);
+
+
+/**
+ */
+function KalturaCaptionVendorTaskData(){
+}
+KalturaCaptionVendorTaskData.inheritsFrom (KalturaVendorTaskData);
 
 
 /**
@@ -10002,6 +10026,13 @@ KalturaDropFolderTrRdsFileHandlerConfig.inheritsFrom (KalturaDropFolderFileHandl
 function KalturaDropFolderXmlBulkUploadFileHandlerConfig(){
 }
 KalturaDropFolderXmlBulkUploadFileHandlerConfig.inheritsFrom (KalturaDropFolderFileHandlerConfig);
+
+
+/**
+ */
+function KalturaDubbingVendorTaskData(){
+}
+KalturaDubbingVendorTaskData.inheritsFrom (KalturaVendorTaskData);
 
 
 /**
@@ -13133,6 +13164,15 @@ function KalturaShortLinkListResponse(){
 	this.objects = null;
 }
 KalturaShortLinkListResponse.inheritsFrom (KalturaListResponse);
+
+
+/**
+ * @param	assetId	string		 (insertOnly).
+ */
+function KalturaSignLanguageVendorTaskData(){
+	this.assetId = null;
+}
+KalturaSignLanguageVendorTaskData.inheritsFrom (KalturaVendorTaskData);
 
 
 /**
