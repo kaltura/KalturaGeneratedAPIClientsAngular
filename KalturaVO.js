@@ -2608,10 +2608,12 @@ KalturaDistributionValidationError.inheritsFrom (KalturaObjectBase);
 /**
  * @param	documentType	int		The type of the document (insertOnly).
  * @param	assetParamsIds	string		Comma separated asset params ids that exists for this media entry (readOnly).
+ * @param	views	int		Number of views (readOnly).
  */
 function KalturaDocumentEntry(){
 	this.documentType = null;
 	this.assetParamsIds = null;
+	this.views = null;
 }
 KalturaDocumentEntry.inheritsFrom (KalturaBaseEntry);
 
@@ -8334,6 +8336,7 @@ KalturaBulkUploadListResponse.inheritsFrom (KalturaListResponse);
  * @param	contributionPolicy	int		.
  * @param	partnerSortValue	int		.
  * @param	moderation	bool		.
+ * @param	adminTags	string		.
  */
 function KalturaBulkUploadResultCategory(){
 	this.relativePath = null;
@@ -8350,6 +8353,7 @@ function KalturaBulkUploadResultCategory(){
 	this.contributionPolicy = null;
 	this.partnerSortValue = null;
 	this.moderation = null;
+	this.adminTags = null;
 }
 KalturaBulkUploadResultCategory.inheritsFrom (KalturaBulkUploadResult);
 
