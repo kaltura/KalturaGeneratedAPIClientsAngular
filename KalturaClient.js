@@ -33,7 +33,7 @@ function KalturaClient(config){
 	this.init(config);
 }
 KalturaClient.inheritsFrom (KalturaClientBase);
-KalturaClient.prototype.apiVersion = "23.6.0";
+KalturaClient.prototype.apiVersion = "23.7.0";
 /**
  * Manage access control profiles
  * @param KalturaAccessControlProfileService
@@ -508,6 +508,11 @@ KalturaClient.prototype.drmProfile = null;
  */
 KalturaClient.prototype.drmLicenseAccess = null;
 /**
+ * 
+ * @param KalturaKeyManagementPolicyService
+ */
+KalturaClient.prototype.keyManagementPolicy = null;
+/**
  * WidevineDrmService serves as a license proxy to a Widevine license server
  * @param KalturaWidevineDrmService
  */
@@ -764,6 +769,7 @@ KalturaClient.prototype.init = function(config){
 	this.drmPolicy = new KalturaDrmPolicyService(this);
 	this.drmProfile = new KalturaDrmProfileService(this);
 	this.drmLicenseAccess = new KalturaDrmLicenseAccessService(this);
+	this.keyManagementPolicy = new KalturaKeyManagementPolicyService(this);
 	this.widevineDrm = new KalturaWidevineDrmService(this);
 	this.scheduledTaskProfile = new KalturaScheduledTaskProfileService(this);
 	this.playReadyDrm = new KalturaPlayReadyDrmService(this);

@@ -11991,6 +11991,57 @@ KalturaDrmLicenseAccessService.prototype.getAccess = function(callback, entryId,
 }
 
 /**
+ *Class definition for the Kaltura service: keyManagementPolicy.
+ * The available service actions:
+ * @action	get	.
+ * @action	update	.
+*/
+function KalturaKeyManagementPolicyService(client){
+	this.init(client);
+}
+KalturaKeyManagementPolicyService.inheritsFrom (KalturaServiceBase);
+/**
+ * .
+ * @param	objectType	int		 (optional, enum: KalturaKeyManagementPolicyObjectType).
+ * @param	objectId	string		 (optional).
+ * @return	KalturaKeyManagementPolicy.
+ * @return	.
+ * @return	.
+ * @return	.
+ * @return	.
+ */
+KalturaKeyManagementPolicyService.prototype.get = function(callback, objectType, objectId){
+	var kparams = new Object();
+	this.client.addParam(kparams, "objectType", objectType);
+	this.client.addParam(kparams, "objectId", objectId);
+	this.client.queueServiceActionCall("drm_keymanagementpolicy", "get", kparams);
+	if (!this.client.isMultiRequest())
+		this.client.doQueue(callback);
+}
+/**
+ * .
+ * @param	objectType	int		 (optional, enum: KalturaKeyManagementPolicyObjectType).
+ * @param	objectId	string		 (optional).
+ * @param	keyManagementPolicy	KalturaKeyManagementPolicy		 (optional).
+ * @return	KalturaKeyManagementPolicy.
+ * @return	.
+ * @return	.
+ * @return	.
+ * @return	.
+ * @return	.
+ * @return	.
+ */
+KalturaKeyManagementPolicyService.prototype.update = function(callback, objectType, objectId, keyManagementPolicy){
+	var kparams = new Object();
+	this.client.addParam(kparams, "objectType", objectType);
+	this.client.addParam(kparams, "objectId", objectId);
+	this.client.addParam(kparams, "keyManagementPolicy", toParams(keyManagementPolicy));
+	this.client.queueServiceActionCall("drm_keymanagementpolicy", "update", kparams);
+	if (!this.client.isMultiRequest())
+		this.client.doQueue(callback);
+}
+
+/**
  *Class definition for the Kaltura service: widevineDrm.
  * The available service actions:
  * @action	getLicense	Get license for encrypted content playback.

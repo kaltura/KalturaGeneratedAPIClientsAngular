@@ -348,6 +348,20 @@ KalturaDocumentType.DOCUMENT = 11;
 KalturaDocumentType.SWF = 12;
 KalturaDocumentType.PDF = 13;
 
+function KalturaDrmKeyManagementPolicy(){
+}
+KalturaDrmKeyManagementPolicy.UNKNOWN = 0;
+KalturaDrmKeyManagementPolicy.CLEAR = 1;
+KalturaDrmKeyManagementPolicy.SHARED_KEY = 2;
+KalturaDrmKeyManagementPolicy.ALL_VIDEO = 3;
+KalturaDrmKeyManagementPolicy.SD_HD = 4;
+KalturaDrmKeyManagementPolicy.SD_HD_UHD = 5;
+KalturaDrmKeyManagementPolicy.SD_HD_UHD1_UHD2 = 6;
+KalturaDrmKeyManagementPolicy.SD_HD1_HD2_UHD1_UHD2 = 7;
+KalturaDrmKeyManagementPolicy.SD_HD1_HD2_UHD = 8;
+KalturaDrmKeyManagementPolicy.SDHD1_HD2_UHD = 9;
+KalturaDrmKeyManagementPolicy.SDHD1_HD2_UHD1_UHD2 = 10;
+
 function KalturaDrmLicenseExpirationPolicy(){
 }
 KalturaDrmLicenseExpirationPolicy.FIXED_DURATION = 1;
@@ -673,6 +687,11 @@ function KalturaKafkaNotificationFormat(){
 }
 KalturaKafkaNotificationFormat.JSON = 1;
 KalturaKafkaNotificationFormat.AVRO = 2;
+
+function KalturaKeyManagementPolicyObjectType(){
+}
+KalturaKeyManagementPolicyObjectType.PARTNER = 1;
+KalturaKeyManagementPolicyObjectType.ENTRY = 2;
 
 function KalturaLicenseType(){
 }
@@ -1486,6 +1505,9 @@ KalturaVendorServiceFeature.SPEECH_TO_VIDEO = 20;
 KalturaVendorServiceFeature.IMMERSIVE_AGENT_CALL = 21;
 KalturaVendorServiceFeature.IMMERSIVE_AGENT_CHAT = 22;
 KalturaVendorServiceFeature.AVATAR_VOD = 23;
+KalturaVendorServiceFeature.LLM_MODELS = 24;
+KalturaVendorServiceFeature.IMMERSIVE_AGENT_EVAL = 25;
+KalturaVendorServiceFeature.IMMERSIVE_AGENT_PREVIEW = 26;
 
 function KalturaVendorServiceTurnAroundTime(){
 }

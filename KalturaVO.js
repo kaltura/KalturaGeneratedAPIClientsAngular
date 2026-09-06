@@ -4349,6 +4349,15 @@ KalturaInteractivityDataFilter.inheritsFrom (KalturaObjectBase);
 
 
 /**
+ * @param	keyManagementPolicy	int		.
+ */
+function KalturaKeyManagementPolicy(){
+	this.keyManagementPolicy = null;
+}
+KalturaKeyManagementPolicy.inheritsFrom (KalturaObjectBase);
+
+
+/**
  * @param	entryId	string		The id of the entry that the like belongs to.
  * @param	userId	string		The id of user that the like belongs to.
  * @param	createdAt	int		The date of the like's creation.
@@ -14094,9 +14103,30 @@ KalturaVendorImmersiveAgentChatCatalogItem.inheritsFrom (KalturaVendorCatalogIte
 
 /**
  */
+function KalturaVendorImmersiveAgentEvalCatalogItem(){
+}
+KalturaVendorImmersiveAgentEvalCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorImmersiveAgentPreviewCatalogItem(){
+}
+KalturaVendorImmersiveAgentPreviewCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
 function KalturaVendorIntelligentTaggingCatalogItem(){
 }
 KalturaVendorIntelligentTaggingCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorLlmModelsCatalogItem(){
+}
+KalturaVendorLlmModelsCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
@@ -20966,9 +20996,30 @@ KalturaVendorImmersiveAgentChatCatalogItemFilter.inheritsFrom (KalturaVendorCata
 
 /**
  */
+function KalturaVendorImmersiveAgentEvalCatalogItemFilter(){
+}
+KalturaVendorImmersiveAgentEvalCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorImmersiveAgentPreviewCatalogItemFilter(){
+}
+KalturaVendorImmersiveAgentPreviewCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
 function KalturaVendorIntelligentTaggingCatalogItemFilter(){
 }
 KalturaVendorIntelligentTaggingCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorLlmModelsCatalogItemFilter(){
+}
+KalturaVendorLlmModelsCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
 
 
 /**
