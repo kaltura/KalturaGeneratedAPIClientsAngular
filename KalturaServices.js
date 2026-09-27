@@ -5031,6 +5031,7 @@ KalturaPermissionService.inheritsFrom (KalturaServiceBase);
  * @return	KalturaPermission.
  * @return	.
  * @return	.
+ * @return	.
  */
 KalturaPermissionService.prototype.add = function(callback, permission){
 	var kparams = new Object();
@@ -5102,6 +5103,7 @@ KalturaPermissionService.prototype.listAction = function(callback, filter, pager
  * @param	permissionName	string		The name assigned to the permission (optional).
  * @param	permission	KalturaPermission		Name The name assigned to the permission (optional).
  * @return	KalturaPermission.
+ * @return	.
  * @return	.
  */
 KalturaPermissionService.prototype.update = function(callback, permissionName, permission){

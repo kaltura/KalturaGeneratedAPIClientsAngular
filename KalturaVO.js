@@ -1182,6 +1182,7 @@ KalturaRegexItem.inheritsFrom (KalturaObjectBase);
  * @param	htmlPurifierBehaviour	string		.
  * @param	htmlPurifierBaseListUsage	bool		.
  * @param	purifyImageContent	bool		.
+ * @param	htmlPurifierAllowedTags	string		.
  * @param	fileTypeRestrictionEnabled	bool		.
  */
 function KalturaPartner(){
@@ -1275,6 +1276,7 @@ function KalturaPartner(){
 	this.htmlPurifierBehaviour = null;
 	this.htmlPurifierBaseListUsage = null;
 	this.purifyImageContent = null;
+	this.htmlPurifierAllowedTags = null;
 	this.fileTypeRestrictionEnabled = null;
 }
 KalturaPartner.inheritsFrom (KalturaObjectBase);
@@ -5885,6 +5887,7 @@ KalturaESearchEntryOperator.inheritsFrom (KalturaESearchEntryBaseItem);
  * @param	reachProfileIdIn	string		filter by reach profile id.
  * @param	isPreview	bool		filter by preview mode.
  * @param	streamTypeIn	string		filter by stream type.
+ * @param	reachCatalogItemIdIn	string		filter by reach catalog item id.
  */
 function KalturaReportInputFilter(){
 	this.keywords = null;
@@ -5942,6 +5945,7 @@ function KalturaReportInputFilter(){
 	this.reachProfileIdIn = null;
 	this.isPreview = null;
 	this.streamTypeIn = null;
+	this.reachCatalogItemIdIn = null;
 }
 KalturaReportInputFilter.inheritsFrom (KalturaReportInputBaseFilter);
 
@@ -12612,6 +12616,13 @@ KalturaQuizUserEntry.inheritsFrom (KalturaUserEntry);
 
 
 /**
+ */
+function KalturaRainFocusDistributionProvider(){
+}
+KalturaRainFocusDistributionProvider.inheritsFrom (KalturaDistributionProvider);
+
+
+/**
  * @param	objects	array		 (readOnly).
  */
 function KalturaRatingCountListResponse(){
@@ -14198,6 +14209,13 @@ function KalturaVendorVideoAnalysisCatalogItem(){
 	this.maxVideoDuration = null;
 }
 KalturaVendorVideoAnalysisCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
+ */
+function KalturaVendorVideoGenerationCatalogItem(){
+}
+KalturaVendorVideoGenerationCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
@@ -17233,6 +17251,42 @@ KalturaQuizVendorTaskData.inheritsFrom (KalturaLocalizedVendorTaskData);
 
 
 /**
+ */
+function KalturaRainFocusDistributionJobProviderData(){
+}
+KalturaRainFocusDistributionJobProviderData.inheritsFrom (KalturaConfigurableDistributionJobProviderData);
+
+
+/**
+ * @param	oauthTokenUrl	string		.
+ * @param	videoPublishEndpointUrl	string		.
+ * @param	oauthScope	string		.
+ * @param	clientId	string		.
+ * @param	clientSecretPrimary	string		.
+ * @param	clientSecretSecondary	string		.
+ * @param	activeSecret	string		.
+ * @param	mediaType	int		.
+ * @param	playerId	string		.
+ * @param	metadataProfileId	string		.
+ * @param	metadataFieldNames	string		.
+ */
+function KalturaRainFocusDistributionProfile(){
+	this.oauthTokenUrl = null;
+	this.videoPublishEndpointUrl = null;
+	this.oauthScope = null;
+	this.clientId = null;
+	this.clientSecretPrimary = null;
+	this.clientSecretSecondary = null;
+	this.activeSecret = null;
+	this.mediaType = null;
+	this.playerId = null;
+	this.metadataProfileId = null;
+	this.metadataFieldNames = null;
+}
+KalturaRainFocusDistributionProfile.inheritsFrom (KalturaConfigurableDistributionProfile);
+
+
+/**
  * @param	entryIdEqual	string		.
  * @param	rankIn	string		.
  */
@@ -19580,6 +19634,13 @@ KalturaQuickPlayDistributionProviderBaseFilter.inheritsFrom (KalturaDistribution
 
 /**
  */
+function KalturaRainFocusDistributionProviderBaseFilter(){
+}
+KalturaRainFocusDistributionProviderBaseFilter.inheritsFrom (KalturaDistributionProviderFilter);
+
+
+/**
+ */
 function KalturaRatingCountFilter(){
 }
 KalturaRatingCountFilter.inheritsFrom (KalturaRatingCountBaseFilter);
@@ -20726,6 +20787,13 @@ KalturaQuizUserEntryBaseFilter.inheritsFrom (KalturaUserEntryFilter);
 
 /**
  */
+function KalturaRainFocusDistributionProviderFilter(){
+}
+KalturaRainFocusDistributionProviderFilter.inheritsFrom (KalturaRainFocusDistributionProviderBaseFilter);
+
+
+/**
+ */
 function KalturaRegistrationUserEntryFilter(){
 }
 KalturaRegistrationUserEntryFilter.inheritsFrom (KalturaUserEntryFilter);
@@ -21069,6 +21137,13 @@ KalturaVendorSummaryCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilt
 function KalturaVendorVideoAnalysisCatalogItemFilter(){
 }
 KalturaVendorVideoAnalysisCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorVideoGenerationCatalogItemFilter(){
+}
+KalturaVendorVideoGenerationCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
 
 
 /**
@@ -21548,6 +21623,13 @@ function KalturaQuizUserEntryFilter(){
 	this.extendedStatusNotIn = null;
 }
 KalturaQuizUserEntryFilter.inheritsFrom (KalturaQuizUserEntryBaseFilter);
+
+
+/**
+ */
+function KalturaRainFocusDistributionProfileBaseFilter(){
+}
+KalturaRainFocusDistributionProfileBaseFilter.inheritsFrom (KalturaConfigurableDistributionProfileFilter);
 
 
 /**
@@ -22048,6 +22130,13 @@ KalturaPdfFlavorParamsBaseFilter.inheritsFrom (KalturaFlavorParamsFilter);
 function KalturaQuickPlayDistributionProfileFilter(){
 }
 KalturaQuickPlayDistributionProfileFilter.inheritsFrom (KalturaQuickPlayDistributionProfileBaseFilter);
+
+
+/**
+ */
+function KalturaRainFocusDistributionProfileFilter(){
+}
+KalturaRainFocusDistributionProfileFilter.inheritsFrom (KalturaRainFocusDistributionProfileBaseFilter);
 
 
 /**

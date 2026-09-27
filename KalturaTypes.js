@@ -1508,6 +1508,7 @@ KalturaVendorServiceFeature.AVATAR_VOD = 23;
 KalturaVendorServiceFeature.LLM_MODELS = 24;
 KalturaVendorServiceFeature.IMMERSIVE_AGENT_EVAL = 25;
 KalturaVendorServiceFeature.IMMERSIVE_AGENT_PREVIEW = 26;
+KalturaVendorServiceFeature.VIDEO_GENERATION = 27;
 
 function KalturaVendorServiceTurnAroundTime(){
 }
@@ -2917,6 +2918,7 @@ KalturaDistributionProviderType.NDN = "ndnDistribution.NDN";
 KalturaDistributionProviderType.PODCAST = "podcastDistribution.PODCAST";
 KalturaDistributionProviderType.PUSH_TO_NEWS = "pushToNewsDistribution.PUSH_TO_NEWS";
 KalturaDistributionProviderType.QUICKPLAY = "quickPlayDistribution.QUICKPLAY";
+KalturaDistributionProviderType.RAIN_FOCUS = "rainFocusDistribution.RAIN_FOCUS";
 KalturaDistributionProviderType.SYNACOR_HBO = "synacorHboDistribution.SYNACOR_HBO";
 KalturaDistributionProviderType.TIME_WARNER = "timeWarnerDistribution.TIME_WARNER";
 KalturaDistributionProviderType.TVCOM = "tvComDistribution.TVCOM";
@@ -5950,6 +5952,16 @@ KalturaQuizUserEntryOrderBy.CREATED_AT_ASC = "+createdAt";
 KalturaQuizUserEntryOrderBy.UPDATED_AT_ASC = "+updatedAt";
 KalturaQuizUserEntryOrderBy.CREATED_AT_DESC = "-createdAt";
 KalturaQuizUserEntryOrderBy.UPDATED_AT_DESC = "-updatedAt";
+
+function KalturaRainFocusDistributionProfileOrderBy(){
+}
+KalturaRainFocusDistributionProfileOrderBy.CREATED_AT_ASC = "+createdAt";
+KalturaRainFocusDistributionProfileOrderBy.UPDATED_AT_ASC = "+updatedAt";
+KalturaRainFocusDistributionProfileOrderBy.CREATED_AT_DESC = "-createdAt";
+KalturaRainFocusDistributionProfileOrderBy.UPDATED_AT_DESC = "-updatedAt";
+
+function KalturaRainFocusDistributionProviderOrderBy(){
+}
 
 function KalturaRatingCountOrderBy(){
 }
