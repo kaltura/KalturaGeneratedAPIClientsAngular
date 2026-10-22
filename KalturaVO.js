@@ -14219,6 +14219,15 @@ KalturaVendorVideoGenerationCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
 
 
 /**
+ * @param	maxVideoDuration	int		.
+ */
+function KalturaVendorVisualDescriptionCatalogItem(){
+	this.maxVideoDuration = null;
+}
+KalturaVendorVisualDescriptionCatalogItem.inheritsFrom (KalturaVendorCatalogItem);
+
+
+/**
  */
 function KalturaVerizonVcastDistributionProvider(){
 }
@@ -21144,6 +21153,13 @@ KalturaVendorVideoAnalysisCatalogItemFilter.inheritsFrom (KalturaVendorCatalogIt
 function KalturaVendorVideoGenerationCatalogItemFilter(){
 }
 KalturaVendorVideoGenerationCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
+
+
+/**
+ */
+function KalturaVendorVisualDescriptionCatalogItemFilter(){
+}
+KalturaVendorVisualDescriptionCatalogItemFilter.inheritsFrom (KalturaVendorCatalogItemFilter);
 
 
 /**

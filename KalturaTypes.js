@@ -1509,6 +1509,7 @@ KalturaVendorServiceFeature.LLM_MODELS = 24;
 KalturaVendorServiceFeature.IMMERSIVE_AGENT_EVAL = 25;
 KalturaVendorServiceFeature.IMMERSIVE_AGENT_PREVIEW = 26;
 KalturaVendorServiceFeature.VIDEO_GENERATION = 27;
+KalturaVendorServiceFeature.VISUAL_DESCRIPTION = 28;
 
 function KalturaVendorServiceTurnAroundTime(){
 }
